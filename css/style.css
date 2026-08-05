@@ -506,9 +506,8 @@ header,
     overflow-wrap: anywhere;
 
     display: -webkit-box;
-    -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
@@ -1169,22 +1168,8 @@ button:disabled {
     }
 
     .produto-info h2 {
-    width: 100%;
-
-    color: #354052;
-    font-size: 0.95rem;
-    font-weight: 700;
-    line-height: 1.23;
-
-    overflow-wrap: anywhere;
-
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-
-    overflow: hidden;
-}
+        font-size: 0.86rem;
+    }
 
     .produto-info .preco {
         font-size: 1rem;
@@ -1298,5 +1283,142 @@ button:disabled {
         scroll-behavior: auto !important;
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================================================
+   AJUSTES PRECISOS V5 — layout compacto no celular
+   ========================================================================== */
+
+@media (max-width: 599px) {
+    header,
+    .cabecalho {
+        padding:
+            max(6px, env(safe-area-inset-top))
+            12px
+            8px;
+    }
+
+    .store-logo {
+        width: min(230px, 72vw);
+        height: 74px;
+        margin: -6px auto 0;
+        transform: scale(1.03);
+    }
+
+    .area-busca {
+        width: 100%;
+        max-width: none;
+    }
+
+    #busca {
+        height: 48px;
+        min-height: 48px;
+        padding: 0 44px 0 45px;
+        border-radius: 13px;
+        font-size: 16px;
+    }
+
+    .icone-busca {
+        left: 16px;
+        width: 17px;
+        height: 17px;
+    }
+
+    .abas-categorias {
+        gap: 6px;
+        padding: 7px 10px;
+    }
+
+    .btn-cat {
+        min-height: 44px;
+        padding: 4px 2px;
+        font-size: 0.66rem;
+        line-height: 1.05;
+        border-radius: 10px;
+    }
+
+    .resumo-lista {
+        padding: 7px 10px 0;
+        font-size: 0.86rem;
+        font-weight: 600;
+    }
+
+    .container-produtos {
+        gap: 8px;
+        padding: 8px 10px 10px;
+    }
+
+    .produto {
+        min-height: 112px;
+        grid-template-columns: 92px minmax(0, 1fr);
+        gap: 10px;
+        padding: 9px;
+    }
+
+    .produto-imagem-area {
+        width: 92px;
+        height: 92px;
+    }
+
+    .produto-info h2 {
+        font-size: 0.9rem;
+        line-height: 1.18;
+    }
+
+    .produto-info .preco {
+        font-size: 1.05rem;
+    }
+
+    .area-preco {
+        min-height: 31px;
+    }
+
+    .btnAdicionar {
+        min-height: 42px;
+        padding: 7px 9px;
+        font-size: 0.86rem;
+        border-radius: 8px;
+    }
+
+    /* Força o coração para dentro do canto superior direito da foto */
+    .produto-imagem-area .btn-favorito {
+        position: absolute !important;
+        inset: 6px 6px auto auto !important;
+        margin: 0 !important;
+
+        width: 34px !important;
+        height: 34px !important;
+        padding: 6px !important;
+
+        display: grid !important;
+        place-items: center !important;
+
+        background: rgba(255, 255, 255, 0.96) !important;
+        border: 1px solid #e3e8ef !important;
+        border-radius: 50% !important;
+        box-shadow: 0 2px 7px rgba(15, 23, 42, 0.14) !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .produto-imagem-area .icone-coracao {
+        width: 21px !important;
+        height: 21px !important;
+        display: block !important;
+        overflow: visible !important;
+
+        fill: transparent !important;
+        stroke: #667085 !important;
+        stroke-width: 1.9 !important;
+
+        pointer-events: none !important;
+    }
+
+    .produto-imagem-area .btn-favorito.ativo .icone-coracao {
+        fill: #e32636 !important;
+        stroke: #e32636 !important;
     }
 }
