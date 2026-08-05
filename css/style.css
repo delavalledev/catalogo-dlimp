@@ -1124,3 +1124,122 @@ button:disabled {
     place-items: center;
     padding: 6px;
 }
+
+
+/* ==========================================================================
+   Ajuste definitivo da área de busca no celular
+   ========================================================================== */
+
+.cabecalho {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.area-busca {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+#busca {
+    display: block;
+    width: 100%;
+    height: 52px;
+    min-height: 52px;
+    margin: 0;
+    padding: 0 46px 0 48px;
+    color: #263238;
+    font-size: 16px;
+    line-height: 52px;
+    background: #f5f7fa;
+    border: 1px solid #dfe4ea;
+    border-radius: 14px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+#busca:focus {
+    background: #ffffff;
+    border-color: #0877e8;
+    box-shadow: 0 0 0 4px rgba(8, 119, 232, 0.10);
+}
+
+#busca::-webkit-search-cancel-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.icone-busca {
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    z-index: 3;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.icone-busca::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11px;
+    height: 11px;
+    border: 2px solid #7b8492;
+    border-radius: 50%;
+}
+
+.icone-busca::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+    width: 8px;
+    height: 2px;
+    background: #7b8492;
+    border-radius: 999px;
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+
+.btn-limpar-busca {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    z-index: 3;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(-50%);
+    color: #667085;
+    font-size: 16px;
+    line-height: 1;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+.btn-limpar-busca[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 599px) {
+    .area-busca {
+        width: calc(100% - 8px);
+        max-width: none;
+    }
+
+    #busca {
+        height: 54px;
+        min-height: 54px;
+        line-height: 54px;
+        border-radius: 15px;
+    }
+}
