@@ -3,18 +3,18 @@ const produtos = [
   { "id": 5, "nome": "CONCENTRADO UBATUBA", "preco": 16.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 7, "nome": "REMOVEDOR PERFUMADO 500ML", "preco": 20.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 11, "nome": "PERFUME PARA ROUPAS 1 LITRO", "preco": 12.50, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 12, "nome": "AMACIANTE CONFORTO 2 LITROS", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 12, "nome": "AMACIANTE CONFORTO 2 LITROS", "preco": 10.00, "imagem": "img/amacft2.png", "categoria": "residencial" },
   { "id": 15, "nome": "PEDRA SANITARIA", "preco": 3.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 16, "nome": "DETERGENTE LIMAO 5 LITROS", "preco": 20.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 18, "nome": "CLORO GEL 5 LITROS", "preco": 29.90, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 19, "nome": "DESINFETANTE EUCALIPTO 5 LITROS", "preco": 11.50, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 21, "nome": "DESINFETANTE TALCO 5 LITROS", "preco": 11.50, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 24, "nome": "DESINFETANTE CAPIM LIMÃO 2 LITROS", "preco": 6.50, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 28, "nome": "SABAO LIQUIDO DE COCO 2 LITROS", "preco": 14.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 28, "nome": "SABAO LIQUIDO DE COCO 2 LITROS", "preco": 14.00, "imagem": "img/coco2l.png", "categoria": "residencial" },
   { "id": 32, "nome": "MARIDAO 2 LITROS", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 33, "nome": "LIMPA VIDROS", "preco": 4.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 34, "nome": "ALCOOL PERFUMADO CEREJA E AVELÃ 2 LITROS", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 37, "nome": "ALCOOL PERFUMADO BAMBOO 2 LITROS", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 37, "nome": "ALCOOL PERFUMADO BAMBOO 2 LITROS", "preco": 10.00, "imagem": "img/alcb2.png", "categoria": "residencial" },
   { "id": 39, "nome": "LIMPA AZULEJO REFIL", "preco": 13.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 41, "nome": "DIA DIA FLORAL", "preco": 9.90, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 47, "nome": "SABONETE LIQUIDO ERVA DOCE C VALVULA", "preco": 5.00, "imagem": "img/default.png", "categoria": "residencial" },
@@ -27,11 +27,11 @@ const produtos = [
   { "id": 73, "nome": "CANDIDA COLORIDA 2 LITROS", "preco": 7.50, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 76, "nome": "DESINFETANTE REVEILLON 2 LITROS", "preco": 6.50, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 77, "nome": "GEL SANITARIO", "preco": 3.99, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 80, "nome": "CLORO GEL 2 LITROS", "preco": 15.00, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 82, "nome": "LUSTRA MOVEIS 500ML", "preco": 11.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 80, "nome": "CLORO GEL 2 LITROS", "preco": 15.00, "imagem": "img/clorogel2l.png", "categoria": "residencial" },
+  { "id": 82, "nome": "LUSTRA MOVEIS 500ML", "preco": 11.00, "imagem": "img/lm500.png", "categoria": "residencial" },
   { "id": 83, "nome": "VEJA SPARKLING", "preco": 3.50, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 87, "nome": "SABAO LIQUIDO ARIEX 2 LITROS", "preco": 14.00, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 95, "nome": "AMACIANTE DOWNIE 2 LITROS", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 87, "nome": "SABAO LIQUIDO ARIEX 2 LITROS", "preco": 14.00, "imagem": "img/ariex2l.png", "categoria": "residencial" },
+  { "id": 95, "nome": "AMACIANTE DOWNIE 2 LITROS", "preco": 10.00, "imagem": "img/amad2l.png", "categoria": "residencial" },
   { "id": 98, "nome": "DESINFETANTE PINHO SOL 2 LITROS", "preco": 6.50, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 100, "nome": "VEJAX MULTIUSO 2 LITROS", "preco": 12.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 103, "nome": "SABAO LIQUIDO DINAMUS 2 LITROS", "preco": 14.00, "imagem": "img/default.png", "categoria": "residencial" },
@@ -41,15 +41,15 @@ const produtos = [
   { "id": 133, "nome": "ALCOOL 70 1LITRO", "preco": 11.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 139, "nome": "SABAO LIQUIDO COM QUEROSENE", "preco": 15.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 140, "nome": "DESINFETANTE FLORAL 2 LITROS", "preco": 6.50, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 142, "nome": "ANTI MOFO 500ML", "preco": 11.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 142, "nome": "ANTI MOFO 500ML", "preco": 11.00, "imagem": "img/anti500.png", "categoria": "residencial" },
   { "id": 143, "nome": "DESINFETANTE EUCALIPTO 2 LITROS", "preco": 6.50, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 144, "nome": "NAFTALINA 24G", "preco": 3.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 319, "nome": "ALCOOL PERFUMADO 5 LITROS", "preco": 20.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450001, "nome": "AGUA SANITARIA 2 LITROS", "preco": 6.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450002, "nome": "AGUA SANITARIA 5 LITROS", "preco": 11.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450013, "nome": "ALCOOL PERFUMADO MAÇA E CANELA 2 LITROS", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 789123450020, "nome": "ALVEJANTE SEM CLORO 2 LITROS", "preco": 11.00, "imagem": "img/udefault.png", "categoria": "residencial" },
-  { "id": 789123450061, "nome": "CLORO 2 LITROS", "preco": 15.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 789123450020, "nome": "ALVEJANTE SEM CLORO 2 LITROS", "preco": 11.00, "imagem": "img/alv2.png", "categoria": "residencial" },
+  { "id": 789123450061, "nome": "CLORO 2 LITROS", "preco": 15.00, "imagem": "img/cl2lt.png", "categoria": "residencial" },
   { "id": 789123450062, "nome": "CLORO 5 LITROS", "preco": 28.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450070, "nome": "DESINFETANTE MARINE 2 LITROS", "preco": 6.50, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450074, "nome": "DESINFETANTE CASA LIMPA 2 LITROS", "preco": 6.50, "imagem": "img/default.png", "categoria": "residencial" },
@@ -57,10 +57,10 @@ const produtos = [
   { "id": 789123450089, "nome": "DESINFETANTE KAIAK 2 LITROS", "preco": 6.50, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450091, "nome": "DESINFETANTE LAVANDA 2 LITROS", "preco": 6.50, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450102, "nome": "DESINFETANTE TALCO 2 LITROS", "preco": 6.50, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 789123450108, "nome": "DETERGENTE NEUTRO 2 LITROS", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 789123450108, "nome": "DETERGENTE NEUTRO 2 LITROS", "preco": 10.00, "imagem": "img/det2lt.png", "categoria": "residencial" },
   { "id": 789123450132, "nome": "LIMPA ALUMINIO 1 LITRO", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450145, "nome": "LIMPA CANIL 2 LITROS", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 789123450161, "nome": "LIMPA TUDO DESENGORDURANTE 2 LITROS", "preco": 15.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 789123450161, "nome": "LIMPA TUDO DESENGORDURANTE 2 LITROS", "preco": 15.00, "imagem": "img/lt2lt.png", "categoria": "residencial" },
   { "id": 789123450226, "nome": "AROMATIZANTE SELVA VERDE", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450246, "nome": "SABAO LIQUIDO OMUS 2 LITROS", "preco": 14.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450267, "nome": "PEDRA ANTI MOFO 25G", "preco": 4.00, "imagem": "img/default.png", "categoria": "residencial" },
@@ -72,7 +72,7 @@ const produtos = [
   { "id": 789123450281, "nome": "CONCENTRADO TULIPA NEGRA", "preco": 16.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450282, "nome": "CONCENTRADO MARINE", "preco": 16.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450283, "nome": "SABONETE LIQUIDO UVA 500ML C VALVULA", "preco": 6.90, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 789123450288, "nome": "ANIL 500 ML", "preco": 8.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 789123450288, "nome": "ANIL 500 ML", "preco": 8.00, "imagem": "img/anil500.png", "categoria": "residencial" },
   { "id": 789123450290, "nome": "DETERGENTE LIMAO 2 LITROS", "preco": 10.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450293, "nome": "SABONETE ARTESANAL S CAIXA", "preco": 5.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450294, "nome": "SABONETE ARTESANAL C CAIXA", "preco": 7.00, "imagem": "img/default.png", "categoria": "residencial" },
@@ -91,12 +91,12 @@ const produtos = [
   { "id": 789123450310, "nome": "PERCARBONATO DE SODIO 1KG", "preco": 25.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450312, "nome": "DESINFETANTE CAPIM LIMAO 5 LITROS", "preco": 11.50, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 789123450313, "nome": "PERCARBONATO 500GR", "preco": 15.00, "imagem": "img/default.png", "categoria": "residencial" },
-  { "id": 789123450315, "nome": "LIMPA ALUMINIO 500ML", "preco": 7.00, "imagem": "img/default.png", "categoria": "residencial" },
+  { "id": 789123450315, "nome": "LIMPA ALUMINIO 500ML", "preco": 7.00, "imagem": "img/la500.png", "categoria": "residencial" },
   { "id": 789123450316, "nome": "SABAO LIQUIDO COM BICARBONATO 2 LITROS", "preco": 18.00, "imagem": "img/default.png", "categoria": "residencial" },
   { "id": 79, "nome": "CREOLINA 2LT", "preco": 13.00, "imagem": "img/default.png", "categoria": "industrial" },
   { "id": 124, "nome": "BARRILHA POTE", "preco": 5.00, "imagem": "img/default.png", "categoria": "industrial" },
   { "id": 789123450149, "nome": "LIMPA CANO SUPER 1L", "preco": 20.00, "imagem": "img/default.png", "categoria": "industrial" },
-  { "id": 789123450156, "nome": "LIMPA PEDRA 2 LITROS", "preco": 18.00, "imagem": "img/default.png", "categoria": "industrial" },
+  { "id": 789123450156, "nome": "LIMPA PEDRA 2 LITROS", "preco": 18.00, "imagem": "img/lp2lt.png", "categoria": "industrial" },
   { "id": 789123450285, "nome": "LIMPA PEDRA 5 LITROS", "preco": 39.90, "imagem": "img/default.png", "categoria": "industrial" },
   { "id": 789123450286, "nome": "LIMPA ALUMINIO 5 LITROS", "preco": 39.90, "imagem": "img/default.png", "categoria": "industrial" },
   { "id": 8, "nome": "LIMPA BAU 5 LITROS", "preco": 34.00, "imagem": "img/default.png", "categoria": "automotivo" },
@@ -178,6 +178,23 @@ const produtos = [
   { "id": 789123450314, "nome": "VASSOURA PIAÇAVA N4", "preco": 20.00, "imagem": "img/default.png", "categoria": "utilitarios" },
   { "id": 789123450317, "nome": "BACIA 40 LITROS", "preco": 49.90, "imagem": "img/default.png", "categoria": "utilitarios" }
 ]
+
+produtos.forEach(produto => {
+  const nome = produto.nome.toUpperCase();
+
+  if (nome.includes("500ML") || nome.includes("500 ML") || nome.includes("500GR")) {
+    produto.imagem = "img/500ml.png";
+  } 
+  else if (nome.includes("1 LITRO") || nome.includes("1LITRO") || nome.includes("1L")) {
+    produto.imagem = "img/1lt.png";
+  } 
+  else if (nome.includes("2 LITROS") || nome.includes("2LT") || nome.includes("2 LITROS")) {
+    produto.imagem = "img/2lt.png";
+  } 
+  else if (nome.includes("5 LITROS") || nome.includes("5LT") || nome.includes("5 L")) {
+    produto.imagem = "img/5lt.png";
+  }
+});
 // Organiza a lista de produtos em ordem alfabética pelo nome
 produtos.sort((a, b) => {
     return a.nome.localeCompare(b.nome);

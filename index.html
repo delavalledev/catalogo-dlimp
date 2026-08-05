@@ -1,95 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<!DOCTYPE html>
-<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>D'Limp Produtos de Limpeza</title>
-
-    <!-- Meta Tags para o WhatsApp -->
+    <meta name="description" content="Catálogo de produtos de limpeza residencial, industrial, automotiva e utilidades da D'Limp.">
+    <meta name="theme-color" content="#0877e8">
     <meta property="og:title" content="D'Limp Produtos de Limpeza">
-    <meta property="og:description" content="Catálogo completo de produtos de limpeza profissional e residencial.">
+    <meta property="og:description" content="Confira nosso catálogo de produtos de limpeza residencial, industrial, automotiva e utilidades.">
     <meta property="og:image" content="https://dlimp.netlify.app/img/logo.png">
     <meta property="og:url" content="https://dlimp.netlify.app">
     <meta property="og:type" content="website">
-
+    <meta property="og:locale" content="pt_BR">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<header>
-    <img src="img/logo.png" alt="D'Limp Produtos de Limpeza" class="store-logo">
-    <input type="text" id="busca" placeholder="Buscar produto...">
-</header>
-
-<div class="abas-categorias" id="menuCategorias">
-    <button class="btn-cat ativo" onclick="filtrarPorCategoria('todos')">Todos</button>
-    <button class="btn-cat" onclick="filtrarPorCategoria('residencial')">🏠 Residencial</button>
-    <button class="btn-cat" onclick="filtrarPorCategoria('industrial')">🏭 Industrial</button>
-    <button class="btn-cat" onclick="filtrarPorCategoria('automotivo')">🚗 Automotivo</button>
-    <button class="btn-cat" onclick="filtrarPorCategoria('utilitarios')">🧹 Utilitários</button>
-</div>
-
-<main id="produtos" class="container-produtos"></main>
-
-<div id="modalCarrinho" class="modal hidden">
-    <div class="modal-content">
-        
-        <div id="telaCarrinho">
-            <div class="modal-topo">
-                <h2>Seu Pedido</h2>
-                <button onclick="document.getElementById('modalCarrinho').classList.add('hidden')" class="btn-fechar">✖</button>
-            </div>
-            
-            <div style="display: flex; justify-content: center; margin-bottom: 15px;">
-                <button id="btnLimparCarrinho" class="btn-limpar-tudo" onclick="limparTodoOCarrinho()">🗑️ Limpar Carrinho</button>
-            </div>
-            
-            <div id="itensCarrinho" class="lista-itens-carrinho"></div>
-            
-            <div class="rodape-carrinho">
-                <h3 id="totalCarrinho">Total: R$ 0,00</h3>
-                <div id="avisoPedidoMinimo">⚠️ Pedido mínimo de R$ 50,00 para entrega.</div>
-                <button id="btnProximoPasso" class="btn-enviar" onclick="abrirCheckout()">Confirmar e Informar Endereço</button>
-            </div>
+    <header class="cabecalho">
+        <img src="img/logo.png" alt="D'Limp Produtos de Limpeza" class="store-logo">
+        <div class="area-busca">
+            <span class="icone-busca" aria-hidden="true"></span>
+            <input type="search" id="busca" placeholder="Buscar produto..." aria-label="Buscar produto" autocomplete="off">
+            <button type="button" id="limparBusca" class="btn-limpar-busca" aria-label="Limpar busca" hidden>✕</button>
         </div>
+    </header>
 
-        <div id="telaCheckout" style="display: none;">
-            <div class="modal-topo">
-                <h2>Dados de Entrega</h2>
-                <button onclick="document.getElementById('modalCarrinho').classList.add('hidden')" class="btn-fechar">✖</button>
-            </div>
-            
-            <div class="secao-entrega">
-                <input type="text" id="entregaNome" class="campo-input" placeholder="Nome Completo">
-                <input type="text" id="entregaRua" class="campo-input" placeholder="Rua e Número">
-                <input type="text" id="entregaCidade" class="campo-input" placeholder="Cidade / Bairro">
-                <select id="entregaPagamento" class="campo-input">
-                    <option value="Pix">📱 Pix</option>
-                    <option value="Dinheiro">💵 Dinheiro</option>
-                    <option value="Cartão">💳 Cartão</option>
-                </select>
-            </div>
+    <nav class="abas-categorias" id="menuCategorias" aria-label="Categorias de produtos">
+        <button type="button" class="btn-cat ativo" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button type="button" class="btn-cat" data-filtro="favoritos" aria-pressed="false">❤️ Favoritos</button>
+        <button type="button" class="btn-cat" data-filtro="promocoes" aria-pressed="false">🔥 Promoções</button>
+        <button type="button" class="btn-cat" data-filtro="novos" aria-pressed="false">✨ Novos</button>
+        <button type="button" class="btn-cat" data-filtro="residencial" aria-pressed="false">🏠 Residencial</button>
+        <button type="button" class="btn-cat" data-filtro="industrial" aria-pressed="false">🏭 Industrial</button>
+        <button type="button" class="btn-cat" data-filtro="automotivo" aria-pressed="false">🚗 Automotivo</button>
+        <button type="button" class="btn-cat" data-filtro="utilitarios" aria-pressed="false">🧹 Utilitários</button>
+    </nav>
 
-            <button id="btnEnviarPedido" class="btn-enviar" onclick="finalizarPedido()">Enviar Pedido no WhatsApp</button>
-            <button class="btn-voltar" onclick="voltarParaCarrinho()">⬅ Voltar ao Carrinho</button>
+    <section class="resumo-lista" aria-live="polite">
+        <span id="contadorResultados">0 produtos</span>
+    </section>
+
+    <main id="produtos" class="container-produtos" aria-live="polite"></main>
+
+    <div id="modalCarrinho" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="tituloCarrinho">
+        <div class="modal-content">
+            <section id="telaCarrinho">
+                <div class="modal-topo">
+                    <h2 id="tituloCarrinho">Seu Pedido</h2>
+                    <button type="button" id="fecharCarrinho" class="btn-fechar" aria-label="Fechar carrinho">✕</button>
+                </div>
+
+                <div id="itensCarrinho" class="lista-itens-carrinho"></div>
+
+                <div class="rodape-carrinho">
+                    <h3 id="totalCarrinho">Total: R$ 0,00</h3>
+                    <div id="avisoPedidoMinimo" style="display: none;">Pedido mínimo de R$ 50,00 para entrega.</div>
+                    <button type="button" id="btnCheckout" class="btn-enviar">Confirmar e informar endereço</button>
+                    <button type="button" id="btnLimparCarrinho" class="btn-limpar-tudo">🗑️ Limpar carrinho</button>
+                </div>
+            </section>
+
+            <section id="telaCheckout" style="display: none;">
+                <div class="modal-topo">
+                    <h2>Dados de Entrega</h2>
+                    <button type="button" class="btn-fechar" data-fechar-modal aria-label="Fechar carrinho">✕</button>
+                </div>
+
+                <div class="secao-entrega">
+                    <label for="entregaNome" class="label-campo">Nome</label>
+                    <input type="text" id="entregaNome" class="campo-input" placeholder="Seu nome completo" autocomplete="name">
+
+                    <label for="entregaRua" class="label-campo">Endereço</label>
+                    <input type="text" id="entregaRua" class="campo-input" placeholder="Rua, número e complemento" autocomplete="street-address">
+
+                    <label for="entregaCidade" class="label-campo">Cidade e bairro</label>
+                    <input type="text" id="entregaCidade" class="campo-input" placeholder="Cidade e bairro" autocomplete="address-level2">
+
+                    <label for="entregaPagamento" class="label-campo">Forma de pagamento</label>
+                    <select id="entregaPagamento" class="campo-input">
+                        <option value="Pix">📱 Pix</option>
+                        <option value="Dinheiro">💵 Dinheiro</option>
+                        <option value="Cartão">💳 Cartão</option>
+                    </select>
+                </div>
+
+                <button type="button" id="btnEnviarPedido" class="btn-enviar">Enviar pedido no WhatsApp</button>
+                <button type="button" id="btnVoltarCarrinho" class="btn-voltar">← Voltar ao carrinho</button>
+            </section>
         </div>
     </div>
-</div>
 
-<div id="barraCarrinho" class="barra-carrinho-fixa">
-    <div class="info-barra">
-        <strong id="qtdItens">0 itens</strong>
-        <span id="valorTotal">R$ 0,00</span>
+    <div id="barraCarrinho" class="barra-carrinho-fixa">
+        <div class="info-barra">
+            <strong id="qtdItens">0 itens</strong>
+            <span id="valorTotal">R$ 0,00</span>
+        </div>
+        <button type="button" id="abrirCarrinho" class="btn-ver-carrinho">Ver carrinho</button>
     </div>
-    <button id="abrirCarrinho" class="btn-ver-carrinho" onclick="document.getElementById('modalCarrinho').classList.remove('hidden')">Ver Carrinho</button>
-</div>
 
-<script src="js/produtos.js"></script>
-<script src="js/carrinho.js"></script>
-<script src="js/app.js"></script>
-    
+    <script src="js/produtos.js"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
