@@ -8,6 +8,7 @@ const botaoFecharCarrinho = document.getElementById("fecharCarrinho");
 
 const CHAVE_FAVORITOS = "dlimp_favoritos";
 const API_URL = "http://127.0.0.1:3000/produtos";
+const CATALOGO_ONLINE_URL = "data/produtos-online.json";
 let categoriaAtual = "todos";
 let favoritos = carregarFavoritos();
 
@@ -276,7 +277,33 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 } catch (erro) {
 
-    console.log("API offline. Utilizando produtos locais.");
+    console.log("API local indisponível. Carregando catálogo publicado.");
+
+    try {
+        const respostaOnline = await fetch(CATALOGO_ONLINE_URL + "?v=" + Date.now());
+
+        if (respostaOnline.ok) {
+            const dadosOnline = await respostaOnline.json();
+
+            if (Array.isArray(dadosOnline)) {
+                produtos.length = 0;
+
+                dadosOnline.forEach(produto => {
+                    produtos.push({
+                        id: produto.id,
+                        nome: produto.descricao,
+                        preco: produto.preco,
+                        imagem: produto.imagem,
+                        categoria: "residencial",
+                        estoque: produto.estoque,
+                        disponivel: produto.disponivel
+                    });
+                });
+            }
+        }
+    } catch (erroOnline) {
+        console.error("Não foi possível carregar o catálogo publicado:", erroOnline);
+    }
 
 }
     if (typeof produtos !== "undefined" && Array.isArray(produtos)) carregarProdutos(produtos);
