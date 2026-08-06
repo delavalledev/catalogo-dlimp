@@ -44,14 +44,19 @@ function encontrarProduto(id) {
 
 function adicionarCarrinho(id) {
     const produto = encontrarProduto(id);
+
     if (!produto) {
         alert("Produto não encontrado.");
         return;
     }
 
-    const existente = carrinho.find(item => Number(item.id) === Number(id));
-    if (existente) existente.quantidade += 1;
-    else {
+    const existente = carrinho.find(
+        item => Number(item.id) === Number(id)
+    );
+
+    if (existente) {
+        existente.quantidade += 1;
+    } else {
         carrinho.push({
             id: produto.id,
             nome: produto.nome,
@@ -63,7 +68,10 @@ function adicionarCarrinho(id) {
 
     salvarCarrinho();
     atualizarCarrinho();
-    if (typeof mostrarToast === "function") mostrarToast(`${produto.nome} adicionado ao carrinho`);
+
+    if (typeof mostrarToast === "function") {
+        mostrarToast(`${produto.nome} adicionado ao carrinho`);
+    }
 }
 
 function removerCarrinho(id) {

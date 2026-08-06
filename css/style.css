@@ -1422,3 +1422,13 @@ button:disabled {
         stroke: #e32636 !important;
     }
 }
+.btnAdicionar:disabled {
+    background: #dfe3e8;
+    color: #6b7280;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.produto:has(.btnAdicionar:disabled) {
+    opacity: 0.72;
+}

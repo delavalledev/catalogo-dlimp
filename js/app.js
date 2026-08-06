@@ -7,6 +7,7 @@ const botaoAbrirCarrinho = document.getElementById("abrirCarrinho");
 const botaoFecharCarrinho = document.getElementById("fecharCarrinho");
 
 const CHAVE_FAVORITOS = "dlimp_favoritos";
+const API_URL = "http://127.0.0.1:3000/produtos";
 let categoriaAtual = "todos";
 let favoritos = carregarFavoritos();
 
@@ -127,7 +128,15 @@ function carregarProdutos(listaProdutos) {
                         ${precoAntigoValido ? `<span class="preco-antigo">${formatarDinheiro(produto.precoAntigo)}</span>` : ""}
                         <p class="preco">${formatarDinheiro(produto.preco)}</p>
                     </div>
-                    <button type="button" class="btnAdicionar" data-adicionar-id="${id}" aria-label="Adicionar ${nome} ao carrinho"><span>＋</span> Adicionar</button>
+                    <button
+    type="button"
+    class="btnAdicionar"
+    data-adicionar-id="${id}"
+    aria-label="${produto.disponivel ? `Adicionar ${nome} ao carrinho` : `${nome} indisponível`}"
+    ${produto.disponivel ? "" : "disabled"}
+>
+    ${produto.disponivel ? "<span>＋</span> Adicionar" : "Indisponível"}
+</button>
                 </div>
             </article>`;
     }).join("");
@@ -222,7 +231,50 @@ function mostrarToast(mensagem) {
     window.timerToastDlimp = setTimeout(() => toast.classList.remove("visivel"), 1800);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+
+    const resposta = await fetch(API_URL);
+
+    if (resposta.ok) {
+
+        const dados = await resposta.json();
+
+        if (Array.isArray(dados)) {
+
+            produtos.length = 0;
+
+            dados.forEach(produto => {
+
+                produtos.push({
+
+                    id: produto.id,
+
+                    nome: produto.descricao,
+
+                    preco: produto.preco,
+
+                    imagem: produto.imagem,
+
+                    categoria: "residencial",
+
+                    estoque: produto.estoque,
+
+                    disponivel: produto.disponivel
+
+                });
+
+            });
+
+        }
+
+    }
+
+} catch (erro) {
+
+    console.log("API offline. Utilizando produtos locais.");
+
+}
     if (typeof produtos !== "undefined" && Array.isArray(produtos)) carregarProdutos(produtos);
     else carregarProdutos([]);
 
