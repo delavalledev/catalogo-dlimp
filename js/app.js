@@ -254,7 +254,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                     preco: produto.preco,
 
-                    imagem: produto.imagem,
+                    imagem: window.location.hostname === "localhost" ||
+                    window.location.hostname === "127.0.0.1"
+                    ? produto.imagem
+                    : `img/produtos/${produto.id}.jpg`,
 
                     categoria: "residencial",
 
