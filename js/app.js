@@ -104,6 +104,7 @@ function carregarProdutos(listaProdutos) {
         const imagem = escaparHTML(produto.imagem || "img/default.png");
         const favorito = produtoEhFavorito(id);
         const precoAntigoValido = Number(produto.precoAntigo) > Number(produto.preco);
+        const disponivel = produto.disponivel !== false;
 
         return `
             <article class="produto">
@@ -132,10 +133,10 @@ function carregarProdutos(listaProdutos) {
     type="button"
     class="btnAdicionar"
     data-adicionar-id="${id}"
-    aria-label="${produto.disponivel ? `Adicionar ${nome} ao carrinho` : `${nome} indisponível`}"
-    ${produto.disponivel ? "" : "disabled"}
+    aria-label="${disponivel ? `Adicionar ${nome} ao carrinho` : `${nome} indisponível`}"
+    ${disponivel ? "" : "disabled"}
 >
-    ${produto.disponivel ? "<span>＋</span> Adicionar" : "Indisponível"}
+    ${disponivel ? "<span>＋</span> Adicionar" : "Indisponível"}
 </button>
                 </div>
             </article>`;
