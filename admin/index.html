@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin D'Limp</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="topo">
+    <div>
+        <h1>D'Limp Admin</h1>
+        <p>Gerenciamento do catálogo</p>
+    </div>
+
+    <div class="acoes-topo">
+    <button id="publicarSite" class="btn-publicar">
+        ☁ Publicar no site
+    </button>
+
+    <a href="../index.html" class="btn-site">
+        Ver site
+    </a>
+</div>
+</header>
+
+<main>
+
+    <section class="resumo">
+        <div class="card-resumo">
+            <strong id="totalProdutos">0</strong>
+            <span>Produtos</span>
+        </div>
+
+        <div class="card-resumo">
+            <strong id="totalDisponiveis">0</strong>
+            <span>Disponíveis</span>
+        </div>
+
+        <div class="card-resumo">
+            <strong id="totalIndisponiveis">0</strong>
+            <span>Indisponíveis</span>
+        </div>
+
+        <div class="card-resumo">
+            <strong id="totalSemFoto">0</strong>
+            <span>Sem foto</span>
+        </div>
+    </section>
+
+    <section class="filtros">
+        <input
+            id="busca"
+            type="search"
+            placeholder="Buscar por nome ou código..."
+        >
+
+        <select id="filtroStatus">
+            <option value="todos">Todos</option>
+            <option value="disponiveis">Disponíveis</option>
+            <option value="indisponiveis">Indisponíveis</option>
+            <option value="semfoto">Sem foto</option>
+            <option value="foradeuso">Fora de uso</option>
+        </select>
+    </section>
+
+    <section id="listaProdutos" class="lista-produtos"></section>
+
+</main>
+
+<div id="modal" class="modal oculto">
+    <div class="modal-conteudo">
+
+        <button id="fecharModal" class="fechar">×</button>
+
+        <div class="area-foto">
+            <img id="fotoProduto" src="" alt="Produto">
+
+            <label class="btn-foto">
+                Trocar foto
+                <input id="novaFoto" type="file" accept="image/*" hidden>
+            </label>
+        </div>
+
+        <div class="form-produto">
+
+            <input id="produtoId" type="hidden">
+
+            <label>
+                Código
+                <input id="codigoProduto" disabled>
+            </label>
+
+            <label>
+                Nome
+                <input id="nomeProduto">
+            </label>
+
+            <label>
+                Preço
+                <input id="precoProduto" type="number" step="0.01">
+            </label>
+
+            <label>
+                Estoque
+                <input id="estoqueProduto" disabled>
+            </label>
+
+            <label>
+                Disponibilidade no site
+                <select id="disponivelProduto">
+                    <option value="true">Disponível</option>
+                    <option value="false">Indisponível</option>
+                </select>
+            </label>
+
+            <label>
+                Situação no Sys-On
+                <select id="foraDeUsoProduto">
+                    <option value="NÃO">Ativo</option>
+                    <option value="SIM">Fora de uso</option>
+                </select>
+            </label>
+
+            <label>
+                Categoria principal
+                <select id="categoriaProduto">
+                    <option value="">Sem categoria</option>
+                    <option value="residencial">Residencial</option>
+                    <option value="industrial">Industrial</option>
+                    <option value="automotivo">Automotivo</option>
+                    <option value="utilitarios">Utilitários</option>
+                </select>
+            </label>
+
+            <label>
+                Exibir no site
+                <select id="exibirSiteProduto">
+                    <option value="true">Sim - mostrar no catálogo</option>
+                    <option value="false">Não - somente loja física</option>
+                </select>
+            </label>
+
+            <div style="display:flex; gap:25px; margin-bottom:18px;">
+                <label style="display:flex; align-items:center; gap:8px; margin:0;">
+                    <input id="promocaoProduto" type="checkbox" style="width:auto; margin:0;">
+                    Promoção
+                </label>
+
+                <label style="display:flex; align-items:center; gap:8px; margin:0;">
+                    <input id="novoProduto" type="checkbox" style="width:auto; margin:0;">
+                    Novo
+                </label>
+            </div>
+
+            <div class="acoes">
+                <button id="salvarProduto" class="btn-salvar">
+                    Salvar alterações
+                </button>
+
+                <button id="excluirProduto" class="btn-excluir">
+                    Excluir produto
+                </button>
+            </div>
+
+            <div id="avisoApi" class="aviso">
+                Modo de desenvolvimento: alterações ainda não são enviadas ao Sys-On.
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
+

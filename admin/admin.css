@@ -1,0 +1,282 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f7;
+    color: #222;
+}
+
+.topo {
+    background: #111;
+    color: white;
+    padding: 18px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo h1 {
+    margin: 0;
+}
+
+.topo p {
+    margin: 4px 0 0;
+    opacity: .7;
+}
+
+.btn-site {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #555;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+main {
+    max-width: 1400px;
+    margin: auto;
+    padding: 24px;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.card-resumo {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #0001;
+}
+
+.card-resumo strong {
+    font-size: 28px;
+    display: block;
+}
+
+.card-resumo span {
+    color: #666;
+}
+
+.filtros {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.filtros input,
+.filtros select {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.filtros input {
+    flex: 1;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.produto {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px #0001;
+    cursor: pointer;
+    transition: .15s;
+}
+
+.produto:hover {
+    transform: translateY(-2px);
+}
+
+.produto img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    background: white;
+}
+
+.produto-info {
+    padding: 14px;
+}
+
+.produto-info h3 {
+    font-size: 15px;
+    margin: 0 0 8px;
+}
+
+.codigo {
+    color: #888;
+    font-size: 12px;
+}
+
+.preco {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.disponivel {
+    background: #e5f7e9;
+}
+
+.indisponivel {
+    background: #fde8e8;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #0009;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.oculto {
+    display: none;
+}
+
+.modal-conteudo {
+    background: white;
+    width: min(900px, 100%);
+    max-height: 95vh;
+    overflow-y: auto;
+    border-radius: 14px;
+    padding: 25px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 25px;
+}
+
+.fechar {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    border: 0;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.area-foto img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.btn-foto {
+    display: block;
+    margin-top: 12px;
+    background: #222;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.form-produto label {
+    display: block;
+    margin-bottom: 14px;
+    font-weight: bold;
+}
+
+.form-produto input,
+.form-produto select {
+    width: 100%;
+    margin-top: 5px;
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.acoes button {
+    border: 0;
+    padding: 13px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-salvar {
+    background: #111;
+    color: white;
+}
+
+.btn-excluir {
+    background: #c62828;
+    color: white;
+}
+
+.aviso {
+    margin-top: 18px;
+    padding: 12px;
+    background: #fff4d6;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .resumo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+.acoes-topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-publicar {
+    border: 0;
+    background: #15803d;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-publicar:hover {
+    filter: brightness(0.95);
+}
+
+.btn-publicar:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
