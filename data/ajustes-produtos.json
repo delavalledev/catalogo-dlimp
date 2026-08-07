@@ -1,0 +1,106 @@
+{
+  "17": {
+    "imagem": "img/produtos/17.jpg"
+  },
+  "51": {
+    "descricao": "PERFUME PARA BANHEIRO 2 LITROS",
+    "preco": 16,
+    "disponivel": true,
+    "categoria": "",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "56": {
+    "imagem": "img/produtos/56.jpg"
+  },
+  "58": {
+    "imagem": "img/produtos/58.jpg"
+  },
+  "60": {
+    "imagem": "img/produtos/60.jpg"
+  },
+  "62": {
+    "imagem": "img/produtos/62.jpg"
+  },
+  "68": {
+    "descricao": "SABÃO LIQUIDO DE COCO 5 LITROS",
+    "preco": 29.9,
+    "disponivel": true,
+    "categoria": "",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false,
+    "imagem": "img/produtos/68.jpg"
+  },
+  "118": {
+    "descricao": "RODO PIA",
+    "preco": 4,
+    "disponivel": true,
+    "categoria": "",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "133": {
+    "descricao": "ESCOVA ROUPA MADEIRA",
+    "preco": 5.8,
+    "disponivel": true,
+    "categoria": "",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "152": {
+    "descricao": "RODO PLASTICO 60CM",
+    "preco": 19,
+    "disponivel": true,
+    "categoria": "",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "154": {
+    "descricao": "VASSOURA TROPICANA",
+    "preco": 19,
+    "disponivel": true,
+    "categoria": "utilitarios",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "190": {
+    "descricao": "SABAO LIQUIDO ARIEX 5L",
+    "preco": 29.9,
+    "disponivel": true,
+    "categoria": "",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "381": {
+    "imagem": "img/produtos/381.jpg"
+  },
+  "399": {
+    "imagem": "img/produtos/399.jpg"
+  },
+  "416": {
+    "descricao": "VASSOURA DE BRUXA",
+    "preco": 45.9,
+    "disponivel": true,
+    "categoria": "utilitarios",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "441": {
+    "descricao": "PERCABONATO 500GR",
+    "preco": 15,
+    "disponivel": true,
+    "categoria": "",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false,
+    "imagem": "img/produtos/441.jpg"
+  }
+}

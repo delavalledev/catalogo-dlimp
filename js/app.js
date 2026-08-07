@@ -1,4 +1,4 @@
-const container = document.getElementById("produtos");
+﻿const container = document.getElementById("produtos");
 const campoBusca = document.getElementById("busca");
 const botaoLimparBusca = document.getElementById("limparBusca");
 const contadorResultados = document.getElementById("contadorResultados");
@@ -9,6 +9,7 @@ const botaoFecharCarrinho = document.getElementById("fecharCarrinho");
 const CHAVE_FAVORITOS = "dlimp_favoritos";
 const API_URL = "http://127.0.0.1:3000/produtos";
 const CATALOGO_ONLINE_URL = "data/produtos-online.json";
+const AJUSTES_URL = "data/ajustes-produtos.json";
 let categoriaAtual = "todos";
 let favoritos = carregarFavoritos();
 
@@ -306,8 +307,51 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 }
-    if (typeof produtos !== "undefined" && Array.isArray(produtos)) carregarProdutos(produtos);
-    else carregarProdutos([]);
+    try {
+    const respostaAjustes = await fetch(AJUSTES_URL + "?v=" + Date.now());
+
+    if (respostaAjustes.ok) {
+        const ajustes = await respostaAjustes.json();
+
+        const produtosAjustados = produtos
+            .map(produto => {
+                const ajuste = ajustes[String(produto.id)];
+
+                if (!ajuste) {
+                    return {
+                        ...produto,
+                        exibirSite: true
+                    };
+                }
+
+                return {
+                    ...produto,
+                    nome: ajuste.descricao ?? produto.nome,
+                    descricao: ajuste.descricao ?? produto.descricao,
+                    preco: ajuste.preco ?? produto.preco,
+                    disponivel: ajuste.disponivel ?? produto.disponivel,
+                    imagem: ajuste.imagem ?? produto.imagem,
+                    categoria:
+                        ajuste.categoria && ajuste.categoria !== ""
+                            ? ajuste.categoria
+                            : produto.categoria,
+                    promocao: ajuste.promocao === true,
+                    novo: ajuste.novo === true,
+                    exibirSite: ajuste.exibirSite !== false
+                };
+            })
+            .filter(produto => produto.exibirSite !== false);
+
+        produtos.length = 0;
+        produtosAjustados.forEach(produto => produtos.push(produto));
+    }
+
+} catch (erroAjustes) {
+    console.warn("Não foi possível carregar ajustes do catálogo:", erroAjustes);
+}
+
+if (typeof produtos !== "undefined" && Array.isArray(produtos)) carregarProdutos(produtos);
+else carregarProdutos([]);
 
     document.getElementById("menuCategorias")?.addEventListener("click", evento => {
         const botao = evento.target.closest(".btn-cat");
