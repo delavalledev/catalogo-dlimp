@@ -94,7 +94,16 @@ function filtrar() {
             return false;
         }
 
-        return true;
+                return true;
+    });
+
+    filtrados.sort((a, b) => {
+        const nomeA = String(a.descricao || "");
+        const nomeB = String(b.descricao || "");
+
+        return nomeA.localeCompare(nomeB, "pt-BR", {
+            sensitivity: "base"
+        });
     });
 
     renderizar();
@@ -152,8 +161,13 @@ function abrirProduto(p) {
     document.getElementById("foraDeUsoProduto").value =
         p.ForaDeUso || "NÃO";
 
-    document.getElementById("categoriaProduto").value =
-        p.categoria || "";
+    const categoriasProduto = Array.isArray(p.categorias)
+    ? p.categorias
+    : (p.categoria ? [p.categoria] : []);
+
+    document.querySelectorAll(".categoria-check").forEach(check => {
+    check.checked = categoriasProduto.includes(check.value);
+    });
 
     document.getElementById("exibirSiteProduto").value =
         String(p.exibirSite !== false);
@@ -249,7 +263,9 @@ document.getElementById("salvarProduto").onclick = async () => {
             descricao: document.getElementById("nomeProduto").value.trim(),
             preco: Number(document.getElementById("precoProduto").value),
             disponivel: document.getElementById("disponivelProduto").value === "true",
-            categoria: document.getElementById("categoriaProduto").value,
+            categorias: Array.from(
+            document.querySelectorAll(".categoria-check:checked")
+            ).map(check => check.value),
             exibirSite: document.getElementById("exibirSiteProduto").value === "true",
             promocao: document.getElementById("promocaoProduto").checked,
             novo: document.getElementById("novoProduto").checked

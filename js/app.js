@@ -174,9 +174,18 @@ function aplicarFiltros() {
         resultado = resultado.filter(produto => produto.promocao === true);
     } else if (categoriaAtual === "novos") {
         resultado = resultado.filter(produto => produto.novo === true);
-    } else if (categoriaAtual !== "todos") {
-        resultado = resultado.filter(produto => String(produto.categoria || "").toLocaleLowerCase("pt-BR") === categoriaAtual.toLocaleLowerCase("pt-BR"));
-    }
+} else if (categoriaAtual !== "todos") {
+    resultado = resultado.filter(produto => {
+        const categorias = Array.isArray(produto.categorias)
+            ? produto.categorias
+            : (produto.categoria ? [produto.categoria] : []);
+
+        return categorias.some(categoria =>
+            String(categoria).toLocaleLowerCase("pt-BR") ===
+            categoriaAtual.toLocaleLowerCase("pt-BR")
+        );
+    });
+}
 
     if (termo) {
         resultado = resultado.filter(produto => {
@@ -331,6 +340,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                     preco: ajuste.preco ?? produto.preco,
                     disponivel: ajuste.disponivel ?? produto.disponivel,
                     imagem: ajuste.imagem ?? produto.imagem,
+                    categorias:
+                    Array.isArray(ajuste.categorias)
+                    ? ajuste.categorias
+                    : (produto.categorias || (produto.categoria ? [produto.categoria] : [])),
                     categoria:
                         ajuste.categoria && ajuste.categoria !== ""
                             ? ajuste.categoria

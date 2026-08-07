@@ -280,3 +280,26 @@ main {
     opacity: 0.6;
     cursor: wait;
 }
+
+.grupo-categorias {
+    margin-bottom: 18px;
+}
+
+.grupo-categorias > strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.grupo-categorias label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 18px 10px 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.grupo-categorias input {
+    width: auto;
+    margin: 0;
+}
