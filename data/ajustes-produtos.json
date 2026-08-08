@@ -14,6 +14,18 @@
   "17": {
     "imagem": "img/produtos/17.jpg"
   },
+  "27": {
+    "imagem": "img/produtos/27.jpg"
+  },
+  "30": {
+    "imagem": "img/produtos/30.jpg"
+  },
+  "45": {
+    "imagem": "img/produtos/45.jpg"
+  },
+  "46": {
+    "imagem": "img/produtos/46.jpg"
+  },
   "51": {
     "descricao": "PERFUME PARA BANHEIRO 2 LITROS",
     "preco": 16,
@@ -26,6 +38,9 @@
   "56": {
     "imagem": "img/produtos/56.jpg"
   },
+  "57": {
+    "imagem": "img/produtos/57.jpg"
+  },
   "58": {
     "imagem": "img/produtos/58.jpg"
   },
@@ -34,6 +49,12 @@
   },
   "62": {
     "imagem": "img/produtos/62.jpg"
+  },
+  "63": {
+    "imagem": "img/produtos/63.jpg"
+  },
+  "65": {
+    "imagem": "img/produtos/65.jpg"
   },
   "68": {
     "descricao": "SABÃO LIQUIDO DE COCO 5 LITROS",
@@ -44,6 +65,9 @@
     "promocao": false,
     "novo": false,
     "imagem": "img/produtos/68.jpg"
+  },
+  "71": {
+    "imagem": "img/produtos/71.jpg"
   },
   "118": {
     "descricao": "RODO PIA",
@@ -59,6 +83,30 @@
     "preco": 5.8,
     "disponivel": true,
     "categoria": "",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "146": {
+    "descricao": "VASSOURA CANTO",
+    "preco": 21,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "149": {
+    "descricao": "VASSOURA ESFREGA FORTE",
+    "preco": 18,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
     "exibirSite": true,
     "promocao": false,
     "novo": false
@@ -81,6 +129,9 @@
     "promocao": false,
     "novo": false
   },
+  "187": {
+    "imagem": "img/produtos/187.jpg"
+  },
   "190": {
     "descricao": "SABAO LIQUIDO ARIEX 5L",
     "preco": 29.9,
@@ -90,17 +141,45 @@
     "promocao": false,
     "novo": false
   },
+  "199": {
+    "imagem": "img/produtos/199.jpg"
+  },
+  "299": {
+    "imagem": "img/produtos/299.jpg"
+  },
+  "328": {
+    "imagem": "img/produtos/328.jpg"
+  },
   "381": {
-    "imagem": "img/produtos/381.jpg"
+    "descricao": "AGUA SANITARIA 5 LITROS",
+    "preco": 11,
+    "disponivel": true,
+    "categorias": [
+      "residencial"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "399": {
-    "imagem": "img/produtos/399.jpg"
+    "descricao": "AGUA SANITARIA 2 LITROS",
+    "preco": 6,
+    "disponivel": true,
+    "categorias": [
+      "residencial"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "416": {
     "descricao": "VASSOURA DE BRUXA",
     "preco": 45.9,
     "disponivel": true,
-    "categoria": "utilitarios",
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
     "exibirSite": true,
     "promocao": false,
     "novo": false
