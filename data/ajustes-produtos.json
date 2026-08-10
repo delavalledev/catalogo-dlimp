@@ -1,4 +1,10 @@
 {
+  "9": {
+    "imagem": "img/produtos/9.jpg"
+  },
+  "10": {
+    "imagem": "img/produtos/10.jpg"
+  },
   "12": {
     "descricao": "SOLUPAM 2 LITROS",
     "preco": 18,
@@ -14,11 +20,17 @@
   "17": {
     "imagem": "img/produtos/17.jpg"
   },
+  "23": {
+    "imagem": "img/produtos/23.jpg"
+  },
   "27": {
     "imagem": "img/produtos/27.jpg"
   },
   "30": {
     "imagem": "img/produtos/30.jpg"
+  },
+  "31": {
+    "imagem": "img/produtos/31.jpg"
   },
   "45": {
     "imagem": "img/produtos/45.jpg"
@@ -33,7 +45,11 @@
     "categoria": "",
     "exibirSite": true,
     "promocao": false,
-    "novo": false
+    "novo": false,
+    "imagem": "img/produtos/51.jpg"
+  },
+  "52": {
+    "imagem": "img/produtos/52.jpg"
   },
   "56": {
     "imagem": "img/produtos/56.jpg"
@@ -69,6 +85,21 @@
   "71": {
     "imagem": "img/produtos/71.jpg"
   },
+  "80": {
+    "imagem": "img/produtos/80.jpg"
+  },
+  "100": {
+    "imagem": "img/produtos/100.jpg"
+  },
+  "111": {
+    "imagem": "img/produtos/111.jpg"
+  },
+  "112": {
+    "imagem": "img/produtos/112.jpg"
+  },
+  "113": {
+    "imagem": "img/produtos/113.jpg"
+  },
   "118": {
     "descricao": "RODO PIA",
     "preco": 4,
@@ -77,6 +108,12 @@
     "exibirSite": true,
     "promocao": false,
     "novo": false
+  },
+  "129": {
+    "imagem": "img/produtos/129.jpg"
+  },
+  "130": {
+    "imagem": "img/produtos/130.jpg"
   },
   "133": {
     "descricao": "ESCOVA ROUPA MADEIRA",
@@ -129,6 +166,9 @@
     "promocao": false,
     "novo": false
   },
+  "179": {
+    "imagem": "img/produtos/179.jpg"
+  },
   "187": {
     "imagem": "img/produtos/187.jpg"
   },
@@ -143,6 +183,33 @@
   },
   "199": {
     "imagem": "img/produtos/199.jpg"
+  },
+  "210": {
+    "descricao": "AGUA SANITARIA ATACADO",
+    "preco": 1.5,
+    "disponivel": false,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  },
+  "221": {
+    "imagem": "img/produtos/221.jpg"
+  },
+  "222": {
+    "imagem": "img/produtos/222.jpg"
+  },
+  "230": {
+    "imagem": "img/produtos/230.jpg"
+  },
+  "294": {
+    "descricao": "REMOVEDOR 2L",
+    "preco": 70,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
   },
   "299": {
     "imagem": "img/produtos/299.jpg"

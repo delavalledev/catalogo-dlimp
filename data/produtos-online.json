@@ -267,7 +267,7 @@
         "estoque":  0,
         "disponivel":  false,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/222.jpg"
     },
     {
         "id":  287,
@@ -494,7 +494,7 @@
         "descricao":  "CLORO 2 LITROS",
         "preco_venda":  15,
         "preco":  15,
-        "estoque":  6,
+        "estoque":  5,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/7.jpg"
@@ -504,7 +504,7 @@
         "descricao":  "CLORO 5 LITROS",
         "preco_venda":  28,
         "preco":  28,
-        "estoque":  2,
+        "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/18.jpg"
@@ -740,36 +740,6 @@
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
-        "id":  29,
-        "descricao":  "DESINFETANTE FLORES VERMELHAS 2L",
-        "preco_venda":  6.2,
-        "preco":  6.2,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  35,
-        "descricao":  "DESINFETANTE FLORES VERMELHAS 5 LITROS",
-        "preco_venda":  11.5,
-        "preco":  11.5,
-        "estoque":  2,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  331,
-        "descricao":  "DESINFETANTE INSENSATEZ",
-        "preco_venda":  6.2,
-        "preco":  6.2,
-        "estoque":  15,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
         "id":  337,
         "descricao":  "DESINFETANTE JASMIN 2 LITROS",
         "preco_venda":  6.5,
@@ -817,7 +787,7 @@
         "estoque":  4,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/23.jpg"
     },
     {
         "id":  37,
@@ -920,44 +890,14 @@
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
-        "id":  338,
-        "descricao":  "DESINFETANTE SEMENTES DO BR 5L",
-        "preco_venda":  11.5,
-        "preco":  11.5,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  270,
-        "descricao":  "DESINFETANTE SEMENTES DO BRASIL 2L",
-        "preco_venda":  6.2,
-        "preco":  6.2,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  427429,
-        "descricao":  "DESINFETANTE SPARKLING 2 LITROS",
-        "preco_venda":  6.5,
-        "preco":  6.5,
-        "estoque":  2,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
         "id":  31,
         "descricao":  "DESINFETANTE TALCO 2 LITROS",
         "preco_venda":  6.5,
         "preco":  6.5,
-        "estoque":  7,
+        "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/31.jpg"
     },
     {
         "id":  39,
@@ -1130,16 +1070,6 @@
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
-        "id":  120,
-        "descricao":  "ESPANADEIRA",
-        "preco_venda":  15,
-        "preco":  15,
-        "estoque":  2,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/120.jpg"
-    },
-    {
         "id":  427431,
         "descricao":  "FLANELA BRANCA MEDIA",
         "preco_venda":  6.5,
@@ -1287,7 +1217,7 @@
         "estoque":  4,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/111.jpg"
     },
     {
         "id":  112,
@@ -1297,7 +1227,7 @@
         "estoque":  0,
         "disponivel":  false,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/112.jpg"
     },
     {
         "id":  113,
@@ -1307,7 +1237,7 @@
         "estoque":  0,
         "disponivel":  false,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/113.jpg"
     },
     {
         "id":  110,
@@ -1404,8 +1334,8 @@
         "descricao":  "LIMPA CANO SUPER 1 LITRO",
         "preco_venda":  20,
         "preco":  20,
-        "estoque":  1,
-        "disponivel":  true,
+        "estoque":  0,
+        "disponivel":  false,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/46.jpg"
     },
@@ -1557,7 +1487,7 @@
         "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/100.jpg"
     },
     {
         "id":  99,
@@ -1610,26 +1540,6 @@
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
-        "id":  220,
-        "descricao":  "LUSTRA MOVEIS 1L",
-        "preco_venda":  12,
-        "preco":  12,
-        "estoque":  2,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  426,
-        "descricao":  "LUSTRA MOVEIS 5 LITROS",
-        "preco_venda":  55,
-        "preco":  55,
-        "estoque":  0,
-        "disponivel":  false,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
         "id":  221,
         "descricao":  "LUSTRA MOVEIS 500ML",
         "preco_venda":  11,
@@ -1637,7 +1547,7 @@
         "estoque":  0,
         "disponivel":  false,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/221.jpg"
     },
     {
         "id":  127,
@@ -1677,17 +1587,17 @@
         "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/9.jpg"
     },
     {
         "id":  10,
         "descricao":  "MARIDAO 5 LITROS",
         "preco_venda":  20,
         "preco":  20,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  1,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/10.jpg"
     },
     {
         "id":  244,
@@ -1937,7 +1847,7 @@
         "estoque":  0,
         "disponivel":  false,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/51.jpg"
     },
     {
         "id":  52,
@@ -1947,7 +1857,7 @@
         "estoque":  0,
         "disponivel":  false,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/52.jpg"
     },
     {
         "id":  207,
@@ -2030,16 +1940,6 @@
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
-        "id":  230,
-        "descricao":  "PRENDEDOR GRANDE MAD",
-        "preco_venda":  4.5,
-        "preco":  4.5,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
         "id":  130,
         "descricao":  "PRENDEDOR MADEIRA GRANDE",
         "preco_venda":  4,
@@ -2047,7 +1947,7 @@
         "estoque":  0,
         "disponivel":  false,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/130.jpg"
     },
     {
         "id":  129,
@@ -2057,7 +1957,7 @@
         "estoque":  7,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/129.jpg"
     },
     {
         "id":  128,
@@ -2107,7 +2007,7 @@
         "estoque":  4,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/179.jpg"
     },
     {
         "id":  262,
@@ -2864,8 +2764,8 @@
         "descricao":  "VEJAX MULTIUSO SPARKLING 1 LITRO",
         "preco_venda":  7,
         "preco":  7,
-        "estoque":  1,
-        "disponivel":  true,
+        "estoque":  0,
+        "disponivel":  false,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
