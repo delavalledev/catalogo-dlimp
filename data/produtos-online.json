@@ -1414,7 +1414,7 @@
         "descricao":  "LIMPA TUDO 2 LITROS",
         "preco_venda":  15,
         "preco":  15,
-        "estoque":  6,
+        "estoque":  5,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/100.jpg"
