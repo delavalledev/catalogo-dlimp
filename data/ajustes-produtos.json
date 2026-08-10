@@ -1,4 +1,7 @@
 {
+  "1": {
+    "imagem": "img/produtos/1.jpg"
+  },
   "9": {
     "imagem": "img/produtos/9.jpg"
   },
@@ -23,14 +26,26 @@
   "23": {
     "imagem": "img/produtos/23.jpg"
   },
+  "24": {
+    "imagem": "img/produtos/24.jpg"
+  },
   "27": {
     "imagem": "img/produtos/27.jpg"
+  },
+  "28": {
+    "imagem": "img/produtos/28.jpg"
   },
   "30": {
     "imagem": "img/produtos/30.jpg"
   },
   "31": {
     "imagem": "img/produtos/31.jpg"
+  },
+  "39": {
+    "imagem": "img/produtos/39.jpg"
+  },
+  "42": {
+    "imagem": "img/produtos/42.jpg"
   },
   "45": {
     "imagem": "img/produtos/45.jpg"
@@ -87,6 +102,24 @@
   },
   "80": {
     "imagem": "img/produtos/80.jpg"
+  },
+  "82": {
+    "imagem": "img/produtos/82.jpg"
+  },
+  "83": {
+    "imagem": "img/produtos/83.jpg"
+  },
+  "87": {
+    "imagem": "img/produtos/87.jpg"
+  },
+  "88": {
+    "imagem": "img/produtos/88.jpg"
+  },
+  "94": {
+    "imagem": "img/produtos/94.jpg"
+  },
+  "95": {
+    "imagem": "img/produtos/95.jpg"
   },
   "100": {
     "imagem": "img/produtos/100.jpg"
@@ -169,6 +202,9 @@
   "179": {
     "imagem": "img/produtos/179.jpg"
   },
+  "185": {
+    "imagem": "img/produtos/185.jpg"
+  },
   "187": {
     "imagem": "img/produtos/187.jpg"
   },
@@ -201,6 +237,12 @@
   },
   "230": {
     "imagem": "img/produtos/230.jpg"
+  },
+  "251": {
+    "imagem": "img/produtos/251.jpg"
+  },
+  "291": {
+    "imagem": "img/produtos/291.jpg"
   },
   "294": {
     "descricao": "REMOVEDOR 2L",

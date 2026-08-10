@@ -14,7 +14,7 @@
         "descricao":  "AGUA SANITARIA 5 LITROS",
         "preco_venda":  11,
         "preco":  11,
-        "estoque":  3,
+        "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/381.jpg"
@@ -127,7 +127,7 @@
         "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/88.jpg"
     },
     {
         "id":  94,
@@ -137,7 +137,7 @@
         "estoque":  7,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/94.jpg"
     },
     {
         "id":  87,
@@ -360,16 +360,6 @@
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
-        "id":  400,
-        "descricao":  "BARRILHA",
-        "preco_venda":  12,
-        "preco":  12,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
         "id":  308,
         "descricao":  "BARRILHA 1 KILO",
         "preco_venda":  20,
@@ -468,16 +458,6 @@
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/335.jpg"
-    },
-    {
-        "id":  197,
-        "descricao":  "CHEIRINHO PARA CASA",
-        "preco_venda":  13,
-        "preco":  13,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
     },
     {
         "id":  2,
@@ -617,7 +597,7 @@
         "estoque":  0,
         "disponivel":  false,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/24.jpg"
     },
     {
         "id":  42,
@@ -627,7 +607,7 @@
         "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/42.jpg"
     },
     {
         "id":  21,
@@ -907,7 +887,7 @@
         "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/39.jpg"
     },
     {
         "id":  430,
@@ -1120,16 +1100,6 @@
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
-        "id":  250,
-        "descricao":  "GATILHO COM EMBALAGEM",
-        "preco_venda":  9.9,
-        "preco":  9.9,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
         "id":  315,
         "descricao":  "GATILHO COM EMBALAGEM",
         "preco_venda":  9.9,
@@ -1144,46 +1114,6 @@
         "descricao":  "GEL SANITARIO",
         "preco_venda":  4,
         "preco":  4,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  301,
-        "descricao":  "HCL 2L",
-        "preco_venda":  40,
-        "preco":  40,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  219,
-        "descricao":  "HCL 5L",
-        "preco_venda":  100,
-        "preco":  100,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  261,
-        "descricao":  "HIPO 12",
-        "preco_venda":  40,
-        "preco":  40,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  206,
-        "descricao":  "HIPOCLORITO 5L",
-        "preco_venda":  35,
-        "preco":  35,
         "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
@@ -1287,7 +1217,7 @@
         "estoque":  0,
         "disponivel":  false,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/291.jpg"
     },
     {
         "id":  82,
@@ -1307,7 +1237,7 @@
         "estoque":  0,
         "disponivel":  false,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/83.jpg"
     },
     {
         "id":  251,
@@ -1317,7 +1247,7 @@
         "estoque":  7,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/251.jpg"
     },
     {
         "id":  276,
@@ -1737,7 +1667,7 @@
         "estoque":  13,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
+        "imagem":  "img/produtos/185.jpg"
     },
     {
         "id":  260,
@@ -2455,16 +2385,6 @@
         "preco_venda":  5,
         "preco":  5,
         "estoque":  98,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  74,
-        "descricao":  "TERRA CHAO",
-        "preco_venda":  17,
-        "preco":  17,
-        "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
