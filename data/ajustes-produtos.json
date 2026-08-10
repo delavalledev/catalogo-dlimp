@@ -27,7 +27,13 @@
     "imagem": "img/produtos/23.jpg"
   },
   "24": {
-    "imagem": "img/produtos/24.jpg"
+    "descricao": "DESINFETANTE CAPIM LIMÃO 2L",
+    "preco": 6.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "27": {
     "imagem": "img/produtos/27.jpg"
@@ -51,7 +57,13 @@
     "imagem": "img/produtos/45.jpg"
   },
   "46": {
-    "imagem": "img/produtos/46.jpg"
+    "descricao": "LIMPA CANO SUPER 1 LITRO",
+    "preco": 20,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "51": {
     "descricao": "PERFUME PARA BANHEIRO 2 LITROS",
@@ -110,7 +122,13 @@
     "imagem": "img/produtos/83.jpg"
   },
   "87": {
-    "imagem": "img/produtos/87.jpg"
+    "descricao": "ALCOOL PERFUMADO CEREJA AVELÃ 2 LITROS",
+    "preco": 10,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "88": {
     "imagem": "img/produtos/88.jpg"
@@ -194,7 +212,9 @@
     "descricao": "VASSOURA TROPICANA",
     "preco": 19,
     "disponivel": true,
-    "categoria": "utilitarios",
+    "categorias": [
+      "utilitarios"
+    ],
     "exibirSite": true,
     "promocao": false,
     "novo": false
