@@ -1,12 +1,32 @@
 {
   "1": {
-    "imagem": "img/produtos/1.jpg"
+    "descricao": "PANO DE PRATO",
+    "preco": 5.5,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "9": {
     "imagem": "img/produtos/9.jpg"
   },
   "10": {
     "imagem": "img/produtos/10.jpg"
+  },
+  "11": {
+    "descricao": "SOLUPAM 1 LITRO",
+    "preco": 10,
+    "disponivel": true,
+    "categorias": [
+      "industrial"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "12": {
     "descricao": "SOLUPAM 2 LITROS",
@@ -20,8 +40,17 @@
     "promocao": false,
     "novo": false
   },
+  "15": {
+    "imagem": "img/produtos/15.jpg"
+  },
+  "16": {
+    "imagem": "img/produtos/16.jpg"
+  },
   "17": {
     "imagem": "img/produtos/17.jpg"
+  },
+  "22": {
+    "imagem": "img/produtos/22.jpg"
   },
   "23": {
     "imagem": "img/produtos/23.jpg"
@@ -34,6 +63,9 @@
     "exibirSite": true,
     "promocao": false,
     "novo": false
+  },
+  "26": {
+    "imagem": "img/produtos/26.jpg"
   },
   "27": {
     "imagem": "img/produtos/27.jpg"
@@ -64,6 +96,9 @@
     "exibirSite": true,
     "promocao": false,
     "novo": false
+  },
+  "49": {
+    "imagem": "img/produtos/49.jpg"
   },
   "51": {
     "descricao": "PERFUME PARA BANHEIRO 2 LITROS",
@@ -112,14 +147,48 @@
   "71": {
     "imagem": "img/produtos/71.jpg"
   },
+  "72": {
+    "imagem": "img/produtos/72.jpg"
+  },
+  "79": {
+    "imagem": "img/produtos/79.jpg"
+  },
   "80": {
-    "imagem": "img/produtos/80.jpg"
+    "descricao": "BLOCO DE ESPUMA",
+    "preco": 8.5,
+    "disponivel": true,
+    "categorias": [
+      "industrial",
+      "automotivo",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "82": {
-    "imagem": "img/produtos/82.jpg"
+    "descricao": "LIMPA BAU 2 LITROS",
+    "preco": 18,
+    "disponivel": true,
+    "categorias": [
+      "industrial",
+      "automotivo"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "83": {
-    "imagem": "img/produtos/83.jpg"
+    "descricao": "LIMPA BAU 5 LITROS",
+    "preco": 39.9,
+    "disponivel": false,
+    "categorias": [
+      "industrial",
+      "automotivo"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "87": {
     "descricao": "ALCOOL PERFUMADO CEREJA AVELÃ 2 LITROS",
@@ -128,19 +197,40 @@
     "categorias": [],
     "exibirSite": true,
     "promocao": false,
-    "novo": false
+    "novo": true
   },
   "88": {
-    "imagem": "img/produtos/88.jpg"
+    "descricao": "ALCOOL PERFUMADO BAMBOO 2 LITROS",
+    "preco": 9.8,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": true
   },
   "94": {
-    "imagem": "img/produtos/94.jpg"
+    "descricao": "ALCOOL PERFUMADO BAMBOO 5 LITROS",
+    "preco": 19.9,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": true
   },
   "95": {
-    "imagem": "img/produtos/95.jpg"
+    "descricao": "ALCOOL PERFUMADO CEREJA AVELÃ 5 LITROS",
+    "preco": 19.9,
+    "disponivel": false,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": true
   },
   "100": {
     "imagem": "img/produtos/100.jpg"
+  },
+  "104": {
+    "imagem": "img/produtos/104.jpg"
   },
   "111": {
     "imagem": "img/produtos/111.jpg"
@@ -155,7 +245,9 @@
     "descricao": "RODO PIA",
     "preco": 4,
     "disponivel": true,
-    "categoria": "",
+    "categorias": [
+      "utilitarios"
+    ],
     "exibirSite": true,
     "promocao": false,
     "novo": false
@@ -166,11 +258,47 @@
   "130": {
     "imagem": "img/produtos/130.jpg"
   },
+  "131": {
+    "descricao": "BUCHA LAVA LOUÇAS",
+    "preco": 2.5,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
   "133": {
     "descricao": "ESCOVA ROUPA MADEIRA",
     "preco": 5.8,
     "disponivel": true,
     "categoria": "",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "141": {
+    "descricao": "VASSOURA POP",
+    "preco": 16,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "143": {
+    "descricao": "VASSOURA AQUARELA",
+    "preco": 24,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
     "exibirSite": true,
     "promocao": false,
     "novo": false
@@ -187,8 +315,57 @@
     "promocao": false,
     "novo": false
   },
+  "147": {
+    "descricao": "VASSOURA PELO PANDA",
+    "preco": 13,
+    "disponivel": false,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "148": {
+    "descricao": "VASSOURA RAVENA",
+    "preco": 17,
+    "disponivel": false,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false,
+    "imagem": "img/produtos/148.jpg"
+  },
   "149": {
     "descricao": "VASSOURA ESFREGA FORTE",
+    "preco": 18,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "150": {
+    "descricao": "RODO PLASTICO 30CM",
+    "preco": 16,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "151": {
+    "descricao": "RODO PLASTICO 40CM",
     "preco": 18,
     "disponivel": true,
     "categorias": [
@@ -203,7 +380,11 @@
     "descricao": "RODO PLASTICO 60CM",
     "preco": 19,
     "disponivel": true,
-    "categoria": "",
+    "categorias": [
+      "residencial",
+      "industrial",
+      "utilitarios"
+    ],
     "exibirSite": true,
     "promocao": false,
     "novo": false
@@ -213,7 +394,32 @@
     "preco": 19,
     "disponivel": true,
     "categorias": [
+      "residencial",
       "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "170": {
+    "descricao": "GATILHO VALVULA PUMP",
+    "preco": 5.5,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false,
+    "imagem": "img/produtos/170.jpg"
+  },
+  "176": {
+    "descricao": "ALCOOL 96 1L",
+    "preco": 16,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "industrial"
     ],
     "exibirSite": true,
     "promocao": false,
@@ -223,7 +429,16 @@
     "imagem": "img/produtos/179.jpg"
   },
   "185": {
-    "imagem": "img/produtos/185.jpg"
+    "descricao": "PANO ALVEJADO/XADREZ",
+    "preco": 5.9,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "187": {
     "imagem": "img/produtos/187.jpg"
@@ -237,8 +452,28 @@
     "promocao": false,
     "novo": false
   },
+  "194": {
+    "descricao": "PANO MICROFIBRA",
+    "preco": 5.5,
+    "disponivel": false,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
   "199": {
     "imagem": "img/produtos/199.jpg"
+  },
+  "207": {
+    "descricao": "PERFUME PARA ROUPA 5L",
+    "preco": 39.5,
+    "disponivel": true,
+    "categorias": [
+      "residencial"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "210": {
     "descricao": "AGUA SANITARIA ATACADO",
@@ -261,8 +496,41 @@
   "251": {
     "imagem": "img/produtos/251.jpg"
   },
+  "260": {
+    "descricao": "PANO DE PIA",
+    "preco": 3,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "263": {
+    "descricao": "VASSOURA SOFT",
+    "preco": 17,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
   "291": {
-    "imagem": "img/produtos/291.jpg"
+    "descricao": "LIMPA BAU 1 LITRO",
+    "preco": 8,
+    "disponivel": false,
+    "categorias": [
+      "industrial",
+      "automotivo"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "294": {
     "descricao": "REMOVEDOR 2L",
@@ -276,8 +544,81 @@
   "299": {
     "imagem": "img/produtos/299.jpg"
   },
+  "308": {
+    "descricao": "BARRILHA 500 GR",
+    "preco": 20,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false,
+    "imagem": "img/produtos/308.jpg"
+  },
+  "315": {
+    "descricao": "GATILHO VALVULA SPRAY",
+    "preco": 9.9,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false,
+    "imagem": "img/produtos/315.jpg"
+  },
   "328": {
-    "imagem": "img/produtos/328.jpg"
+    "descricao": "MATA INSETO 500ML C GATILHO SPRAY",
+    "preco": 15,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "industrial"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "335": {
+    "descricao": "CESTO TELADO 60LTS",
+    "preco": 49.9,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "337": {
+    "imagem": "img/produtos/337.jpg"
+  },
+  "341": {
+    "descricao": "ESFREGÃO GARI",
+    "preco": 56,
+    "disponivel": false,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "348": {
+    "descricao": "PANO MICROFIBRA",
+    "preco": 9.9,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "industrial",
+      "automotivo",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "381": {
     "descricao": "AGUA SANITARIA 5 LITROS",
@@ -290,6 +631,31 @@
     "promocao": false,
     "novo": false
   },
+  "390": {
+    "descricao": "VASSOURA GRAN MESTRA",
+    "preco": 24,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "394": {
+    "descricao": "VASSOURA PIAÇAVA GLOBO",
+    "preco": 22,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false,
+    "imagem": "img/produtos/394.jpg"
+  },
   "399": {
     "descricao": "AGUA SANITARIA 2 LITROS",
     "preco": 6,
@@ -301,9 +667,36 @@
     "promocao": false,
     "novo": false
   },
+  "405": {
+    "descricao": "VASSOURA GARI",
+    "preco": 37,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "411": {
+    "imagem": "img/produtos/411.jpg"
+  },
   "416": {
     "descricao": "VASSOURA DE BRUXA",
     "preco": 45.9,
+    "disponivel": true,
+    "categorias": [
+      "residencial",
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "422": {
+    "descricao": "VASSOURA VERONA PLUS",
+    "preco": 19,
     "disponivel": true,
     "categorias": [
       "residencial",
@@ -331,5 +724,34 @@
     "exibirSite": true,
     "promocao": false,
     "novo": false
+  },
+  "427441": {
+    "descricao": "ALCOOL PERFUMADO MAÇA CANELA 5 LITROS",
+    "preco": 19.9,
+    "disponivel": false,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": true
+  },
+  "427447": {
+    "descricao": "CESTO TELADO 12 LTS",
+    "preco": 8,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "427448": {
+    "descricao": "ALCOOL PERFUMADO MAÇA CANELA 2 LITROS",
+    "preco": 10,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": true
   }
 }
