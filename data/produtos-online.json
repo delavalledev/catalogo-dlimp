@@ -4,7 +4,7 @@
         "descricao":  "AGUA SANITARIA 2 LITROS",
         "preco_venda":  6,
         "preco":  6,
-        "estoque":  7,
+        "estoque":  8,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/399.jpg"
@@ -14,7 +14,7 @@
         "descricao":  "AGUA SANITARIA 5 LITROS",
         "preco_venda":  11,
         "preco":  11,
-        "estoque":  1,
+        "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/381.jpg"
@@ -50,6 +50,16 @@
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
+        "id":  427456,
+        "descricao":  "ALCOOL 70 500ML",
+        "preco_venda":  10,
+        "preco":  10,
+        "estoque":  8,
+        "disponivel":  true,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
         "id":  175,
         "descricao":  "ALCOOL 70 5L",
         "preco_venda":  60,
@@ -62,8 +72,8 @@
     {
         "id":  176,
         "descricao":  "ALCOOL 96 1L",
-        "preco_venda":  16,
-        "preco":  16,
+        "preco_venda":  20,
+        "preco":  20,
         "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
@@ -72,8 +82,8 @@
     {
         "id":  177,
         "descricao":  "ALCOOL 96 2L",
-        "preco_venda":  26,
-        "preco":  26,
+        "preco_venda":  35,
+        "preco":  35,
         "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
@@ -82,8 +92,8 @@
     {
         "id":  178,
         "descricao":  "ALCOOL 96 5L",
-        "preco_venda":  55,
-        "preco":  55,
+        "preco_venda":  70,
+        "preco":  70,
         "estoque":  4,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
@@ -102,8 +112,8 @@
     {
         "id":  346,
         "descricao":  "ALCOOL GEL 500 ML",
-        "preco_venda":  8,
-        "preco":  8,
+        "preco_venda":  12,
+        "preco":  12,
         "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
@@ -184,7 +194,7 @@
         "descricao":  "ALVEJANTE SEM CLORO 2 LITROS",
         "preco_venda":  9.8,
         "preco":  9.8,
-        "estoque":  5,
+        "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -194,8 +204,8 @@
         "descricao":  "ALVEJANTE SEM CLORO 5 LITROS",
         "preco_venda":  20,
         "preco":  20,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  1,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -224,7 +234,7 @@
         "descricao":  "AMACIANTE DOWNIE 2 LITROS",
         "preco_venda":  10,
         "preco":  10,
-        "estoque":  2,
+        "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/56.jpg"
@@ -244,7 +254,7 @@
         "descricao":  "AMACIANTE MAMAE BEBE 2 LITROS",
         "preco_venda":  10,
         "preco":  10,
-        "estoque":  7,
+        "estoque":  5,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/58.jpg"
@@ -264,8 +274,8 @@
         "descricao":  "ANTI MOFO 500ML",
         "preco_venda":  11,
         "preco":  11,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  6,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/222.jpg"
     },
@@ -324,7 +334,7 @@
         "descricao":  "BALDE 10L",
         "preco_venda":  12,
         "preco":  12,
-        "estoque":  2,
+        "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/225.jpg"
@@ -394,7 +404,7 @@
         "descricao":  "BUCHA INOX",
         "preco_venda":  4,
         "preco":  4,
-        "estoque":  1,
+        "estoque":  3,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -464,7 +474,7 @@
         "descricao":  "CLORO 1 LITRO",
         "preco_venda":  8,
         "preco":  8,
-        "estoque":  1,
+        "estoque":  3,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/2.jpg"
@@ -474,7 +484,7 @@
         "descricao":  "CLORO 2 LITROS",
         "preco_venda":  15,
         "preco":  15,
-        "estoque":  5,
+        "estoque":  14,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/7.jpg"
@@ -484,7 +494,7 @@
         "descricao":  "CLORO 5 LITROS",
         "preco_venda":  28,
         "preco":  28,
-        "estoque":  1,
+        "estoque":  5,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/18.jpg"
@@ -525,6 +535,86 @@
         "preco_venda":  39.9,
         "preco":  39.9,
         "estoque":  1,
+        "disponivel":  true,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
+        "id":  427450,
+        "descricao":  "CONCENTRATO CHA BRANCO",
+        "preco_venda":  15.9,
+        "preco":  15.9,
+        "estoque":  2,
+        "disponivel":  true,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
+        "id":  427451,
+        "descricao":  "CONCENTRATO FLORAL",
+        "preco_venda":  15.9,
+        "preco":  15.9,
+        "estoque":  1,
+        "disponivel":  true,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
+        "id":  427455,
+        "descricao":  "CONCENTRATO FLORES DO CAMPO",
+        "preco_venda":  15.9,
+        "preco":  15.9,
+        "estoque":  1,
+        "disponivel":  true,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
+        "id":  427454,
+        "descricao":  "CONCENTRATO GIOVANNA",
+        "preco_venda":  15.9,
+        "preco":  15.9,
+        "estoque":  1,
+        "disponivel":  true,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
+        "id":  427452,
+        "descricao":  "CONCENTRATO LAVANDA",
+        "preco_venda":  15.9,
+        "preco":  15.9,
+        "estoque":  0,
+        "disponivel":  false,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
+        "id":  427453,
+        "descricao":  "CONCENTRATO MARINE",
+        "preco_venda":  15.9,
+        "preco":  15.9,
+        "estoque":  0,
+        "disponivel":  false,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
+        "id":  427449,
+        "descricao":  "CONCENTRATO TULIPA NEGRA",
+        "preco_venda":  15.9,
+        "preco":  15.9,
+        "estoque":  2,
+        "disponivel":  true,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
+        "id":  307,
+        "descricao":  "CONCENTRATO UBATUBA",
+        "preco_venda":  15.9,
+        "preco":  15.9,
+        "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -574,8 +664,8 @@
         "descricao":  "DESINFETANTE CAPIM LIMÃO 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  7,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/24.jpg"
     },
@@ -614,7 +704,7 @@
         "descricao":  "DESINFETANTE CITRONELA 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
-        "estoque":  1,
+        "estoque":  3,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -654,7 +744,7 @@
         "descricao":  "DESINFETANTE FLOR DE CEREJEIRA 2 LITROS",
         "preco_venda":  6.5,
         "preco":  6.5,
-        "estoque":  7,
+        "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/71.jpg"
@@ -704,7 +794,7 @@
         "descricao":  "DESINFETANTE KAIAK 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
-        "estoque":  9,
+        "estoque":  8,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/28.jpg"
@@ -724,7 +814,7 @@
         "descricao":  "DESINFETANTE LAVANDA 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
-        "estoque":  4,
+        "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/23.jpg"
@@ -744,7 +834,7 @@
         "descricao":  "DESINFETANTE MAMAE BEBE 2 LITROS",
         "preco_venda":  6.5,
         "preco":  6.5,
-        "estoque":  3,
+        "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/299.jpg"
@@ -774,7 +864,7 @@
         "descricao":  "DESINFETANTE NATUREZA 2L",
         "preco_venda":  6.2,
         "preco":  6.2,
-        "estoque":  3,
+        "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -814,7 +904,7 @@
         "descricao":  "DESINFETANTE REVEILLON 2 LITROS",
         "preco_venda":  6.5,
         "preco":  6.5,
-        "estoque":  10,
+        "estoque":  8,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/30.jpg"
@@ -834,7 +924,7 @@
         "descricao":  "DESINFETANTE TALCO 2 LITROS",
         "preco_venda":  6.5,
         "preco":  6.5,
-        "estoque":  6,
+        "estoque":  4,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/31.jpg"
@@ -844,8 +934,8 @@
         "descricao":  "DESINFETANTE TALCO 5 LITROS",
         "preco_venda":  11.5,
         "preco":  11.5,
-        "estoque":  1,
-        "disponivel":  true,
+        "estoque":  0,
+        "disponivel":  false,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/39.jpg"
     },
@@ -904,7 +994,7 @@
         "descricao":  "DETERGENTE NEUTRO 1 LITRO",
         "preco_venda":  5.5,
         "preco":  5.5,
-        "estoque":  8,
+        "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -914,8 +1004,8 @@
         "descricao":  "DETERGENTE NEUTRO 2 LITROS",
         "preco_venda":  10,
         "preco":  10,
-        "estoque":  1,
-        "disponivel":  true,
+        "estoque":  0,
+        "disponivel":  false,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -935,16 +1025,6 @@
         "preco_venda":  3,
         "preco":  3,
         "estoque":  101,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  307,
-        "descricao":  "DIA DIA",
-        "preco_venda":  15.9,
-        "preco":  15.9,
-        "estoque":  15,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -1064,6 +1144,16 @@
         "descricao":  "GEL SANITARIO",
         "preco_venda":  4,
         "preco":  4,
+        "estoque":  14,
+        "disponivel":  true,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
+        "id":  5,
+        "descricao":  "HOME SPRAY BAUNILHA",
+        "preco_venda":  16,
+        "preco":  16,
         "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
@@ -1104,8 +1194,8 @@
         "descricao":  "LIMPA ALUMINIO 2 LITROS",
         "preco_venda":  18,
         "preco":  18,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  1,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/112.jpg"
     },
@@ -1124,7 +1214,7 @@
         "descricao":  "LIMPA ALUMINIO 500ML",
         "preco_venda":  7,
         "preco":  7,
-        "estoque":  6,
+        "estoque":  5,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -1134,8 +1224,8 @@
         "descricao":  "LIMPA AZULEJO MADEIRA",
         "preco_venda":  15,
         "preco":  15,
-        "estoque":  1,
-        "disponivel":  true,
+        "estoque":  0,
+        "disponivel":  false,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1174,7 +1264,7 @@
         "descricao":  "LIMPA BAU 2 LITROS",
         "preco_venda":  18,
         "preco":  18,
-        "estoque":  2,
+        "estoque":  5,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/82.jpg"
@@ -1184,8 +1274,8 @@
         "descricao":  "LIMPA BAU 5 LITROS",
         "preco_venda":  39.9,
         "preco":  39.9,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  2,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/83.jpg"
     },
@@ -1194,7 +1284,7 @@
         "descricao":  "LIMPA CANIL 2 LITROS",
         "preco_venda":  10,
         "preco":  10,
-        "estoque":  7,
+        "estoque":  8,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/251.jpg"
@@ -1204,7 +1294,7 @@
         "descricao":  "LIMPA CANIL 5L",
         "preco_venda":  20,
         "preco":  20,
-        "estoque":  1,
+        "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -1324,8 +1414,8 @@
         "descricao":  "LIMPA PEDRA 2 LITROS",
         "preco_venda":  18,
         "preco":  18,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  7,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/15.jpg"
     },
@@ -1334,7 +1424,7 @@
         "descricao":  "LIMPA PEDRA 5 LITROS",
         "preco_venda":  39.9,
         "preco":  39.9,
-        "estoque":  1,
+        "estoque":  3,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/16.jpg"
@@ -1364,7 +1454,7 @@
         "descricao":  "LIMPA TUDO 2 LITROS",
         "preco_venda":  15,
         "preco":  15,
-        "estoque":  5,
+        "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/100.jpg"
@@ -1424,8 +1514,8 @@
         "descricao":  "LUSTRA MOVEIS 500ML",
         "preco_venda":  11,
         "preco":  11,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  7,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/221.jpg"
     },
@@ -1464,7 +1554,7 @@
         "descricao":  "MARIDAO 2 LITROS",
         "preco_venda":  10,
         "preco":  10,
-        "estoque":  6,
+        "estoque":  8,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/9.jpg"
@@ -1474,7 +1564,7 @@
         "descricao":  "MARIDAO 5 LITROS",
         "preco_venda":  20,
         "preco":  20,
-        "estoque":  1,
+        "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/10.jpg"
@@ -1541,10 +1631,10 @@
     },
     {
         "id":  286,
-        "descricao":  "ODORIZANTE DE AMBIENTE",
+        "descricao":  "ODORIZANTE DE AMBIENTE BIXINHO",
         "preco_venda":  13,
         "preco":  13,
-        "estoque":  1,
+        "estoque":  4,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -1554,7 +1644,7 @@
         "descricao":  "ODORIZANTE PARA CARRO MELANCIA (ROSA)",
         "preco_venda":  10,
         "preco":  10,
-        "estoque":  15,
+        "estoque":  14,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -1564,7 +1654,7 @@
         "descricao":  "ODORIZANTE PARA CARRO TROUSSARDI (AZUL)",
         "preco_venda":  10,
         "preco":  10,
-        "estoque":  3,
+        "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -1614,7 +1704,7 @@
         "descricao":  "PANO ALVEJADO/XADREZ",
         "preco_venda":  5.9,
         "preco":  5.9,
-        "estoque":  13,
+        "estoque":  45,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/185.jpg"
@@ -1634,7 +1724,7 @@
         "descricao":  "PANO DE PRATO",
         "preco_venda":  5.5,
         "preco":  5.5,
-        "estoque":  7,
+        "estoque":  18,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/1.jpg"
@@ -1654,8 +1744,8 @@
         "descricao":  "PASSA CERA",
         "preco_venda":  18,
         "preco":  18,
-        "estoque":  3,
-        "disponivel":  true,
+        "estoque":  0,
+        "disponivel":  false,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/173.jpg"
     },
@@ -1664,7 +1754,7 @@
         "descricao":  "PASTA DE BRILHO 500GR",
         "preco_venda":  9,
         "preco":  9,
-        "estoque":  2,
+        "estoque":  14,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/98.jpg"
@@ -1684,14 +1774,14 @@
         "descricao":  "PEDRA SANITARIA",
         "preco_venda":  3,
         "preco":  3,
-        "estoque":  26,
+        "estoque":  22,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
         "id":  423,
-        "descricao":  "PERCABONATO 1 KILO",
+        "descricao":  "PERCABONATO 1KG",
         "preco_venda":  25,
         "preco":  25,
         "estoque":  0,
@@ -1701,7 +1791,7 @@
     },
     {
         "id":  441,
-        "descricao":  "PERCABONATO 500GR",
+        "descricao":  "PERCARBONATO 500GR",
         "preco_venda":  15,
         "preco":  15,
         "estoque":  0,
@@ -1714,8 +1804,8 @@
         "descricao":  "PERFUME PARA BANHEIRO 2 LITROS",
         "preco_venda":  16,
         "preco":  16,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  2,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/51.jpg"
     },
@@ -1724,8 +1814,8 @@
         "descricao":  "PERFUME PARA BANHEIRO 5 LITROS",
         "preco_venda":  39.9,
         "preco":  39.9,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  1,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/52.jpg"
     },
@@ -1804,8 +1894,8 @@
         "descricao":  "PNEU PRETINHO 500ML",
         "preco_venda":  8,
         "preco":  8,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  11,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1845,6 +1935,16 @@
         "preco_venda":  45,
         "preco":  45,
         "estoque":  1,
+        "disponivel":  true,
+        "ForaDeUso":  "NÃO",
+        "imagem":  "img/produtos/sem_imagem.png"
+    },
+    {
+        "id":  427457,
+        "descricao":  "PULVERIZADOR",
+        "preco_venda":  13,
+        "preco":  13,
+        "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -1914,7 +2014,7 @@
         "descricao":  "RODO PLASTICO 40CM",
         "preco_venda":  18,
         "preco":  18,
-        "estoque":  7,
+        "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/151.jpg"
@@ -1924,8 +2024,8 @@
         "descricao":  "RODO PLASTICO 60CM",
         "preco_venda":  22,
         "preco":  22,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  3,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/152.jpg"
     },
@@ -1944,7 +2044,7 @@
         "descricao":  "SABÃO LIQUIDO ARIEX 2 LITROS",
         "preco_venda":  14,
         "preco":  14,
-        "estoque":  11,
+        "estoque":  5,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/17.jpg"
@@ -1964,7 +2064,7 @@
         "descricao":  "SABÃO LIQUIDO COM BICARBONATO 2 LITROS",
         "preco_venda":  18,
         "preco":  18,
-        "estoque":  4,
+        "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/63.jpg"
@@ -2014,7 +2114,7 @@
         "descricao":  "SABÃO LIQUIDO OMUS 2 LITROS",
         "preco_venda":  14,
         "preco":  14,
-        "estoque":  4,
+        "estoque":  7,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/60.jpg"
@@ -2024,8 +2124,8 @@
         "descricao":  "SABÃO LIQUIDO OMUS 5 LITROS",
         "preco_venda":  29.9,
         "preco":  29.9,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  2,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2034,8 +2134,8 @@
         "descricao":  "SABAO QUEROSENE 2 LITROS",
         "preco_venda":  15,
         "preco":  15,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  2,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2124,7 +2224,7 @@
         "descricao":  "SACO DE LIIXO 40LTS 10UNI",
         "preco_venda":  5.5,
         "preco":  5.5,
-        "estoque":  110,
+        "estoque":  108,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -2134,8 +2234,8 @@
         "descricao":  "SACO DE LIXO 100 5UNI",
         "preco_venda":  13,
         "preco":  13,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  10,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2164,7 +2264,7 @@
         "descricao":  "SACO DE LIXO 40 LTS 10UN",
         "preco_venda":  8,
         "preco":  8,
-        "estoque":  149,
+        "estoque":  10,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -2284,7 +2384,7 @@
         "descricao":  "SOLUPAM 2 LITROS",
         "preco_venda":  18,
         "preco":  18,
-        "estoque":  4,
+        "estoque":  13,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/12.jpg"
@@ -2294,8 +2394,8 @@
         "descricao":  "SOLUPAM 5 LITROS",
         "preco_venda":  39.9,
         "preco":  39.9,
-        "estoque":  0,
-        "disponivel":  false,
+        "estoque":  2,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2404,7 +2504,7 @@
         "descricao":  "VASSOURA CANTO",
         "preco_venda":  21,
         "preco":  21,
-        "estoque":  5,
+        "estoque":  3,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/146.jpg"
@@ -2424,7 +2524,7 @@
         "descricao":  "VASSOURA ESFREGA FORTE",
         "preco_venda":  18,
         "preco":  18,
-        "estoque":  3,
+        "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/149.jpg"
@@ -2464,8 +2564,8 @@
         "descricao":  "VASSOURA POP",
         "preco_venda":  16,
         "preco":  16,
-        "estoque":  1,
-        "disponivel":  true,
+        "estoque":  0,
+        "disponivel":  false,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2474,7 +2574,7 @@
         "descricao":  "VASSOURA RAVENA",
         "preco_venda":  19,
         "preco":  19,
-        "estoque":  4,
+        "estoque":  3,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/148.jpg"
@@ -2484,7 +2584,7 @@
         "descricao":  "VASSOURA SOFT",
         "preco_venda":  17,
         "preco":  17,
-        "estoque":  3,
+        "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
