@@ -80,7 +80,7 @@ foreach ($produto in $produtosSysOn) {
         preco_venda = [double]$produto.preco
         preco       = [double]$produto.preco
         estoque     = [double]$produto.estoque
-        disponivel  = [bool]$produto.disponivel
+        disponivel  = $true
         ForaDeUso   = $produto.ForaDeUso
         imagem      = $imagemProjeto
     }

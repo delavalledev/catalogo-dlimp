@@ -56,7 +56,7 @@
     "imagem": "img/produtos/23.jpg"
   },
   "24": {
-    "descricao": "DESINFETANTE CAPIM LIMÃO 2L",
+    "descricao": "DESINFETANTE CAPIM LIMÃƒO 2L",
     "preco": 6.5,
     "disponivel": true,
     "categorias": [],
@@ -135,7 +135,7 @@
     "imagem": "img/produtos/65.jpg"
   },
   "68": {
-    "descricao": "SABÃO LIQUIDO DE COCO 5 LITROS",
+    "descricao": "SABÃƒO LIQUIDO DE COCO 5 LITROS",
     "preco": 29.9,
     "disponivel": true,
     "categoria": "",
@@ -181,7 +181,7 @@
   "83": {
     "descricao": "LIMPA BAU 5 LITROS",
     "preco": 39.9,
-    "disponivel": false,
+    "disponivel": true,
     "categorias": [
       "industrial",
       "automotivo"
@@ -191,7 +191,7 @@
     "novo": false
   },
   "87": {
-    "descricao": "ALCOOL PERFUMADO CEREJA AVELÃ 2 LITROS",
+    "descricao": "ALCOOL PERFUMADO CEREJA AVELÃƒ 2 LITROS",
     "preco": 10,
     "disponivel": true,
     "categorias": [],
@@ -218,9 +218,9 @@
     "novo": true
   },
   "95": {
-    "descricao": "ALCOOL PERFUMADO CEREJA AVELÃ 5 LITROS",
+    "descricao": "ALCOOL PERFUMADO CEREJA AVELÃƒ 5 LITROS",
     "preco": 19.9,
-    "disponivel": false,
+    "disponivel": true,
     "categorias": [],
     "exibirSite": true,
     "promocao": false,
@@ -259,7 +259,7 @@
     "imagem": "img/produtos/130.jpg"
   },
   "131": {
-    "descricao": "BUCHA LAVA LOUÇAS",
+    "descricao": "BUCHA LAVA LOUÃ‡AS",
     "preco": 2.5,
     "disponivel": true,
     "categorias": [
@@ -318,7 +318,7 @@
   "147": {
     "descricao": "VASSOURA PELO PANDA",
     "preco": 13,
-    "disponivel": false,
+    "disponivel": true,
     "categorias": [
       "residencial",
       "utilitarios"
@@ -330,7 +330,7 @@
   "148": {
     "descricao": "VASSOURA RAVENA",
     "preco": 17,
-    "disponivel": false,
+    "disponivel": true,
     "categorias": [
       "residencial",
       "utilitarios"
@@ -413,6 +413,15 @@
     "novo": false,
     "imagem": "img/produtos/170.jpg"
   },
+  "172": {
+    "descricao": "CLORO ATACADO",
+    "preco": 4.1,
+    "disponivel": false,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
   "176": {
     "descricao": "ALCOOL 96 1L",
     "preco": 16,
@@ -455,7 +464,7 @@
   "194": {
     "descricao": "PANO MICROFIBRA",
     "preco": 5.5,
-    "disponivel": false,
+    "disponivel": true,
     "categorias": [],
     "exibirSite": true,
     "promocao": false,
@@ -496,6 +505,15 @@
   "251": {
     "imagem": "img/produtos/251.jpg"
   },
+  "254": {
+    "descricao": "DETERGENTE NEUTRO ATACADO",
+    "preco": 3,
+    "disponivel": false,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
   "260": {
     "descricao": "PANO DE PIA",
     "preco": 3,
@@ -523,7 +541,7 @@
   "291": {
     "descricao": "LIMPA BAU 1 LITRO",
     "preco": 8,
-    "disponivel": false,
+    "disponivel": true,
     "categorias": [
       "industrial",
       "automotivo"
@@ -596,9 +614,9 @@
     "imagem": "img/produtos/337.jpg"
   },
   "341": {
-    "descricao": "ESFREGÃO GARI",
+    "descricao": "ESFREGÃƒO GARI",
     "preco": 56,
-    "disponivel": false,
+    "disponivel": true,
     "categorias": [
       "utilitarios"
     ],
@@ -644,7 +662,7 @@
     "novo": false
   },
   "394": {
-    "descricao": "VASSOURA PIAÇAVA GLOBO",
+    "descricao": "VASSOURA PIAÃ‡AVA GLOBO",
     "preco": 22,
     "disponivel": true,
     "categorias": [
@@ -681,6 +699,15 @@
   },
   "411": {
     "imagem": "img/produtos/411.jpg"
+  },
+  "413": {
+    "descricao": "SOLUPAM ATACADO",
+    "preco": 4,
+    "disponivel": false,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "416": {
     "descricao": "VASSOURA DE BRUXA",
@@ -726,9 +753,9 @@
     "novo": false
   },
   "427441": {
-    "descricao": "ALCOOL PERFUMADO MAÇA CANELA 5 LITROS",
+    "descricao": "ALCOOL PERFUMADO MAÃ‡A CANELA 5 LITROS",
     "preco": 19.9,
-    "disponivel": false,
+    "disponivel": true,
     "categorias": [],
     "exibirSite": true,
     "promocao": false,
@@ -746,7 +773,7 @@
     "novo": false
   },
   "427448": {
-    "descricao": "ALCOOL PERFUMADO MAÇA CANELA 2 LITROS",
+    "descricao": "ALCOOL PERFUMADO MAÃ‡A CANELA 2 LITROS",
     "preco": 10,
     "disponivel": true,
     "categorias": [],

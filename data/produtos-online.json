@@ -25,7 +25,7 @@
         "preco_venda":  1.5,
         "preco":  1.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -65,7 +65,7 @@
         "preco_venda":  60,
         "preco":  60,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -105,7 +105,7 @@
         "preco_venda":  16.99,
         "preco":  16.99,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -155,7 +155,7 @@
         "preco_venda":  10,
         "preco":  10,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/87.jpg"
     },
@@ -165,7 +165,7 @@
         "preco_venda":  19.9,
         "preco":  19.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/95.jpg"
     },
@@ -185,7 +185,7 @@
         "preco_venda":  19.9,
         "preco":  19.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/427441.jpg"
     },
@@ -225,7 +225,7 @@
         "preco_venda":  20,
         "preco":  20,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/187.jpg"
     },
@@ -245,7 +245,7 @@
         "preco_venda":  25,
         "preco":  25,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -515,7 +515,7 @@
         "preco_venda":  8,
         "preco":  8,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -585,7 +585,7 @@
         "preco_venda":  15.9,
         "preco":  15.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -595,7 +595,7 @@
         "preco_venda":  15.9,
         "preco":  15.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -635,7 +635,7 @@
         "preco_venda":  24.9,
         "preco":  24.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -645,7 +645,7 @@
         "preco_venda":  16.5,
         "preco":  16.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -685,7 +685,7 @@
         "preco_venda":  6.5,
         "preco":  6.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -715,7 +715,7 @@
         "preco_venda":  11.5,
         "preco":  11.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -735,7 +735,7 @@
         "preco_venda":  11.5,
         "preco":  11.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -765,7 +765,7 @@
         "preco_venda":  11.5,
         "preco":  11.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -825,7 +825,7 @@
         "preco_venda":  11.5,
         "preco":  11.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/37.jpg"
     },
@@ -855,7 +855,7 @@
         "preco_venda":  11.5,
         "preco":  11.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -935,7 +935,7 @@
         "preco_venda":  11.5,
         "preco":  11.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/39.jpg"
     },
@@ -945,7 +945,7 @@
         "preco_venda":  16,
         "preco":  16,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -955,7 +955,7 @@
         "preco_venda":  35,
         "preco":  35,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1005,7 +1005,7 @@
         "preco_venda":  10,
         "preco":  10,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1015,7 +1015,7 @@
         "preco_venda":  18.8,
         "preco":  18.8,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1035,7 +1035,7 @@
         "preco_venda":  9,
         "preco":  9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1045,7 +1045,7 @@
         "preco_venda":  5.8,
         "preco":  5.8,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/133.jpg"
     },
@@ -1085,7 +1085,7 @@
         "preco_venda":  56,
         "preco":  56,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1125,7 +1125,7 @@
         "preco_venda":  5.5,
         "preco":  5.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/170.jpg"
     },
@@ -1175,7 +1175,7 @@
         "preco_venda":  50,
         "preco":  50,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1205,7 +1205,7 @@
         "preco_venda":  35.9,
         "preco":  35.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/113.jpg"
     },
@@ -1225,7 +1225,7 @@
         "preco_venda":  15,
         "preco":  15,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1235,7 +1235,7 @@
         "preco_venda":  18,
         "preco":  18,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1245,7 +1245,7 @@
         "preco_venda":  12,
         "preco":  12,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1255,7 +1255,7 @@
         "preco_venda":  8,
         "preco":  8,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/291.jpg"
     },
@@ -1305,7 +1305,7 @@
         "preco_venda":  20,
         "preco":  20,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/46.jpg"
     },
@@ -1405,7 +1405,7 @@
         "preco_venda":  9.9,
         "preco":  9.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1525,7 +1525,7 @@
         "preco_venda":  8.9,
         "preco":  8.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1535,7 +1535,7 @@
         "preco_venda":  8.9,
         "preco":  8.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1615,7 +1615,7 @@
         "preco_venda":  3.5,
         "preco":  3.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1675,7 +1675,7 @@
         "preco_venda":  12,
         "preco":  12,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1745,7 +1745,7 @@
         "preco_venda":  18,
         "preco":  18,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/173.jpg"
     },
@@ -1785,7 +1785,7 @@
         "preco_venda":  25,
         "preco":  25,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1795,7 +1795,7 @@
         "preco_venda":  15,
         "preco":  15,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/441.jpg"
     },
@@ -1825,7 +1825,7 @@
         "preco_venda":  12.5,
         "preco":  12.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1835,7 +1835,7 @@
         "preco_venda":  22,
         "preco":  22,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1845,7 +1845,7 @@
         "preco_venda":  39.5,
         "preco":  39.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -1905,7 +1905,7 @@
         "preco_venda":  4,
         "preco":  4,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/130.jpg"
     },
@@ -1995,7 +1995,7 @@
         "preco_venda":  4,
         "preco":  4,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/118.jpg"
     },
@@ -2035,7 +2035,7 @@
         "preco_venda":  5,
         "preco":  5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2055,7 +2055,7 @@
         "preco_venda":  29.9,
         "preco":  29.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/190.jpg"
     },
@@ -2085,7 +2085,7 @@
         "preco_venda":  29.9,
         "preco":  29.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/68.jpg"
     },
@@ -2095,7 +2095,7 @@
         "preco_venda":  14,
         "preco":  14,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/65.jpg"
     },
@@ -2105,7 +2105,7 @@
         "preco_venda":  29.9,
         "preco":  29.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2145,7 +2145,7 @@
         "preco_venda":  5.5,
         "preco":  5.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2165,7 +2165,7 @@
         "preco_venda":  25,
         "preco":  25,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2175,7 +2175,7 @@
         "preco_venda":  5,
         "preco":  5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2215,7 +2215,7 @@
         "preco_venda":  12.5,
         "preco":  12.5,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2325,7 +2325,7 @@
         "preco_venda":  18,
         "preco":  18,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2405,7 +2405,7 @@
         "preco_venda":  4,
         "preco":  4,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2415,7 +2415,7 @@
         "preco_venda":  13,
         "preco":  13,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2435,7 +2435,7 @@
         "preco_venda":  10,
         "preco":  10,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2455,7 +2455,7 @@
         "preco_venda":  49.9,
         "preco":  49.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/104.jpg"
     },
@@ -2465,7 +2465,7 @@
         "preco_venda":  13,
         "preco":  13,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2485,7 +2485,7 @@
         "preco_venda":  47,
         "preco":  47,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2545,7 +2545,7 @@
         "preco_venda":  13,
         "preco":  13,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2565,7 +2565,7 @@
         "preco_venda":  16,
         "preco":  16,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2635,7 +2635,7 @@
         "preco_venda":  24.9,
         "preco":  24.9,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2645,7 +2645,7 @@
         "preco_venda":  7,
         "preco":  7,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     },
@@ -2655,7 +2655,7 @@
         "preco_venda":  12,
         "preco":  12,
         "estoque":  0,
-        "disponivel":  false,
+        "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
     }

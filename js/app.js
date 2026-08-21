@@ -244,127 +244,177 @@ function mostrarToast(mensagem) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    try {
 
-    const resposta = await fetch(API_URL);
-
-    if (resposta.ok) {
-
-        const dados = await resposta.json();
-
-        if (Array.isArray(dados)) {
-
-            produtos.length = 0;
-
-            dados.forEach(produto => {
-
-                produtos.push({
-
-                    id: produto.id,
-
-                    nome: produto.descricao,
-
-                    preco: produto.preco,
-
-                    imagem: window.location.hostname === "localhost" ||
-                    window.location.hostname === "127.0.0.1"
-                    ? produto.imagem
-                    : `img/produtos/${produto.id}.jpg`,
-
-                    categoria: "residencial",
-
-                    estoque: produto.estoque,
-
-                    disponivel: produto.disponivel
-
-                });
-
-            });
-
-        }
-
-    }
-
-} catch (erro) {
-
-    console.log("API local indisponível. Carregando catálogo publicado.");
+    // =========================================================
+    // CARREGA O CATÁLOGO PUBLICADO
+    // O 5500 deve usar o JSON, não o estoque direto do Sys-On.
+    // =========================================================
 
     try {
-        const respostaOnline = await fetch(CATALOGO_ONLINE_URL + "?v=" + Date.now());
+
+        const respostaOnline = await fetch(
+            CATALOGO_ONLINE_URL + "?v=" + Date.now()
+        );
 
         if (respostaOnline.ok) {
+
             const dadosOnline = await respostaOnline.json();
 
             if (Array.isArray(dadosOnline)) {
+
                 produtos.length = 0;
 
                 dadosOnline.forEach(produto => {
+
                     produtos.push({
                         id: produto.id,
                         nome: produto.descricao,
+                        descricao: produto.descricao,
                         preco: produto.preco,
                         imagem: produto.imagem,
                         categoria: "residencial",
                         estoque: produto.estoque,
+
+                        // Usa exatamente o valor enviado pelo sincronizador
                         disponivel: produto.disponivel
                     });
+
                 });
+
             }
+
         }
+
     } catch (erroOnline) {
-        console.error("Não foi possível carregar o catálogo publicado:", erroOnline);
+
+        console.error(
+            "Não foi possível carregar o catálogo publicado:",
+            erroOnline
+        );
+
     }
 
-}
+
+    // =========================================================
+    // CARREGA OS AJUSTES DO ADMIN
+    // =========================================================
+
     try {
-    const respostaAjustes = await fetch(AJUSTES_URL + "?v=" + Date.now());
 
-    if (respostaAjustes.ok) {
-        const ajustes = await respostaAjustes.json();
+        const respostaAjustes = await fetch(
+            AJUSTES_URL + "?v=" + Date.now()
+        );
 
-        const produtosAjustados = produtos
-            .map(produto => {
-                const ajuste = ajustes[String(produto.id)];
+        if (respostaAjustes.ok) {
 
-                if (!ajuste) {
+            const ajustes = await respostaAjustes.json();
+
+            const produtosAjustados = produtos
+                .map(produto => {
+
+                    const ajuste = ajustes[String(produto.id)];
+
+                    // Produto sem ajuste
+                    if (!ajuste) {
+
+                        return {
+                            ...produto,
+                            exibirSite: true
+                        };
+
+                    }
+
+                    // Produto com ajuste
                     return {
+
                         ...produto,
-                        exibirSite: true
+
+                        nome:
+                            ajuste.descricao ??
+                            produto.nome,
+
+                        descricao:
+                            ajuste.descricao ??
+                            produto.descricao,
+
+                        preco:
+                            ajuste.preco ??
+                            produto.preco,
+
+                        disponivel:
+                            ajuste.disponivel ??
+                            produto.disponivel,
+
+                        imagem:
+                            ajuste.imagem ??
+                            produto.imagem,
+
+                        categorias:
+                            Array.isArray(ajuste.categorias)
+                                ? ajuste.categorias
+                                : (
+                                    produto.categorias ||
+                                    (
+                                        produto.categoria
+                                            ? [produto.categoria]
+                                            : []
+                                    )
+                                ),
+
+                        categoria:
+                            ajuste.categoria &&
+                            ajuste.categoria !== ""
+                                ? ajuste.categoria
+                                : produto.categoria,
+
+                        promocao:
+                            ajuste.promocao === true,
+
+                        novo:
+                            ajuste.novo === true,
+
+                        exibirSite:
+                            ajuste.exibirSite !== false
                     };
-                }
 
-                return {
-                    ...produto,
-                    nome: ajuste.descricao ?? produto.nome,
-                    descricao: ajuste.descricao ?? produto.descricao,
-                    preco: ajuste.preco ?? produto.preco,
-                    disponivel: ajuste.disponivel ?? produto.disponivel,
-                    imagem: ajuste.imagem ?? produto.imagem,
-                    categorias:
-                    Array.isArray(ajuste.categorias)
-                    ? ajuste.categorias
-                    : (produto.categorias || (produto.categoria ? [produto.categoria] : [])),
-                    categoria:
-                        ajuste.categoria && ajuste.categoria !== ""
-                            ? ajuste.categoria
-                            : produto.categoria,
-                    promocao: ajuste.promocao === true,
-                    novo: ajuste.novo === true,
-                    exibirSite: ajuste.exibirSite !== false
-                };
-            })
-            .filter(produto => produto.exibirSite !== false);
+                })
+                .filter(produto => produto.exibirSite !== false);
 
-        produtos.length = 0;
-        produtosAjustados.forEach(produto => produtos.push(produto));
+
+            produtos.length = 0;
+
+            produtosAjustados.forEach(produto => {
+                produtos.push(produto);
+            });
+
+        }
+
+    } catch (erroAjustes) {
+
+        console.warn(
+            "Não foi possível carregar ajustes do catálogo:",
+            erroAjustes
+        );
+
     }
 
-} catch (erroAjustes) {
-    console.warn("Não foi possível carregar ajustes do catálogo:", erroAjustes);
-}
 
-if (typeof produtos !== "undefined" && Array.isArray(produtos)) carregarProdutos(produtos);
-else carregarProdutos([]);
+    // =========================================================
+    // MOSTRA OS PRODUTOS
+    // =========================================================
+
+    if (
+        typeof produtos !== "undefined" &&
+        Array.isArray(produtos)
+    ) {
+
+        carregarProdutos(produtos);
+
+    } else {
+
+        carregarProdutos([]);
+
+    }
 
     document.getElementById("menuCategorias")?.addEventListener("click", evento => {
         const botao = evento.target.closest(".btn-cat");
