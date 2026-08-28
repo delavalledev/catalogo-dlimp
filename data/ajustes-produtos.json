@@ -49,6 +49,9 @@
   "17": {
     "imagem": "img/produtos/17.jpg"
   },
+  "20": {
+    "imagem": "img/produtos/20.jpg"
+  },
   "22": {
     "imagem": "img/produtos/22.jpg"
   },
@@ -150,6 +153,9 @@
   "72": {
     "imagem": "img/produtos/72.jpg"
   },
+  "76": {
+    "imagem": "img/produtos/76.jpg"
+  },
   "79": {
     "imagem": "img/produtos/79.jpg"
   },
@@ -190,8 +196,11 @@
     "promocao": false,
     "novo": false
   },
+  "84": {
+    "imagem": "img/produtos/84.jpg"
+  },
   "87": {
-    "descricao": "ALCOOL PERFUMADO CEREJA AVELÃƒ 2 LITROS",
+    "descricao": "ALCOOL PERFUMADO CEREJA AVELÃ 2 LITROS",
     "preco": 10,
     "disponivel": true,
     "categorias": [],
@@ -218,7 +227,7 @@
     "novo": true
   },
   "95": {
-    "descricao": "ALCOOL PERFUMADO CEREJA AVELÃƒ 5 LITROS",
+    "descricao": "ALCOOL PERFUMADO CEREJA AVELÃ 5 LITROS",
     "preco": 19.9,
     "disponivel": true,
     "categorias": [],
@@ -229,8 +238,14 @@
   "100": {
     "imagem": "img/produtos/100.jpg"
   },
+  "102": {
+    "imagem": "img/produtos/102.jpg"
+  },
   "104": {
     "imagem": "img/produtos/104.jpg"
+  },
+  "105": {
+    "imagem": "img/produtos/105.jpg"
   },
   "111": {
     "imagem": "img/produtos/111.jpg"
@@ -422,6 +437,9 @@
     "promocao": false,
     "novo": false
   },
+  "174": {
+    "imagem": "img/produtos/174.jpg"
+  },
   "176": {
     "descricao": "ALCOOL 96 1L",
     "preco": 16,
@@ -432,7 +450,8 @@
     ],
     "exibirSite": true,
     "promocao": false,
-    "novo": false
+    "novo": false,
+    "imagem": "img/produtos/176.jpg"
   },
   "179": {
     "imagem": "img/produtos/179.jpg"
@@ -492,6 +511,9 @@
     "exibirSite": false,
     "promocao": false,
     "novo": false
+  },
+  "217": {
+    "imagem": "img/produtos/217.jpg"
   },
   "221": {
     "imagem": "img/produtos/221.jpg"
@@ -743,6 +765,15 @@
     "novo": false,
     "imagem": "img/produtos/441.jpg"
   },
+  "427433": {
+    "descricao": "VEJAX MULTIUSO SPARKLING 1 LITRO",
+    "preco": 7,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  },
   "427436": {
     "descricao": "SABAO LIQUIDO C BICARBONATO 5 LITROS",
     "preco": 34.9,
@@ -753,7 +784,7 @@
     "novo": false
   },
   "427441": {
-    "descricao": "ALCOOL PERFUMADO MAÃ‡A CANELA 5 LITROS",
+    "descricao": "ALCOOL PERFUMADO MAÇA CANELA 5 LITROS",
     "preco": 19.9,
     "disponivel": true,
     "categorias": [],
@@ -773,7 +804,7 @@
     "novo": false
   },
   "427448": {
-    "descricao": "ALCOOL PERFUMADO MAÃ‡A CANELA 2 LITROS",
+    "descricao": "ALCOOL PERFUMADO MAÇA CANELA 2 LITROS",
     "preco": 10,
     "disponivel": true,
     "categorias": [],
