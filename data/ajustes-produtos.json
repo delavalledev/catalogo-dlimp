@@ -52,14 +52,44 @@
   "20": {
     "imagem": "img/produtos/20.jpg"
   },
+  "21": {
+    "descricao": "DESINFETANTE CASA LIMPA 2 LITROS",
+    "preco": 6.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
   "22": {
-    "imagem": "img/produtos/22.jpg"
+    "descricao": "DESINFETANTE FLORAL 2 LITROS",
+    "preco": 6.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "23": {
-    "imagem": "img/produtos/23.jpg"
+    "descricao": "DESINFETANTE LAVANDA 2 LITROS",
+    "preco": 6.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "24": {
-    "descricao": "DESINFETANTE CAPIM LIMÃƒO 2L",
+    "descricao": "DESINFETANTE CAPIM LIMÃO 2 LITROS",
+    "preco": 6.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "25": {
+    "descricao": "DESINFETANTE CITRONELA 2 LITROS",
     "preco": 6.5,
     "disponivel": true,
     "categorias": [],
@@ -71,16 +101,37 @@
     "imagem": "img/produtos/26.jpg"
   },
   "27": {
-    "imagem": "img/produtos/27.jpg"
+    "descricao": "DESINFETANTE PINHO SOL 2 LITROS",
+    "preco": 6.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "28": {
-    "imagem": "img/produtos/28.jpg"
+    "descricao": "DESINFETANTE KAIAK 2 LITROS",
+    "preco": 6.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "30": {
     "imagem": "img/produtos/30.jpg"
   },
   "31": {
     "imagem": "img/produtos/31.jpg"
+  },
+  "32": {
+    "descricao": "DESINFETANTE NATUREZA 2 LITROS",
+    "preco": 6.2,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "39": {
     "imagem": "img/produtos/39.jpg"
@@ -438,10 +489,25 @@
     "novo": false
   },
   "174": {
-    "imagem": "img/produtos/174.jpg"
+    "descricao": "ALCOOL 70º 2 LITRO",
+    "preco": 28,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "175": {
+    "descricao": "ALCOOL 70 5 LITROS",
+    "preco": 60,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "176": {
-    "descricao": "ALCOOL 96 1L",
+    "descricao": "ALCOOL 96 1 LITRO",
     "preco": 16,
     "disponivel": true,
     "categorias": [
@@ -450,8 +516,25 @@
     ],
     "exibirSite": true,
     "promocao": false,
-    "novo": false,
-    "imagem": "img/produtos/176.jpg"
+    "novo": false
+  },
+  "177": {
+    "descricao": "ALCOOL 96º 2 LITROS",
+    "preco": 35,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "178": {
+    "descricao": "ALCOOL 96 5 LITROS",
+    "preco": 70,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "179": {
     "imagem": "img/produtos/179.jpg"
@@ -469,7 +552,13 @@
     "novo": false
   },
   "187": {
-    "imagem": "img/produtos/187.jpg"
+    "descricao": "AMACIANTE CONFORTO 5 LITROS",
+    "preco": 20,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "190": {
     "descricao": "SABAO LIQUIDO ARIEX 5L",
@@ -489,8 +578,41 @@
     "promocao": false,
     "novo": false
   },
+  "198": {
+    "descricao": "CREOLINA 5 LITROS",
+    "preco": 24.9,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
   "199": {
-    "imagem": "img/produtos/199.jpg"
+    "descricao": "CREOLINA 2 LITROS",
+    "preco": 13,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "202": {
+    "descricao": "PERFUME PARA ROUPA AMACIEX 2 LITROS",
+    "preco": 22,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "203": {
+    "descricao": "LIMPA CONCRETO 2 LITROS",
+    "preco": 19.9,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "207": {
     "descricao": "PERFUME PARA ROUPA 5L",
@@ -513,7 +635,13 @@
     "novo": false
   },
   "217": {
-    "imagem": "img/produtos/217.jpg"
+    "descricao": "ALCOOL 70 1 LITRO",
+    "preco": 15,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "221": {
     "imagem": "img/produtos/221.jpg"
@@ -523,6 +651,15 @@
   },
   "230": {
     "imagem": "img/produtos/230.jpg"
+  },
+  "246": {
+    "descricao": "LIMPA CONCRETO 1 LITRO",
+    "preco": 10,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "251": {
     "imagem": "img/produtos/251.jpg"
@@ -560,6 +697,24 @@
     "promocao": false,
     "novo": false
   },
+  "271": {
+    "descricao": "SABONETE LIQUIDO ERVA DOCE 2 LITROS",
+    "preco": 12,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "276": {
+    "descricao": "LIMPA CANIL 5 LITROS",
+    "preco": 20,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
   "291": {
     "descricao": "LIMPA BAU 1 LITRO",
     "preco": 8,
@@ -573,7 +728,7 @@
     "novo": false
   },
   "294": {
-    "descricao": "REMOVEDOR 2L",
+    "descricao": "REMOVEDOR 2 LITROS",
     "preco": 70,
     "disponivel": true,
     "categorias": [],
@@ -608,6 +763,15 @@
     "promocao": false,
     "novo": false,
     "imagem": "img/produtos/315.jpg"
+  },
+  "317": {
+    "descricao": "ALCOOL GEL  5 LITROS",
+    "preco": 66,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "328": {
     "descricao": "MATA INSETO 500ML C GATILHO SPRAY",
@@ -667,6 +831,15 @@
     "categorias": [
       "residencial"
     ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "389": {
+    "descricao": "BALDE 15 LITROS",
+    "preco": 20,
+    "disponivel": true,
+    "categorias": [],
     "exibirSite": true,
     "promocao": false,
     "novo": false
@@ -755,6 +928,15 @@
     "promocao": false,
     "novo": false
   },
+  "440": {
+    "descricao": "KIT PROMOCIONAL 50 REAIS",
+    "preco": 50,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  },
   "441": {
     "descricao": "PERCABONATO 500GR",
     "preco": 15,
@@ -764,6 +946,15 @@
     "promocao": false,
     "novo": false,
     "imagem": "img/produtos/441.jpg"
+  },
+  "427430": {
+    "descricao": "PERFUME PARA ROUPA AMACIEX 1 LITRO",
+    "preco": 12.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
   },
   "427433": {
     "descricao": "VEJAX MULTIUSO SPARKLING 1 LITRO",
@@ -779,6 +970,15 @@
     "preco": 34.9,
     "disponivel": true,
     "categoria": "",
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "427440": {
+    "descricao": "AMACIANTE DOWNIE 5 LITROS",
+    "preco": 25,
+    "disponivel": true,
+    "categorias": [],
     "exibirSite": true,
     "promocao": false,
     "novo": false

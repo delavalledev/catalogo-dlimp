@@ -42,8 +42,8 @@
     {
         "id":  174,
         "descricao":  "ALCOOL 70 2L",
-        "preco_venda":  22,
-        "preco":  22,
+        "preco_venda":  28,
+        "preco":  28,
         "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
@@ -984,7 +984,7 @@
         "descricao":  "DETERGENTE NEUTRO 1 LITRO",
         "preco_venda":  5.5,
         "preco":  5.5,
-        "estoque":  3,
+        "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/105.jpg"
@@ -1330,16 +1330,6 @@
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
-        "id":  248,
-        "descricao":  "LIMPA CONCRETO 1L PRO",
-        "preco_venda":  6,
-        "preco":  6,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
         "id":  47,
         "descricao":  "LIMPA CONCRETO 2 LITROS",
         "preco_venda":  19.9,
@@ -1364,16 +1354,6 @@
         "descricao":  "LIMPA CONCRETO 5L",
         "preco_venda":  110,
         "preco":  110,
-        "estoque":  1,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  247,
-        "descricao":  "LIMPA CONCRETO PROMO 2L",
-        "preco_venda":  10,
-        "preco":  10,
         "estoque":  1,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
@@ -1840,16 +1820,6 @@
         "imagem":  "img/produtos/sem_imagem.png"
     },
     {
-        "id":  284,
-        "descricao":  "PINHO GEL 1L",
-        "preco_venda":  8,
-        "preco":  8,
-        "estoque":  6,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
         "id":  96,
         "descricao":  "PINHO GEL 2 LITROS",
         "preco_venda":  14.2,
@@ -2135,16 +2105,6 @@
         "preco_venda":  5.5,
         "preco":  5.5,
         "estoque":  0,
-        "disponivel":  true,
-        "ForaDeUso":  "NÃO",
-        "imagem":  "img/produtos/sem_imagem.png"
-    },
-    {
-        "id":  336,
-        "descricao":  "SABONETE LIQUIDO 1L",
-        "preco_venda":  9.9,
-        "preco":  9.9,
-        "estoque":  11,
         "disponivel":  true,
         "ForaDeUso":  "NÃO",
         "imagem":  "img/produtos/sem_imagem.png"
