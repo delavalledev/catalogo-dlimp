@@ -1,161 +1,386 @@
 ﻿$ErrorActionPreference = "Stop"
 
-$repo = "C:\catalogo-dlimp"
-
-$apiUrl = "http://127.0.0.1:3000/produtos"
-
-$arquivoJson = "$repo\data\produtos-online.json"
-$arquivoAjustes = "$repo\data\ajustes-produtos.json"
-
-$pastaFotosProjeto = "$repo\img\produtos"
-$pastaFotosSysOn = "C:\SysOnPDV-Pro\imgProdutos"
+$Raiz = "C:\catalogo-dlimp"
+$Api = "http://127.0.0.1:3000"
+$ArquivoCatalogo = "$Raiz\data\produtos-online.json"
 
 Write-Host ""
-Write-Host "=====================================" -ForegroundColor Cyan
-Write-Host " SINCRONIZADOR D'LIMP" -ForegroundColor Green
-Write-Host "=====================================" -ForegroundColor Cyan
+Write-Host "============================================" -ForegroundColor Cyan
+Write-Host "       SINCRONIZADOR D'LIMP" -ForegroundColor Cyan
+Write-Host "       PRIMEIRA EQUALIZACAO" -ForegroundColor Cyan
+Write-Host "============================================" -ForegroundColor Cyan
 Write-Host ""
 
-# --------------------------------------------------
-# 1. Confere API do Sys-On
-# --------------------------------------------------
+# ==================================================
+# API
+# ==================================================
+
+Write-Host "Consultando Sys-On..." -ForegroundColor Yellow
 
 try {
-    $produtosSysOn = Invoke-RestMethod $apiUrl -TimeoutSec 15
+    $resposta = Invoke-RestMethod "$Api/produtos?v=$(Get-Date -Format 'HHmmss')"
+    $SysOn = @($resposta)
 }
 catch {
-    Write-Host "ERRO: API do Sys-On não está disponível na porta 3000." -ForegroundColor Red
-    Write-Host "Abra primeiro: node C:\catalogo-dlimp\api\server.js"
+    Write-Host ""
+    Write-Host "ERRO AO CONSULTAR API." -ForegroundColor Red
+    Write-Host $_.Exception.Message
     exit 1
 }
 
-Write-Host "Produtos ativos no Sys-On: $($produtosSysOn.Count)"
+Write-Host "OK - $($SysOn.Count) produtos no Sys-On" -ForegroundColor Green
 
-# --------------------------------------------------
-# 2. Carrega ajustes do Admin
-# --------------------------------------------------
+# PROTEÇÃO CRÍTICA
+if ($SysOn.Count -lt 200) {
+    Write-Host ""
+    Write-Host "ERRO DE SEGURANCA: API RETORNOU MENOS DE 200 PRODUTOS." -ForegroundColor Red
+    Write-Host "NENHUM DADO SERÁ ALTERADO."
+    Write-Host ""
+    exit 1
+}
 
-$ajustes = @{}
+# ==================================================
+# CATÁLOGO
+# ==================================================
 
-if (Test-Path $arquivoAjustes) {
+if (-not (Test-Path $ArquivoCatalogo)) {
+    Write-Host "ERRO: catálogo não encontrado." -ForegroundColor Red
+    exit 1
+}
 
-    $objAjustes =
-        Get-Content $arquivoAjustes -Raw |
+try {
+    $respostaCatalogo = Get-Content $ArquivoCatalogo -Raw |
         ConvertFrom-Json
 
-    foreach ($prop in $objAjustes.PSObject.Properties) {
-        $ajustes[$prop.Name] = $prop.Value
+    $Catalogo = @($respostaCatalogo)
+}
+catch {
+    Write-Host "ERRO AO LER CATALOGO." -ForegroundColor Red
+    Write-Host $_.Exception.Message
+    exit 1
+}
+
+Write-Host "OK - $($Catalogo.Count) produtos no catalogo" -ForegroundColor Green
+Write-Host ""
+
+if ($Catalogo.Count -lt 200) {
+    Write-Host ""
+    Write-Host "ERRO DE SEGURANCA: CATALOGO RETORNOU MENOS DE 200 PRODUTOS." -ForegroundColor Red
+    Write-Host "NENHUM DADO SERÁ ALTERADO."
+    Write-Host ""
+    exit 1
+}
+
+# ==================================================
+# BACKUP
+# ==================================================
+
+$Backup = "$Raiz\data\produtos-online.antes-primeira-sincronizacao-$(Get-Date -Format 'yyyyMMdd-HHmmss').json"
+
+Copy-Item $ArquivoCatalogo $Backup -Force
+
+Write-Host "Backup criado:" -ForegroundColor DarkGray
+Write-Host $Backup -ForegroundColor DarkGray
+Write-Host ""
+
+# ==================================================
+# MAPAS
+# ==================================================
+
+$MapaSysOn = @{}
+$MapaCatalogo = @{}
+
+foreach ($produto in $SysOn) {
+    $MapaSysOn[[string]$produto.id] = $produto
+}
+
+foreach ($produto in $Catalogo) {
+    $MapaCatalogo[[string]$produto.id] = $produto
+}
+
+# ==================================================
+# COMPARAÇÃO
+# ==================================================
+
+$Alteracoes = @()
+$SomenteSysOn = @()
+$SomenteCatalogo = @()
+
+foreach ($id in $MapaSysOn.Keys) {
+
+    if (-not $MapaCatalogo.ContainsKey($id)) {
+        $SomenteSysOn += $MapaSysOn[$id]
+        continue
+    }
+
+    $sys = $MapaSysOn[$id]
+    $cat = $MapaCatalogo[$id]
+
+    $mudancas = @()
+
+    # ----------------------------------------------
+    # NOME
+    # ----------------------------------------------
+
+    $nomeSys = [string]$sys.descricao
+    $nomeCat = [string]$cat.descricao
+
+    if ($nomeSys -ne $nomeCat) {
+        $mudancas += "NOME: $nomeCat -> $nomeSys"
+    }
+
+    # ----------------------------------------------
+    # PREÇO
+    # PRIMEIRA SINCRONIZAÇÃO:
+    # MAIOR PREÇO É MANTIDO
+    # ----------------------------------------------
+
+    $precoSys = 0
+    $precoCat = 0
+
+    if ($null -ne $sys.preco_venda) {
+        $precoSys = [decimal]$sys.preco_venda
+    }
+    elseif ($null -ne $sys.preco) {
+        $precoSys = [decimal]$sys.preco
+    }
+
+    if ($null -ne $cat.preco_venda) {
+        $precoCat = [decimal]$cat.preco_venda
+    }
+    elseif ($null -ne $cat.preco) {
+        $precoCat = [decimal]$cat.preco
+    }
+
+    $precoFinal = [Math]::Max($precoSys, $precoCat)
+
+    if ($precoSys -ne $precoCat) {
+        $mudancas += "PREÇO: R$ $precoCat -> R$ $precoFinal"
+    }
+
+    # ----------------------------------------------
+    # ESTOQUE
+    # ----------------------------------------------
+
+    $estoqueSys = 0
+    $estoqueCat = 0
+
+    if ($null -ne $sys.estoque) {
+        $estoqueSys = [decimal]$sys.estoque
+    }
+
+    if ($null -ne $cat.estoque) {
+        $estoqueCat = [decimal]$cat.estoque
+    }
+
+    if ($estoqueSys -ne $estoqueCat) {
+        $mudancas += "ESTOQUE: $estoqueCat -> $estoqueSys"
+    }
+
+    # ----------------------------------------------
+    # DISPONIBILIDADE
+    #
+    # NAO DEPENDE DO ESTOQUE
+    # ----------------------------------------------
+
+    $foraDeUso = ([string]$sys.ForaDeUso).Trim().ToUpper()
+
+    if ($foraDeUso -eq "SIM") {
+        $disponivelSys = $false
+    }
+    else {
+        $disponivelSys = $true
+    }
+
+    $disponivelCat = [bool]$cat.disponivel
+
+    if ($disponivelSys -ne $disponivelCat) {
+        $mudancas += "DISPONIBILIDADE: $disponivelCat -> $disponivelSys"
+    }
+
+    if ($mudancas.Count -gt 0) {
+
+        $Alteracoes += [PSCustomObject]@{
+            id = $id
+            descricao = $nomeSys
+            mudancas = $mudancas
+        }
     }
 }
 
-# --------------------------------------------------
-# 3. Monta catálogo novo
-# --------------------------------------------------
+foreach ($id in $MapaCatalogo.Keys) {
 
-$catalogoNovo = @()
-
-foreach ($produto in $produtosSysOn) {
-
-    $id = [string]$produto.id
-
-    $imagemProjeto = "img/produtos/sem_imagem.png"
-
-    $jpg = Join-Path $pastaFotosProjeto "$id.jpg"
-    $png = Join-Path $pastaFotosProjeto "$id.png"
-    $webp = Join-Path $pastaFotosProjeto "$id.webp"
-
-    if (Test-Path $jpg) {
-        $imagemProjeto = "img/produtos/$id.jpg"
+    if (-not $MapaSysOn.ContainsKey($id)) {
+        $SomenteCatalogo += $MapaCatalogo[$id]
     }
-    elseif (Test-Path $png) {
-        $imagemProjeto = "img/produtos/$id.png"
-    }
-    elseif (Test-Path $webp) {
-        $imagemProjeto = "img/produtos/$id.webp"
-    }
-
-    $item = [ordered]@{
-        id          = [int]$produto.id
-        descricao   = [string]$produto.descricao
-        preco_venda = [double]$produto.preco
-        preco       = [double]$produto.preco
-        estoque     = [double]$produto.estoque
-        disponivel  = $true
-        ForaDeUso   = $produto.ForaDeUso
-        imagem      = $imagemProjeto
-    }
-
-    # Ajustes do Admin continuam separados e não são apagados.
-    $catalogoNovo += [PSCustomObject]$item
 }
 
-# --------------------------------------------------
-# 4. Backup do JSON atual
-# --------------------------------------------------
+# ==================================================
+# RESULTADO
+# ==================================================
 
-$backupJson =
-    "$repo\data\produtos-online-backup-" +
-    (Get-Date -Format "yyyyMMdd-HHmmss") +
-    ".json"
-
-Copy-Item $arquivoJson $backupJson -Force
-
-# --------------------------------------------------
-# 5. Salva novo produtos-online.json
-# --------------------------------------------------
-
-$json = $catalogoNovo | ConvertTo-Json -Depth 10
-
-$utf8SemBom = New-Object System.Text.UTF8Encoding($false)
-
-[System.IO.File]::WriteAllText(
-    $arquivoJson,
-    $json,
-    $utf8SemBom
-)
-
+Write-Host "============================================" -ForegroundColor Cyan
+Write-Host "              RESULTADO" -ForegroundColor Cyan
+Write-Host "============================================" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "Catalogo atualizado: $($catalogoNovo.Count) produtos" -ForegroundColor Green
 
-# --------------------------------------------------
-# 6. Copia fotos DO projeto PARA o Sys-On
-# --------------------------------------------------
+Write-Host "Sys-On:              $($SysOn.Count)"
+Write-Host "Catalogo:            $($Catalogo.Count)"
+Write-Host "Somente no Sys-On:   $($SomenteSysOn.Count)"
+Write-Host "Somente no catalogo: $($SomenteCatalogo.Count)"
+Write-Host "Com diferencas:      $($Alteracoes.Count)"
+Write-Host ""
 
-New-Item -ItemType Directory -Force -Path $pastaFotosSysOn | Out-Null
+if ($Alteracoes.Count -gt 0) {
 
-$copiadas = 0
+    Write-Host "--------------------------------------------"
+    Write-Host "DIFERENCAS ENCONTRADAS"
+    Write-Host "--------------------------------------------"
+    Write-Host ""
 
-Get-ChildItem $pastaFotosProjeto -File |
-Where-Object {
-    $_.Extension.ToLower() -in ".jpg", ".jpeg", ".png", ".webp" -and
-    $_.Name -ne "sem_imagem.png"
-} |
-ForEach-Object {
+    foreach ($alteracao in $Alteracoes) {
 
-    $destino = Join-Path $pastaFotosSysOn $_.Name
+        Write-Host "ID $($alteracao.id) - $($alteracao.descricao)" -ForegroundColor Yellow
 
-    Copy-Item $_.FullName $destino -Force
+        foreach ($mudanca in $alteracao.mudancas) {
+            Write-Host "   $mudanca"
+        }
 
-    $copiadas++
+        Write-Host ""
+    }
 }
 
-Write-Host "Fotos sincronizadas para o Sys-On: $copiadas"
+# ==================================================
+# PRODUTOS AUSENTES
+# ==================================================
 
-# --------------------------------------------------
-# 7. Resumo
-# --------------------------------------------------
+if ($SomenteSysOn.Count -gt 0) {
+
+    Write-Host "--------------------------------------------"
+    Write-Host "ATENCAO: PRODUTOS AUSENTES NO CATALOGO"
+    Write-Host "--------------------------------------------"
+    Write-Host ""
+
+    foreach ($produto in $SomenteSysOn) {
+        Write-Host "ID $($produto.id) - $($produto.descricao)"
+    }
+
+    Write-Host ""
+
+    Write-Host "NENHUM DADO FOI ALTERADO." -ForegroundColor Red
+    Write-Host "Corrija a quantidade de produtos antes de continuar."
+    Write-Host ""
+
+    exit 1
+}
+
+if ($SomenteCatalogo.Count -gt 0) {
+
+    Write-Host "--------------------------------------------"
+    Write-Host "ATENCAO: PRODUTOS AUSENTES NO SYS-ON"
+    Write-Host "--------------------------------------------"
+    Write-Host ""
+
+    foreach ($produto in $SomenteCatalogo) {
+        Write-Host "ID $($produto.id) - $($produto.descricao)"
+    }
+
+    Write-Host ""
+}
+
+# ==================================================
+# APLICA
+# ==================================================
+
+if ($Alteracoes.Count -eq 0) {
+
+    Write-Host "Nenhuma diferença encontrada." -ForegroundColor Green
+    Write-Host "Nenhum dado foi alterado."
+    Write-Host ""
+    exit 0
+}
+
+Write-Host "Aplicando alterações..." -ForegroundColor Yellow
+Write-Host ""
+
+foreach ($alteracao in $Alteracoes) {
+
+    $id = [string]$alteracao.id
+
+    $sys = $MapaSysOn[$id]
+    $cat = $MapaCatalogo[$id]
+
+    # NOME
+    $cat.descricao = [string]$sys.descricao
+
+    # PREÇO - MAIOR VALOR SOMENTE NESTA PRIMEIRA SINCRONIZAÇÃO
+    $precoSys = 0
+    $precoCat = 0
+
+    if ($null -ne $sys.preco_venda) {
+        $precoSys = [decimal]$sys.preco_venda
+    }
+    elseif ($null -ne $sys.preco) {
+        $precoSys = [decimal]$sys.preco
+    }
+
+    if ($null -ne $cat.preco_venda) {
+        $precoCat = [decimal]$cat.preco_venda
+    }
+    elseif ($null -ne $cat.preco) {
+        $precoCat = [decimal]$cat.preco
+    }
+
+    $precoFinal = [Math]::Max($precoSys, $precoCat)
+
+    $cat.preco_venda = [double]$precoFinal
+    $cat.preco = [double]$precoFinal
+
+    # ESTOQUE
+    if ($null -ne $sys.estoque) {
+        $cat.estoque = [double]([decimal]$sys.estoque)
+    }
+    else {
+        $cat.estoque = 0
+    }
+
+    # DISPONIBILIDADE
+    $foraDeUso = ([string]$sys.ForaDeUso).Trim().ToUpper()
+
+    if ($foraDeUso -eq "SIM") {
+        $cat.disponivel = $false
+    }
+    else {
+        $cat.disponivel = $true
+    }
+
+    # FOTO: NAO ALTERA
+}
+
+# ==================================================
+# SALVA
+# ==================================================
+
+$Catalogo |
+    ConvertTo-Json -Depth 20 |
+    Set-Content -Encoding UTF8 $ArquivoCatalogo
 
 Write-Host ""
-Write-Host "=====================================" -ForegroundColor Cyan
-Write-Host " SINCRONIZACAO CONCLUIDA" -ForegroundColor Green
-Write-Host "=====================================" -ForegroundColor Cyan
+Write-Host "============================================" -ForegroundColor Green
+Write-Host "     PRIMEIRA SINCRONIZACAO CONCLUIDA" -ForegroundColor Green
+Write-Host "============================================" -ForegroundColor Green
+Write-Host ""
 
-Write-Host "Sys-On:  $($produtosSysOn.Count)"
-Write-Host "Catalogo: $($catalogoNovo.Count)"
+Write-Host "Produtos atualizados: $($Alteracoes.Count)"
 Write-Host ""
-Write-Host "Backup criado:"
-Write-Host $backupJson
+Write-Host "REGRAS APLICADAS:"
+Write-Host "- Maior preço foi mantido nesta primeira sincronização."
+Write-Host "- Estoque veio somente do Sys-On."
+Write-Host "- Estoque do Sys-On NÃO foi alterado."
+Write-Host "- Estoque zero NÃO torna produto indisponível."
+Write-Host "- ForaDeUso controla disponibilidade."
+Write-Host "- Fotos NÃO foram alteradas."
 Write-Host ""
-Write-Host "Nada foi publicado no GitHub."
-Write-Host "Confira o site local e depois use o botao 'Publicar no site'."
+Write-Host "Backup:"
+Write-Host $Backup
 Write-Host ""

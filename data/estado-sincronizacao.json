@@ -1,0 +1,1829 @@
+{
+    "1": {
+        "descricao": "PANO DE PRATO",
+        "preco": 5.5,
+        "estoque": 18,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/1.jpg"
+    },
+    "2": {
+        "descricao": "CLORO 1 LITRO",
+        "preco": 8,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/2.jpg"
+    },
+    "4": {
+        "descricao": "ODORIZANTE PARA CARRO VANILLA (ROXO)",
+        "preco": 10,
+        "estoque": 12,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "5": {
+        "descricao": "HOME SPRAY BAUNILHA",
+        "preco": 16,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "7": {
+        "descricao": "CLORO 2 LITROS",
+        "preco": 15,
+        "estoque": 11,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/7.jpg"
+    },
+    "9": {
+        "descricao": "MARIDAO 2 LITROS",
+        "preco": 10,
+        "estoque": 8,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/9.jpg"
+    },
+    "10": {
+        "descricao": "MARIDAO 5 LITROS",
+        "preco": 20,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/10.jpg"
+    },
+    "11": {
+        "descricao": "SOLUPAM 1 LITRO",
+        "preco": 10,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/11.jpg"
+    },
+    "12": {
+        "descricao": "SOLUPAM 2 LITROS",
+        "preco": 18,
+        "estoque": 13,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/12.jpg"
+    },
+    "13": {
+        "descricao": "SOLUPAM 5 LITROS",
+        "preco": 39.9,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "15": {
+        "descricao": "LIMPA PEDRA 2 LITROS",
+        "preco": 18,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/15.jpg"
+    },
+    "16": {
+        "descricao": "LIMPA PEDRA 5 LITROS",
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/16.jpg"
+    },
+    "17": {
+        "descricao": "SABÃO LIQUIDO ARIEX 2 LITROS",
+        "preco": 14,
+        "estoque": 5,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/17.jpg"
+    },
+    "18": {
+        "descricao": "CLORO 5 LITROS",
+        "preco": 28,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/18.jpg"
+    },
+    "20": {
+        "descricao": "ALCOOL GEL 1 LITRO",
+        "preco": 16.99,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/20.jpg"
+    },
+    "21": {
+        "descricao": "DESINFETANTE CASA LIMPA 2L",
+        "preco": 6.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "22": {
+        "descricao": "DESINFETANTE FLORAL 2L",
+        "preco": 6.5,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/22.jpg"
+    },
+    "23": {
+        "descricao": "DESINFETANTE LAVANDA 2L",
+        "preco": 6.5,
+        "estoque": 7,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/23.jpg"
+    },
+    "24": {
+        "descricao": "DESINFETANTE CAPIM LIMÃO 2L",
+        "preco": 6.5,
+        "estoque": 7,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/24.jpg"
+    },
+    "25": {
+        "descricao": "DESINFETANTE CITRONELA 2L",
+        "preco": 6.5,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "26": {
+        "descricao": "DESINFETANTE EUCALIPTO 2 LITROS",
+        "preco": 6.5,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/26.jpg"
+    },
+    "27": {
+        "descricao": "DESINFETANTE PINHO SOL 2L",
+        "preco": 6.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/27.jpg"
+    },
+    "28": {
+        "descricao": "DESINFETANTE KAIAK 2L",
+        "preco": 6.5,
+        "estoque": 7,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/28.jpg"
+    },
+    "30": {
+        "descricao": "DESINFETANTE REVEILLON 2 LITROS",
+        "preco": 6.5,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/30.jpg"
+    },
+    "31": {
+        "descricao": "DESINFETANTE TALCO 2 LITROS",
+        "preco": 6.5,
+        "estoque": 5,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/31.jpg"
+    },
+    "32": {
+        "descricao": "DESINFETANTE NATUREZA 2L",
+        "preco": 6.2,
+        "estoque": 5,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "33": {
+        "descricao": "DESINFETANTE KAIAK 5 LITROS",
+        "preco": 12,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "34": {
+        "descricao": "DESINFETANTE EUCALIPTO 5 LITROS",
+        "preco": 11.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "36": {
+        "descricao": "DESINFETANTE CASA LIMPA 5 LITROS",
+        "preco": 11.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "37": {
+        "descricao": "DESINFETANTE LAVANDA 5 LITROS",
+        "preco": 11.5,
+        "estoque": -3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/37.jpg"
+    },
+    "38": {
+        "descricao": "DESINFETANTE REVEILLON 5 LITROS",
+        "preco": 11.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "39": {
+        "descricao": "DESINFETANTE TALCO 5 LITROS",
+        "preco": 11.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/39.jpg"
+    },
+    "40": {
+        "descricao": "DESINFETANTE PINHO SOL 5 LITROS",
+        "preco": 11.5,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "41": {
+        "descricao": "DESINFETANTE CITRONELA 5 LITROS",
+        "preco": 11.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "42": {
+        "descricao": "DESINFETANTE CAPIM LIMÃO 5 LITROS",
+        "preco": 11.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/42.jpg"
+    },
+    "43": {
+        "descricao": "DESINFETANTE NATUREZA 5 LITROS",
+        "preco": 11.5,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "44": {
+        "descricao": "DESINFETANTE FLORAL 5 LITROS",
+        "preco": 11.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "45": {
+        "descricao": "MATA INSETOS 1 LITRO",
+        "preco": 25,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/45.jpg"
+    },
+    "46": {
+        "descricao": "LIMPA CANO SUPER 1 LITRO",
+        "preco": 20,
+        "estoque": 8,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/46.jpg"
+    },
+    "47": {
+        "descricao": "LIMPA CONCRETO 2 LITROS",
+        "preco": 19.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "49": {
+        "descricao": "VEJAX MULTIUSO 2 LITROS",
+        "preco": 12,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/49.jpg"
+    },
+    "50": {
+        "descricao": "VEJAX MULTIUSO 5 LITROS",
+        "preco": 24.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "51": {
+        "descricao": "PERFUME PARA BANHEIRO 2 LITROS",
+        "preco": 16,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/51.jpg"
+    },
+    "52": {
+        "descricao": "PERFUME PARA BANHEIRO 5 LITROS",
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/52.jpg"
+    },
+    "54": {
+        "descricao": "ALVEJANTE SEM CLORO 2 LITROS",
+        "preco": 10,
+        "estoque": 5,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "55": {
+        "descricao": "ALVEJANTE SEM CLORO 5 LITROS",
+        "preco": 20,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "56": {
+        "descricao": "AMACIANTE DOWNIE 2 LITROS",
+        "preco": 10,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/56.jpg"
+    },
+    "57": {
+        "descricao": "AMACIANTE CONFORTO 2 LITROS",
+        "preco": 10,
+        "estoque": 8,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/57.jpg"
+    },
+    "58": {
+        "descricao": "AMACIANTE MAMAE BEBE 2 LITROS",
+        "preco": 10,
+        "estoque": 5,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/58.jpg"
+    },
+    "60": {
+        "descricao": "SABÃO LIQUIDO OMUS 2 LITROS",
+        "preco": 14,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/60.jpg"
+    },
+    "62": {
+        "descricao": "SABÃO LIQUIDO DE COCO 2 LITROS",
+        "preco": 14,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/62.jpg"
+    },
+    "63": {
+        "descricao": "SABÃO LIQUIDO COM BICARBONATO 2 LITROS",
+        "preco": 18,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/63.jpg"
+    },
+    "65": {
+        "descricao": "SABÃO LIQUIDO DINAMUS 2 LITROS",
+        "preco": 14,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/65.jpg"
+    },
+    "66": {
+        "descricao": "SABÃO LIQUIDO OMUS 5 LITROS",
+        "preco": 29.9,
+        "estoque": -3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "68": {
+        "descricao": "SABÃO LIQUIDO DE COCO 5 LITROS",
+        "preco": 29.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/68.jpg"
+    },
+    "70": {
+        "descricao": "SABÃO LIQUIDO DINAMUS 5 LITROS",
+        "preco": 29.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "71": {
+        "descricao": "DESINFETANTE FLOR DE CEREJEIRA 2 LITROS",
+        "preco": 6.5,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/71.jpg"
+    },
+    "72": {
+        "descricao": "DESINFETANTE MARINE 2 LITROS",
+        "preco": 6.5,
+        "estoque": 9,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/72.jpg"
+    },
+    "73": {
+        "descricao": "SABONETE LIQUIDO 2 LITROS",
+        "preco": 25,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "75": {
+        "descricao": "PNEU PRETINHO 500ML",
+        "preco": 8,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "76": {
+        "descricao": "PNEU PRETINHO 1 LITRO",
+        "preco": 15,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/76.jpg"
+    },
+    "77": {
+        "descricao": "JET CERA 500ML",
+        "preco": 9.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "78": {
+        "descricao": "SHAMPOO COM CERA 2 LITROS",
+        "preco": 18,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "79": {
+        "descricao": "SHAMPOO COM CERA 1 LITRO",
+        "preco": 10,
+        "estoque": 5,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/79.jpg"
+    },
+    "80": {
+        "descricao": "BLOCO DE ESPUMA",
+        "preco": 8.5,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/80.jpg"
+    },
+    "82": {
+        "descricao": "LIMPA BAU 2 LITROS",
+        "preco": 18,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/82.jpg"
+    },
+    "83": {
+        "descricao": "LIMPA BAU 5 LITROS",
+        "preco": 39.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/83.jpg"
+    },
+    "84": {
+        "descricao": "CLORO GEL 1 LITRO",
+        "preco": 8,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/84.jpg"
+    },
+    "85": {
+        "descricao": "CLORO GEL 2 LITROS",
+        "preco": 15.9,
+        "estoque": 9,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "86": {
+        "descricao": "CLORO GEL 5 LITROS",
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "87": {
+        "descricao": "ALCOOL PERFUMADO CEREJA AVELA 2 LITROS",
+        "preco": 10,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/87.jpg"
+    },
+    "88": {
+        "descricao": "ALCOOL PERFUMADO BAMBOO 2 LITROS",
+        "preco": 9.8,
+        "estoque": 5,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/88.jpg"
+    },
+    "94": {
+        "descricao": "ALCOOL PERFUMADO BAMBOO 5 LITROS",
+        "preco": 19.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/94.jpg"
+    },
+    "95": {
+        "descricao": "ALCOOL PERFUMADO CEREJA AVELA 5 LITROS",
+        "preco": 19.9,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/95.jpg"
+    },
+    "96": {
+        "descricao": "PINHO GEL 2 LITROS",
+        "preco": 14.2,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "97": {
+        "descricao": "PINHO GEL 5 LITROS",
+        "preco": 19.9,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "98": {
+        "descricao": "PASTA DE BRILHO 500GR",
+        "preco": 9,
+        "estoque": 14,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/98.jpg"
+    },
+    "99": {
+        "descricao": "LIMPA TUDO 5 LITROS",
+        "preco": 24.9,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "100": {
+        "descricao": "LIMPA TUDO 2 LITROS",
+        "preco": 15,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/100.jpg"
+    },
+    "102": {
+        "descricao": "TIRA LIMO 1 LITRO",
+        "preco": 10,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/102.jpg"
+    },
+    "103": {
+        "descricao": "TIRA LIMO 2 LITROS",
+        "preco": 25,
+        "estoque": 12,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/103.jpg"
+    },
+    "104": {
+        "descricao": "TIRA LIMO 5 LITROS",
+        "preco": 49.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/104.jpg"
+    },
+    "105": {
+        "descricao": "DETERGENTE NEUTRO 1 LITRO",
+        "preco": 5.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/105.jpg"
+    },
+    "106": {
+        "descricao": "DETERGENTE NEUTRO 2 LITROS",
+        "preco": 10,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "107": {
+        "descricao": "DETERGENTE NEUTRO 5 LITROS",
+        "preco": 18.8,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "110": {
+        "descricao": "LIMPA ALUMINIO 500ML",
+        "preco": 7,
+        "estoque": 5,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "111": {
+        "descricao": "LIMPA ALUMINIO 1 LITRO",
+        "preco": 10,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/111.jpg"
+    },
+    "112": {
+        "descricao": "LIMPA ALUMINIO 2 LITROS",
+        "preco": 18,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/112.jpg"
+    },
+    "113": {
+        "descricao": "LIMPA ALUMINIO 5 LITROS",
+        "preco": 35.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/113.jpg"
+    },
+    "114": {
+        "descricao": "LIMPA AZULEJO MADEIRA",
+        "preco": 15,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "115": {
+        "descricao": "LIMPA AZULEJO PLASTICO",
+        "preco": 18,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "116": {
+        "descricao": "LIMPA VIDROS COM CABO",
+        "preco": 18,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/116.jpg"
+    },
+    "118": {
+        "descricao": "RODO PIA",
+        "preco": 4,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/118.jpg"
+    },
+    "119": {
+        "descricao": "PÁ DE LIXO DE MÃO",
+        "preco": 5,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/119.jpg"
+    },
+    "121": {
+        "descricao": "DESINTUPIDOR DE PIA",
+        "preco": 6,
+        "estoque": 9,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/121.jpg"
+    },
+    "122": {
+        "descricao": "PA DE LIXO COM CABO",
+        "preco": 12,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "124": {
+        "descricao": "LIMPA PORCELANATO 500ML",
+        "preco": 7.5,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "125": {
+        "descricao": "VARAL N 10",
+        "preco": 5,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/125.jpg"
+    },
+    "126": {
+        "descricao": "LUVA LATEX M",
+        "preco": 8.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "127": {
+        "descricao": "LUVA LATEX G",
+        "preco": 8.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "128": {
+        "descricao": "PRENDEDOR PLASTICO",
+        "preco": 3,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "129": {
+        "descricao": "PRENDEDOR MADEIRA PEQUENO",
+        "preco": 2.5,
+        "estoque": 7,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/129.jpg"
+    },
+    "130": {
+        "descricao": "PRENDEDOR MADEIRA GRANDE",
+        "preco": 4,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/130.jpg"
+    },
+    "131": {
+        "descricao": "BUCHA LAVA LOUÇAS",
+        "preco": 2.5,
+        "estoque": 14,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/131.jpg"
+    },
+    "132": {
+        "descricao": "BUCHA INOX",
+        "preco": 4,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "133": {
+        "descricao": "ESCOVA ROUPA MADEIRA",
+        "preco": 5.8,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/133.jpg"
+    },
+    "134": {
+        "descricao": "ESCOVA ROUPAS PLASTICO ANATOMICA",
+        "preco": 5.2,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/134.jpg"
+    },
+    "135": {
+        "descricao": "ESCOVA ROUPAS COM ALÇA",
+        "preco": 7.9,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/135.jpg"
+    },
+    "136": {
+        "descricao": "BALDE PEDREIRO 8 LITROS",
+        "preco": 15,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "137": {
+        "descricao": "BACIA 12 LITROS",
+        "preco": 15,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "138": {
+        "descricao": "BACIA 18 LITROS",
+        "preco": 25,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "139": {
+        "descricao": "SACO DE LIXO 20 LTS 10UN",
+        "preco": 5,
+        "estoque": 51,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "141": {
+        "descricao": "VASSOURA POP",
+        "preco": 16,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "143": {
+        "descricao": "VASSOURA AQUARELA",
+        "preco": 24,
+        "estoque": 7,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "146": {
+        "descricao": "VASSOURA CANTO",
+        "preco": 21,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/146.jpg"
+    },
+    "147": {
+        "descricao": "VASSOURA PELO PANDA",
+        "preco": 13,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "148": {
+        "descricao": "VASSOURA RAVENA",
+        "preco": 19,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/148.jpg"
+    },
+    "149": {
+        "descricao": "VASSOURA ESFREGA FORTE",
+        "preco": 18,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/149.jpg"
+    },
+    "150": {
+        "descricao": "RODO PLASTICO 30CM",
+        "preco": 16,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/150.jpg"
+    },
+    "151": {
+        "descricao": "RODO PLASTICO 40CM",
+        "preco": 18,
+        "estoque": 5,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/151.jpg"
+    },
+    "152": {
+        "descricao": "RODO PLASTICO 60CM",
+        "preco": 22,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/152.jpg"
+    },
+    "154": {
+        "descricao": "VASSOURA TROPICANA",
+        "preco": 19,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/154.jpg"
+    },
+    "155": {
+        "descricao": "LIMPA AZULEJO REFIL PLASTICO",
+        "preco": 12,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "157": {
+        "descricao": "DESINTUPIDOR W.C",
+        "preco": 9.5,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "160": {
+        "descricao": "SACO DE LIIXO 40LTS 10UNI",
+        "preco": 5.5,
+        "estoque": 108,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "162": {
+        "descricao": "SACO DE LIXO 60 LTS 10 UN",
+        "preco": 10,
+        "estoque": 48,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "164": {
+        "descricao": "SACO DE LIXO 100 5UNI",
+        "preco": 13,
+        "estoque": 10,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "169": {
+        "descricao": "SACO DE LIXO 40 LTS 10UN",
+        "preco": 8,
+        "estoque": 10,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "170": {
+        "descricao": "GATILHO",
+        "preco": 5.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/170.jpg"
+    },
+    "171": {
+        "descricao": "ODORIZANTE PARA CARRO MELANCIA (ROSA)",
+        "preco": 10,
+        "estoque": 13,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "172": {
+        "descricao": "CLORO ATACADO",
+        "preco": 3.85,
+        "estoque": 2.14,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "173": {
+        "descricao": "PASSA CERA",
+        "preco": 21,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/173.jpg"
+    },
+    "174": {
+        "descricao": "ALCOOL 70 2L",
+        "preco": 28,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/174.jpg"
+    },
+    "175": {
+        "descricao": "ALCOOL 70 5L",
+        "preco": 60,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "176": {
+        "descricao": "ALCOOL 96 1L",
+        "preco": 20,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/176.jpg"
+    },
+    "177": {
+        "descricao": "ALCOOL 96 2L",
+        "preco": 35,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "178": {
+        "descricao": "ALCOOL 96 5L",
+        "preco": 70,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "179": {
+        "descricao": "REMOVEDOR 500ML",
+        "preco": 20,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/179.jpg"
+    },
+    "180": {
+        "descricao": "NEW 3/5",
+        "preco": 5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "185": {
+        "descricao": "PANO ALVEJADO/XADREZ",
+        "preco": 5.9,
+        "estoque": 20,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/185.jpg"
+    },
+    "187": {
+        "descricao": "AMACIANTE CONFORTO 5L",
+        "preco": 20,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/187.jpg"
+    },
+    "188": {
+        "descricao": "SACO DE LIXO 100 REF 5UN",
+        "preco": 18.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "190": {
+        "descricao": "SABAO LIQUIDO ARIEX 5L",
+        "preco": 29.9,
+        "estoque": -1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/190.jpg"
+    },
+    "198": {
+        "descricao": "CREOLINA 5L",
+        "preco": 24.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "199": {
+        "descricao": "CREOLINA 2L",
+        "preco": 13,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/199.jpg"
+    },
+    "200": {
+        "descricao": "CABO MADEIRA 1,2M AVULSO",
+        "preco": 6,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "202": {
+        "descricao": "PERFUME PARA ROUPA AMACIEX 2L",
+        "preco": 22,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "203": {
+        "descricao": "LIMPA CONCRETO 2LTS",
+        "preco": 15,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "204": {
+        "descricao": "PROMOÇAO 45,00",
+        "preco": 45,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "205": {
+        "descricao": "SABONETE LIQUIDO DOVE",
+        "preco": 12,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "207": {
+        "descricao": "PERFUME PARA ROUPA AMACIEX 5L",
+        "preco": 39.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "208": {
+        "descricao": "SODA ESCAMA 1KG",
+        "preco": 25,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "209": {
+        "descricao": "TAXA ENTREGA",
+        "preco": 5,
+        "estoque": 98,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "210": {
+        "descricao": "AGUA SANITARIA ATACADO",
+        "preco": 1.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "214": {
+        "descricao": "PEDRA SANITARIA",
+        "preco": 3,
+        "estoque": 22,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "217": {
+        "descricao": "ALCOOL 70 1L",
+        "preco": 15,
+        "estoque": 11,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/217.jpg"
+    },
+    "221": {
+        "descricao": "LUSTRA MOVEIS 500ML",
+        "preco": 11,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/221.jpg"
+    },
+    "222": {
+        "descricao": "ANTI MOFO 500ML",
+        "preco": 11,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/222.jpg"
+    },
+    "225": {
+        "descricao": "BALDE 10L",
+        "preco": 12,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/225.jpg"
+    },
+    "226": {
+        "descricao": "SABONETE LIQUIDO 5L",
+        "preco": 29.9,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "237": {
+        "descricao": "LIMPA COURO",
+        "preco": 14,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "241": {
+        "descricao": "ANIL",
+        "preco": 14,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "242": {
+        "descricao": "SAPONEO",
+        "preco": 6,
+        "estoque": 15,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "243": {
+        "descricao": "SODA ESCAMA 500G",
+        "preco": 15,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "244": {
+        "descricao": "MARIDAO CONCENTRADO",
+        "preco": 25,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "246": {
+        "descricao": "LIMPA CONCRETO 1L",
+        "preco": 10,
+        "estoque": 31,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "251": {
+        "descricao": "LIMPA CANIL 2 LITROS",
+        "preco": 10,
+        "estoque": 7,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/251.jpg"
+    },
+    "254": {
+        "descricao": "DETERGENTE NEUTRO ATACADO",
+        "preco": 3,
+        "estoque": 101,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "255": {
+        "descricao": "FLANELA LARANJA MEDIA",
+        "preco": 6.5,
+        "estoque": 8,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "260": {
+        "descricao": "PANO DE PIA",
+        "preco": 3,
+        "estoque": 21,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "262": {
+        "descricao": "REVITALIZADOR",
+        "preco": 10,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "263": {
+        "descricao": "VASSOURA SOFT",
+        "preco": 17,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "266": {
+        "descricao": "NAFTALINA",
+        "preco": 3.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "267": {
+        "descricao": "LUVA P",
+        "preco": 7.5,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "271": {
+        "descricao": "SABONETE LIQUIDO ERVA DOCE 2L",
+        "preco": 12,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "274": {
+        "descricao": "VEJAX CONCENTRADO",
+        "preco": 20,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "276": {
+        "descricao": "LIMPA CANIL 5L",
+        "preco": 20,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "280": {
+        "descricao": "SABONETE LIQUIDO 500ML",
+        "preco": 5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "281": {
+        "descricao": "ESCOVA SANITARIA",
+        "preco": 14.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/281.jpg"
+    },
+    "283": {
+        "descricao": "LIXEIRA",
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "285": {
+        "descricao": "GEL SANITARIO",
+        "preco": 4,
+        "estoque": 14,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "286": {
+        "descricao": "ODORIZANTE DE AMBIENTE BIXINHO",
+        "preco": 13,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "287": {
+        "descricao": "AROMATIZANTE",
+        "preco": 15,
+        "estoque": 7,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "288": {
+        "descricao": "AROMATIZANTE DIFUSOR",
+        "preco": 18,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "289": {
+        "descricao": "PA EXTRA",
+        "preco": 9.9,
+        "estoque": 30,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "291": {
+        "descricao": "LIMPA BAU 1 LITRO",
+        "preco": 8,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/291.jpg"
+    },
+    "294": {
+        "descricao": "REMOVEDOR 2L",
+        "preco": 70,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "299": {
+        "descricao": "DESINFETANTE MAMAE BEBE 2 LITROS",
+        "preco": 6.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/299.jpg"
+    },
+    "300": {
+        "descricao": "DESINFETANTE JASMIN 5 LITROS",
+        "preco": 11.5,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "307": {
+        "descricao": "CONCENTRATO UBATUBA",
+        "preco": 15.9,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "308": {
+        "descricao": "BARRILHA 1 KILO",
+        "preco": 20,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/308.jpg"
+    },
+    "315": {
+        "descricao": "GATILHO COM EMBALAGEM",
+        "preco": 9.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/315.jpg"
+    },
+    "316": {
+        "descricao": "CANETAO QUADRO BRANCO",
+        "preco": 9.9,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "317": {
+        "descricao": "ALCOOL GEL 5L",
+        "preco": 66,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "321": {
+        "descricao": "LIMPA TETO",
+        "preco": 24,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "323": {
+        "descricao": "LIMPA VIDROS 500ML",
+        "preco": 10,
+        "estoque": 8,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "328": {
+        "descricao": "MATA INSETO 500ML C GATILHO",
+        "preco": 15,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/328.jpg"
+    },
+    "332": {
+        "descricao": "GAT * 500ML",
+        "preco": 8.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "333": {
+        "descricao": "BACIA 40LTS",
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "334": {
+        "descricao": "BALDE 30LTS",
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "335": {
+        "descricao": "CESTO TELADO 60LTS",
+        "preco": 49.9,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/335.jpg"
+    },
+    "337": {
+        "descricao": "DESINFETANTE JASMIN 2 LITROS",
+        "preco": 6.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/337.jpg"
+    },
+    "341": {
+        "descricao": "ESFREGÃO GARI",
+        "preco": 56,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "345": {
+        "descricao": "REGADOR",
+        "preco": 19.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "346": {
+        "descricao": "ALCOOL GEL 500 ML",
+        "preco": 12,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "347": {
+        "descricao": "CAIXA ACOPLADA",
+        "preco": 8.9,
+        "estoque": 10,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "348": {
+        "descricao": "PANO MICROFIBRA",
+        "preco": 9.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "351": {
+        "descricao": "LIMPA CARPETE",
+        "preco": 6,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "354": {
+        "descricao": "SALADEIRA COM TAMPA",
+        "preco": 21.9,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "355": {
+        "descricao": "LIXEIRINHA",
+        "preco": 8,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "378": {
+        "descricao": "BUCHA DE BANHO",
+        "preco": 6,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "379": {
+        "descricao": "SACOS DE 200LTS",
+        "preco": 25,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "381": {
+        "descricao": "AGUA SANITARIA 5 LITROS",
+        "preco": 11,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/381.jpg"
+    },
+    "386": {
+        "descricao": "LIMPA CONCRETO 5L",
+        "preco": 110,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "389": {
+        "descricao": "BALDE 15L",
+        "preco": 20,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "390": {
+        "descricao": "VASSOURA GRAN MESTRA",
+        "preco": 24,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "394": {
+        "descricao": "VASSOURA PIAÇAVA GLOBO",
+        "preco": 22,
+        "estoque": 6,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/394.jpg"
+    },
+    "397": {
+        "descricao": "PEDRA ANTIMOFO",
+        "preco": 4,
+        "estoque": 10,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "398": {
+        "descricao": "TIRA MANCHA DE ROUPA",
+        "preco": 13,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "399": {
+        "descricao": "AGUA SANITARIA 2 LITROS",
+        "preco": 6,
+        "estoque": 8,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/399.jpg"
+    },
+    "403": {
+        "descricao": "SABONETE 500 ML",
+        "preco": 5.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "407": {
+        "descricao": "SILICONE 250GR",
+        "preco": 10,
+        "estoque": 4,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "411": {
+        "descricao": "SHAMPOO COM CERA 5 LITROS",
+        "preco": 40,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/411.jpg"
+    },
+    "412": {
+        "descricao": "LIMPA PAINEL 500 ML",
+        "preco": 9.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "413": {
+        "descricao": "SOLUPAM ATACADO",
+        "preco": 4,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "415": {
+        "descricao": "VARRE TETO",
+        "preco": 47,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "416": {
+        "descricao": "VASSOURA DE BRUXA",
+        "preco": 45.9,
+        "estoque": 3,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/416.jpg"
+    },
+    "417": {
+        "descricao": "SABAO QUEROSENE 2 LITROS",
+        "preco": 15,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "418": {
+        "descricao": "SACO 5 UNIDADE REFORÇADO",
+        "preco": 12.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "419": {
+        "descricao": "SABAO CASEIRO 350 GR",
+        "preco": 5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "422": {
+        "descricao": "VASSOURA VERONA PLUS",
+        "preco": 19,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "423": {
+        "descricao": "PERCABONATO 1KG",
+        "preco": 25,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "424": {
+        "descricao": "DESENGRAXANTE",
+        "preco": 16.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "430": {
+        "descricao": "DESINGRAXANTE 2 LITROS",
+        "preco": 16,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "432": {
+        "descricao": "ENGATE RAPIDO",
+        "preco": 9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "439": {
+        "descricao": "DESINGRAXANTE 5 LITROS",
+        "preco": 35,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "440": {
+        "descricao": "KIT PROMOCIONAL 50 REAIS",
+        "preco": 50,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "441": {
+        "descricao": "PERCARBONATO 500GR",
+        "preco": 15,
+        "estoque": 9,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/441.jpg"
+    },
+    "427428": {
+        "descricao": "TAPETE",
+        "preco": 13,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427430": {
+        "descricao": "PERFUME PARA ROUPA AMACIEX 1L",
+        "preco": 12.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427431": {
+        "descricao": "FLANELA BRANCA MEDIA",
+        "preco": 6.5,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427432": {
+        "descricao": "VEJAX MULTIUSO SPARKLING 2 LITROS",
+        "preco": 12,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427433": {
+        "descricao": "VEJAX MULTIUSO SPARKLING 1 LITRO",
+        "preco": 7,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427434": {
+        "descricao": "ODORIZANTE PARA CARRO TROUSSARDI (AZUL)",
+        "preco": 10,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427440": {
+        "descricao": "AMACIANTE DOWNIE 5L",
+        "preco": 25,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427441": {
+        "descricao": "ALCOOL PERFUMADO MAÇA CANELA 5 LITROS",
+        "preco": 19.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/427441.jpg"
+    },
+    "427442": {
+        "descricao": "MTC 5LTS",
+        "preco": 110,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427444": {
+        "descricao": "DESINFETANTE MARINE 5 LITROS",
+        "preco": 11.5,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427445": {
+        "descricao": "LIMPA CARPETE 2 LITROS",
+        "preco": 18,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427446": {
+        "descricao": "DESENGRAXANTE 5 LITROS",
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427447": {
+        "descricao": "CESTO TELADO 12 LTS",
+        "preco": 8,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/427447.jpg"
+    },
+    "427448": {
+        "descricao": "ALCOOL PERFUMADO MAÇA CANELA 2 LITROS",
+        "preco": 10,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/427448.jpg"
+    },
+    "427449": {
+        "descricao": "CONCENTRATO TULIPA NEGRA",
+        "preco": 15.9,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427450": {
+        "descricao": "CONCENTRATO CHA BRANCO",
+        "preco": 15.9,
+        "estoque": 2,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427451": {
+        "descricao": "CONCENTRATO FLORAL",
+        "preco": 15.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427452": {
+        "descricao": "CONCENTRATO LAVANDA",
+        "preco": 15.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427453": {
+        "descricao": "CONCENTRATO MARINE",
+        "preco": 15.9,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427454": {
+        "descricao": "CONCENTRATO GIOVANNA",
+        "preco": 15.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427455": {
+        "descricao": "CONCENTRATO FLORES DO CAMPO",
+        "preco": 15.9,
+        "estoque": 1,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427456": {
+        "descricao": "ALCOOL 70 500ML",
+        "preco": 10,
+        "estoque": 5,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    "427457": {
+        "descricao": "PULVERIZADOR",
+        "preco": 13,
+        "estoque": 0,
+        "disponivel": true,
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    }
+}

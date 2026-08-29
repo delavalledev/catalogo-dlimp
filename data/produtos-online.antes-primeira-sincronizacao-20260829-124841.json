@@ -1,7 +1,7 @@
 ﻿[
     {
         "id":  399,
-        "descricao":  "AGUA SANITÁRIA 2 LITROS",
+        "descricao":  "AGUA SANITARIA 2 LITROS",
         "preco_venda":  6,
         "preco":  6,
         "estoque":  8,
@@ -11,7 +11,7 @@
     },
     {
         "id":  381,
-        "descricao":  "AGUA SANITÁRIA 5 LITROS",
+        "descricao":  "AGUA SANITARIA 5 LITROS",
         "preco_venda":  11,
         "preco":  11,
         "estoque":  2,
@@ -21,7 +21,7 @@
     },
     {
         "id":  210,
-        "descricao":  "AGUA SANITÁRIA ATACADO",
+        "descricao":  "AGUA SANITARIA ATACADO",
         "preco_venda":  1.5,
         "preco":  1.5,
         "estoque":  0,
@@ -31,7 +31,7 @@
     },
     {
         "id":  217,
-        "descricao":  "ÁLCOOL 70 1 LITRO",
+        "descricao":  "ALCOOL 70 1L",
         "preco_venda":  15,
         "preco":  15,
         "estoque":  11,
@@ -41,7 +41,7 @@
     },
     {
         "id":  174,
-        "descricao":  "ÁLCOOL 70 2 LITROS",
+        "descricao":  "ALCOOL 70 2L",
         "preco_venda":  28,
         "preco":  28,
         "estoque":  1,
@@ -51,7 +51,7 @@
     },
     {
         "id":  427456,
-        "descricao":  "ÁLCOOL 70 500 ML",
+        "descricao":  "ALCOOL 70 500ML",
         "preco_venda":  10,
         "preco":  10,
         "estoque":  5,
@@ -71,7 +71,7 @@
     },
     {
         "id":  176,
-        "descricao":  "ÁLCOOL 96 1 LITRO",
+        "descricao":  "ALCOOL 96 1L",
         "preco_venda":  20,
         "preco":  20,
         "estoque":  1,
@@ -81,7 +81,7 @@
     },
     {
         "id":  177,
-        "descricao":  "ÁLCOOL 96 2 LITROS",
+        "descricao":  "ALCOOL 96 2L",
         "preco_venda":  35,
         "preco":  35,
         "estoque":  2,
@@ -91,7 +91,7 @@
     },
     {
         "id":  178,
-        "descricao":  "ÁLCOOL 96 5 LITROS",
+        "descricao":  "ALCOOL 96 5L",
         "preco_venda":  70,
         "preco":  70,
         "estoque":  4,
@@ -101,7 +101,7 @@
     },
     {
         "id":  20,
-        "descricao":  "ÁLCOOL GEL 1 LITRO",
+        "descricao":  "ALCOOL GEL 1 LITRO",
         "preco_venda":  16.99,
         "preco":  16.99,
         "estoque":  0,
@@ -111,7 +111,7 @@
     },
     {
         "id":  346,
-        "descricao":  "ÁLCOOL GEL 500 ML",
+        "descricao":  "ALCOOL GEL 500 ML",
         "preco_venda":  12,
         "preco":  12,
         "estoque":  1,
@@ -121,7 +121,7 @@
     },
     {
         "id":  317,
-        "descricao":  "ÁLCOOL GEL 5 LITROS",
+        "descricao":  "ALCOOL GEL 5L",
         "preco_venda":  66,
         "preco":  66,
         "estoque":  1,
@@ -131,7 +131,7 @@
     },
     {
         "id":  88,
-        "descricao":  "ÁLCOOL PERFUMADO BAMBOO 2 LITROS",
+        "descricao":  "ALCOOL PERFUMADO BAMBOO 2 LITROS",
         "preco_venda":  9.8,
         "preco":  9.8,
         "estoque":  5,
@@ -141,7 +141,7 @@
     },
     {
         "id":  94,
-        "descricao":  "ÁLCOOL PERFUMADO BAMBOO 5 LITROS",
+        "descricao":  "ALCOOL PERFUMADO BAMBOO 5 LITROS",
         "preco_venda":  19.9,
         "preco":  19.9,
         "estoque":  1,
@@ -151,7 +151,7 @@
     },
     {
         "id":  87,
-        "descricao":  "ÁLCOOL PERFUMADO CEREJA AVELÃ 2 LITROS",
+        "descricao":  "ALCOOL PERFUMADO CEREJA AVELA 2 LITROS",
         "preco_venda":  10,
         "preco":  10,
         "estoque":  1,
@@ -161,7 +161,7 @@
     },
     {
         "id":  95,
-        "descricao":  "ÁLCOOL PERFUMADO CEREJA AVELÃ 5 LITROS",
+        "descricao":  "ALCOOL PERFUMADO CEREJA AVELA 5 LITROS",
         "preco_venda":  19.9,
         "preco":  19.9,
         "estoque":  2,
@@ -171,7 +171,7 @@
     },
     {
         "id":  427448,
-        "descricao":  "ÁLCOOL PERFUMADO MAÇA CANELA 2 LITROS",
+        "descricao":  "ALCOOL PERFUMADO MAÇA CANELA 2 LITROS",
         "preco_venda":  10,
         "preco":  10,
         "estoque":  1,
@@ -181,7 +181,7 @@
     },
     {
         "id":  427441,
-        "descricao":  "ÁLCOOL PERFUMADO MAÇA CANELA 5 LITROS",
+        "descricao":  "ALCOOL PERFUMADO MAÇA CANELA 5 LITROS",
         "preco_venda":  19.9,
         "preco":  19.9,
         "estoque":  0,
@@ -221,7 +221,7 @@
     },
     {
         "id":  187,
-        "descricao":  "AMACIANTE CONFORTO 5 LITROS",
+        "descricao":  "AMACIANTE CONFORTO 5L",
         "preco_venda":  20,
         "preco":  20,
         "estoque":  0,
@@ -241,7 +241,7 @@
     },
     {
         "id":  427440,
-        "descricao":  "AMACIANTE DOWNIE 5 LITROS",
+        "descricao":  "AMACIANTE DOWNIE 5L",
         "preco_venda":  25,
         "preco":  25,
         "estoque":  0,
@@ -251,7 +251,7 @@
     },
     {
         "id":  58,
-        "descricao":  "AMACIANTE MAMÃE BEBÊ 2 LITROS",
+        "descricao":  "AMACIANTE MAMAE BEBE 2 LITROS",
         "preco_venda":  10,
         "preco":  10,
         "estoque":  5,
@@ -271,7 +271,7 @@
     },
     {
         "id":  222,
-        "descricao":  "ANTI MOFO 500 ML",
+        "descricao":  "ANTI MOFO 500ML",
         "preco_venda":  11,
         "preco":  11,
         "estoque":  6,
@@ -321,7 +321,7 @@
     },
     {
         "id":  333,
-        "descricao":  "BACIA 40 LITROS",
+        "descricao":  "BACIA 40LTS",
         "preco_venda":  39.9,
         "preco":  39.9,
         "estoque":  1,
@@ -351,7 +351,7 @@
     },
     {
         "id":  334,
-        "descricao":  "BALDE 30 LITROS",
+        "descricao":  "BALDE 30LTS",
         "preco_venda":  39.9,
         "preco":  39.9,
         "estoque":  1,
@@ -371,7 +371,7 @@
     },
     {
         "id":  308,
-        "descricao":  "BARRILHA 1 KG",
+        "descricao":  "BARRILHA 1 KILO",
         "preco_venda":  20,
         "preco":  20,
         "estoque":  3,
@@ -451,7 +451,7 @@
     },
     {
         "id":  427447,
-        "descricao":  "CESTO TELADO 12 LITROS",
+        "descricao":  "CESTO TELADO 12 LTS",
         "preco_venda":  8,
         "preco":  8,
         "estoque":  1,
@@ -461,7 +461,7 @@
     },
     {
         "id":  335,
-        "descricao":  "CESTO TELADO 60 LITROS",
+        "descricao":  "CESTO TELADO 60LTS",
         "preco_venda":  49.9,
         "preco":  49.9,
         "estoque":  2,
@@ -621,7 +621,7 @@
     },
     {
         "id":  199,
-        "descricao":  "CREOLINA 2 LITROS",
+        "descricao":  "CREOLINA 2L",
         "preco_venda":  13,
         "preco":  13,
         "estoque":  0,
@@ -631,7 +631,7 @@
     },
     {
         "id":  198,
-        "descricao":  "CREOLINA 5 LITROS",
+        "descricao":  "CREOLINA 5L",
         "preco_venda":  24.9,
         "preco":  24.9,
         "estoque":  0,
@@ -661,7 +661,7 @@
     },
     {
         "id":  24,
-        "descricao":  "DESINFETANTE CAPIM LIMÃO 2 LITROS",
+        "descricao":  "DESINFETANTE CAPIM LIMÃO 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
         "estoque":  7,
@@ -681,7 +681,7 @@
     },
     {
         "id":  21,
-        "descricao":  "DESINFETANTE CASA LIMPA 2 LITROS",
+        "descricao":  "DESINFETANTE CASA LIMPA 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
         "estoque":  1,
@@ -701,7 +701,7 @@
     },
     {
         "id":  25,
-        "descricao":  "DESINFETANTE CITRONELA 2 LITROS",
+        "descricao":  "DESINFETANTE CITRONELA 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
         "estoque":  2,
@@ -751,7 +751,7 @@
     },
     {
         "id":  22,
-        "descricao":  "DESINFETANTE FLORAL 2 LITROS",
+        "descricao":  "DESINFETANTE FLORAL 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
         "estoque":  3,
@@ -791,7 +791,7 @@
     },
     {
         "id":  28,
-        "descricao":  "DESINFETANTE KAIAK 2 LITROS",
+        "descricao":  "DESINFETANTE KAIAK 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
         "estoque":  7,
@@ -811,7 +811,7 @@
     },
     {
         "id":  23,
-        "descricao":  "DESINFETANTE LAVANDA 2 LITROS",
+        "descricao":  "DESINFETANTE LAVANDA 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
         "estoque":  7,
@@ -831,7 +831,7 @@
     },
     {
         "id":  299,
-        "descricao":  "DESINFETANTE MAMÃE BEBÊ 2 LITROS",
+        "descricao":  "DESINFETANTE MAMAE BEBE 2 LITROS",
         "preco_venda":  6.5,
         "preco":  6.5,
         "estoque":  1,
@@ -861,7 +861,7 @@
     },
     {
         "id":  32,
-        "descricao":  "DESINFETANTE NATUREZA 2 LITROS",
+        "descricao":  "DESINFETANTE NATUREZA 2L",
         "preco_venda":  6.2,
         "preco":  6.2,
         "estoque":  5,
@@ -881,7 +881,7 @@
     },
     {
         "id":  27,
-        "descricao":  "DESINFETANTE PINHO SOL 2 LITROS",
+        "descricao":  "DESINFETANTE PINHO SOL 2L",
         "preco_venda":  6.5,
         "preco":  6.5,
         "estoque":  1,
@@ -941,7 +941,7 @@
     },
     {
         "id":  430,
-        "descricao":  "DESENGRAXANTE 2 LITROS",
+        "descricao":  "DESINGRAXANTE 2 LITROS",
         "preco_venda":  16,
         "preco":  16,
         "estoque":  0,
@@ -951,7 +951,7 @@
     },
     {
         "id":  439,
-        "descricao":  "DESENGRAXANTE 5 LITROS",
+        "descricao":  "DESINGRAXANTE 5 LITROS",
         "preco_venda":  35,
         "preco":  35,
         "estoque":  0,
@@ -1051,7 +1051,7 @@
     },
     {
         "id":  134,
-        "descricao":  "ESCOVA ROUPAS PLÁSTICO ANATÔMICA",
+        "descricao":  "ESCOVA ROUPAS PLASTICO ANATOMICA",
         "preco_venda":  5.2,
         "preco":  5.2,
         "estoque":  1,
@@ -1061,7 +1061,7 @@
     },
     {
         "id":  281,
-        "descricao":  "ESCOVA SANITÁRIA",
+        "descricao":  "ESCOVA SANITARIA",
         "preco_venda":  14.9,
         "preco":  14.9,
         "estoque":  1,
@@ -1101,7 +1101,7 @@
     },
     {
         "id":  332,
-        "descricao":  "GAT * 500 ML",
+        "descricao":  "GAT * 500ML",
         "preco_venda":  8.5,
         "preco":  8.5,
         "estoque":  1,
@@ -1151,7 +1151,7 @@
     },
     {
         "id":  77,
-        "descricao":  "JET CERA 500 ML",
+        "descricao":  "JET CERA 500ML",
         "preco_venda":  9.9,
         "preco":  9.9,
         "estoque":  1,
@@ -1171,7 +1171,7 @@
     },
     {
         "id":  111,
-        "descricao":  "LIMPA ALUMÍNIO 1 LITRO",
+        "descricao":  "LIMPA ALUMINIO 1 LITRO",
         "preco_venda":  10,
         "preco":  10,
         "estoque":  4,
@@ -1181,7 +1181,7 @@
     },
     {
         "id":  112,
-        "descricao":  "LIMPA ALUMÍNIO 2 LITROS",
+        "descricao":  "LIMPA ALUMINIO 2 LITROS",
         "preco_venda":  18,
         "preco":  18,
         "estoque":  1,
@@ -1191,7 +1191,7 @@
     },
     {
         "id":  113,
-        "descricao":  "LIMPA ALUMÍNIO 5 LITROS",
+        "descricao":  "LIMPA ALUMINIO 5 LITROS",
         "preco_venda":  35.9,
         "preco":  35.9,
         "estoque":  0,
@@ -1201,7 +1201,7 @@
     },
     {
         "id":  110,
-        "descricao":  "LIMPA ALUMÍNIO 500 ML",
+        "descricao":  "LIMPA ALUMINIO 500ML",
         "preco_venda":  7,
         "preco":  7,
         "estoque":  5,
@@ -1221,7 +1221,7 @@
     },
     {
         "id":  115,
-        "descricao":  "LIMPA AZULEJO PLÁSTICO",
+        "descricao":  "LIMPA AZULEJO PLASTICO",
         "preco_venda":  18,
         "preco":  18,
         "estoque":  0,
@@ -1231,7 +1231,7 @@
     },
     {
         "id":  155,
-        "descricao":  "LIMPA AZULEJO REFIL PLÁSTICO",
+        "descricao":  "LIMPA AZULEJO REFIL PLASTICO",
         "preco_venda":  12,
         "preco":  12,
         "estoque":  0,
@@ -1281,7 +1281,7 @@
     },
     {
         "id":  276,
-        "descricao":  "LIMPA CANIL 5 LITROS",
+        "descricao":  "LIMPA CANIL 5L",
         "preco_venda":  20,
         "preco":  20,
         "estoque":  1,
@@ -1321,7 +1321,7 @@
     },
     {
         "id":  246,
-        "descricao":  "LIMPA CONCRETO 1 LITRO",
+        "descricao":  "LIMPA CONCRETO 1L",
         "preco_venda":  10,
         "preco":  10,
         "estoque":  31,
@@ -1341,7 +1341,7 @@
     },
     {
         "id":  203,
-        "descricao":  "LIMPA CONCRETO 2 LITROS",
+        "descricao":  "LIMPA CONCRETO 2LTS",
         "preco_venda":  15,
         "preco":  15,
         "estoque":  6,
@@ -1351,7 +1351,7 @@
     },
     {
         "id":  386,
-        "descricao":  "LIMPA CONCRETO 5 LITROS",
+        "descricao":  "LIMPA CONCRETO 5L",
         "preco_venda":  110,
         "preco":  110,
         "estoque":  1,
@@ -1401,7 +1401,7 @@
     },
     {
         "id":  124,
-        "descricao":  "LIMPA PORCELANATO 500 ML",
+        "descricao":  "LIMPA PORCELANATO 500ML",
         "preco_venda":  7.5,
         "preco":  7.5,
         "estoque":  3,
@@ -1441,7 +1441,7 @@
     },
     {
         "id":  323,
-        "descricao":  "LIMPA VIDROS 500 ML",
+        "descricao":  "LIMPA VIDROS 500ML",
         "preco_venda":  10,
         "preco":  10,
         "estoque":  8,
@@ -1481,7 +1481,7 @@
     },
     {
         "id":  221,
-        "descricao":  "LUSTRA MÓVEIS 500 ML",
+        "descricao":  "LUSTRA MOVEIS 500ML",
         "preco_venda":  11,
         "preco":  11,
         "estoque":  6,
@@ -1551,7 +1551,7 @@
     },
     {
         "id":  328,
-        "descricao":  "MATA INSETO 500 ML COM GATILHO",
+        "descricao":  "MATA INSETO 500ML C GATILHO",
         "preco_venda":  15,
         "preco":  15,
         "estoque":  3,
@@ -1571,7 +1571,7 @@
     },
     {
         "id":  427442,
-        "descricao":  "MTC 5 LITROS",
+        "descricao":  "MTC 5LTS",
         "preco_venda":  110,
         "preco":  110,
         "estoque":  1,
@@ -1641,7 +1641,7 @@
     },
     {
         "id":  122,
-        "descricao":  "PÁ DE LIXO COM CABO",
+        "descricao":  "PA DE LIXO COM CABO",
         "preco_venda":  12,
         "preco":  12,
         "estoque":  0,
@@ -1721,7 +1721,7 @@
     },
     {
         "id":  98,
-        "descricao":  "PASTA DE BRILHO 500 G",
+        "descricao":  "PASTA DE BRILHO 500GR",
         "preco_venda":  9,
         "preco":  9,
         "estoque":  14,
@@ -1741,7 +1741,7 @@
     },
     {
         "id":  214,
-        "descricao":  "PEDRA SANITÁRIA",
+        "descricao":  "PEDRA SANITARIA",
         "preco_venda":  3,
         "preco":  3,
         "estoque":  22,
@@ -1751,7 +1751,7 @@
     },
     {
         "id":  423,
-        "descricao":  "PERCARBONATO 1 KG",
+        "descricao":  "PERCABONATO 1KG",
         "preco_venda":  25,
         "preco":  25,
         "estoque":  0,
@@ -1761,7 +1761,7 @@
     },
     {
         "id":  441,
-        "descricao":  "PERCARBONATO 500 G",
+        "descricao":  "PERCARBONATO 500GR",
         "preco_venda":  15,
         "preco":  15,
         "estoque":  8,
@@ -1791,7 +1791,7 @@
     },
     {
         "id":  427430,
-        "descricao":  "PERFUME PARA ROUPA AMACIEX 1 LITRO",
+        "descricao":  "PERFUME PARA ROUPA AMACIEX 1L",
         "preco_venda":  12.5,
         "preco":  12.5,
         "estoque":  0,
@@ -1801,7 +1801,7 @@
     },
     {
         "id":  202,
-        "descricao":  "PERFUME PARA ROUPA AMACIEX 2 LITROS",
+        "descricao":  "PERFUME PARA ROUPA AMACIEX 2L",
         "preco_venda":  22,
         "preco":  22,
         "estoque":  0,
@@ -1811,7 +1811,7 @@
     },
     {
         "id":  207,
-        "descricao":  "PERFUME PARA ROUPA AMACIEX 5 LITROS",
+        "descricao":  "PERFUME PARA ROUPA AMACIEX 5L",
         "preco_venda":  39.5,
         "preco":  39.5,
         "estoque":  0,
@@ -1851,7 +1851,7 @@
     },
     {
         "id":  75,
-        "descricao":  "PNEU PRETINHO 500 ML",
+        "descricao":  "PNEU PRETINHO 500ML",
         "preco_venda":  8,
         "preco":  8,
         "estoque":  6,
@@ -1881,7 +1881,7 @@
     },
     {
         "id":  128,
-        "descricao":  "PRENDEDOR PLÁSTICO",
+        "descricao":  "PRENDEDOR PLASTICO",
         "preco_venda":  3,
         "preco":  3,
         "estoque":  2,
@@ -1921,7 +1921,7 @@
     },
     {
         "id":  294,
-        "descricao":  "REMOVEDOR 2 LITROS",
+        "descricao":  "REMOVEDOR 2L",
         "preco_venda":  70,
         "preco":  70,
         "estoque":  1,
@@ -1931,7 +1931,7 @@
     },
     {
         "id":  179,
-        "descricao":  "REMOVEDOR 500 ML",
+        "descricao":  "REMOVEDOR 500ML",
         "preco_venda":  20,
         "preco":  20,
         "estoque":  4,
@@ -1961,7 +1961,7 @@
     },
     {
         "id":  150,
-        "descricao":  "RODO PLÁSTICO 30 CM",
+        "descricao":  "RODO PLASTICO 30CM",
         "preco_venda":  16,
         "preco":  16,
         "estoque":  2,
@@ -1971,7 +1971,7 @@
     },
     {
         "id":  151,
-        "descricao":  "RODO PLÁSTICO 40 CM",
+        "descricao":  "RODO PLASTICO 40CM",
         "preco_venda":  18,
         "preco":  18,
         "estoque":  5,
@@ -1981,7 +1981,7 @@
     },
     {
         "id":  152,
-        "descricao":  "RODO PLÁSTICO 60 CM",
+        "descricao":  "RODO PLASTICO 60CM",
         "preco_venda":  22,
         "preco":  22,
         "estoque":  1,
@@ -1991,7 +1991,7 @@
     },
     {
         "id":  419,
-        "descricao":  "SABÃO CASEIRO 350 G",
+        "descricao":  "SABAO CASEIRO 350 GR",
         "preco_venda":  5,
         "preco":  5,
         "estoque":  0,
@@ -2001,7 +2001,7 @@
     },
     {
         "id":  17,
-        "descricao":  "SABÃO LÍQUIDO ARIEX 2 LITROS",
+        "descricao":  "SABÃO LIQUIDO ARIEX 2 LITROS",
         "preco_venda":  14,
         "preco":  14,
         "estoque":  5,
@@ -2011,7 +2011,7 @@
     },
     {
         "id":  190,
-        "descricao":  "SABÃO LÍQUIDO ARIEX 5 LITROS",
+        "descricao":  "SABAO LIQUIDO ARIEX 5L",
         "preco_venda":  29.9,
         "preco":  29.9,
         "estoque":  -1,
@@ -2021,7 +2021,7 @@
     },
     {
         "id":  63,
-        "descricao":  "SABÃO LÍQUIDO COM BICARBONATO 2 LITROS",
+        "descricao":  "SABÃO LIQUIDO COM BICARBONATO 2 LITROS",
         "preco_venda":  18,
         "preco":  18,
         "estoque":  2,
@@ -2031,7 +2031,7 @@
     },
     {
         "id":  62,
-        "descricao":  "SABÃO LÍQUIDO DE COCO 2 LITROS",
+        "descricao":  "SABÃO LIQUIDO DE COCO 2 LITROS",
         "preco_venda":  14,
         "preco":  14,
         "estoque":  4,
@@ -2041,7 +2041,7 @@
     },
     {
         "id":  68,
-        "descricao":  "SABÃO LÍQUIDO DE COCO 5 LITROS",
+        "descricao":  "SABÃO LIQUIDO DE COCO 5 LITROS",
         "preco_venda":  29.9,
         "preco":  29.9,
         "estoque":  1,
@@ -2051,7 +2051,7 @@
     },
     {
         "id":  65,
-        "descricao":  "SABÃO LÍQUIDO DINAMUS 2 LITROS",
+        "descricao":  "SABÃO LIQUIDO DINAMUS 2 LITROS",
         "preco_venda":  14,
         "preco":  14,
         "estoque":  0,
@@ -2061,7 +2061,7 @@
     },
     {
         "id":  70,
-        "descricao":  "SABÃO LÍQUIDO DINAMUS 5 LITROS",
+        "descricao":  "SABÃO LIQUIDO DINAMUS 5 LITROS",
         "preco_venda":  29.9,
         "preco":  29.9,
         "estoque":  0,
@@ -2071,7 +2071,7 @@
     },
     {
         "id":  60,
-        "descricao":  "SABÃO LÍQUIDO OMUS 2 LITROS",
+        "descricao":  "SABÃO LIQUIDO OMUS 2 LITROS",
         "preco_venda":  14,
         "preco":  14,
         "estoque":  6,
@@ -2081,7 +2081,7 @@
     },
     {
         "id":  66,
-        "descricao":  "SABÃO LÍQUIDO OMUS 5 LITROS",
+        "descricao":  "SABÃO LIQUIDO OMUS 5 LITROS",
         "preco_venda":  29.9,
         "preco":  29.9,
         "estoque":  -3,
@@ -2091,7 +2091,7 @@
     },
     {
         "id":  417,
-        "descricao":  "SABÃO QUEROSENE 2 LITROS",
+        "descricao":  "SABAO QUEROSENE 2 LITROS",
         "preco_venda":  15,
         "preco":  15,
         "estoque":  0,
@@ -2111,7 +2111,7 @@
     },
     {
         "id":  73,
-        "descricao":  "SABONETE LÍQUIDO 2 LITROS",
+        "descricao":  "SABONETE LIQUIDO 2 LITROS",
         "preco_venda":  25,
         "preco":  25,
         "estoque":  0,
@@ -2121,7 +2121,7 @@
     },
     {
         "id":  280,
-        "descricao":  "SABONETE LÍQUIDO 500 ML",
+        "descricao":  "SABONETE LIQUIDO 500ML",
         "preco_venda":  5,
         "preco":  5,
         "estoque":  0,
@@ -2131,7 +2131,7 @@
     },
     {
         "id":  226,
-        "descricao":  "SABONETE LÍQUIDO 5 LITROS",
+        "descricao":  "SABONETE LIQUIDO 5L",
         "preco_venda":  29.9,
         "preco":  29.9,
         "estoque":  4,
@@ -2141,7 +2141,7 @@
     },
     {
         "id":  205,
-        "descricao":  "SABONETE LÍQUIDO DOVE",
+        "descricao":  "SABONETE LIQUIDO DOVE",
         "preco_venda":  12,
         "preco":  12,
         "estoque":  3,
@@ -2151,7 +2151,7 @@
     },
     {
         "id":  271,
-        "descricao":  "SABONETE LÍQUIDO ERVA DOCE 2 LITROS",
+        "descricao":  "SABONETE LIQUIDO ERVA DOCE 2L",
         "preco_venda":  12,
         "preco":  12,
         "estoque":  4,
@@ -2171,7 +2171,7 @@
     },
     {
         "id":  160,
-        "descricao":  "SACO DE LIXO 40 LITROS 10 UNIDADES",
+        "descricao":  "SACO DE LIIXO 40LTS 10UNI",
         "preco_venda":  5.5,
         "preco":  5.5,
         "estoque":  108,
@@ -2181,7 +2181,7 @@
     },
     {
         "id":  164,
-        "descricao":  "SACO DE LIXO 100 5 UNIDADES",
+        "descricao":  "SACO DE LIXO 100 5UNI",
         "preco_venda":  13,
         "preco":  13,
         "estoque":  10,
@@ -2201,7 +2201,7 @@
     },
     {
         "id":  139,
-        "descricao":  "SACO DE LIXO 20 LITROS 10UN",
+        "descricao":  "SACO DE LIXO 20 LTS 10UN",
         "preco_venda":  5,
         "preco":  5,
         "estoque":  51,
@@ -2211,7 +2211,7 @@
     },
     {
         "id":  169,
-        "descricao":  "SACO DE LIXO 40 LITROS 10UN",
+        "descricao":  "SACO DE LIXO 40 LTS 10UN",
         "preco_venda":  8,
         "preco":  8,
         "estoque":  10,
@@ -2221,7 +2221,7 @@
     },
     {
         "id":  162,
-        "descricao":  "SACO DE LIXO 60 LITROS 10 UNIDADES",
+        "descricao":  "SACO DE LIXO 60 LTS 10 UN",
         "preco_venda":  10,
         "preco":  10,
         "estoque":  48,
@@ -2231,7 +2231,7 @@
     },
     {
         "id":  379,
-        "descricao":  "SACOS DE 200 LITROS",
+        "descricao":  "SACOS DE 200LTS",
         "preco_venda":  25,
         "preco":  25,
         "estoque":  3,
@@ -2291,7 +2291,7 @@
     },
     {
         "id":  407,
-        "descricao":  "SILICONE 250 G",
+        "descricao":  "SILICONE 250GR",
         "preco_venda":  10,
         "preco":  10,
         "estoque":  4,
@@ -2301,7 +2301,7 @@
     },
     {
         "id":  208,
-        "descricao":  "SODA ESCAMA 1 KG",
+        "descricao":  "SODA ESCAMA 1KG",
         "preco_venda":  25,
         "preco":  25,
         "estoque":  3,

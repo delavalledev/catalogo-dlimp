@@ -1,0 +1,387 @@
+============================================
+ LIMPEZA INICIAL DO CATÁLOGO D'LIMP
+============================================
+
+TOTAL DE PRODUTOS: 261
+
+REGRAS:
+- Nomes serão padronizados.
+- Abreviações serão expandidas.
+- Caracteres quebrados serão corrigidos.
+- Erros ortográficos conhecidos serão corrigidos.
+- Preço desta limpeza = maior preço encontrado.
+- Estoque NÃO será alterado.
+- Fotos NÃO serão alteradas nesta etapa.
+
+--------------------------------------------
+ID: 217
+ANTES:  ALCOOL 70 1L
+DEPOIS: ÁLCOOL 70 1 LITRO
+
+--------------------------------------------
+ID: 174
+ANTES:  ALCOOL 70 2L
+DEPOIS: ÁLCOOL 70 2 LITROS
+
+--------------------------------------------
+ID: 427456
+ANTES:  ALCOOL 70 500ML
+DEPOIS: ÁLCOOL 70 500 ML
+
+--------------------------------------------
+ID: 175
+ANTES:  ALCOOL 70 5L
+DEPOIS: ÁLCOOL 70 5 LITROS
+
+--------------------------------------------
+ID: 176
+ANTES:  ALCOOL 96 1L
+DEPOIS: ÁLCOOL 96 1 LITRO
+
+--------------------------------------------
+ID: 177
+ANTES:  ALCOOL 96 2L
+DEPOIS: ÁLCOOL 96 2 LITROS
+
+--------------------------------------------
+ID: 178
+ANTES:  ALCOOL 96 5L
+DEPOIS: ÁLCOOL 96 5 LITROS
+
+--------------------------------------------
+ID: 20
+ANTES:  ALCOOL GEL 1 LITRO
+DEPOIS: ÁLCOOL GEL 1 LITRO
+
+--------------------------------------------
+ID: 346
+ANTES:  ALCOOL GEL 500 ML
+DEPOIS: ÁLCOOL GEL 500 ML
+
+--------------------------------------------
+ID: 317
+ANTES:  ALCOOL GEL 5L
+DEPOIS: ÁLCOOL GEL 5 LITROS
+
+--------------------------------------------
+ID: 88
+ANTES:  ALCOOL PERFUMADO BAMBOO 2 LITROS
+DEPOIS: ÁLCOOL PERFUMADO BAMBOO 2 LITROS
+
+--------------------------------------------
+ID: 94
+ANTES:  ALCOOL PERFUMADO BAMBOO 5 LITROS
+DEPOIS: ÁLCOOL PERFUMADO BAMBOO 5 LITROS
+
+--------------------------------------------
+ID: 87
+ANTES:  ALCOOL PERFUMADO CEREJA AVELA 2 LITROS
+DEPOIS: ÁLCOOL PERFUMADO CEREJA AVELÃ 2 LITROS
+
+--------------------------------------------
+ID: 95
+ANTES:  ALCOOL PERFUMADO CEREJA AVELA 5 LITROS
+DEPOIS: ÁLCOOL PERFUMADO CEREJA AVELÃ 5 LITROS
+
+--------------------------------------------
+ID: 427448
+ANTES:  ALCOOL PERFUMADO MAÇA CANELA 2 LITROS
+DEPOIS: ÁLCOOL PERFUMADO MAÇA CANELA 2 LITROS
+
+--------------------------------------------
+ID: 427441
+ANTES:  ALCOOL PERFUMADO MAÇA CANELA 5 LITROS
+DEPOIS: ÁLCOOL PERFUMADO MAÇA CANELA 5 LITROS
+
+--------------------------------------------
+ID: 187
+ANTES:  AMACIANTE CONFORTO 5L
+DEPOIS: AMACIANTE CONFORTO 5 LITROS
+
+--------------------------------------------
+ID: 427440
+ANTES:  AMACIANTE DOWNIE 5L
+DEPOIS: AMACIANTE DOWNIE 5 LITROS
+
+--------------------------------------------
+ID: 58
+ANTES:  AMACIANTE MAMAE BEBE 2 LITROS
+DEPOIS: AMACIANTE MAMÃE BEBE 2 LITROS
+
+--------------------------------------------
+ID: 222
+ANTES:  ANTI MOFO 500ML
+DEPOIS: ANTI MOFO 500 ML
+
+--------------------------------------------
+ID: 308
+ANTES:  BARRILHA 1 KILO
+DEPOIS: BARRILHA 1 KG
+
+--------------------------------------------
+ID: 199
+ANTES:  CREOLINA 2L
+DEPOIS: CREOLINA 2 LITROS
+
+--------------------------------------------
+ID: 198
+ANTES:  CREOLINA 5L
+DEPOIS: CREOLINA 5 LITROS
+
+--------------------------------------------
+ID: 24
+ANTES:  DESINFETANTE CAPIM LIMÃO 2L
+DEPOIS: DESINFETANTE CAPIM LIMÃO 2 LITROS
+
+--------------------------------------------
+ID: 21
+ANTES:  DESINFETANTE CASA LIMPA 2L
+DEPOIS: DESINFETANTE CASA LIMPA 2 LITROS
+
+--------------------------------------------
+ID: 25
+ANTES:  DESINFETANTE CITRONELA 2L
+DEPOIS: DESINFETANTE CITRONELA 2 LITROS
+
+--------------------------------------------
+ID: 22
+ANTES:  DESINFETANTE FLORAL 2L
+DEPOIS: DESINFETANTE FLORAL 2 LITROS
+
+--------------------------------------------
+ID: 28
+ANTES:  DESINFETANTE KAIAK 2L
+DEPOIS: DESINFETANTE KAIAK 2 LITROS
+
+--------------------------------------------
+ID: 23
+ANTES:  DESINFETANTE LAVANDA 2L
+DEPOIS: DESINFETANTE LAVANDA 2 LITROS
+
+--------------------------------------------
+ID: 299
+ANTES:  DESINFETANTE MAMAE BEBE 2 LITROS
+DEPOIS: DESINFETANTE MAMÃE BEBE 2 LITROS
+
+--------------------------------------------
+ID: 32
+ANTES:  DESINFETANTE NATUREZA 2L
+DEPOIS: DESINFETANTE NATUREZA 2 LITROS
+
+--------------------------------------------
+ID: 27
+ANTES:  DESINFETANTE PINHO SOL 2L
+DEPOIS: DESINFETANTE PINHO SOL 2 LITROS
+
+--------------------------------------------
+ID: 430
+ANTES:  DESINGRAXANTE 2 LITROS
+DEPOIS: DESENGRAXANTE 2 LITROS
+
+--------------------------------------------
+ID: 439
+ANTES:  DESINGRAXANTE 5 LITROS
+DEPOIS: DESENGRAXANTE 5 LITROS
+
+--------------------------------------------
+ID: 332
+ANTES:  GAT * 500ML
+DEPOIS: GAT * 500 ML
+
+--------------------------------------------
+ID: 77
+ANTES:  JET CERA 500ML
+DEPOIS: JET CERA 500 ML
+
+--------------------------------------------
+ID: 110
+ANTES:  LIMPA ALUMINIO 500ML
+DEPOIS: LIMPA ALUMINIO 500 ML
+
+--------------------------------------------
+ID: 276
+ANTES:  LIMPA CANIL 5L
+DEPOIS: LIMPA CANIL 5 LITROS
+
+--------------------------------------------
+ID: 246
+ANTES:  LIMPA CONCRETO 1L
+DEPOIS: LIMPA CONCRETO 1 LITRO
+
+--------------------------------------------
+ID: 203
+ANTES:  LIMPA CONCRETO 2LTS
+DEPOIS: LIMPA CONCRETO 2 LITROS
+
+--------------------------------------------
+ID: 386
+ANTES:  LIMPA CONCRETO 5L
+DEPOIS: LIMPA CONCRETO 5 LITROS
+
+--------------------------------------------
+ID: 124
+ANTES:  LIMPA PORCELANATO 500ML
+DEPOIS: LIMPA PORCELANATO 500 ML
+
+--------------------------------------------
+ID: 323
+ANTES:  LIMPA VIDROS 500ML
+DEPOIS: LIMPA VIDROS 500 ML
+
+--------------------------------------------
+ID: 221
+ANTES:  LUSTRA MOVEIS 500ML
+DEPOIS: LUSTRA MOVEIS 500 ML
+
+--------------------------------------------
+ID: 328
+ANTES:  MATA INSETO 500ML C GATILHO
+DEPOIS: MATA INSETO 500 ML C GATILHO
+
+--------------------------------------------
+ID: 427442
+ANTES:  MTC 5LTS
+DEPOIS: MTC 5 LITROS
+
+--------------------------------------------
+ID: 98
+ANTES:  PASTA DE BRILHO 500GR
+DEPOIS: PASTA DE BRILHO 500 G
+
+--------------------------------------------
+ID: 423
+ANTES:  PERCABONATO 1KG
+DEPOIS: PERCARBONATO 1 KG
+
+--------------------------------------------
+ID: 441
+ANTES:  PERCARBONATO 500GR
+DEPOIS: PERCARBONATO 500 G
+
+--------------------------------------------
+ID: 427430
+ANTES:  PERFUME PARA ROUPA AMACIEX 1L
+DEPOIS: PERFUME PARA ROUPA AMACIEX 1 LITRO
+
+--------------------------------------------
+ID: 202
+ANTES:  PERFUME PARA ROUPA AMACIEX 2L
+DEPOIS: PERFUME PARA ROUPA AMACIEX 2 LITROS
+
+--------------------------------------------
+ID: 207
+ANTES:  PERFUME PARA ROUPA AMACIEX 5L
+DEPOIS: PERFUME PARA ROUPA AMACIEX 5 LITROS
+
+--------------------------------------------
+ID: 75
+ANTES:  PNEU PRETINHO 500ML
+DEPOIS: PNEU PRETINHO 500 ML
+
+--------------------------------------------
+ID: 294
+ANTES:  REMOVEDOR 2L
+DEPOIS: REMOVEDOR 2 LITROS
+
+--------------------------------------------
+ID: 179
+ANTES:  REMOVEDOR 500ML
+DEPOIS: REMOVEDOR 500 ML
+
+--------------------------------------------
+ID: 419
+ANTES:  SABAO CASEIRO 350 GR
+DEPOIS: SABÃO CASEIRO 350 GR
+
+--------------------------------------------
+ID: 17
+ANTES:  SABÃO LIQUIDO ARIEX 2 LITROS
+DEPOIS: SABÃO LÍQUIDO ARIEX 2 LITROS
+
+--------------------------------------------
+ID: 190
+ANTES:  SABAO LIQUIDO ARIEX 5L
+DEPOIS: SABÃO LÍQUIDO ARIEX 5 LITROS
+
+--------------------------------------------
+ID: 63
+ANTES:  SABÃO LIQUIDO COM BICARBONATO 2 LITROS
+DEPOIS: SABÃO LÍQUIDO COM BICARBONATO 2 LITROS
+
+--------------------------------------------
+ID: 62
+ANTES:  SABÃO LIQUIDO DE COCO 2 LITROS
+DEPOIS: SABÃO LÍQUIDO DE COCO 2 LITROS
+
+--------------------------------------------
+ID: 68
+ANTES:  SABÃO LIQUIDO DE COCO 5 LITROS
+DEPOIS: SABÃO LÍQUIDO DE COCO 5 LITROS
+
+--------------------------------------------
+ID: 65
+ANTES:  SABÃO LIQUIDO DINAMUS 2 LITROS
+DEPOIS: SABÃO LÍQUIDO DINAMUS 2 LITROS
+
+--------------------------------------------
+ID: 70
+ANTES:  SABÃO LIQUIDO DINAMUS 5 LITROS
+DEPOIS: SABÃO LÍQUIDO DINAMUS 5 LITROS
+
+--------------------------------------------
+ID: 60
+ANTES:  SABÃO LIQUIDO OMUS 2 LITROS
+DEPOIS: SABÃO LÍQUIDO OMUS 2 LITROS
+
+--------------------------------------------
+ID: 66
+ANTES:  SABÃO LIQUIDO OMUS 5 LITROS
+DEPOIS: SABÃO LÍQUIDO OMUS 5 LITROS
+
+--------------------------------------------
+ID: 417
+ANTES:  SABAO QUEROSENE 2 LITROS
+DEPOIS: SABÃO QUEROSENE 2 LITROS
+
+--------------------------------------------
+ID: 73
+ANTES:  SABONETE LIQUIDO 2 LITROS
+DEPOIS: SABONETE LÍQUIDO 2 LITROS
+
+--------------------------------------------
+ID: 280
+ANTES:  SABONETE LIQUIDO 500ML
+DEPOIS: SABONETE LÍQUIDO 500 ML
+
+--------------------------------------------
+ID: 226
+ANTES:  SABONETE LIQUIDO 5L
+DEPOIS: SABONETE LÍQUIDO 5 LITROS
+
+--------------------------------------------
+ID: 205
+ANTES:  SABONETE LIQUIDO DOVE
+DEPOIS: SABONETE LÍQUIDO DOVE
+
+--------------------------------------------
+ID: 271
+ANTES:  SABONETE LIQUIDO ERVA DOCE 2L
+DEPOIS: SABONETE LÍQUIDO ERVA DOCE 2 LITROS
+
+--------------------------------------------
+ID: 208
+ANTES:  SODA ESCAMA 1KG
+DEPOIS: SODA ESCAMA 1 KG
+
+============================================
+RESUMO
+============================================
+
+Produtos analisados: 261
+Nomes alterados:     72
+
+BACKUP: C:/catalogo-dlimp/data/produtos-online.antes-limpeza.json
+
+ATENÇÃO:
+Esta etapa alterou somente os nomes no arquivo do site.
+O banco do Sys-On NÃO foi alterado.

@@ -1,2 +1,13 @@
 @echo off
-powershell.exe -ExecutionPolicy Bypass -File "C:\catalogo-dlimp\sincronizar.ps1"
+title SINCRONIZADOR D'LIMP
+
+cd /d C:\catalogo-dlimp
+
+node sincronizador.js
+
+echo.
+echo ============================================
+echo   SINCRONIZADOR ENCERRADO
+echo ============================================
+echo.
+pause

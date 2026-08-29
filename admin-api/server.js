@@ -1,7 +1,13 @@
-﻿const http = require("http");
+﻿const path = require("path");
+const http = require("http");
 const fs = require("fs");
-const path = require("path");
-const { execFileSync } = require("child_process"); 
+const { execFileSync } = require("child_process");
+
+require("../api/node_modules/dotenv").config({
+    path: path.join(__dirname, "api", ".env")
+});
+
+const db = require("../api/db");
 
 const PORT = 3100;
 
@@ -59,6 +65,52 @@ function lerCorpo(req) {
     });
 }
 
+async function atualizarSysOn(id, dados) {
+
+    const campos = [];
+    const valores = [];
+
+    if (dados.descricao !== undefined) {
+        campos.push("descricao = ?");
+        valores.push(String(dados.descricao).trim());
+    }
+
+    if (dados.preco !== undefined) {
+        const preco = Number(dados.preco);
+
+        if (!Number.isFinite(preco) || preco < 0) {
+            throw new Error("Preço inválido.");
+        }
+
+        campos.push("preco_venda = ?");
+        valores.push(preco);
+    }
+
+    if (campos.length === 0) {
+        return {
+            alterado: false,
+            mensagem: "Nenhum campo para alterar."
+        };
+    }
+
+    valores.push(Number(id));
+
+    const [resultado] = await db.query(
+        `
+        UPDATE cadproduto
+        SET ${campos.join(", ")}
+        WHERE id = ?
+        LIMIT 1
+        `,
+        valores
+    );
+
+    return {
+        alterado: resultado.affectedRows > 0,
+        affectedRows: resultado.affectedRows
+    };
+}
+
 const server = http.createServer(async (req, res) => {
 
     if (req.method === "OPTIONS") {
@@ -72,39 +124,111 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (req.method === "GET" && req.url === "/saude") {
-        return responder(res, 200, {
-            ok: true,
-            servico: "Admin D'Limp"
-        });
+
+        try {
+
+            await db.query("SELECT 1");
+
+            return responder(res, 200, {
+                ok: true,
+                servico: "Admin D'Limp",
+                banco: "conectado"
+            });
+
+        } catch (erro) {
+
+            console.error("ERRO BANCO:", erro);
+
+            return responder(res, 500, {
+                ok: false,
+                servico: "Admin D'Limp",
+                banco: "desconectado",
+                erro: erro.message
+            });
+        }
     }
 
     if (req.method === "GET" && req.url === "/ajustes") {
+
         try {
             return responder(res, 200, lerAjustes());
+
         } catch (erro) {
-            return responder(res, 500, { erro: erro.message });
+
+            return responder(res, 500, {
+                ok: false,
+                erro: erro.message
+            });
         }
     }
 
     if (req.method === "POST" && req.url === "/ajustes") {
+
         try {
+
             const corpo = await lerCorpo(req);
             const dados = JSON.parse(corpo);
 
             salvarAjustes(dados);
 
+            const resultados = [];
+
+            for (const [id, produto] of Object.entries(dados)) {
+
+                if (!produto || typeof produto !== "object") {
+                    continue;
+                }
+
+                if (
+                    produto.descricao === undefined &&
+                    produto.preco === undefined
+                ) {
+                    continue;
+                }
+
+                try {
+
+                    const resultado = await atualizarSysOn(
+                        id,
+                        produto
+                    );
+
+                    resultados.push({
+                        id,
+                        ...resultado
+                    });
+
+                } catch (erro) {
+
+                    resultados.push({
+                        id,
+                        alterado: false,
+                        erro: erro.message
+                    });
+                }
+            }
+
             return responder(res, 200, {
                 ok: true,
-                mensagem: "Ajustes salvos."
+                mensagem: "Ajustes salvos e enviados ao Sys-On.",
+                resultados
             });
 
         } catch (erro) {
-            return responder(res, 400, { erro: erro.message });
+
+            console.error("ERRO /ajustes:", erro);
+
+            return responder(res, 400, {
+                ok: false,
+                erro: erro.message
+            });
         }
     }
 
     if (req.method === "POST" && req.url === "/foto") {
+
         try {
+
             const corpo = await lerCorpo(req);
             const dados = JSON.parse(corpo);
 
@@ -132,8 +256,10 @@ const server = http.createServer(async (req, res) => {
             const nomeArquivo = `${id}.${extensao}`;
             const destino = path.join(pastaFotos, nomeArquivo);
 
-            const buffer = Buffer.from(base64, "base64");
-            fs.writeFileSync(destino, buffer);
+            fs.writeFileSync(
+                destino,
+                Buffer.from(base64, "base64")
+            );
 
             const ajustes = lerAjustes();
 
@@ -141,89 +267,138 @@ const server = http.createServer(async (req, res) => {
                 ajustes[id] = {};
             }
 
-            ajustes[id].imagem = `img/produtos/${nomeArquivo}`;
+            ajustes[id].imagem =
+                `img/produtos/${nomeArquivo}`;
 
             salvarAjustes(ajustes);
 
+            /*
+             * Guarda também o nome da imagem no cadastro do Sys-On.
+             */
+            await db.query(
+                `
+                UPDATE cadproduto
+                SET imagem = ?
+                WHERE id = ?
+                LIMIT 1
+                `,
+                [nomeArquivo, Number(id)]
+            );
+
             return responder(res, 200, {
                 ok: true,
-                imagem: `img/produtos/${nomeArquivo}`
+                imagem: `img/produtos/${nomeArquivo}`,
+                sysOn: true
             });
 
         } catch (erro) {
+
+            console.error("ERRO /foto:", erro);
+
             return responder(res, 400, {
+                ok: false,
                 erro: erro.message
             });
         }
     }
+
     if (req.method === "POST" && req.url === "/publicar") {
-    try {
-        execFileSync("git", ["add", "-A"], {
-            cwd: raiz,
-            encoding: "utf8"
-        });
 
         try {
-            execFileSync("git", ["diff", "--cached", "--quiet"], {
-                cwd: raiz
-            });
+
+            execFileSync(
+                "git",
+                ["add", "-A"],
+                {
+                    cwd: raiz,
+                    encoding: "utf8"
+                }
+            );
+
+            try {
+
+                execFileSync(
+                    "git",
+                    ["diff", "--cached", "--quiet"],
+                    {
+                        cwd: raiz
+                    }
+                );
+
+                return responder(res, 200, {
+                    ok: true,
+                    publicou: false,
+                    mensagem: "Nenhuma alteração nova para publicar."
+                });
+
+            } catch {
+                // Existem alterações.
+            }
+
+            const data =
+                new Date().toLocaleString("pt-BR");
+
+            execFileSync(
+                "git",
+                [
+                    "commit",
+                    "-m",
+                    `Atualizacao pelo Admin - ${data}`
+                ],
+                {
+                    cwd: raiz,
+                    encoding: "utf8"
+                }
+            );
+
+            execFileSync(
+                "git",
+                ["push", "origin", "main"],
+                {
+                    cwd: raiz,
+                    encoding: "utf8"
+                }
+            );
 
             return responder(res, 200, {
                 ok: true,
-                publicou: false,
-                mensagem: "Nenhuma alteração nova para publicar."
+                publicou: true,
+                mensagem: "Alterações publicadas com sucesso."
             });
 
-        } catch {
-            // Se o git diff retornar diferente de zero,
-            // existem alterações e podemos continuar.
+        } catch (erro) {
+
+            console.error("ERRO /publicar:", erro);
+
+            return responder(res, 500, {
+                ok: false,
+                erro: erro.stderr?.toString() || erro.message
+            });
         }
-
-        const data = new Date().toLocaleString("pt-BR");
-
-        execFileSync(
-            "git",
-            ["commit", "-m", `Atualizacao pelo Admin - ${data}`],
-            {
-                cwd: raiz,
-                encoding: "utf8"
-            }
-        );
-
-        execFileSync(
-            "git",
-            ["push", "origin", "main"],
-            {
-                cwd: raiz,
-                encoding: "utf8"
-            }
-        );
-
-        return responder(res, 200, {
-            ok: true,
-            publicou: true,
-            mensagem: "Alterações publicadas com sucesso."
-        });
-
-    } catch (erro) {
-        console.error("Erro ao publicar:", erro);
-
-        return responder(res, 500, {
-            ok: false,
-            erro: erro.stderr?.toString() || erro.message
-        });
     }
-}
-    responder(res, 404, {
+
+    return responder(res, 404, {
+        ok: false,
         erro: "Rota não encontrada."
     });
 });
 
-server.listen(PORT, "127.0.0.1", () => {
+server.listen(PORT, "127.0.0.1", async () => {
+
     console.log("");
     console.log("=====================================");
     console.log(" ADMIN API D'Limp");
     console.log("=====================================");
     console.log(`http://127.0.0.1:${PORT}`);
+
+    try {
+        await db.query("SELECT 1");
+        console.log("Banco Sys-On: conectado");
+    } catch (erro) {
+        console.log("ERRO BANCO:", erro.message);
+    }
+
     console.log("");
 });
+
+

@@ -1,4 +1,4 @@
-require("dotenv").config();
+﻿require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
@@ -15,7 +15,7 @@ const PASTA_IMAGENS = "C:/SysOnPDV-Pro/imgProdutos";
 const URL_BASE = `http://127.0.0.1:${PORT}`;
 
 /* =========================================================
-   Configurações gerais
+   ConfiguraÃ§Ãµes gerais
    ========================================================= */
 
 app.disable("x-powered-by");
@@ -36,7 +36,7 @@ app.use(
 );
 
 /* =========================================================
-   Funções auxiliares
+   FunÃ§Ãµes auxiliares
    ========================================================= */
 
 function obterImagemProduto(id) {
@@ -62,7 +62,7 @@ function converterProduto(produto) {
         preco: preco,
 
         estoque: estoque,
-        disponivel: estoque > 0,
+        disponivel: String(produto.ForaDeUso || "").trim().toUpperCase() !== "SIM",
 
         ForaDeUso: produto.ForaDeUso,
 
@@ -118,7 +118,7 @@ app.get("/produtos", async (req, res) => {
                 id <> 0
                 AND descricao IS NOT NULL
                 AND TRIM(descricao) <> ''
-                AND COALESCE(ForaDeUso, 'NÃO') <> 'SIM'
+                AND COALESCE(ForaDeUso, 'NÃƒO') <> 'SIM'
             ORDER BY descricao ASC
         `);
 
@@ -143,7 +143,7 @@ app.get("/produtos/:id", async (req, res) => {
         if (!Number.isFinite(id)) {
             return res.status(400).json({
                 sucesso: false,
-                erro: "ID inválido."
+                erro: "ID invÃ¡lido."
             });
         }
 
@@ -158,7 +158,7 @@ app.get("/produtos/:id", async (req, res) => {
             FROM cadproduto
             WHERE
                 id = ?
-                AND COALESCE(ForaDeUso, 'NÃO') <> 'SIM'
+                AND COALESCE(ForaDeUso, 'NÃƒO') <> 'SIM'
             LIMIT 1
             `,
             [id]
@@ -167,7 +167,7 @@ app.get("/produtos/:id", async (req, res) => {
         if (rows.length === 0) {
             return res.status(404).json({
                 sucesso: false,
-                erro: "Produto não encontrado."
+                erro: "Produto nÃ£o encontrado."
             });
         }
 
@@ -184,7 +184,7 @@ app.get("/produtos/:id", async (req, res) => {
 });
 
 /* =========================================================
-   Inicialização
+   InicializaÃ§Ã£o
    ========================================================= */
 
 app.listen(PORT, "127.0.0.1", () => {
@@ -193,8 +193,9 @@ app.listen(PORT, "127.0.0.1", () => {
     console.log(" API D'Limp iniciada com sucesso");
     console.log("======================================");
     console.log(`API:       ${URL_BASE}`);
-    console.log(`Saúde:     ${URL_BASE}/saude`);
+    console.log(`SaÃºde:     ${URL_BASE}/saude`);
     console.log(`Produtos:  ${URL_BASE}/produtos`);
     console.log(`Imagem:    ${URL_BASE}/imagens/12.jpg`);
     console.log("");
 });
+
