@@ -4,7 +4,7 @@
         "descricao":  "AGUA SANITARIA 2 LITROS",
         "preco_venda":  6,
         "preco":  6,
-        "estoque":  7,
+        "estoque":  8,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/399.jpg"
@@ -14,7 +14,7 @@
         "descricao":  "AGUA SANITARIA 5 LITROS",
         "preco_venda":  11,
         "preco":  11,
-        "estoque":  1,
+        "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/381.jpg"
@@ -54,7 +54,7 @@
         "descricao":  "ALCOOL 70 500ML",
         "preco_venda":  10,
         "preco":  10,
-        "estoque":  4,
+        "estoque":  5,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -484,7 +484,7 @@
         "descricao":  "CLORO 2 LITROS",
         "preco_venda":  15,
         "preco":  15,
-        "estoque":  9,
+        "estoque":  11,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/7.jpg"
@@ -494,7 +494,7 @@
         "descricao":  "CLORO 5 LITROS",
         "preco_venda":  28,
         "preco":  28,
-        "estoque":  12,
+        "estoque":  0,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/18.jpg"
@@ -1294,7 +1294,7 @@
         "descricao":  "LIMPA CANO SUPER 1 LITRO",
         "preco_venda":  20,
         "preco":  20,
-        "estoque":  7,
+        "estoque":  8,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/46.jpg"
@@ -1304,7 +1304,7 @@
         "descricao":  "LIMPA CARPETE",
         "preco_venda":  6,
         "preco":  6,
-        "estoque":  1,
+        "estoque":  2,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/sem_imagem.png"
@@ -1384,7 +1384,7 @@
         "descricao":  "LIMPA PEDRA 2 LITROS",
         "preco_venda":  18,
         "preco":  18,
-        "estoque":  5,
+        "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/15.jpg"
@@ -1764,7 +1764,7 @@
         "descricao":  "PERCARBONATO 500GR",
         "preco_venda":  15,
         "preco":  15,
-        "estoque":  6,
+        "estoque":  8,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/441.jpg"
@@ -2004,7 +2004,7 @@
         "descricao":  "SABÃO LIQUIDO ARIEX 2 LITROS",
         "preco_venda":  14,
         "preco":  14,
-        "estoque":  4,
+        "estoque":  5,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/17.jpg"
@@ -2074,7 +2074,7 @@
         "descricao":  "SABÃO LIQUIDO OMUS 2 LITROS",
         "preco_venda":  14,
         "preco":  14,
-        "estoque":  5,
+        "estoque":  6,
         "disponivel":  true,
         "ForaDeUso":  "NÃƒO",
         "imagem":  "img/produtos/60.jpg"
