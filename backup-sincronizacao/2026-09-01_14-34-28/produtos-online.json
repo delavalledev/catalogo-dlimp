@@ -25,7 +25,7 @@
         "preco_venda": 1.5,
         "preco": 1.5,
         "estoque": 0,
-        "disponivel": false,
+        "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/sem_imagem.png"
     },
@@ -2372,8 +2372,8 @@
     {
         "id": 147,
         "descricao": "VASSOURA PELO PANDA",
-        "preco_venda": 18,
-        "preco": 18,
+        "preco_venda": 13,
+        "preco": 13,
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
@@ -2412,8 +2412,8 @@
     {
         "id": 263,
         "descricao": "VASSOURA SOFT",
-        "preco_venda": 24,
-        "preco": 24,
+        "preco_venda": 17,
+        "preco": 17,
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
