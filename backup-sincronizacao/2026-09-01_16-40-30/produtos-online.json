@@ -704,7 +704,7 @@
         "descricao": "DESINFETANTE CASA LIMPA 2 LITROS",
         "preco_venda": 6.5,
         "preco": 6.5,
-        "estoque": 0,
+        "estoque": 1,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"

@@ -466,7 +466,10 @@ function normalizarForaDeUso(valor) {
         : "NAO";
 }
 
-function normalizarProduto(produto) {
+function normalizarProduto(
+    produto,
+    preservarDisponivel = false
+) {
 
     const foraDeUso =
         normalizarForaDeUso(
@@ -503,7 +506,12 @@ function normalizarProduto(produto) {
             ),
 
         disponivel:
-            foraDeUso !== "SIM",
+            preservarDisponivel &&
+            produto.disponivel !== undefined
+                ? Boolean(
+                    produto.disponivel
+                )
+                : true,
 
         ForaDeUso:
             foraDeUso,
@@ -687,16 +695,13 @@ function carregarCatalogo() {
     }
 
     return produtos
-        .map(
-            normalizarProduto
-        )
-        .filter(
-            produto =>
-                Number.isInteger(
-                    produto.id
-                ) &&
-                produto.id > 0
-        );
+    .map(
+        produto =>
+            normalizarProduto(
+                produto,
+                true
+            )
+    )
 }
 
 /* =========================================================
@@ -993,9 +998,11 @@ function construirCatalogo(
                 ajustes[String(sys.id)];
 
             const disponivel =
-                ajuste?.exibirSite !== undefined
-                    ? Boolean(ajuste.exibirSite)
-                    : sys.disponivel;
+            ajuste?.exibirSite !== undefined
+            ? Boolean(ajuste.exibirSite)
+            : antigo?.disponivel !== undefined
+            ? Boolean(antigo.disponivel)
+            : true;
 
             const caminhoFotoSysOn =
                 path.join(
@@ -1288,7 +1295,7 @@ const processadosCatalogo =
     );
 
     console.log(
-        "Fotos: sincronização bidirecional ativa"
+        "Fotos: incronização bidirecional ativa"
     );
 
     console.log("");

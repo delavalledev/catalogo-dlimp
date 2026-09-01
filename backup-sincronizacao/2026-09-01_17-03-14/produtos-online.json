@@ -25,7 +25,7 @@
         "preco_venda": 1.5,
         "preco": 1.5,
         "estoque": 0,
-        "disponivel": true,
+        "disponivel": false,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
