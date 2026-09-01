@@ -1,0 +1,17 @@
+{
+  "86": {
+    "imagem": "img/produtos/86.jpg"
+  },
+  "210": {
+    "descricao": "AGUA SANITARIA ATACADO",
+    "preco": 1.5,
+    "disponivel": false,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  },
+  "439": {
+    "imagem": "img/produtos/439.jpg"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "32": {
+    "descricao": "DESINFETANTE NATUREZA 2 LITROS",
+    "preco": 6.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "33": {
+    "imagem": "img/produtos/33.jpg"
+  },
+  "34": {
+    "imagem": "img/produtos/34.jpg"
+  },
+  "37": {
+    "imagem": "img/produtos/37.jpg"
+  },
+  "40": {
+    "imagem": "img/produtos/40.jpg"
+  },
+  "41": {
+    "imagem": "img/produtos/41.jpg"
+  },
+  "43": {
+    "imagem": "img/produtos/43.jpg"
+  },
+  "44": {
+    "imagem": "img/produtos/44.jpg"
+  },
+  "210": {
+    "descricao": "AGUA SANITARIA ATACADO",
+    "preco": 1.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  },
+  "300": {
+    "imagem": "img/produtos/300.jpg"
+  },
+  "427444": {
+    "imagem": "img/produtos/427444.jpg"
+  }
+}

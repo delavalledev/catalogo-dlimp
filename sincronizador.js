@@ -97,13 +97,135 @@ function sincronizarFotoParaSysOn(
         PASTA_IMAGENS_SYSON
     );
 
+    /*
+     * Se a foto já existe no Sys-On, verifica
+     * se ela realmente mudou antes de copiar.
+     */
+    if (fs.existsSync(destino)) {
+
+        const statOrigem =
+            fs.statSync(origem);
+
+        const statDestino =
+            fs.statSync(destino);
+
+        const mesmoTamanho =
+            statOrigem.size ===
+            statDestino.size;
+
+        const mesmaData =
+            statOrigem.mtimeMs ===
+            statDestino.mtimeMs;
+
+        if (
+            mesmoTamanho &&
+            mesmaData
+        ) {
+            return false;
+        }
+    }
+
     fs.copyFileSync(
         origem,
         destino
     );
 
+    /*
+     * Mantém a mesma data de alteração
+     * nos dois arquivos.
+     */
+    const statOrigemDepois =
+        fs.statSync(origem);
+
+    fs.utimesSync(
+        destino,
+        statOrigemDepois.atime,
+        statOrigemDepois.mtime
+    );
+
     console.log(
-        `ID ${id}: foto copiada para o Sys-On.`
+        `ID ${id}: foto atualizada no Sys-On.`
+    );
+
+    return true;
+}
+
+
+function sincronizarFotoParaCatalogo(
+    id
+) {
+
+    const nomeImagem =
+        `${id}.jpg`;
+
+    const origem =
+        path.join(
+            PASTA_IMAGENS_SYSON,
+            nomeImagem
+        );
+
+    const destino =
+        path.join(
+            PASTA_IMAGENS_CATALOGO,
+            nomeImagem
+        );
+
+    if (!fs.existsSync(origem)) {
+        return false;
+    }
+
+    garantirPasta(
+        PASTA_IMAGENS_CATALOGO
+    );
+
+    /*
+     * Se a foto já existe no catálogo,
+     * verifica se realmente mudou.
+     */
+    if (fs.existsSync(destino)) {
+
+        const statOrigem =
+            fs.statSync(origem);
+
+        const statDestino =
+            fs.statSync(destino);
+
+        const mesmoTamanho =
+            statOrigem.size ===
+            statDestino.size;
+
+        const mesmaData =
+            statOrigem.mtimeMs ===
+            statDestino.mtimeMs;
+
+        if (
+            mesmoTamanho &&
+            mesmaData
+        ) {
+            return false;
+        }
+    }
+
+    fs.copyFileSync(
+        origem,
+        destino
+    );
+
+    /*
+     * Mantém a mesma data de alteração
+     * nos dois arquivos.
+     */
+    const statOrigemDepois =
+        fs.statSync(origem);
+
+    fs.utimesSync(
+        destino,
+        statOrigemDepois.atime,
+        statOrigemDepois.mtime
+    );
+
+    console.log(
+        `ID ${id}: foto atualizada no catálogo.`
     );
 
     return true;
@@ -625,7 +747,10 @@ async function aplicarAjustes(
             "Nenhum ajuste pendente do Admin."
         );
 
-        return [];
+        return {
+        sysOn: [],
+        catalogo: []
+        };
     }
 
     console.log("");
@@ -860,6 +985,10 @@ function construirCatalogo(
                     sys.id
                 );
 
+            sincronizarFotoParaCatalogo(
+                sys.id
+            );
+
             const ajuste =
                 ajustes[String(sys.id)];
 
@@ -867,6 +996,45 @@ function construirCatalogo(
                 ajuste?.exibirSite !== undefined
                     ? Boolean(ajuste.exibirSite)
                     : sys.disponivel;
+
+            const caminhoFotoSysOn =
+                path.join(
+                    PASTA_IMAGENS_CATALOGO,
+                    `${sys.id}.jpg`
+                );
+
+            const temFotoNoCatalogo =
+                fs.existsSync(
+                    caminhoFotoSysOn
+                );
+
+            let imagem;
+
+            if (ajuste?.imagem) {
+
+                imagem =
+                    ajuste.imagem;
+
+            } else if (temFotoNoCatalogo) {
+
+                imagem =
+                    `img/produtos/${sys.id}.jpg`;
+
+            } else if (
+                antigo?.imagem &&
+                antigo.imagem !==
+                    "img/produtos/sem_imagem.png"
+            ) {
+
+                imagem =
+                    antigo.imagem;
+
+            } else {
+
+                imagem =
+                    sys.imagem ||
+                    "img/produtos/sem_imagem.png";
+            }
 
             return {
 
@@ -891,11 +1059,8 @@ function construirCatalogo(
                 ForaDeUso:
                     sys.ForaDeUso,
 
-               imagem:
-                 ajuste?.imagem ||
-                 antigo?.imagem ||
-                 sys.imagem ||
-                 "img/produtos/sem_imagem.png"
+                imagem:
+                    imagem
             };
         }
     );
@@ -1123,7 +1288,7 @@ const processadosCatalogo =
     );
 
     console.log(
-        "Fotos: aguardando próxima etapa"
+        "Fotos: sincronização bidirecional ativa"
     );
 
     console.log("");

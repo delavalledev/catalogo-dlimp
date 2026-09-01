@@ -25,7 +25,7 @@
         "preco_venda": 1.5,
         "preco": 1.5,
         "estoque": 0,
-        "disponivel": false,
+        "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
@@ -207,7 +207,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/55.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 57,
@@ -537,7 +537,7 @@
         "estoque": 1,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/86.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 427450,
@@ -657,7 +657,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/439.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 121,
@@ -737,7 +737,7 @@
         "estoque": 1,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/41.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 26,
@@ -757,7 +757,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/34.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 71,
@@ -787,7 +787,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/44.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 337,
@@ -807,7 +807,7 @@
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/300.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 28,
@@ -827,7 +827,7 @@
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/33.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 23,
@@ -877,13 +877,13 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/427444.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 32,
         "descricao": "DESINFETANTE NATUREZA 2 LITROS",
-        "preco_venda": 6.5,
-        "preco": 6.5,
+        "preco_venda": 6.2,
+        "preco": 6.2,
         "estoque": 5,
         "disponivel": true,
         "ForaDeUso": "NAO",
@@ -897,7 +897,7 @@
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/43.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 27,
@@ -917,7 +917,7 @@
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/40.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 30,
