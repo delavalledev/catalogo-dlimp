@@ -1,34 +1,7 @@
 {
-  "172": {
-    "descricao": "CLORO ATACADO",
-    "preco": 3.85,
-    "disponivel": true,
-    "categorias": [],
-    "exibirSite": false,
-    "promocao": false,
-    "novo": false
-  },
   "210": {
     "descricao": "AGUA SANITARIA ATACADO",
     "preco": 1.5,
-    "disponivel": false,
-    "categorias": [],
-    "exibirSite": false,
-    "promocao": false,
-    "novo": false
-  },
-  "254": {
-    "descricao": "DETERGENTE NEUTRO ATACADO",
-    "preco": 3,
-    "disponivel": true,
-    "categorias": [],
-    "exibirSite": false,
-    "promocao": false,
-    "novo": false
-  },
-  "413": {
-    "descricao": "SOLUPAM ATACADO",
-    "preco": 4,
     "disponivel": true,
     "categorias": [],
     "exibirSite": false,

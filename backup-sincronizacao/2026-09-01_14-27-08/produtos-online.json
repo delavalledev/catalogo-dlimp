@@ -25,7 +25,7 @@
         "preco_venda": 1.5,
         "preco": 1.5,
         "estoque": 0,
-        "disponivel": true,
+        "disponivel": false,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/sem_imagem.png"
     },
@@ -57,7 +57,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/175.jpg"
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 427456,
@@ -67,7 +67,7 @@
         "estoque": 4,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/427456.jpg"
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 176,
@@ -97,7 +97,7 @@
         "estoque": 4,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/178.jpg"
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 20,
@@ -247,7 +247,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/427440.jpg"
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 58,
@@ -637,7 +637,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/198.jpg"
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 424,
@@ -1257,7 +1257,7 @@
         "estoque": 1,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/276.jpg"
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 46,
@@ -1327,7 +1327,7 @@
         "estoque": 1,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/386.jpg"
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 237,
@@ -1787,7 +1787,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/207.jpg"
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 96,
