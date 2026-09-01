@@ -505,7 +505,7 @@
         "preco_venda": 3.85,
         "preco": 3.85,
         "estoque": 2.14,
-        "disponivel": false,
+        "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
@@ -995,7 +995,7 @@
         "preco_venda": 3,
         "preco": 3,
         "estoque": 101,
-        "disponivel": false,
+        "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
@@ -2215,7 +2215,7 @@
         "preco_venda": 4,
         "preco": 4,
         "estoque": 0,
-        "disponivel": false,
+        "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
@@ -2442,8 +2442,8 @@
     {
         "id": 50,
         "descricao": "VEJAX MULTIUSO 5 LITROS",
-        "preco_venda": 39.9,
-        "preco": 39.9,
+        "preco_venda": 24.9,
+        "preco": 24.9,
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
