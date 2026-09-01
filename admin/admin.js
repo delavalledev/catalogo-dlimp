@@ -312,11 +312,89 @@ document.getElementById("salvarProduto").onclick = async () => {
     }
 };
 
-document.getElementById("excluirProduto").onclick = () => {
-    alert(
-        "Exclusão ainda bloqueada até verificarmos as relações do produto no banco do Sys-On."
+document.getElementById("excluirProduto").onclick = async () => {
+
+    const botao = document.getElementById("excluirProduto");
+    const id = document.getElementById("produtoId").value;
+
+    const produto = produtos.find(
+        p => String(p.id) === String(id)
     );
+
+    if (!id || !produto) {
+        alert("Produto inválido.");
+        return;
+    }
+
+    const confirmar = confirm(
+        `Excluir o produto "${produto.descricao}" do catálogo?\n\n` +
+        "O produto será removido do catálogo e a exclusão será sincronizada com o Sys-On."
+    );
+
+    if (!confirmar) {
+        return;
+    }
+
+    try {
+
+        botao.disabled = true;
+        botao.textContent = "Excluindo...";
+
+        const resposta = await fetch(
+            "http://127.0.0.1:3100/excluir",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    id: id
+                })
+            }
+        );
+
+        const resultado = await resposta.json();
+
+        if (!resposta.ok) {
+            throw new Error(
+                resultado.erro || "Não foi possível excluir o produto."
+            );
+        }
+
+        produtos = produtos.filter(
+            p => String(p.id) !== String(id)
+        );
+
+        atualizarResumo();
+        filtrar();
+
+        document.getElementById("modal").classList.add("oculto");
+
+        document.getElementById("avisoApi").textContent =
+            "Produto excluído do catálogo. Execute o sincronizador para concluir a exclusão no Sys-On.";
+
+        alert(
+            "Produto excluído do catálogo!\n\n" +
+            "Agora execute o sincronizador para concluir a exclusão no Sys-On."
+        );
+
+    } catch (erro) {
+
+        console.error(erro);
+
+        alert(
+            "Erro ao excluir o produto:\n\n" +
+            erro.message
+        );
+
+    } finally {
+
+        botao.disabled = false;
+        botao.textContent = "Excluir produto";
+
+    }
 };
+
 
 busca.addEventListener("input", filtrar);
 filtroStatus.addEventListener("change", filtrar);

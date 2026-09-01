@@ -1,0 +1,11 @@
+{
+  "210": {
+    "descricao": "AGUA SANITARIA ATACADO",
+    "preco": 1.5,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  }
+}

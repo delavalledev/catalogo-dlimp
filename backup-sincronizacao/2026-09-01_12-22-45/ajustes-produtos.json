@@ -1,0 +1,13 @@
+{
+  "17": {
+    "descricao": "SABAO LIQUIDO ARIEX TESTE SYNC",
+    "preco": 14,
+    "disponivel": true,
+    "categorias": [
+      "residencial"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  }
+}

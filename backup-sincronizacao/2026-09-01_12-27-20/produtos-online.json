@@ -6,7 +6,7 @@
         "preco": 6,
         "estoque": 7,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/399.jpg"
     },
     {
@@ -16,7 +16,7 @@
         "preco": 11,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/381.jpg"
     },
     {
@@ -25,8 +25,8 @@
         "preco_venda": 1.5,
         "preco": 1.5,
         "estoque": 0,
-        "disponivel": false,
-        "ForaDeUso": "NAO",
+        "disponivel": true,
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -36,7 +36,7 @@
         "preco": 15,
         "estoque": 11,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/217.jpg"
     },
     {
@@ -46,7 +46,7 @@
         "preco": 28,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/174.jpg"
     },
     {
@@ -56,7 +56,7 @@
         "preco": 60,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -66,7 +66,7 @@
         "preco": 10,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -76,7 +76,7 @@
         "preco": 20,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/176.jpg"
     },
     {
@@ -86,7 +86,7 @@
         "preco": 35,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -96,7 +96,7 @@
         "preco": 70,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -106,7 +106,7 @@
         "preco": 16.99,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/20.jpg"
     },
     {
@@ -116,7 +116,7 @@
         "preco": 66,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -126,8 +126,8 @@
         "preco": 12,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/346.jpg"
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 88,
@@ -136,7 +136,7 @@
         "preco": 9.8,
         "estoque": 5,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/88.jpg"
     },
     {
@@ -146,7 +146,7 @@
         "preco": 19.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/94.jpg"
     },
     {
@@ -156,7 +156,7 @@
         "preco": 10,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/87.jpg"
     },
     {
@@ -166,7 +166,7 @@
         "preco": 19.9,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/95.jpg"
     },
     {
@@ -176,7 +176,7 @@
         "preco": 10,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -186,7 +186,7 @@
         "preco": 19.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/427441.jpg"
     },
     {
@@ -196,7 +196,7 @@
         "preco": 10,
         "estoque": 5,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -206,7 +206,7 @@
         "preco": 20,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -216,7 +216,7 @@
         "preco": 10,
         "estoque": 7,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/57.jpg"
     },
     {
@@ -226,7 +226,7 @@
         "preco": 20,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/187.jpg"
     },
     {
@@ -236,7 +236,7 @@
         "preco": 10,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/56.jpg"
     },
     {
@@ -246,7 +246,7 @@
         "preco": 25,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -256,7 +256,7 @@
         "preco": 10,
         "estoque": 5,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/58.jpg"
     },
     {
@@ -266,7 +266,7 @@
         "preco": 14,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -276,7 +276,7 @@
         "preco": 11,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/222.jpg"
     },
     {
@@ -286,7 +286,7 @@
         "preco": 15,
         "estoque": 7,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -296,7 +296,7 @@
         "preco": 18,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -306,7 +306,7 @@
         "preco": 15,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -316,7 +316,7 @@
         "preco": 25,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -326,7 +326,7 @@
         "preco": 39.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -336,7 +336,7 @@
         "preco": 12,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/225.jpg"
     },
     {
@@ -346,7 +346,7 @@
         "preco": 20,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -356,7 +356,7 @@
         "preco": 39.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -366,7 +366,7 @@
         "preco": 15,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -376,7 +376,7 @@
         "preco": 20,
         "estoque": 3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/308.jpg"
     },
     {
@@ -386,7 +386,7 @@
         "preco": 8.5,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/80.jpg"
     },
     {
@@ -396,7 +396,7 @@
         "preco": 6,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -406,7 +406,7 @@
         "preco": 4,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -416,7 +416,7 @@
         "preco": 2.5,
         "estoque": 12,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/131.jpg"
     },
     {
@@ -426,7 +426,7 @@
         "preco": 6,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -436,7 +436,7 @@
         "preco": 8.9,
         "estoque": 10,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -446,7 +446,7 @@
         "preco": 9.9,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -456,7 +456,7 @@
         "preco": 8,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/427447.jpg"
     },
     {
@@ -466,7 +466,7 @@
         "preco": 49.9,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/335.jpg"
     },
     {
@@ -476,7 +476,7 @@
         "preco": 8,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/2.jpg"
     },
     {
@@ -486,7 +486,7 @@
         "preco": 15,
         "estoque": 9,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/7.jpg"
     },
     {
@@ -496,7 +496,7 @@
         "preco": 28,
         "estoque": 11,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/18.jpg"
     },
     {
@@ -506,7 +506,7 @@
         "preco": 3.85,
         "estoque": 2.14,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -516,7 +516,7 @@
         "preco": 8,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/84.jpg"
     },
     {
@@ -526,7 +526,7 @@
         "preco": 15.9,
         "estoque": 9,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -536,7 +536,7 @@
         "preco": 39.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -546,7 +546,7 @@
         "preco": 15.9,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -556,7 +556,7 @@
         "preco": 15.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -566,7 +566,7 @@
         "preco": 15.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -576,7 +576,7 @@
         "preco": 15.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -586,7 +586,7 @@
         "preco": 15.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -596,7 +596,7 @@
         "preco": 15.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -606,7 +606,7 @@
         "preco": 15.9,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -616,7 +616,7 @@
         "preco": 15.9,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -626,7 +626,7 @@
         "preco": 13,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/199.jpg"
     },
     {
@@ -636,7 +636,7 @@
         "preco": 24.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -646,7 +646,7 @@
         "preco": 16.5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -656,7 +656,7 @@
         "preco": 16,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -666,7 +666,7 @@
         "preco": 35,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -676,7 +676,7 @@
         "preco": 39.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -686,7 +686,7 @@
         "preco": 6,
         "estoque": 9,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/121.jpg"
     },
     {
@@ -696,7 +696,7 @@
         "preco": 9.5,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -706,7 +706,7 @@
         "preco": 6.5,
         "estoque": 7,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/24.jpg"
     },
     {
@@ -716,7 +716,7 @@
         "preco": 11.5,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/42.jpg"
     },
     {
@@ -726,7 +726,7 @@
         "preco": 6.5,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -736,7 +736,7 @@
         "preco": 11.5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -746,7 +746,7 @@
         "preco": 6.5,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -756,7 +756,7 @@
         "preco": 11.5,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -766,7 +766,7 @@
         "preco": 6.5,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/26.jpg"
     },
     {
@@ -776,7 +776,7 @@
         "preco": 11.5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -786,7 +786,7 @@
         "preco": 6.5,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/71.jpg"
     },
     {
@@ -796,7 +796,7 @@
         "preco": 6.5,
         "estoque": 3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/22.jpg"
     },
     {
@@ -806,7 +806,7 @@
         "preco": 11.5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -816,7 +816,7 @@
         "preco": 6.5,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/337.jpg"
     },
     {
@@ -826,7 +826,7 @@
         "preco": 11.5,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -836,7 +836,7 @@
         "preco": 6.5,
         "estoque": 7,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/28.jpg"
     },
     {
@@ -846,7 +846,7 @@
         "preco": 12,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -856,7 +856,7 @@
         "preco": 6.5,
         "estoque": 7,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/23.jpg"
     },
     {
@@ -866,7 +866,7 @@
         "preco": 11.5,
         "estoque": -3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/37.jpg"
     },
     {
@@ -876,7 +876,7 @@
         "preco": 6.5,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/299.jpg"
     },
     {
@@ -886,7 +886,7 @@
         "preco": 6.5,
         "estoque": 9,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/72.jpg"
     },
     {
@@ -896,7 +896,7 @@
         "preco": 11.5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -906,7 +906,7 @@
         "preco": 6.2,
         "estoque": 5,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -916,7 +916,7 @@
         "preco": 11.5,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -926,7 +926,7 @@
         "preco": 6.5,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/27.jpg"
     },
     {
@@ -936,7 +936,7 @@
         "preco": 11.5,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -946,7 +946,7 @@
         "preco": 6.5,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/30.jpg"
     },
     {
@@ -956,7 +956,7 @@
         "preco": 11.5,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -966,7 +966,7 @@
         "preco": 6.5,
         "estoque": 5,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/31.jpg"
     },
     {
@@ -976,7 +976,7 @@
         "preco": 11.5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/39.jpg"
     },
     {
@@ -986,7 +986,7 @@
         "preco": 5.5,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/105.jpg"
     },
     {
@@ -996,7 +996,7 @@
         "preco": 10,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1006,7 +1006,7 @@
         "preco": 18.8,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1016,7 +1016,7 @@
         "preco": 3,
         "estoque": 101,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1026,7 +1026,7 @@
         "preco": 5.8,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/133.jpg"
     },
     {
@@ -1036,7 +1036,7 @@
         "preco": 7.9,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/135.jpg"
     },
     {
@@ -1046,7 +1046,7 @@
         "preco": 5.2,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/134.jpg"
     },
     {
@@ -1056,7 +1056,7 @@
         "preco": 14.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/281.jpg"
     },
     {
@@ -1066,7 +1066,7 @@
         "preco": 56,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1076,7 +1076,7 @@
         "preco": 6.5,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1086,7 +1086,7 @@
         "preco": 6.5,
         "estoque": 8,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1096,7 +1096,7 @@
         "preco": 9.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/315.jpg"
     },
     {
@@ -1106,7 +1106,7 @@
         "preco": 4,
         "estoque": 14,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1116,7 +1116,7 @@
         "preco": 16,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1126,8 +1126,8 @@
         "preco": 9.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/77.jpg"
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 440,
@@ -1136,7 +1136,7 @@
         "preco": 50,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1146,7 +1146,7 @@
         "preco": 10,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/111.jpg"
     },
     {
@@ -1156,7 +1156,7 @@
         "preco": 18,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/112.jpg"
     },
     {
@@ -1166,7 +1166,7 @@
         "preco": 35.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/113.jpg"
     },
     {
@@ -1176,8 +1176,8 @@
         "preco": 7,
         "estoque": 5,
         "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/110.jpg"
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 114,
@@ -1186,7 +1186,7 @@
         "preco": 15,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1196,7 +1196,7 @@
         "preco": 18,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1206,7 +1206,7 @@
         "preco": 12,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1216,7 +1216,7 @@
         "preco": 8,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/291.jpg"
     },
     {
@@ -1226,7 +1226,7 @@
         "preco": 18,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/82.jpg"
     },
     {
@@ -1234,9 +1234,9 @@
         "descricao": "LIMPA BAU 5 LITROS",
         "preco_venda": 39.9,
         "preco": 39.9,
-        "estoque": 0,
+        "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/83.jpg"
     },
     {
@@ -1246,7 +1246,7 @@
         "preco": 10,
         "estoque": 7,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/251.jpg"
     },
     {
@@ -1256,7 +1256,7 @@
         "preco": 20,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1266,7 +1266,7 @@
         "preco": 20,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/46.jpg"
     },
     {
@@ -1276,7 +1276,7 @@
         "preco": 6,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1286,7 +1286,7 @@
         "preco": 18,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1296,7 +1296,7 @@
         "preco": 10,
         "estoque": 31,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1306,7 +1306,7 @@
         "preco": 19.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1316,7 +1316,7 @@
         "preco": 15,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1326,7 +1326,7 @@
         "preco": 110,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1336,7 +1336,7 @@
         "preco": 14,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1346,8 +1346,8 @@
         "preco": 9.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/412.jpg"
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 15,
@@ -1356,7 +1356,7 @@
         "preco": 18,
         "estoque": 5,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/15.jpg"
     },
     {
@@ -1366,7 +1366,7 @@
         "preco": 39.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/16.jpg"
     },
     {
@@ -1376,8 +1376,8 @@
         "preco": 7.5,
         "estoque": 3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/124.jpg"
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 321,
@@ -1386,7 +1386,7 @@
         "preco": 24,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1396,7 +1396,7 @@
         "preco": 15,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/100.jpg"
     },
     {
@@ -1406,7 +1406,7 @@
         "preco": 24.9,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1416,8 +1416,8 @@
         "preco": 10,
         "estoque": 8,
         "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/323.jpg"
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 116,
@@ -1426,7 +1426,7 @@
         "preco": 18,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/116.jpg"
     },
     {
@@ -1436,7 +1436,7 @@
         "preco": 39.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1446,7 +1446,7 @@
         "preco": 8,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1456,7 +1456,7 @@
         "preco": 11,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/221.jpg"
     },
     {
@@ -1466,7 +1466,7 @@
         "preco": 8.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1476,7 +1476,7 @@
         "preco": 8.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1486,7 +1486,7 @@
         "preco": 7.5,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1496,7 +1496,7 @@
         "preco": 10,
         "estoque": 8,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/9.jpg"
     },
     {
@@ -1506,7 +1506,7 @@
         "preco": 20,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/10.jpg"
     },
     {
@@ -1516,7 +1516,7 @@
         "preco": 25,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1526,7 +1526,7 @@
         "preco": 15,
         "estoque": 3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/328.jpg"
     },
     {
@@ -1536,7 +1536,7 @@
         "preco": 25,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/45.jpg"
     },
     {
@@ -1546,7 +1546,7 @@
         "preco": 110,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1556,7 +1556,7 @@
         "preco": 3.5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1566,7 +1566,7 @@
         "preco": 5,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1576,7 +1576,7 @@
         "preco": 13,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1586,7 +1586,7 @@
         "preco": 10,
         "estoque": 13,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1596,7 +1596,7 @@
         "preco": 10,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1606,7 +1606,7 @@
         "preco": 10,
         "estoque": 12,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1616,7 +1616,7 @@
         "preco": 12,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1626,7 +1626,7 @@
         "preco": 5,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/119.jpg"
     },
     {
@@ -1636,7 +1636,7 @@
         "preco": 9.9,
         "estoque": 30,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1646,7 +1646,7 @@
         "preco": 5.9,
         "estoque": 20,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/185.jpg"
     },
     {
@@ -1656,7 +1656,7 @@
         "preco": 3,
         "estoque": 21,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1666,7 +1666,7 @@
         "preco": 5.5,
         "estoque": 18,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/1.jpg"
     },
     {
@@ -1676,7 +1676,7 @@
         "preco": 9.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1686,7 +1686,7 @@
         "preco": 21,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/173.jpg"
     },
     {
@@ -1696,7 +1696,7 @@
         "preco": 9,
         "estoque": 14,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/98.jpg"
     },
     {
@@ -1706,7 +1706,7 @@
         "preco": 4,
         "estoque": 10,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1716,7 +1716,7 @@
         "preco": 3,
         "estoque": 22,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1726,7 +1726,7 @@
         "preco": 25,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1736,7 +1736,7 @@
         "preco": 15,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/441.jpg"
     },
     {
@@ -1746,7 +1746,7 @@
         "preco": 16,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/51.jpg"
     },
     {
@@ -1756,7 +1756,7 @@
         "preco": 39.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/52.jpg"
     },
     {
@@ -1766,7 +1766,7 @@
         "preco": 12.5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1776,7 +1776,7 @@
         "preco": 22,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1786,7 +1786,7 @@
         "preco": 39.5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1796,7 +1796,7 @@
         "preco": 14.2,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1806,7 +1806,7 @@
         "preco": 19.9,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1816,7 +1816,7 @@
         "preco": 15,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/76.jpg"
     },
     {
@@ -1826,8 +1826,8 @@
         "preco": 8,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/75.jpg"
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 130,
@@ -1836,7 +1836,7 @@
         "preco": 4,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/130.jpg"
     },
     {
@@ -1846,7 +1846,7 @@
         "preco": 2.5,
         "estoque": 7,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/129.jpg"
     },
     {
@@ -1856,7 +1856,7 @@
         "preco": 3,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1866,7 +1866,7 @@
         "preco": 45,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1876,7 +1876,7 @@
         "preco": 13,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1886,7 +1886,7 @@
         "preco": 19.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1896,7 +1896,7 @@
         "preco": 70,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1906,7 +1906,7 @@
         "preco": 20,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/179.jpg"
     },
     {
@@ -1916,7 +1916,7 @@
         "preco": 10,
         "estoque": 3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1926,7 +1926,7 @@
         "preco": 4,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/118.jpg"
     },
     {
@@ -1936,7 +1936,7 @@
         "preco": 16,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/150.jpg"
     },
     {
@@ -1946,7 +1946,7 @@
         "preco": 18,
         "estoque": 5,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/151.jpg"
     },
     {
@@ -1956,7 +1956,7 @@
         "preco": 22,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/152.jpg"
     },
     {
@@ -1966,7 +1966,7 @@
         "preco": 5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -1976,7 +1976,7 @@
         "preco": 29.9,
         "estoque": -1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/190.jpg"
     },
     {
@@ -1986,7 +1986,7 @@
         "preco": 14,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/17.jpg"
     },
     {
@@ -1996,7 +1996,7 @@
         "preco": 18,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/63.jpg"
     },
     {
@@ -2006,7 +2006,7 @@
         "preco": 14,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/62.jpg"
     },
     {
@@ -2016,7 +2016,7 @@
         "preco": 29.9,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/68.jpg"
     },
     {
@@ -2026,7 +2026,7 @@
         "preco": 14,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/65.jpg"
     },
     {
@@ -2036,7 +2036,7 @@
         "preco": 29.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2046,7 +2046,7 @@
         "preco": 14,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/60.jpg"
     },
     {
@@ -2056,7 +2056,7 @@
         "preco": 29.9,
         "estoque": -3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2066,77 +2066,87 @@
         "preco": 15,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/sem_imagem.png"
-    },
-    {
-        "id": 164,
-        "descricao": "SACO DE LIXO 100 LITROS 5UN",
-        "preco_venda": 13,
-        "preco": 13,
-        "estoque": 10,
-        "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/sem_imagem.png"
-    },
-    {
-        "id": 188,
-        "descricao": "SACO DE LIXO 100 LITROS REF 5UN",
-        "preco_venda": 18.5,
-        "preco": 18.5,
-        "estoque": 1,
-        "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/sem_imagem.png"
-    },
-    {
-        "id": 139,
-        "descricao": "SACO DE LIXO 20 LITROS 10 UN",
-        "preco_venda": 5,
-        "preco": 5,
-        "estoque": 51,
-        "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/sem_imagem.png"
-    },
-    {
-        "id": 169,
-        "descricao": "SACO DE LIXO 40 LITROS 10 UN",
-        "preco_venda": 8,
-        "preco": 8,
-        "estoque": 10,
-        "disponivel": true,
-        "ForaDeUso": "NAO",
-        "imagem": "img/produtos/sem_imagem.png"
-    },
-    {
-        "id": 162,
-        "descricao": "SACO DE LIXO 60 LITROS 10 UN",
-        "preco_venda": 10,
-        "preco": 10,
-        "estoque": 48,
-        "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 418,
-        "descricao": "SACO DE LIXO 60 LITROS REF 5UN",
-        "preco_venda": 13.5,
-        "preco": 13.5,
+        "descricao": "SACO 5 UNIDADES REFORCADO",
+        "preco_venda": 12.5,
+        "preco": 12.5,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
+    },
+    {
+        "id": 164,
+        "descricao": "SACO DE LIXO 100 5UNI",
+        "preco_venda": 13,
+        "preco": 13,
+        "estoque": 10,
+        "disponivel": true,
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
+    },
+    {
+        "id": 188,
+        "descricao": "SACO DE LIXO 100 REF 5UN",
+        "preco_venda": 18.5,
+        "preco": 18.5,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
+    },
+    {
+        "id": 139,
+        "descricao": "SACO DE LIXO 20 LITROS 10 UNIDADES",
+        "preco_venda": 5,
+        "preco": 5,
+        "estoque": 51,
+        "disponivel": true,
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
+    },
+    {
+        "id": 160,
+        "descricao": "SACO DE LIXO 40 LITROS 10 UNIDADES",
+        "preco_venda": 5.5,
+        "preco": 5.5,
+        "estoque": 108,
+        "disponivel": true,
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
+    },
+    {
+        "id": 169,
+        "descricao": "SACO DE LIXO 40 LITROS 10 UNIDADES",
+        "preco_venda": 8,
+        "preco": 8,
+        "estoque": 10,
+        "disponivel": true,
+        "ForaDeUso": "NÃO",
+        "imagem": "img/produtos/sem_imagem.png"
+    },
+    {
+        "id": 162,
+        "descricao": "SACO DE LIXO 60 LITROS 10 UNIDADES",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 48,
+        "disponivel": true,
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
         "id": 379,
-        "descricao": "SACOS DE 200 LITROS REF 5 UN",
-        "preco_venda": 20,
-        "preco": 20,
+        "descricao": "SACOS DE 200 LITROS",
+        "preco_venda": 25,
+        "preco": 25,
         "estoque": 3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2146,7 +2156,7 @@
         "preco": 21.9,
         "estoque": 3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2156,7 +2166,7 @@
         "preco": 6,
         "estoque": 15,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2166,7 +2176,7 @@
         "preco": 10,
         "estoque": 5,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/79.jpg"
     },
     {
@@ -2176,7 +2186,7 @@
         "preco": 18,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2186,7 +2196,7 @@
         "preco": 40,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/411.jpg"
     },
     {
@@ -2196,7 +2206,7 @@
         "preco": 10,
         "estoque": 4,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2206,7 +2216,7 @@
         "preco": 10,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/11.jpg"
     },
     {
@@ -2216,7 +2226,7 @@
         "preco": 18,
         "estoque": 12,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/12.jpg"
     },
     {
@@ -2226,7 +2236,7 @@
         "preco": 39.9,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2236,7 +2246,7 @@
         "preco": 4,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2246,7 +2256,7 @@
         "preco": 13,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2256,7 +2266,7 @@
         "preco": 5,
         "estoque": 98,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2266,7 +2276,7 @@
         "preco": 10,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/102.jpg"
     },
     {
@@ -2276,7 +2286,7 @@
         "preco": 25,
         "estoque": 12,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/103.jpg"
     },
     {
@@ -2286,7 +2296,7 @@
         "preco": 49.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/104.jpg"
     },
     {
@@ -2296,7 +2306,7 @@
         "preco": 13,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2306,7 +2316,7 @@
         "preco": 5,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/125.jpg"
     },
     {
@@ -2316,7 +2326,7 @@
         "preco": 47,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2326,7 +2336,7 @@
         "preco": 24,
         "estoque": 7,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2336,7 +2346,7 @@
         "preco": 21,
         "estoque": 3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/146.jpg"
     },
     {
@@ -2346,7 +2356,7 @@
         "preco": 45.9,
         "estoque": 3,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/416.jpg"
     },
     {
@@ -2356,7 +2366,7 @@
         "preco": 18,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/149.jpg"
     },
     {
@@ -2366,7 +2376,7 @@
         "preco": 24,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2376,7 +2386,7 @@
         "preco": 13,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2386,7 +2396,7 @@
         "preco": 22,
         "estoque": 6,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/394.jpg"
     },
     {
@@ -2396,7 +2406,7 @@
         "preco": 16,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2406,7 +2416,7 @@
         "preco": 19,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/148.jpg"
     },
     {
@@ -2416,7 +2426,7 @@
         "preco": 17,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2426,7 +2436,7 @@
         "preco": 19,
         "estoque": 2,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/154.jpg"
     },
     {
@@ -2436,7 +2446,7 @@
         "preco": 19,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2446,7 +2456,7 @@
         "preco": 20,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2456,7 +2466,7 @@
         "preco": 12,
         "estoque": 1,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/49.jpg"
     },
     {
@@ -2466,7 +2476,7 @@
         "preco": 24.9,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2476,7 +2486,7 @@
         "preco": 7,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     },
     {
@@ -2486,7 +2496,7 @@
         "preco": 12,
         "estoque": 0,
         "disponivel": true,
-        "ForaDeUso": "NAO",
+        "ForaDeUso": "NÃO",
         "imagem": "img/produtos/sem_imagem.png"
     }
 ]

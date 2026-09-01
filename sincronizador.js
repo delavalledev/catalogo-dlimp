@@ -2,72 +2,35 @@
 const path = require("path");
 const http = require("http");
 
-const PROJETO = "C:/catalogo-dlimp";
+const PROJETO = __dirname;
 
-const API_URL = "http://127.0.0.1:3000/produtos";
-const CATALOGO_FILE = path.join(PROJETO, "data", "produtos-online.json");
-const AJUSTES_FILE = path.join(PROJETO, "data", "ajustes-produtos.json");
+const API_URL = "http://127.0.0.1:3000";
+const API_PRODUTOS = `${API_URL}/produtos`;
+const API_SINCRONIZAR = `${API_URL}/sincronizar`;
 
-const BACKUP_DIR = path.join(PROJETO, "backup-sincronizacao");
-const ESTADO_FILE = path.join(PROJETO, "data", "estado-sincronizacao.json");
+const CATALOGO_FILE = path.join(
+    PROJETO,
+    "data",
+    "produtos-online.json"
+);
 
-function lerJson(arquivo, padrao) {
-    if (!fs.existsSync(arquivo)) {
-        return padrao;
-    }
+const AJUSTES_FILE = path.join(
+    PROJETO,
+    "data",
+    "ajustes-produtos.json"
+);
 
-    return JSON.parse(fs.readFileSync(arquivo, "utf8"));
-}
+const BACKUP_DIR = path.join(
+    PROJETO,
+    "backup-sincronizacao"
+);
 
-function salvarJson(arquivo, dados) {
-    fs.writeFileSync(
-        arquivo,
-        JSON.stringify(dados, null, 4),
-        "utf8"
-    );
-}
+/* =========================================================
+   UTILIDADES
+   ========================================================= */
 
-function obterSysOn() {
-    return new Promise((resolve, reject) => {
-
-        http.get(API_URL, res => {
-
-            let corpo = "";
-
-            res.on("data", parte => {
-                corpo += parte;
-            });
-
-            res.on("end", () => {
-
-                if (res.statusCode !== 200) {
-                    reject(
-                        new Error(`API respondeu HTTP ${res.statusCode}`)
-                    );
-                    return;
-                }
-
-                try {
-                    const dados = JSON.parse(corpo);
-
-                    if (!Array.isArray(dados)) {
-                        reject(
-                            new Error("API não retornou uma lista de produtos.")
-                        );
-                        return;
-                    }
-
-                    resolve(dados);
-
-                } catch {
-                    reject(
-                        new Error("Resposta da API não é JSON válido.")
-                    );
-                }
-            });
-
-        }).on("error", reject);
-    });
+function texto(valor) {
+    return String(valor ?? "").trim();
 }
 
 function numero(valor) {
@@ -75,379 +38,1118 @@ function numero(valor) {
     return Number.isFinite(n) ? n : 0;
 }
 
-function texto(valor) {
-    return String(valor ?? "").trim();
+function garantirPasta(pasta) {
+    fs.mkdirSync(pasta, {
+        recursive: true
+    });
 }
 
-function disponibilidade(produto) {
-    return texto(produto.ForaDeUso).toUpperCase() !== "SIM";
-}
+/* =========================================================
+   FOTOS
+   ========================================================= */
 
-function normalizarProdutoSys(produto) {
-
-    return {
-        id: Number(produto.id),
-        descricao: texto(produto.descricao),
-        preco: numero(produto.preco_venda),
-        estoque: numero(produto.estoque),
-        disponivel: disponibilidade(produto),
-        ForaDeUso: texto(produto.ForaDeUso),
-        imagem: texto(produto.imagem)
-    };
-}
-
-function normalizarProdutoSite(produto) {
-
-    return {
-        id: Number(produto.id),
-        descricao: texto(produto.descricao),
-        preco: numero(produto.preco),
-        estoque: numero(produto.estoque),
-        disponivel: Boolean(produto.disponivel),
-        imagem: texto(produto.imagem)
-    };
-}
-
-function criarBackup() {
-
-    if (!fs.existsSync(BACKUP_DIR)) {
-        fs.mkdirSync(BACKUP_DIR, {
-            recursive: true
-        });
-    }
-
-    const agora = new Date()
-        .toISOString()
-        .replace(/[:.]/g, "-");
-
-    const pasta = path.join(
-        BACKUP_DIR,
-        agora
+const PASTA_IMAGENS_CATALOGO =
+    path.join(
+        PROJETO,
+        "img",
+        "produtos"
     );
 
-    fs.mkdirSync(pasta);
+const PASTA_IMAGENS_SYSON =
+    "C:/SysOnPDV-Pro/imgProdutos";
 
-    if (fs.existsSync(CATALOGO_FILE)) {
+function sincronizarFotoParaSysOn(
+    id,
+    imagem
+) {
+
+    const nomeImagem =
+        path.basename(
+            texto(imagem)
+        );
+
+    if (!nomeImagem) {
+        return false;
+    }
+
+    const origem =
+        path.join(
+            PASTA_IMAGENS_CATALOGO,
+            nomeImagem
+        );
+
+    const destino =
+        path.join(
+            PASTA_IMAGENS_SYSON,
+            nomeImagem
+        );
+
+    if (!fs.existsSync(origem)) {
+
+        console.log(
+            `ID ${id}: foto não encontrada no catálogo.`
+        );
+
+        return false;
+    }
+
+    garantirPasta(
+        PASTA_IMAGENS_SYSON
+    );
+
+    fs.copyFileSync(
+        origem,
+        destino
+    );
+
+    console.log(
+        `ID ${id}: foto copiada para o Sys-On.`
+    );
+
+    return true;
+}
+
+function dataHora() {
+    const agora = new Date();
+
+    const pad = n =>
+        String(n).padStart(2, "0");
+
+    return (
+        `${agora.getFullYear()}-` +
+        `${pad(agora.getMonth() + 1)}-` +
+        `${pad(agora.getDate())}_` +
+        `${pad(agora.getHours())}-` +
+        `${pad(agora.getMinutes())}-` +
+        `${pad(agora.getSeconds())}`
+    );
+}
+
+/* =========================================================
+   JSON
+   ========================================================= */
+
+function lerJson(arquivo, padrao) {
+
+    if (!fs.existsSync(arquivo)) {
+        return padrao;
+    }
+
+    const conteudo = fs
+        .readFileSync(arquivo, "utf8")
+        .replace(/^\uFEFF/, "")
+        .trim();
+
+    if (!conteudo) {
+        return padrao;
+    }
+
+    return JSON.parse(conteudo);
+}
+
+function salvarJson(arquivo, dados) {
+
+    fs.writeFileSync(
+        arquivo,
+        JSON.stringify(
+            dados,
+            null,
+            4
+        ),
+        "utf8"
+    );
+}
+
+/* =========================================================
+   BACKUP
+   ========================================================= */
+
+function fazerBackup() {
+
+    garantirPasta(
+        BACKUP_DIR
+    );
+
+    const pasta =
+        path.join(
+            BACKUP_DIR,
+            dataHora()
+        );
+
+    garantirPasta(pasta);
+
+    if (
+        fs.existsSync(
+            CATALOGO_FILE
+        )
+    ) {
+
         fs.copyFileSync(
             CATALOGO_FILE,
-            path.join(pasta, "produtos-online.json")
+            path.join(
+                pasta,
+                "produtos-online.json"
+            )
         );
     }
 
-    if (fs.existsSync(AJUSTES_FILE)) {
+    if (
+        fs.existsSync(
+            AJUSTES_FILE
+        )
+    ) {
+
         fs.copyFileSync(
             AJUSTES_FILE,
-            path.join(pasta, "ajustes-produtos.json")
-        );
-    }
-
-    if (fs.existsSync(ESTADO_FILE)) {
-        fs.copyFileSync(
-            ESTADO_FILE,
-            path.join(pasta, "estado-sincronizacao.json")
+            path.join(
+                pasta,
+                "ajustes-produtos.json"
+            )
         );
     }
 
     return pasta;
 }
 
-async function main() {
+/* =========================================================
+   HTTP
+   ========================================================= */
 
-    console.log("");
-    console.log("============================================");
-    console.log("          SINCRONIZADOR D'LIMP");
-    console.log("============================================");
-    console.log("");
+function requisicaoJson(
+    url,
+    opcoes = {}
+) {
 
-    console.log("Consultando Sys-On...");
+    return new Promise(
+        (resolve, reject) => {
 
-    const dadosSys = await obterSysOn();
+            const req =
+                http.request(
+                    url,
+                    {
+                        method:
+                            opcoes.method ||
+                            "GET",
 
-    console.log(
-        `OK - ${dadosSys.length} produtos recebidos`
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        }
+                    },
+
+                    res => {
+
+                        let corpo = "";
+
+                        res.setEncoding(
+                            "utf8"
+                        );
+
+                        res.on(
+                            "data",
+                            parte => {
+                                corpo += parte;
+                            }
+                        );
+
+                        res.on(
+                            "end",
+                            () => {
+
+                                let dados;
+
+                                try {
+
+                                    dados =
+                                        corpo
+                                            ? JSON.parse(
+                                                corpo
+                                            )
+                                            : {};
+
+                                } catch {
+
+                                    return reject(
+                                        new Error(
+                                            `Resposta inválida da API: ${url}`
+                                        )
+                                    );
+                                }
+
+                                if (
+                                    res.statusCode <
+                                        200 ||
+                                    res.statusCode >=
+                                        300
+                                ) {
+
+                                    return reject(
+                                        new Error(
+                                            `HTTP ${res.statusCode}: ${
+                                                dados.erro ||
+                                                dados.mensagem ||
+                                                corpo
+                                            }`
+                                        )
+                                    );
+                                }
+
+                                resolve(
+                                    dados
+                                );
+                            }
+                        );
+                    }
+                );
+
+            req.on(
+                "error",
+                reject
+            );
+
+            if (
+                opcoes.body !== undefined
+            ) {
+
+                req.write(
+                    JSON.stringify(
+                        opcoes.body
+                    )
+                );
+            }
+
+            req.end();
+        }
     );
+}
 
-    const dadosSite = lerJson(
-        CATALOGO_FILE,
-        []
-    );
+/* =========================================================
+   NORMALIZACAO
+   ========================================================= */
 
-    if (!Array.isArray(dadosSite)) {
-        throw new Error(
-            "produtos-online.json não contém uma lista."
+function normalizarForaDeUso(valor) {
+
+    let s = texto(valor).toUpperCase();
+
+    s = s
+        .replace(/NÃƒÆ’O/g, "NAO")
+        .replace(/NÃƒO/g, "NAO")
+        .replace(/NÃO/g, "NAO")
+        .replace(/NÃ?O/g, "NAO")
+        .replace(/NÃO/g, "NAO")
+        .trim();
+
+    return s === "SIM"
+        ? "SIM"
+        : "NAO";
+}
+
+function normalizarProduto(produto) {
+
+    const foraDeUso =
+        normalizarForaDeUso(
+            produto.ForaDeUso
+        );
+
+    const preco =
+        numero(
+            produto.preco_venda ??
+            produto.preco
+        );
+
+    return {
+
+        id:
+            Number(
+                produto.id
+            ),
+
+        descricao:
+            texto(
+                produto.descricao
+            ),
+
+        preco_venda:
+            preco,
+
+        preco:
+            preco,
+
+        estoque:
+            numero(
+                produto.estoque
+            ),
+
+        disponivel:
+            foraDeUso !== "SIM",
+
+        ForaDeUso:
+            foraDeUso,
+
+        imagem:
+            texto(
+                produto.imagem
+            )
+    };
+}
+
+/* =========================================================
+   MAPA
+   ========================================================= */
+
+function criarMapa(produtos) {
+
+    const mapa =
+        new Map();
+
+    for (
+        const produto
+        of produtos
+    ) {
+
+        const id =
+            Number(
+                produto.id
+            );
+
+        if (
+            !Number.isInteger(id) ||
+            id <= 0
+        ) {
+            continue;
+        }
+
+        mapa.set(
+            id,
+            produto
         );
     }
 
+    return mapa;
+}
+
+/* =========================================================
+   LER SYS-ON
+   ========================================================= */
+
+async function carregarSysOn() {
+
+    console.log("");
     console.log(
-        `OK - ${dadosSite.length} produtos no site`
+        "Lendo produtos do Sys-On..."
     );
 
-    const ajustes = lerJson(
-        AJUSTES_FILE,
-        {}
+    const resposta =
+        await requisicaoJson(
+            API_PRODUTOS
+        );
+
+    if (
+        !Array.isArray(
+            resposta
+        )
+    ) {
+
+        throw new Error(
+            "A API do Sys-On não retornou uma lista."
+        );
+    }
+
+    const produtos =
+        resposta
+            .map(
+                normalizarProduto
+            )
+            .filter(
+                produto =>
+                    Number.isInteger(
+                        produto.id
+                    ) &&
+                    produto.id > 0
+            );
+
+    console.log(
+        `Sys-On: ${produtos.length} produtos válidos.`
     );
 
-    const estadoAnterior = lerJson(
-        ESTADO_FILE,
-        {}
+    /*
+     * PROTECAO CONTRA API QUEBRADA
+     */
+
+    if (
+        produtos.length < 200
+    ) {
+
+        throw new Error(
+            `SINCRONIZACAO ABORTADA: API retornou somente ${produtos.length} produtos.`
+        );
+    }
+
+    return produtos;
+}
+
+/* =========================================================
+   LER CATALOGO
+   ========================================================= */
+
+function carregarCatalogo() {
+
+    const dados =
+        lerJson(
+            CATALOGO_FILE,
+            []
+        );
+
+    let produtos;
+
+    if (
+        Array.isArray(
+            dados
+        )
+    ) {
+
+        /*
+         * Formato:
+         * [
+         *   {
+         *      value: [...]
+         *   }
+         * ]
+         */
+
+        if (
+            dados.length === 1 &&
+            Array.isArray(
+                dados[0]?.value
+            )
+        ) {
+
+            produtos =
+                dados[0].value;
+
+        } else {
+
+            /*
+             * Array direto
+             */
+
+            produtos =
+                dados;
+        }
+
+    } else if (
+        dados &&
+        Array.isArray(
+            dados.value
+        )
+    ) {
+
+        produtos =
+            dados.value;
+
+    } else if (
+        dados &&
+        Array.isArray(
+            dados.produtos
+        )
+    ) {
+
+        produtos =
+            dados.produtos;
+
+    } else {
+
+        throw new Error(
+            "Formato de produtos-online.json não reconhecido."
+        );
+    }
+
+    return produtos
+        .map(
+            normalizarProduto
+        )
+        .filter(
+            produto =>
+                Number.isInteger(
+                    produto.id
+                ) &&
+                produto.id > 0
+        );
+}
+
+/* =========================================================
+   LER AJUSTES
+   ========================================================= */
+
+function carregarAjustes() {
+
+    const ajustes =
+        lerJson(
+            AJUSTES_FILE,
+            {}
+        );
+
+    if (
+        !ajustes ||
+        Array.isArray(ajustes) ||
+        typeof ajustes !== "object"
+    ) {
+
+        throw new Error(
+            "Formato de ajustes-produtos.json inválido."
+        );
+    }
+
+    return ajustes;
+}
+
+/* =========================================================
+   APLICAR AJUSTES DO ADMIN
+   ========================================================= */
+
+async function aplicarAjustes(
+    ajustes,
+    mapaSys
+) {
+
+    const ids =
+        Object.keys(
+            ajustes
+        );
+
+    if (
+        ids.length === 0
+    ) {
+
+        console.log(
+            "Nenhum ajuste pendente do Admin."
+        );
+
+        return [];
+    }
+
+    console.log("");
+    console.log(
+        `Ajustes encontrados: ${ids.length}`
     );
 
-    const mapaSys = new Map(
-        dadosSys.map(p => [
-            String(p.id),
-            normalizarProdutoSys(p)
-        ])
-    );
+    	const processadosSysOn = [];
+	const processadosCatalogo = [];
 
-    const mapaSite = new Map(
-        dadosSite.map(p => [
-            String(p.id),
-            normalizarProdutoSite(p)
-        ])
-    );
+    for (
+        const idTexto
+        of ids
+    ) {
 
-    const alteracoes = [];
+        const id =
+            Number(
+                idTexto
+            );
 
-    for (const [id, sys] of mapaSys) {
+        const ajuste =
+            ajustes[idTexto];
 
-        const site = mapaSite.get(id);
+        if (
+            !Number.isInteger(id) ||
+            id <= 0
+        ) {
 
-        if (!site) {
-            alteracoes.push({
-                id,
-                tipo: "NOVO_NO_SYS_ON",
-                descricao: sys.descricao
-            });
+            console.log(
+                `ID inválido ignorado: ${idTexto}`
+            );
 
             continue;
         }
 
-        const ajuste = ajustes[id] || null;
-        const anterior = estadoAnterior[id] || null;
-
         /*
-         * ESTOQUE:
-         * sempre vem do Sys-On.
+         * O produto foi excluído do Sys-On.
+         *
+         * NÃO recriar.
          */
 
-        if (sys.estoque !== site.estoque) {
-
-            alteracoes.push({
-                id,
-                tipo: "ESTOQUE_SYS_ON_SITE",
-                descricao: sys.descricao,
-                antes: site.estoque,
-                depois: sys.estoque
-            });
-        }
-
-        /*
-         * DISPONIBILIDADE:
-         * calculada exclusivamente pelo ForaDeUso.
-         */
-
-        const disponibilidadeSys = disponibilidade(sys);
-
-        if (site.disponivel !== disponibilidadeSys) {
-
-            alteracoes.push({
-                id,
-                tipo: "DISPONIBILIDADE",
-                descricao: sys.descricao,
-                antes: site.disponivel,
-                depois: disponibilidadeSys
-            });
-        }
-
-        /*
-         * SITE / ADMIN:
-         * se existir ajuste explícito de nome ou preço,
-         * consideramos que a alteração veio do Admin.
-         */
-
-        const nomeSite = ajuste && ajuste.descricao !== undefined
-            ? texto(ajuste.descricao)
-            : site.descricao;
-
-        const precoSite = ajuste && ajuste.preco !== undefined
-            ? numero(ajuste.preco)
-            : site.preco;
-
-        if (nomeSite !== sys.descricao) {
-
-            alteracoes.push({
-                id,
-                tipo: "NOME",
-                descricao: sys.descricao,
-                site: nomeSite,
-                sysOn: sys.descricao
-            });
-        }
-
-        if (precoSite !== sys.preco) {
-
-            alteracoes.push({
-                id,
-                tipo: "PRECO",
-                descricao: sys.descricao,
-                site: precoSite,
-                sysOn: sys.preco
-            });
-        }
-
-        /*
-         * FOTO:
-         * apenas sinalizamos neste momento.
-         * A gravação no Sys-On será feita pela API
-         * depois que adicionarmos a rota segura de escrita.
-         */
-
-        if (ajuste && ajuste.imagem !== undefined) {
-
-            const imagemSite = texto(ajuste.imagem);
-
-            if (
-                imagemSite &&
-                imagemSite !== texto(sys.imagem)
-            ) {
-
-                alteracoes.push({
-                    id,
-                    tipo: "FOTO",
-                    descricao: sys.descricao,
-                    site: imagemSite,
-                    sysOn: sys.imagem
-                });
-            }
-        }
-
-        /*
-         * Estado usado futuramente para descobrir
-         * qual lado foi alterado desde a última sincronização.
-         */
-
-        estadoAnterior[id] = {
-            descricao: sys.descricao,
-            preco: sys.preco,
-            estoque: sys.estoque,
-            disponivel: disponibilidadeSys,
-            imagem: sys.imagem
-        };
-    }
-
-    /*
-     * PRODUTOS EXISTENTES SOMENTE NO SITE
-     */
-
-    for (const [id, site] of mapaSite) {
-
-        if (!mapaSys.has(id)) {
-
-            alteracoes.push({
-                id,
-                tipo: "NOVO_NO_SITE",
-                descricao: site.descricao
-            });
-        }
-    }
-
-    console.log("");
-    console.log("============================================");
-    console.log("              RESUMO");
-    console.log("============================================");
-    console.log("");
-
-    console.log(`Sys-On:      ${mapaSys.size}`);
-    console.log(`Site:        ${mapaSite.size}`);
-    console.log(`Diferenças:  ${alteracoes.length}`);
-
-    console.log("");
-
-    if (alteracoes.length === 0) {
-
-        console.log(
-            "Nenhuma diferença encontrada."
-        );
-
-    } else {
-
-        for (const item of alteracoes) {
+        if (
+            !mapaSys.has(id)
+        ) {
 
             console.log(
-                `[${item.tipo}] ID ${item.id} - ${item.descricao}`
+                `ID ${id}: não existe no Sys-On. Ajuste não será aplicado.`
             );
 
-            if (item.antes !== undefined) {
-                console.log(
-                    `   Antes: ${item.antes}`
-                );
-            }
-
-            if (item.depois !== undefined) {
-                console.log(
-                    `   Depois: ${item.depois}`
-                );
-            }
-
-            if (item.site !== undefined) {
-                console.log(
-                    `   Site: ${item.site}`
-                );
-            }
-
-            if (item.sysOn !== undefined) {
-                console.log(
-                    `   Sys-On: ${item.sysOn}`
-                );
-            }
-
-            console.log("");
+            continue;
         }
+
+        const atual =
+            mapaSys.get(id);
+
+        const dados = {
+            id
+        };
+
+        let alterou = false;
+
+        /*
+         * NOME
+         */
+
+        if (
+            ajuste.descricao !== undefined
+        ) {
+
+            const descricao =
+                texto(
+                    ajuste.descricao
+                );
+
+            if (
+                descricao &&
+                descricao !==
+                    atual.descricao
+            ) {
+
+                dados.descricao =
+                    descricao;
+
+                alterou = true;
+            }
+        }
+
+        /*
+         * PRECO
+         */
+
+        if (
+            ajuste.preco !== undefined ||
+            ajuste.preco_venda !== undefined
+        ) {
+
+            const preco =
+                numero(
+                    ajuste.preco ??
+                    ajuste.preco_venda
+                );
+
+            if (
+                preco !==
+                atual.preco_venda
+            ) {
+
+                dados.preco_venda =
+                    preco;
+
+                alterou = true;
+            }
+        }
+
+      /*
+ * FOTO
+ *
+ * A foto do Admin já foi salva em:
+ *
+ * C:\catalogo-dlimp\img\produtos\ID.jpg
+ *
+ * Aqui apenas marcamos que existe uma
+ * alteração de foto para o catálogo.
+ *
+ * A cópia física para o Sys-On será
+ * feita na etapa de sincronização.
+ */
+
+const ajusteFoto =
+    ajuste.imagem !== undefined;
+
+const ajusteCatalogo =
+    ajuste.exibirSite !== undefined ||
+    ajusteFoto;
+
+if (ajusteFoto) {
+
+    sincronizarFotoParaSysOn(
+        id,
+        ajuste.imagem
+    );
+}
+if (
+    !alterou &&
+    !ajusteCatalogo
+) {
+
+    console.log(
+        `ID ${id}: nenhum nome/preço ou ajuste de catálogo novo.`
+    );
+
+    continue;
+}
+
+if (!alterou && ajusteCatalogo) {
+
+    console.log(
+        `ID ${id}: ajuste de exibição do site será aplicado no catálogo.`
+    );
+
+    processadosCatalogo.push(
+        id
+    );
+
+    continue;
+}
+
+        console.log("");
+        console.log(
+            `ID ${id}: enviando alteração ao Sys-On...`
+        );
+
+        /*
+         * AGORA usamos a rota correta.
+         *
+         * /sincronizar altera o banco.
+         */
+
+        const resposta =
+            await requisicaoJson(
+                API_SINCRONIZAR,
+                {
+                    method: "POST",
+                    body: dados
+                }
+            );
+
+        if (
+            resposta.sucesso !== true
+        ) {
+
+            throw new Error(
+                `Falha ao atualizar ID ${id}.`
+            );
+        }
+
+        console.log(
+            `ID ${id}: atualizado no Sys-On.`
+        );
+
+        processadosSysOn.push(
+    id
+);
     }
+
+    return {
+    sysOn: processadosSysOn,
+    catalogo: processadosCatalogo
+};
+}
+
+/* =========================================================
+   CONSTRUIR CATALOGO
+   ========================================================= */
+
+function construirCatalogo(
+    produtosSysOn,
+    catalogoAtual,
+    ajustes
+) {
+
+    const mapaAtual =
+        criarMapa(
+            catalogoAtual
+        );
+
+    return produtosSysOn.map(
+        sys => {
+
+            const antigo =
+                mapaAtual.get(
+                    sys.id
+                );
+
+            const ajuste =
+                ajustes[String(sys.id)];
+
+            const disponivel =
+                ajuste?.exibirSite !== undefined
+                    ? Boolean(ajuste.exibirSite)
+                    : sys.disponivel;
+
+            return {
+
+                id:
+                    sys.id,
+
+                descricao:
+                    sys.descricao,
+
+                preco_venda:
+                    sys.preco_venda,
+
+                preco:
+                    sys.preco_venda,
+
+                estoque:
+                    sys.estoque,
+
+                disponivel:
+                    disponivel,
+
+                ForaDeUso:
+                    sys.ForaDeUso,
+
+               imagem:
+                 ajuste?.imagem ||
+                 antigo?.imagem ||
+                 sys.imagem ||
+                 "img/produtos/sem_imagem.png"
+            };
+        }
+    );
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+async function main() {
+
+    console.log("");
+    console.log(
+        "================================================"
+    );
+    console.log(
+        " SINCRONIZADOR D'LIMP"
+    );
+    console.log(
+        "================================================"
+    );
 
     /*
      * BACKUP
      */
 
-    const backup = criarBackup();
+    const backup =
+        fazerBackup();
 
+    console.log("");
     console.log(
-        `Backup criado em: ${backup}`
+        `Backup: ${backup}`
     );
 
     /*
-     * Neste primeiro estágio não escrevemos
-     * nada no banco do Sys-On.
+     * 1. Sys-On
+     */
+
+    const produtosSysOn =
+        await carregarSysOn();
+
+    let mapaSys =
+        criarMapa(
+            produtosSysOn
+        );
+
+    /*
+     * 2. Catálogo atual
+     */
+
+    const catalogoAtual =
+        carregarCatalogo();
+
+    console.log(
+        `Catálogo atual: ${catalogoAtual.length} produtos.`
+    );
+
+    /*
+     * 3. Ajustes do Admin
+     */
+
+    const ajustes =
+        carregarAjustes();
+
+    /*
+     * 4. Admin → Sys-On
+     */
+
+    const resultadoAjustes =
+    await aplicarAjustes(
+        ajustes,
+        mapaSys
+    );
+
+const processadosSysOn =
+    resultadoAjustes.sysOn;
+
+const processadosCatalogo =
+    resultadoAjustes.catalogo;
+
+    /*
+     * 5. Se houve alterações,
+     *    precisamos consultar o Sys-On
+     *    novamente.
+     */
+
+    let produtosFinais;
+
+    if (
+        processadosSysOn.length > 0
+    ) {
+
+        console.log("");
+        console.log(
+            "Reconsultando Sys-On após as alterações..."
+        );
+
+        produtosFinais =
+            await carregarSysOn();
+
+        mapaSys =
+            criarMapa(
+                produtosFinais
+            );
+
+    } else {
+
+        produtosFinais =
+            produtosSysOn;
+    }
+
+    /*
+     * 6. Reconstruir catálogo.
      *
-     * Salvamos somente o estado conhecido.
+     * IMPORTANTE:
+     *
+     * Se um produto foi apagado no Sys-On,
+     * ele NÃO estará em produtosFinais.
+     *
+     * Portanto ele sai do catálogo.
+     *
+     * Nenhum DELETE é feito no banco.
+     */
+
+    const novoCatalogo =
+    construirCatalogo(
+        produtosFinais,
+        catalogoAtual,
+        ajustes
+    );
+
+    /*
+     * 7. Salvar catálogo
      */
 
     salvarJson(
-        ESTADO_FILE,
-        estadoAnterior
+        CATALOGO_FILE,
+        novoCatalogo
+    );
+
+    /*
+     * 8. Remover somente os ajustes
+     *    que foram efetivamente enviados.
+     */
+
+    if (
+    processadosSysOn.length > 0 ||
+    processadosCatalogo.length > 0
+) {
+
+        const ajustesRestantes =
+            {
+                ...ajustes
+            };
+
+        for (
+    const id
+    of [
+        ...processadosSysOn,
+        ...processadosCatalogo
+    ]
+) {
+
+            delete ajustesRestantes[
+                String(id)
+            ];
+        }
+
+        salvarJson(
+            AJUSTES_FILE,
+            ajustesRestantes
+        );
+    }
+
+    /*
+     * 9. Resultado
+     */
+
+    console.log("");
+    console.log(
+        "================================================"
+    );
+    console.log(
+        " SINCRONIZACAO CONCLUIDA"
+    );
+    console.log(
+        "================================================"
     );
 
     console.log("");
-    console.log("============================================");
-    console.log("       DIAGNÓSTICO CONCLUÍDO");
-    console.log("============================================");
+    console.log(
+        `Produtos no Sys-On: ${produtosFinais.length}`
+    );
+
+    console.log(
+        `Produtos no catálogo: ${novoCatalogo.length}`
+    );
+
+    console.log(
+        `Ajustes aplicados: ${
+    processadosSysOn.length +
+    processadosCatalogo.length
+}`
+    );
+
     console.log("");
-    console.log("NENHUM DADO DO SYS-ON FOI ALTERADO.");
-    console.log("NENHUMA FOTO FOI ALTERADA.");
-    console.log("NENHUM PREÇO FOI ALTERADO.");
+    console.log(
+        "Nome: Admin -> Sys-On"
+    );
+
+    console.log(
+        "Preço: Admin -> Sys-On"
+    );
+
+    console.log(
+        "Estoque: Sys-On -> catálogo"
+    );
+
+    console.log(
+        "ForaDeUso: Sys-On -> catálogo"
+    );
+
+    console.log(
+        "Exclusão: Sys-On -> catálogo"
+    );
+
+    console.log(
+        "Fotos: aguardando próxima etapa"
+    );
+
     console.log("");
 }
 
-main().catch(erro => {
+main().catch(
+    erro => {
 
-    console.log("");
-    console.log("============================================");
-    console.log("              ERRO");
-    console.log("============================================");
-    console.log("");
+        console.error("");
+        console.error(
+            "================================================"
+        );
+        console.error(
+            " SINCRONIZACAO ABORTADA"
+        );
+        console.error(
+            "================================================"
+        );
 
-    console.error(erro.message);
+        console.error("");
+        console.error(
+            erro.message
+        );
 
-    console.log("");
-    process.exit(1);
-});
+        console.error("");
+
+        process.exitCode = 1;
+    }
+);

@@ -184,6 +184,119 @@ app.get("/produtos/:id", async (req, res) => {
 });
 
 /* =========================================================
+   Sincronização interna
+   ========================================================= */
+
+app.post("/sincronizar", async (req, res) => {
+    try {
+        const id = Number(req.body?.id);
+
+        if (!Number.isInteger(id) || id <= 0) {
+            return res.status(400).json({
+                sucesso: false,
+                erro: "ID inválido."
+            });
+        }
+
+        const descricao =
+            req.body?.descricao !== undefined
+                ? String(req.body.descricao).trim()
+                : undefined;
+
+        const preco =
+            req.body?.preco_venda !== undefined
+                ? Number(req.body.preco_venda)
+                : undefined;
+
+        if (
+            descricao === undefined &&
+            preco === undefined
+        ) {
+            return res.status(400).json({
+                sucesso: false,
+                erro: "Nenhuma alteração enviada."
+            });
+        }
+
+        if (
+            preco !== undefined &&
+            !Number.isFinite(preco)
+        ) {
+            return res.status(400).json({
+                sucesso: false,
+                erro: "Preço inválido."
+            });
+        }
+
+        const campos = [];
+        const valores = [];
+
+        if (descricao !== undefined) {
+            campos.push("descricao = ?");
+            valores.push(descricao);
+        }
+
+        if (preco !== undefined) {
+            campos.push("preco_venda = ?");
+            valores.push(preco);
+        }
+
+        valores.push(id);
+
+        const [resultado] = await db.query(
+            `
+            UPDATE cadproduto
+            SET ${campos.join(", ")}
+            WHERE id = ?
+            LIMIT 1
+            `,
+            valores
+        );
+
+        if (resultado.affectedRows === 0) {
+            return res.status(404).json({
+                sucesso: false,
+                erro: "Produto não encontrado no Sys-On.",
+                id
+            });
+        }
+
+        const [rows] = await db.query(
+            `
+            SELECT
+                id,
+                descricao,
+                preco_venda,
+                estoque,
+                ForaDeUso
+            FROM cadproduto
+            WHERE id = ?
+            LIMIT 1
+            `,
+            [id]
+        );
+
+        return res.json({
+            sucesso: true,
+            mensagem: "Produto atualizado no Sys-On.",
+            produto: rows[0]
+        });
+
+    } catch (erro) {
+        console.error(
+            "Erro na sincronização:",
+            erro
+        );
+
+        return res.status(500).json({
+            sucesso: false,
+            erro: "Erro ao atualizar produto no Sys-On.",
+            detalhes: erro.message
+        });
+    }
+});
+
+/* =========================================================
    InicializaÃ§Ã£o
    ========================================================= */
 

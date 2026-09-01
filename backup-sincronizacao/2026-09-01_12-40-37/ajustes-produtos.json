@@ -1,0 +1,90 @@
+{
+  "139": {
+    "descricao": "SACO DE LIXO 20 LITROS 10 UN",
+    "preco": 5,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "160": {
+    "descricao": "SACO DE LIXO 40 LITROS 10 UN",
+    "preco": 5.5,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "162": {
+    "descricao": "SACO DE LIXO 60 LITROS 10 UN",
+    "preco": 10,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "164": {
+    "descricao": "SACO DE LIXO 100 LITROS 5UN",
+    "preco": 13,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "169": {
+    "descricao": "SACO DE LIXO 40 LITROS 10 UN",
+    "preco": 8,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "188": {
+    "descricao": "SACO DE LIXO 100 LITROS REF 5UN",
+    "preco": 18.5,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "379": {
+    "descricao": "SACOS DE 200 LITROS 5 UN",
+    "preco": 20,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "418": {
+    "descricao": "SACO DE LIXO 60 LITROS REF 5UN",
+    "preco": 13.5,
+    "disponivel": true,
+    "categorias": [
+      "utilitarios"
+    ],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  }
+}
