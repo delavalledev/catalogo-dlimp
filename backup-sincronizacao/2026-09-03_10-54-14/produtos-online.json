@@ -4,7 +4,7 @@
         "descricao": "AGUA SANITARIA 2 LITROS",
         "preco_venda": 6,
         "preco": 6,
-        "estoque": 6,
+        "estoque": 7,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/399.jpg"
@@ -25,7 +25,7 @@
         "preco_venda": 1.5,
         "preco": 1.5,
         "estoque": 0,
-        "disponivel": false,
+        "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
@@ -194,7 +194,7 @@
         "descricao": "ALVEJANTE SEM CLORO 2 LITROS",
         "preco_venda": 10,
         "preco": 10,
-        "estoque": 4,
+        "estoque": 5,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
@@ -204,7 +204,7 @@
         "descricao": "ALVEJANTE SEM CLORO 5 LITROS",
         "preco_venda": 20,
         "preco": 20,
-        "estoque": 3,
+        "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/55.jpg"
@@ -474,7 +474,7 @@
         "descricao": "CLORO 1 LITRO",
         "preco_venda": 8,
         "preco": 8,
-        "estoque": 10,
+        "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/2.jpg"
@@ -484,7 +484,7 @@
         "descricao": "CLORO 2 LITROS",
         "preco_venda": 15,
         "preco": 15,
-        "estoque": 8,
+        "estoque": 9,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/7.jpg"
@@ -494,7 +494,7 @@
         "descricao": "CLORO 5 LITROS",
         "preco_venda": 28,
         "preco": 28,
-        "estoque": 5,
+        "estoque": 11,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/18.jpg"
@@ -624,7 +624,7 @@
         "descricao": "CREOLINA 2 LITROS",
         "preco_venda": 13,
         "preco": 13,
-        "estoque": 7,
+        "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/199.jpg"
@@ -684,7 +684,7 @@
         "descricao": "DESINFETANTE CAPIM LIMAO 2 LITROS",
         "preco_venda": 6.5,
         "preco": 6.5,
-        "estoque": 3,
+        "estoque": 7,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/24.jpg"
@@ -694,7 +694,7 @@
         "descricao": "DESINFETANTE CAPIM LIMAO 5 LITROS",
         "preco_venda": 11.5,
         "preco": 11.5,
-        "estoque": 4,
+        "estoque": 1,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/42.jpg"
@@ -774,7 +774,7 @@
         "descricao": "DESINFETANTE FLORAL 2 LITROS",
         "preco_venda": 6.5,
         "preco": 6.5,
-        "estoque": 12,
+        "estoque": 3,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/22.jpg"
@@ -884,7 +884,7 @@
         "descricao": "DESINFETANTE NATUREZA 2 LITROS",
         "preco_venda": 6.5,
         "preco": 6.5,
-        "estoque": 4,
+        "estoque": 5,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
@@ -937,14 +937,14 @@
         "estoque": 1,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/38.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 31,
         "descricao": "DESINFETANTE TALCO 2 LITROS",
         "preco_venda": 6.5,
         "preco": 6.5,
-        "estoque": 3,
+        "estoque": 5,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/31.jpg"
@@ -964,7 +964,7 @@
         "descricao": "DETERGENTE NEUTRO 1 LITRO",
         "preco_venda": 5.5,
         "preco": 5.5,
-        "estoque": 6,
+        "estoque": 1,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/105.jpg"
@@ -974,7 +974,7 @@
         "descricao": "DETERGENTE NEUTRO 2 LITROS",
         "preco_venda": 10,
         "preco": 10,
-        "estoque": 7,
+        "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
@@ -984,10 +984,10 @@
         "descricao": "DETERGENTE NEUTRO 5 LITROS",
         "preco_venda": 18.8,
         "preco": 18.8,
-        "estoque": 2,
+        "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/107.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 254,
@@ -1334,7 +1334,7 @@
         "descricao": "LIMPA PEDRA 2 LITROS",
         "preco_venda": 18,
         "preco": 18,
-        "estoque": 4,
+        "estoque": 5,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/15.jpg"
@@ -1387,7 +1387,7 @@
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/99.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 323,
@@ -1474,7 +1474,7 @@
         "descricao": "MARIDAO 2 LITROS",
         "preco_venda": 10,
         "preco": 10,
-        "estoque": 5,
+        "estoque": 8,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/9.jpg"
@@ -1484,7 +1484,7 @@
         "descricao": "MARIDAO 5 LITROS",
         "preco_venda": 20,
         "preco": 20,
-        "estoque": 2,
+        "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/10.jpg"
@@ -1504,7 +1504,7 @@
         "descricao": "MATA INSETO 500 ML C GATILHO",
         "preco_venda": 15,
         "preco": 15,
-        "estoque": 2,
+        "estoque": 3,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/328.jpg"
@@ -1714,7 +1714,7 @@
         "descricao": "PERCARBONATO DE SODIO 500 GR",
         "preco_venda": 15,
         "preco": 15,
-        "estoque": 21,
+        "estoque": 4,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/441.jpg"
@@ -1787,7 +1787,7 @@
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/97.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 76,
@@ -2017,14 +2017,14 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/70.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 60,
         "descricao": "SABAO LIQUIDO OMUS 2 LITROS",
         "preco_venda": 14,
         "preco": 14,
-        "estoque": 7,
+        "estoque": 3,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/60.jpg"
@@ -2037,7 +2037,7 @@
         "estoque": -3,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/66.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 417,
@@ -2207,7 +2207,7 @@
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/13.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 413,
@@ -2384,7 +2384,7 @@
         "descricao": "VASSOURA RAVENA",
         "preco_venda": 19,
         "preco": 19,
-        "estoque": 1,
+        "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/148.jpg"
@@ -2447,7 +2447,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/50.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 427433,
