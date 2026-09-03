@@ -87,7 +87,7 @@
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/177.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 178,

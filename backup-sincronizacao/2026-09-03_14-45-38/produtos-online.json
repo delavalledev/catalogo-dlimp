@@ -87,7 +87,7 @@
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/177.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 178,
@@ -197,7 +197,7 @@
         "estoque": 4,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/54.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 55,
@@ -505,7 +505,7 @@
         "preco_venda": 3.85,
         "preco": 3.85,
         "estoque": 2.14,
-        "disponivel": false,
+        "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
@@ -527,7 +527,7 @@
         "estoque": 9,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/85.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 86,
@@ -647,7 +647,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/430.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 439,
@@ -707,7 +707,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/21.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 36,
@@ -727,7 +727,7 @@
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/25.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 41,
@@ -887,7 +887,7 @@
         "estoque": 4,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/32.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 43,
@@ -977,7 +977,7 @@
         "estoque": 7,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/106.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 107,
@@ -1267,7 +1267,7 @@
         "estoque": 1,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/427445.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 246,
@@ -1287,7 +1287,17 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/47.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    {
+        "id": 203,
+        "descricao": "LIMPA CONCRETO 2 LITROS",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 386,
@@ -1704,7 +1714,7 @@
         "descricao": "PERCARBONATO DE SODIO 500 GR",
         "preco_venda": 15,
         "preco": 15,
-        "estoque": 20,
+        "estoque": 21,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/441.jpg"
@@ -1747,7 +1757,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/202.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 207,
@@ -2004,7 +2014,7 @@
         "descricao": "SABAO LIQUIDO OMUS 2 LITROS",
         "preco_venda": 14,
         "preco": 14,
-        "estoque": 6,
+        "estoque": 7,
         "disponivel": true,
         "ForaDeUso": "NAO",
         "imagem": "img/produtos/60.jpg"
@@ -2027,7 +2037,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/417.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 164,
@@ -2137,7 +2147,7 @@
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
-        "imagem": "img/produtos/78.jpg"
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
     },
     {
         "id": 411,
@@ -2194,6 +2204,16 @@
         "descricao": "SOLUPAM ATACADO",
         "preco_venda": 4,
         "preco": 4,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    {
+        "id": 427428,
+        "descricao": "TAPETE",
+        "preco_venda": 13,
+        "preco": 13,
         "estoque": 0,
         "disponivel": true,
         "ForaDeUso": "NAO",
@@ -2384,6 +2404,16 @@
         "descricao": "VASSOURA VERONA PLUS",
         "preco_venda": 19,
         "preco": 19,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png"
+    },
+    {
+        "id": 274,
+        "descricao": "VEJAX CONCENTRADO",
+        "preco_venda": 20,
+        "preco": 20,
         "estoque": 1,
         "disponivel": true,
         "ForaDeUso": "NAO",

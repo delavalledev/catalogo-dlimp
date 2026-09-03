@@ -1,0 +1,71 @@
+{
+  "12": {
+    "imagem": "img/produtos/12.jpg"
+  },
+  "21": {
+    "imagem": "img/produtos/21.jpg"
+  },
+  "25": {
+    "imagem": "img/produtos/25.jpg"
+  },
+  "32": {
+    "imagem": "img/produtos/32.jpg"
+  },
+  "47": {
+    "imagem": "img/produtos/47.jpg"
+  },
+  "54": {
+    "imagem": "img/produtos/54.jpg"
+  },
+  "78": {
+    "imagem": "img/produtos/78.jpg"
+  },
+  "85": {
+    "imagem": "img/produtos/85.jpg"
+  },
+  "103": {
+    "imagem": "img/produtos/103.jpg"
+  },
+  "106": {
+    "imagem": "img/produtos/106.jpg"
+  },
+  "172": {
+    "descricao": "CLORO ATACADO",
+    "preco": 3.85,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  },
+  "202": {
+    "imagem": "img/produtos/202.jpg"
+  },
+  "210": {
+    "descricao": "AGUA SANITARIA ATACADO",
+    "preco": 1.5,
+    "disponivel": false,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  },
+  "274": {
+    "descricao": "VEJAX CONCENTRADO",
+    "preco": 20,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  },
+  "417": {
+    "imagem": "img/produtos/417.jpg"
+  },
+  "430": {
+    "imagem": "img/produtos/430.jpg"
+  },
+  "427445": {
+    "imagem": "img/produtos/427445.jpg"
+  }
+}

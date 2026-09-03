@@ -1,0 +1,14 @@
+{
+  "177": {
+    "imagem": "img/produtos/177.jpg"
+  },
+  "274": {
+    "descricao": "VEJAX CONCENTRADO",
+    "preco": 20,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  }
+}
