@@ -798,3 +798,754 @@ main {
     }
 }
 
+
+
+/* =========================================================
+   SUBMENU CUSTEAMENTO
+   ========================================================= */
+
+.submenu-custeamento {
+    display: inline-flex;
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 24px;
+    background: #e9ecef;
+    border-radius: 10px;
+}
+
+.submenu-item {
+    border: 0;
+    background: transparent;
+    color: #666;
+    padding: 9px 16px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.submenu-item:hover {
+    color: #222;
+    background: #f8f9fa;
+}
+
+.submenu-item.ativo {
+    background: #fff;
+    color: #198754;
+    box-shadow: 0 1px 4px rgba(0,0,0,.10);
+}
+
+/* =========================================================
+   RECEITAS
+   ========================================================= */
+
+.linha-receita {
+    grid-template-columns: minmax(280px, 2fr) 180px 150px 100px;
+}
+
+.btn-editar-receita {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    border-radius: 7px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-editar-receita:hover {
+    background: #f2f2f2;
+    border-color: #bbb;
+}
+
+.custo-receita-lista {
+    color: #198754;
+}
+
+/* =========================================================
+   MODAL RECEITA
+   ========================================================= */
+
+.modal-receita {
+    display: block;
+    width: min(900px, 100%);
+    max-width: 900px;
+    box-sizing: border-box;
+}
+
+.cabecalho-modal-receita h2 {
+    margin: 0 0 5px;
+    font-size: 24px;
+}
+
+.cabecalho-modal-receita p {
+    margin: 0 0 24px;
+    color: #777;
+    font-size: 14px;
+}
+
+.form-receita label {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-receita input,
+.form-receita select,
+.form-receita textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 7px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 11px 12px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-receita input,
+.form-receita select {
+    height: 44px;
+}
+
+.form-receita textarea {
+    resize: vertical;
+}
+
+.form-receita input:focus,
+.form-receita select:focus,
+.form-receita textarea:focus {
+    outline: none;
+    border-color: #198754;
+    box-shadow: 0 0 0 3px rgba(25,135,84,.10);
+}
+
+.campos-receita {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 14px;
+}
+
+.btn-cancelar-receita {
+    background: #eee;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.area-itens-receita {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.titulo-itens-receita h3 {
+    margin: 0 0 4px;
+    font-size: 18px;
+}
+
+.titulo-itens-receita p {
+    margin: 0 0 18px;
+    color: #777;
+    font-size: 13px;
+}
+
+.adicionar-item-receita {
+    display: grid;
+    grid-template-columns: 1fr 150px auto;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.adicionar-item-receita select,
+.adicionar-item-receita input {
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0 12px;
+    background: #fff;
+}
+
+.adicionar-item-receita button {
+    border: 0;
+    border-radius: 8px;
+    padding: 0 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tabela-itens-receita {
+    border: 1px solid #e2e4e8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cabecalho-itens-receita,
+.linha-item-receita {
+    display: grid;
+    grid-template-columns: minmax(220px, 2fr) 130px 130px 130px 80px;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 14px;
+}
+
+.cabecalho-itens-receita {
+    background: #f7f8fa;
+    color: #777;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.linha-item-receita {
+    min-height: 45px;
+    border-top: 1px solid #eee;
+    font-size: 13px;
+}
+
+.nome-item-receita {
+    font-weight: 600;
+}
+
+.linha-item-receita strong {
+    color: #198754;
+}
+
+.btn-excluir-item-receita {
+    border: 0;
+    background: transparent;
+    color: #c62828;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.resumo-receita {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-top: 18px;
+}
+
+.resumo-receita > div {
+    min-width: 150px;
+    padding: 14px 16px;
+    background: #f7f8fa;
+    border-radius: 10px;
+}
+
+.resumo-receita span {
+    display: block;
+    margin-bottom: 5px;
+    color: #777;
+    font-size: 12px;
+}
+
+.resumo-receita strong {
+    font-size: 18px;
+    color: #198754;
+}
+
+.estado-vazio small {
+    color: #999;
+}
+
+@media (max-width: 700px) {
+
+    .submenu-custeamento {
+        width: 100%;
+    }
+
+    .submenu-item {
+        flex: 1;
+    }
+
+    .campos-receita,
+    .adicionar-item-receita {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho-itens-receita {
+        display: none;
+    }
+
+    .linha-item-receita {
+        grid-template-columns: 1fr 1fr;
+        padding: 14px;
+    }
+
+    .nome-item-receita {
+        grid-column: 1 / -1;
+    }
+
+    .resumo-receita {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .resumo-receita > div {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+/* =========================================================
+   CUSTEAMENTO V3 — DASHBOARD + RECEITAS
+   ========================================================= */
+
+.aviso:empty {
+    display: none !important;
+}
+
+#avisoReceita:not(.visivel) {
+    display: none !important;
+}
+
+#avisoReceita.visivel {
+    display: block !important;
+    margin: 14px 0 0 !important;
+    padding: 11px 14px !important;
+    border: 1px solid #fde68a !important;
+    background: #fffbeb !important;
+    color: #92400e !important;
+    border-radius: 10px !important;
+    font-size: 13px !important;
+}
+
+#avisoReceita.visivel.erro {
+    border-color: #fecaca !important;
+    background: #fef2f2 !important;
+    color: #991b1b !important;
+}
+
+.cabecalho-receitas {
+    align-items: flex-end !important;
+    margin-bottom: 18px !important;
+}
+
+.eyebrow-custeamento {
+    display: block;
+    margin-bottom: 5px;
+    color: #198754;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.btn-nova-receita {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-nova-receita span {
+    font-size: 19px;
+    line-height: 1;
+}
+
+.dashboard-custeamento {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0 0 18px;
+}
+
+.card-dashboard {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 88px;
+    padding: 17px 18px;
+    background: #fff;
+    border: 1px solid #e2e4e8;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(15,23,42,.045);
+}
+
+.card-dashboard-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border-radius: 11px;
+    background: #eef8f2;
+    font-size: 20px;
+}
+
+.card-dashboard-label {
+    display: block;
+    margin-bottom: 4px;
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.card-dashboard strong {
+    display: block;
+    color: #111827;
+    font-size: 22px;
+    line-height: 1.1;
+}
+
+.card-dashboard small {
+    display: block;
+    margin-top: 3px;
+    color: #9ca3af;
+    font-size: 11px;
+}
+
+.card-dashboard-futuro {
+    background: linear-gradient(135deg, #f0fdf4, #fff);
+    border-color: #bbf7d0;
+}
+
+#painelReceitas .filtros-custeamento {
+    margin-bottom: 14px;
+}
+
+#painelReceitas #buscaReceita {
+    height: 50px;
+}
+
+.tabela-receitas {
+    overflow: hidden;
+}
+
+.cabecalho-receitas-lista {
+    grid-template-columns: minmax(300px, 2fr) 160px 190px 120px !important;
+}
+
+#painelReceitas .linha-receita {
+    display: grid;
+    grid-template-columns: minmax(300px, 2fr) 160px 190px 120px;
+    align-items: center;
+    gap: 15px;
+    min-height: 78px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #eef0f2;
+    background: #fff;
+    transition: .15s ease;
+}
+
+#painelReceitas .linha-receita:last-child {
+    border-bottom: 0;
+}
+
+#painelReceitas .linha-receita:hover {
+    background: #fbfcfd;
+}
+
+.receita-identificacao strong {
+    display: block;
+    color: #111827;
+    font-size: 14px;
+}
+
+.receita-identificacao small,
+.receita-rendimento small,
+.receita-custo small {
+    display: block;
+    margin-top: 4px;
+    color: #9ca3af;
+    font-size: 11px;
+}
+
+.receita-rendimento strong {
+    color: #374151;
+    font-size: 14px;
+}
+
+.receita-custo strong {
+    display: block;
+    color: #198754;
+    font-size: 15px;
+}
+
+.receita-custo .custo-unidade-receita {
+    color: #6b7280;
+}
+
+.acoes-receita {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#painelReceitas .btn-editar-receita {
+    min-height: 37px;
+    padding: 0 13px;
+    border: 1px solid #dfe3e8;
+    border-radius: 9px;
+    background: #fff;
+    color: #374151;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .15s ease;
+}
+
+#painelReceitas .btn-editar-receita:hover {
+    border-color: #198754;
+    color: #198754;
+    background: #f0fdf4;
+}
+
+/* Modal receita */
+#modalReceita .modal-conteudo.modal-receita {
+    display: block !important;
+    width: min(980px, calc(100vw - 40px)) !important;
+    max-width: 980px !important;
+    max-height: calc(100vh - 40px) !important;
+    overflow-y: auto !important;
+    padding: 32px 34px 28px !important;
+    border-radius: 20px !important;
+    background: #fff !important;
+    box-shadow: 0 28px 80px rgba(15,23,42,.28) !important;
+}
+
+#modalReceita {
+    background: rgba(15,23,42,.68) !important;
+    backdrop-filter: blur(4px);
+}
+
+#modalReceita .fechar {
+    width: 38px !important;
+    height: 38px !important;
+    right: 18px !important;
+    top: 18px !important;
+    border-radius: 10px !important;
+    background: #f3f4f6 !important;
+    color: #374151 !important;
+    font-size: 24px !important;
+}
+
+#modalReceita .form-receita input,
+#modalReceita .form-receita select,
+#modalReceita .form-receita textarea {
+    border: 1px solid #d1d5db !important;
+    border-radius: 10px !important;
+}
+
+#modalReceita .area-itens-receita {
+    border-top: 1px solid #e5e7eb !important;
+    padding-top: 28px !important;
+}
+
+#modalReceita .adicionar-item-receita {
+    padding: 14px !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 13px !important;
+    background: #f8fafc !important;
+}
+
+#modalReceita .adicionar-item-receita select,
+#modalReceita .adicionar-item-receita input {
+    height: 44px !important;
+    border-radius: 9px !important;
+    border: 1px solid #d1d5db !important;
+}
+
+#modalReceita .adicionar-item-receita button {
+    min-width: 120px;
+    background: #198754 !important;
+}
+
+#modalReceita .tabela-itens-receita {
+    border: 1px solid #e5e7eb !important;
+    border-radius: 13px !important;
+}
+
+#modalReceita .cabecalho-itens-receita,
+#modalReceita .linha-item-receita {
+    grid-template-columns: minmax(250px, 2fr) 150px 125px 135px 48px !important;
+}
+
+#modalReceita .cabecalho-itens-receita {
+    background: #f8fafc !important;
+    color: #6b7280 !important;
+}
+
+#modalReceita .linha-item-receita {
+    min-height: 62px;
+    border-top: 1px solid #eef0f2;
+}
+
+.nome-item-receita strong {
+    display: block;
+    color: #111827;
+}
+
+.nome-item-receita small {
+    display: block;
+    margin-top: 3px;
+    color: #9ca3af;
+    font-size: 11px;
+}
+
+.quantidade-item-receita {
+    width: 100% !important;
+    height: 38px !important;
+    box-sizing: border-box !important;
+    padding: 0 9px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+}
+
+.quantidade-item-receita:focus {
+    outline: none !important;
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 3px rgba(25,135,84,.10) !important;
+}
+
+.custo-item-receita {
+    color: #198754 !important;
+}
+
+.btn-excluir-item-receita {
+    width: 34px !important;
+    height: 34px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: #fff1f2 !important;
+    color: #be123c !important;
+    font-size: 21px !important;
+    cursor: pointer !important;
+}
+
+.btn-excluir-item-receita:hover {
+    background: #ffe4e6 !important;
+}
+
+#modalReceita .resumo-receita {
+    display: grid !important;
+    grid-template-columns: 220px 220px !important;
+    justify-content: end !important;
+    gap: 12px !important;
+    margin-top: 18px !important;
+}
+
+#modalReceita .resumo-receita > div {
+    padding: 15px 17px !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 13px !important;
+    background: #f8fafc !important;
+}
+
+#modalReceita .resumo-receita span {
+    display: block;
+    margin-bottom: 4px !important;
+    color: #6b7280 !important;
+    font-size: 11px !important;
+}
+
+#modalReceita .resumo-receita strong {
+    color: #111827 !important;
+    font-size: 19px !important;
+}
+
+#modalReceita #custoUnidadeReceita {
+    color: #198754 !important;
+}
+
+@media (max-width: 950px) {
+    .dashboard-custeamento {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #painelReceitas .linha-receita {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .receita-identificacao {
+        grid-column: 1 / -1;
+    }
+
+    .acoes-receita {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 700px) {
+    .dashboard-custeamento {
+        grid-template-columns: 1fr;
+    }
+
+    #painelReceitas .linha-receita {
+        grid-template-columns: 1fr;
+    }
+
+    .receita-identificacao {
+        grid-column: auto;
+    }
+
+    #modalReceita .modal-conteudo.modal-receita {
+        width: calc(100vw - 20px) !important;
+        padding: 24px 18px !important;
+    }
+
+    #modalReceita .resumo-receita {
+        grid-template-columns: 1fr !important;
+    }
+
+    #modalReceita .cabecalho-itens-receita {
+        display: none !important;
+    }
+
+    #modalReceita .linha-item-receita {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    #modalReceita .nome-item-receita {
+        grid-column: 1 / -1 !important;
+    }
+}
+
+
+/* =========================================================
+   CUSTEAMENTO V4 - AJUSTES FINAIS
+   ========================================================= */
+
+#avisoReceita:empty,
+#avisoReceita:not(.visivel) {
+    display: none;
+}
+
+#avisoReceita.erro {
+    background: #fff0f0;
+    border-color: #f3b4b4;
+    color: #a61b1b;
+}
+
+.linha-receita {
+    transition: background .15s, transform .15s;
+}
+
+.linha-receita:hover {
+    background: #fbfcfd;
+}
+
+.custo-receita-lista {
+    font-weight: 700;
+}
+
+.modal-receita {
+    max-height: 92vh;
+    overflow-y: auto;
+}
+
+.modal-receita #avisoReceita {
+    margin-top: 12px;
+    border: 1px solid #f1d58a;
+}

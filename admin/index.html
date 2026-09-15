@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin D'Limp</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin.css?v=6">
 </head>
 <body>
 
@@ -255,32 +255,35 @@
     <!-- PAINEL DE RECEITAS -->
     <section id="painelReceitas" class="painel-custeamento oculto">
 
-        <div class="cabecalho-custeamento">
+        <div class="cabecalho-custeamento cabecalho-receitas">
             <div>
+                <span class="eyebrow-custeamento">CUSTEAMENTO</span>
                 <h2>Receitas</h2>
-                <p>Fórmulas e custos de produção</p>
+                <p>Controle das fórmulas, custos e rentabilidade dos produtos.</p>
             </div>
 
-            <button id="novaReceita" class="btn-salvar">
-                + Nova receita
+            <button id="novaReceita" class="btn-salvar btn-nova-receita">
+                <span>+</span> Nova receita
             </button>
         </div>
+
+        <section id="dashboardCusteamento" class="dashboard-custeamento"></section>
 
         <section class="filtros filtros-custeamento">
             <input
                 id="buscaReceita"
                 type="search"
-                placeholder="Buscar receita..."
+                placeholder="🔎  Buscar receita por nome..."
             >
         </section>
 
-        <section class="tabela-custeamento">
+        <section class="tabela-custeamento tabela-receitas">
 
-            <div class="tabela-cabecalho">
-                <span>Nome</span>
+            <div class="tabela-cabecalho cabecalho-receitas-lista">
+                <span>Receita</span>
                 <span>Rendimento</span>
-                <span>Custo</span>
-                <span></span>
+                <span>Custo total</span>
+                <span>Ação</span>
             </div>
 
             <div id="listaReceitas"></div>
@@ -348,7 +351,125 @@
     </div>
 
 </div>
-<script src="admin.js"></script>
+
+<!-- MODAL DE RECEITA -->
+<div id="modalReceita" class="modal oculto">
+    <div class="modal-conteudo modal-receita">
+
+        <button id="fecharModalReceita" class="fechar">×</button>
+
+        <div class="cabecalho-modal-receita">
+            <div>
+                <h2 id="tituloModalReceita">Nova receita</h2>
+                <p>Cadastre a fórmula e os insumos utilizados.</p>
+            </div>
+        </div>
+
+        <input id="receitaId" type="hidden">
+
+        <div class="form-receita">
+
+            <label>
+                Nome da receita
+                <input id="nomeReceita" type="text" placeholder="Ex.: Cloro Gel">
+            </label>
+
+            <div class="campos-receita">
+                <label>
+                    Rendimento
+                    <input id="rendimentoReceita" type="number" min="0" step="0.0001" placeholder="0">
+                </label>
+
+                <label>
+                    Unidade
+                    <select id="unidadeRendimentoReceita">
+                        <option value="L">Litros (L)</option>
+                        <option value="KG">Quilos (KG)</option>
+                        <option value="UN">Unidades (UN)</option>
+                    </select>
+                </label>
+            </div>
+
+            <label>
+                Observação
+                <textarea id="observacaoReceita" rows="3" placeholder="Observações da receita..."></textarea>
+            </label>
+
+            <div class="acoes">
+                <button id="cancelarReceita" type="button" class="btn-cancelar-receita">
+                    Cancelar
+                </button>
+
+                <button id="salvarReceita" type="button" class="btn-salvar">
+                    Salvar receita
+                </button>
+            </div>
+
+            <div id="avisoReceita" class="aviso"></div>
+
+        </div>
+
+        <section id="areaItensReceita" class="area-itens-receita oculto">
+
+            <div class="titulo-itens-receita">
+                <div>
+                    <h3>Insumos da receita</h3>
+                    <p>Informe a quantidade usada de cada insumo.</p>
+                </div>
+            </div>
+
+            <div class="adicionar-item-receita">
+
+                <select id="insumoReceita">
+                    <option value="">Selecione um insumo...</option>
+                </select>
+
+                <input
+                    id="quantidadeInsumoReceita"
+                    type="number"
+                    min="0"
+                    step="0.000001"
+                    placeholder="Quantidade"
+                >
+
+                <button id="adicionarItemReceita" type="button" class="btn-salvar">
+                    + Adicionar
+                </button>
+
+            </div>
+
+            <div class="tabela-itens-receita">
+                <div class="cabecalho-itens-receita">
+                    <span>Insumo</span>
+                    <span>Quantidade</span>
+                    <span>Preço</span>
+                    <span>Custo</span>
+                    <span></span>
+                </div>
+
+                <div id="listaItensReceita"></div>
+            </div>
+
+            <div class="resumo-receita">
+
+                <div>
+                    <span>Custo total</span>
+                    <strong id="custoTotalReceita">R$ 0,00</strong>
+                </div>
+
+                <div>
+                    <span>Custo por unidade</span>
+                    <strong id="custoUnidadeReceita">R$ 0,00</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+</div>
+
+<script src="admin.js?v=6"></script>
 </body>
 </html>
 
