@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -25,6 +25,15 @@
 </div>
 </header>
 
+<nav class="menu-admin">
+    <button id="menuProdutos" class="menu-item ativo">
+        Produtos
+    </button>
+
+    <button id="menuCusteamento" class="menu-item">
+        Custeamento
+    </button>
+</nav>
 <main>
 
     <section class="resumo">
@@ -185,6 +194,160 @@
     </div>
 </div>
 
+<section id="secaoCusteamento" class="secao-custeamento oculto">
+
+    <!-- SUBMENU -->
+    <div class="submenu-custeamento">
+        <button id="subMenuInsumos" class="submenu-item ativo">
+            Insumos
+        </button>
+
+        <button id="subMenuReceitas" class="submenu-item">
+            Receitas
+        </button>
+    </div>
+
+
+    <!-- PAINEL DE INSUMOS -->
+    <section id="painelInsumos" class="painel-custeamento">
+
+        <div class="cabecalho-custeamento">
+            <div>
+                <h2>Insumos</h2>
+                <p>Controle de insumos e custos de produção</p>
+            </div>
+
+            <button id="novoInsumo" class="btn-salvar">
+                + Novo insumo
+            </button>
+        </div>
+
+        <section class="filtros filtros-custeamento">
+            <input
+                id="buscaInsumo"
+                type="search"
+                placeholder="Buscar insumo..."
+            >
+
+            <select id="filtroTipoInsumo">
+                <option value="todos">Todos os tipos</option>
+                <option value="MATERIA_PRIMA">Matéria-prima</option>
+                <option value="EMBALAGEM">Embalagem</option>
+                <option value="ACESSORIO">Acessório</option>
+            </select>
+        </section>
+
+        <section class="tabela-custeamento">
+            <div class="tabela-cabecalho">
+                <span>Nome</span>
+                <span>Tipo</span>
+                <span>Unidade</span>
+                <span>Preço atual</span>
+                <span></span>
+            </div>
+
+            <div id="listaInsumos"></div>
+        </section>
+
+    </section>
+
+
+    <!-- PAINEL DE RECEITAS -->
+    <section id="painelReceitas" class="painel-custeamento oculto">
+
+        <div class="cabecalho-custeamento">
+            <div>
+                <h2>Receitas</h2>
+                <p>Fórmulas e custos de produção</p>
+            </div>
+
+            <button id="novaReceita" class="btn-salvar">
+                + Nova receita
+            </button>
+        </div>
+
+        <section class="filtros filtros-custeamento">
+            <input
+                id="buscaReceita"
+                type="search"
+                placeholder="Buscar receita..."
+            >
+        </section>
+
+        <section class="tabela-custeamento">
+
+            <div class="tabela-cabecalho">
+                <span>Nome</span>
+                <span>Rendimento</span>
+                <span>Custo</span>
+                <span></span>
+            </div>
+
+            <div id="listaReceitas"></div>
+
+        </section>
+
+    </section>
+
+</section>
+
+<div id="modalInsumo" class="modal oculto">
+
+    <div class="modal-conteudo modal-insumo">
+
+        <button id="fecharModalInsumo" class="fechar">×</button>
+
+        <h2 id="tituloModalInsumo">Novo insumo</h2>
+
+        <input id="insumoId" type="hidden">
+
+        <label>
+            Nome
+            <input id="nomeInsumo" type="text">
+        </label>
+
+        <label>
+            Tipo
+            <select id="tipoInsumo">
+                <option value="MATERIA_PRIMA">Matéria-prima</option>
+                <option value="EMBALAGEM">Embalagem</option>
+                <option value="ACESSORIO">Acessório</option>
+            </select>
+        </label>
+
+        <label>
+            Unidade
+            <select id="unidadeInsumo">
+                <option value="KG">KG</option>
+                <option value="L">L</option>
+                <option value="UN">UN</option>
+                <option value="ML">ML</option>
+                <option value="G">G</option>
+            </select>
+        </label>
+
+        <label>
+            Preço atual
+            <input id="precoInsumo" type="number" min="0" step="0.0001">
+        </label>
+
+        <div class="acoes">
+
+            <button id="cancelarInsumo" class="btn-site">
+                Cancelar
+            </button>
+
+            <button id="salvarInsumo" class="btn-salvar">
+                Salvar
+            </button>
+
+        </div>
+
+        <div id="avisoInsumo" class="aviso"></div>
+
+    </div>
+
+</div>
 <script src="admin.js"></script>
 </body>
 </html>

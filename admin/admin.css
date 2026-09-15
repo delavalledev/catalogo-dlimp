@@ -1,4 +1,4 @@
-﻿* {
+* {
     box-sizing: border-box;
 }
 
@@ -303,3 +303,498 @@ main {
     width: auto;
     margin: 0;
 }
+/* =========================================================
+   MENU ADMIN
+   ========================================================= */
+
+.menu-admin {
+    display: flex;
+    gap: 6px;
+    padding: 14px 28px 0;
+    background: #111;
+    border-top: 1px solid #252525;
+}
+
+.menu-item {
+    border: 0;
+    background: transparent;
+    color: #aaa;
+    padding: 12px 20px;
+    border-radius: 8px 8px 0 0;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu-item:hover {
+    color: #fff;
+    background: #1d1d1d;
+}
+
+.menu-item.ativo {
+    color: #222;
+    background: #f5f6f8;
+}
+
+
+/* =========================================================
+   CUSTEAMENTO
+   ========================================================= */
+
+.secao-custeamento {
+    padding: 30px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.secao-custeamento.oculto {
+    display: none !important;
+}
+
+.cabecalho-custeamento {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.cabecalho-custeamento h2 {
+    margin: 0 0 5px;
+    font-size: 28px;
+    color: #151515;
+}
+
+.cabecalho-custeamento p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FILTROS
+   ========================================================= */
+
+.filtros-custeamento {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.filtros-custeamento input,
+.filtros-custeamento select {
+    width: 100%;
+    box-sizing: border-box;
+    height: 48px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0 15px;
+    background: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.filtros-custeamento input:focus,
+.filtros-custeamento select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 3px rgba(25, 135, 84, 0.10);
+}
+
+
+/* =========================================================
+   TABELA
+   ========================================================= */
+
+.tabela-custeamento {
+    background: #fff;
+    border: 1px solid #e2e4e8;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.tabela-cabecalho,
+.linha-insumo {
+    display: grid;
+    grid-template-columns: minmax(280px, 2fr) 180px 100px 150px 100px;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+.tabela-cabecalho {
+    background: #f7f8fa;
+    border-bottom: 1px solid #e2e4e8;
+    color: #777;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.linha-insumo {
+    min-height: 54px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+}
+
+.linha-insumo:last-child {
+    border-bottom: 0;
+}
+
+.linha-insumo:hover {
+    background: #fafafa;
+}
+
+.nome-insumo {
+    font-weight: 600;
+    color: #222;
+}
+
+.linha-insumo strong {
+    font-size: 15px;
+    color: #198754;
+}
+
+.btn-editar-insumo {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    border-radius: 7px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-editar-insumo:hover {
+    background: #f2f2f2;
+    border-color: #bbb;
+}
+
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.badge-tipo {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badge-tipo.materia_prima {
+    background: #e8f1ff;
+    color: #2864c7;
+}
+
+.badge-tipo.embalagem {
+    background: #fff2df;
+    color: #b56b00;
+}
+
+.badge-tipo.acessorio {
+    background: #eee8ff;
+    color: #6941c6;
+}
+
+
+/* =========================================================
+   BOTÃO NOVO
+   ========================================================= */
+
+.cabecalho-custeamento .btn-salvar {
+    border: 0;
+    background: #198754;
+    color: #fff;
+    padding: 11px 18px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cabecalho-custeamento .btn-salvar:hover {
+    background: #157347;
+}
+
+
+/* =========================================================
+   MODAL INSUMO
+   ========================================================= */
+
+.modal-insumo {
+    max-width: 500px;
+}
+
+.modal-insumo h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.modal-insumo label {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+.modal-insumo input,
+.modal-insumo select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 7px;
+    height: 44px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.modal-insumo input:focus,
+.modal-insumo select:focus {
+    outline: none;
+    border-color: #198754;
+    box-shadow: 0 0 0 3px rgba(25,135,84,.10);
+}
+
+.modal-insumo .acoes {
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   ESTADOS
+   ========================================================= */
+
+.linha-insumo.carregando,
+.linha-insumo.erro,
+.linha-insumo.vazio {
+    display: block;
+    text-align: center;
+    padding: 35px;
+    color: #777;
+}
+
+.linha-insumo.erro {
+    color: #b42318;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .secao-custeamento {
+        padding: 20px;
+    }
+
+    .tabela-cabecalho {
+        display: none;
+    }
+
+    .linha-insumo {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 18px;
+    }
+
+    .nome-insumo {
+        grid-column: 1 / -1;
+    }
+
+    .filtros-custeamento {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   CORREÇÃO DO MODAL DE INSUMO
+   ========================================================= */
+
+.modal-insumo {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    box-sizing: border-box;
+}
+
+.modal-insumo h2 {
+    margin: 0 0 25px 0;
+}
+
+.modal-insumo label {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.modal-insumo input,
+.modal-insumo select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal-insumo .acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+}
+
+.modal-insumo .acoes button {
+    width: auto;
+    min-width: 100px;
+}
+/* Ajustes finais do modal de insumo */
+
+.modal-insumo #cancelarInsumo {
+    background: #eee;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.modal-insumo #cancelarInsumo:hover {
+    background: #e2e2e2;
+}
+
+.modal-insumo #salvarInsumo {
+    background: #111;
+    color: #fff;
+    border: 1px solid #111;
+}
+
+.modal-insumo #avisoInsumo:empty {
+    display: none;
+}
+
+/* =========================================================
+   SUBMENU DO CUSTEAMENTO
+   ========================================================= */
+
+.submenu-custeamento {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 24px;
+    background: #e9ecef;
+    border: 1px solid #dde1e5;
+    border-radius: 10px;
+}
+
+.submenu-item {
+    border: 0;
+    background: transparent;
+    color: #666;
+    padding: 9px 16px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.submenu-item:hover {
+    color: #222;
+    background: #f5f6f8;
+}
+
+.submenu-item.ativo {
+    background: #fff;
+    color: #198754;
+    box-shadow: 0 1px 4px rgba(0,0,0,.10);
+}
+
+/* =========================================================
+   PAINÉIS DE CUSTEAMENTO
+   ========================================================= */
+
+.painel-custeamento {
+    width: 100%;
+}
+
+.painel-custeamento.oculto {
+    display: none !important;
+}
+
+/* =========================================================
+   RECEITAS
+   ========================================================= */
+
+.linha-receita {
+    grid-template-columns: minmax(280px, 2fr) 180px 150px 100px;
+}
+
+.linha-receita .acoes-insumo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-editar-receita {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    border-radius: 7px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .15s;
+}
+
+.btn-editar-receita:hover {
+    background: #f2f2f2;
+    border-color: #bbb;
+}
+
+.estado-vazio {
+    text-align: center;
+    padding: 40px 20px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* =========================================================
+   AJUSTES VISUAIS DO CUSTEAMENTO
+   ========================================================= */
+
+.secao-custeamento {
+    background: #f3f5f7;
+}
+
+.cabecalho-custeamento .btn-salvar {
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+
+    .submenu-custeamento {
+        width: 100%;
+    }
+
+    .submenu-item {
+        flex: 1;
+    }
+
+    .linha-receita {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .linha-receita .nome-insumo {
+        grid-column: 1 / -1;
+    }
+}
+
