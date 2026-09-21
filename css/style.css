@@ -1301,10 +1301,10 @@ button:disabled {
     }
 
     .store-logo {
-        width: min(230px, 72vw);
-        height: 74px;
-        margin: -6px auto 0;
-        transform: scale(1.03);
+        width: min(290px, 88vw);
+        height: 100px;
+        margin: -8px auto 0;
+        transform: scale(1.04);
     }
 
     .area-busca {
@@ -1733,8 +1733,18 @@ button:disabled {
 
 
 /* ==========================================================================
-   AJUSTE FINAL — detalhes do produto no celular
+   AJUSTE FINAL — catálogo e detalhes no celular
    ========================================================================== */
+
+/* Logo maior no celular */
+@media (max-width: 599px) {
+    .store-logo {
+        width: min(290px, 88vw);
+        height: 100px;
+        margin: -8px auto 0;
+        transform: scale(1.04);
+    }
+}
 
 /* Botão fechar sempre visível e fácil de tocar */
 .modal-produto-conteudo {
@@ -1742,19 +1752,23 @@ button:disabled {
 }
 
 .modal-produto-fechar {
-    top: max(10px, env(safe-area-inset-top)) !important;
+    position: absolute !important;
+    top: 10px !important;
     right: 10px !important;
+    z-index: 9999 !important;
     width: 44px !important;
     height: 44px !important;
-    z-index: 9999 !important;
     display: grid !important;
     place-items: center !important;
     visibility: visible !important;
     opacity: 1 !important;
     pointer-events: auto !important;
+    cursor: pointer !important;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
-/* Deixa as informações mais compactas, sem aquele aspecto de "bula" */
+/* Informações mais compactas */
 .produto-detalhe-informacoes {
     gap: 8px;
     margin-top: 14px;
@@ -1786,10 +1800,11 @@ button:disabled {
     padding: 11px 13px;
 }
 
-/* Celular: modal mais aproveitável e imagem sem ocupar a tela toda */
+/* Celular */
 @media (max-width: 700px) {
     .modal-produto {
         padding: 6px !important;
+        align-items: flex-end;
     }
 
     .modal-produto-conteudo {
@@ -1804,13 +1819,13 @@ button:disabled {
     }
 
     .produto-detalhe-imagem-wrap {
-        min-height: 220px;
-        max-height: 34vh;
-        padding: 10px;
+        min-height: 210px;
+        max-height: 32vh;
+        padding: 8px;
     }
 
     .produto-detalhe-imagem {
-        height: min(32vh, 260px);
+        height: min(30vh, 245px);
     }
 
     .produto-detalhe-resumo h2 {

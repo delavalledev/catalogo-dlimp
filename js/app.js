@@ -270,8 +270,18 @@ function criarModalProduto() {
     `;
     document.body.appendChild(modal);
 
+    const botaoFechar = modal.querySelector("#fecharModalProduto");
+
+    // Fechamento direto: funciona também no toque do celular.
+    botaoFechar?.addEventListener("click", evento => {
+        evento.preventDefault();
+        evento.stopPropagation();
+        fecharModalProduto();
+    });
+
+    // Clique/toque fora do conteúdo também fecha.
     modal.addEventListener("click", evento => {
-        if (evento.target === modal || evento.target.closest("#fecharModalProduto")) {
+        if (evento.target === modal) {
             fecharModalProduto();
         }
     });
@@ -295,9 +305,7 @@ function abrirModalProduto(produto) {
         descricao = "";
     }
     const paraQueServe = valorInformacaoProduto(produto, ["paraQueServe", "finalidade", "utilidade"]);
-    const ondeAplicar = valorInformacaoProduto(produto, ["ondeAplicar", "aplicacao", "aplicacoes"]);
     const modoUso = valorInformacaoProduto(produto, ["modoUso", "modoDeUso", "modo_uso"]);
-    const observacoes = valorInformacaoProduto(produto, ["observacoes", "observacao"]);
     const advertencias = valorInformacaoProduto(produto, ["advertencias", "advertencia", "atencao"]);
     const ceatox = valorInformacaoProduto(produto, ["ceatox", "ciatox"]);
     const disponivel = produto.disponivel !== false;
@@ -334,12 +342,10 @@ function abrirModalProduto(produto) {
         <div class="produto-detalhe-informacoes">
             ${blocoInformacao("Descrição", descricao)}
             ${blocoInformacao("Para que serve", paraQueServe)}
-            ${blocoInformacao("Onde aplicar", ondeAplicar)}
             ${blocoInformacao("Modo de uso", modoUso)}
-            ${blocoInformacao("Observações", observacoes)}
             ${blocoInformacao("⚠️ Atenção", advertencias, "produto-detalhe-alerta")}
             ${ceatox ? `<section class="produto-detalhe-ceatox"><strong>☎️ Em caso de intoxicação</strong><p>${escaparHTML(ceatox)}</p></section>` : ""}
-            ${!descricao && !paraQueServe && !ondeAplicar && !modoUso && !observacoes && !advertencias ? `
+            ${!descricao && !paraQueServe && !modoUso && !advertencias ? `
                 <div class="produto-detalhe-sem-info">
                     <strong>Informações do produto</strong>
                     <p>Os detalhes de uso e aplicação ainda não foram cadastrados para este produto.</p>
