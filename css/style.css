@@ -1699,3 +1699,34 @@ button:disabled {
         right: 10px;
     }
 }
+
+/* Informações de segurança do produto */
+.produto-detalhe-alerta {
+    border-color: #f0d58a;
+    background: #fffaf0;
+}
+
+.produto-detalhe-alerta h3 {
+    color: #8a5a00;
+}
+
+.produto-detalhe-ceatox {
+    grid-column: 1 / -1;
+    padding: 13px 16px;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    background: #f7f8fa;
+}
+
+.produto-detalhe-ceatox strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--texto);
+    font-size: 0.9rem;
+}
+
+.produto-detalhe-ceatox p {
+    color: var(--texto-suave);
+    font-size: 0.84rem;
+    line-height: 1.45;
+}

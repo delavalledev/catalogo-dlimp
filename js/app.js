@@ -298,6 +298,8 @@ function abrirModalProduto(produto) {
     const ondeAplicar = valorInformacaoProduto(produto, ["ondeAplicar", "aplicacao", "aplicacoes"]);
     const modoUso = valorInformacaoProduto(produto, ["modoUso", "modoDeUso", "modo_uso"]);
     const observacoes = valorInformacaoProduto(produto, ["observacoes", "observacao"]);
+    const advertencias = valorInformacaoProduto(produto, ["advertencias", "advertencia", "atencao"]);
+    const ceatox = valorInformacaoProduto(produto, ["ceatox", "ciatox"]);
     const disponivel = produto.disponivel !== false;
 
     const blocoInformacao = (titulo, texto, classe = "") => {
@@ -335,7 +337,9 @@ function abrirModalProduto(produto) {
             ${blocoInformacao("Onde aplicar", ondeAplicar)}
             ${blocoInformacao("Modo de uso", modoUso)}
             ${blocoInformacao("Observações", observacoes)}
-            ${!descricao && !paraQueServe && !ondeAplicar && !modoUso && !observacoes ? `
+            ${blocoInformacao("⚠️ Atenção", advertencias, "produto-detalhe-alerta")}
+            ${ceatox ? `<section class="produto-detalhe-ceatox"><strong>☎️ Em caso de intoxicação</strong><p>${escaparHTML(ceatox)}</p></section>` : ""}
+            ${!descricao && !paraQueServe && !ondeAplicar && !modoUso && !observacoes && !advertencias ? `
                 <div class="produto-detalhe-sem-info">
                     <strong>Informações do produto</strong>
                     <p>Os detalhes de uso e aplicação ainda não foram cadastrados para este produto.</p>
