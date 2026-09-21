@@ -1,4 +1,4 @@
-﻿const container = document.getElementById("produtos");
+const container = document.getElementById("produtos");
 const campoBusca = document.getElementById("busca");
 const botaoLimparBusca = document.getElementById("limparBusca");
 const contadorResultados = document.getElementById("contadorResultados");
@@ -109,8 +109,8 @@ function carregarProdutos(listaProdutos) {
         const disponivel = produto.disponivel !== false;
 
         return `
-            <article class="produto">
-                <div class="produto-imagem-area">
+            <article class="produto" data-produto-id="${id}">
+                <div class="produto-imagem-area area-imagem-clicavel" role="button" tabindex="0" aria-label="Ver detalhes de ${nome}">
                     <div class="selos-produto">${montarSelos(produto)}</div>
                     ${calcularDesconto(produto)}
                     <button type="button" class="btn-favorito ${favorito ? "ativo" : ""}" data-favorito-id="${id}" aria-label="${favorito ? "Remover" : "Adicionar"} ${nome} dos favoritos" aria-pressed="${favorito}"><svg
@@ -126,7 +126,7 @@ function carregarProdutos(listaProdutos) {
                     <img src="${imagem}" alt="${nome}" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='img/default.png';">
                 </div>
                 <div class="produto-info">
-                    <h2>${nome}</h2>
+                    <h2 class="nome-produto-clicavel">${nome}</h2>
                     <div class="area-preco">
                         ${precoAntigoValido ? `<span class="preco-antigo">${formatarDinheiro(produto.precoAntigo)}</span>` : ""}
                         <p class="preco">${formatarDinheiro(produto.preco)}</p>
@@ -227,6 +227,135 @@ function fecharModalCarrinho() {
     document.body.classList.remove("modal-aberto");
 }
 
+
+function obterCategoriasProduto(produto) {
+    if (Array.isArray(produto?.categorias)) return produto.categorias;
+    return produto?.categoria ? [produto.categoria] : [];
+}
+
+function formatarNomeCategoria(categoria) {
+    const nomes = {
+        residencial: "🏠 Residencial",
+        industrial: "🏭 Industrial",
+        automotivo: "🚗 Automotivo",
+        utilitarios: "🧹 Utilitários"
+    };
+    return nomes[String(categoria || "").toLowerCase()] || String(categoria || "");
+}
+
+function valorInformacaoProduto(produto, chaves) {
+    for (const chave of chaves) {
+        if (produto && produto[chave] != null && String(produto[chave]).trim() !== "") {
+            return String(produto[chave]);
+        }
+    }
+    return "";
+}
+
+function criarModalProduto() {
+    let modal = document.getElementById("modalProdutoDetalhes");
+    if (modal) return modal;
+
+    modal = document.createElement("div");
+    modal.id = "modalProdutoDetalhes";
+    modal.className = "modal-produto hidden";
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-modal", "true");
+    modal.setAttribute("aria-labelledby", "tituloProdutoDetalhes");
+    modal.innerHTML = `
+        <div class="modal-produto-conteudo">
+            <button type="button" class="modal-produto-fechar" id="fecharModalProduto" aria-label="Fechar detalhes">✕</button>
+            <div id="conteudoModalProduto"></div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    modal.addEventListener("click", evento => {
+        if (evento.target === modal || evento.target.closest("#fecharModalProduto")) {
+            fecharModalProduto();
+        }
+    });
+
+    return modal;
+}
+
+function abrirModalProduto(produto) {
+    if (!produto) return;
+
+    const modal = criarModalProduto();
+    const conteudo = modal.querySelector("#conteudoModalProduto");
+    if (!conteudo) return;
+
+    const id = Number(produto.id);
+    const nome = escaparHTML(produto.nome || produto.descricao || "Produto");
+    const imagem = escaparHTML(produto.imagem || "img/default.png");
+    const categorias = obterCategoriasProduto(produto);
+    let descricao = valorInformacaoProduto(produto, ["descricaoDetalhada", "descricao", "descricaoProduto"]);
+    if (descricao.trim().toLocaleLowerCase("pt-BR") === String(produto.nome || produto.descricao || "").trim().toLocaleLowerCase("pt-BR")) {
+        descricao = "";
+    }
+    const paraQueServe = valorInformacaoProduto(produto, ["paraQueServe", "finalidade", "utilidade"]);
+    const ondeAplicar = valorInformacaoProduto(produto, ["ondeAplicar", "aplicacao", "aplicacoes"]);
+    const modoUso = valorInformacaoProduto(produto, ["modoUso", "modoDeUso", "modo_uso"]);
+    const observacoes = valorInformacaoProduto(produto, ["observacoes", "observacao"]);
+    const disponivel = produto.disponivel !== false;
+
+    const blocoInformacao = (titulo, texto, classe = "") => {
+        if (!texto) return "";
+        return `
+            <section class="produto-detalhe-bloco ${classe}">
+                <h3>${titulo}</h3>
+                <p>${escaparHTML(texto).replaceAll("\n", "<br>")}</p>
+            </section>
+        `;
+    };
+
+    conteudo.innerHTML = `
+        <div class="produto-detalhe-capa">
+            <div class="produto-detalhe-imagem-wrap">
+                <img class="produto-detalhe-imagem" src="${imagem}" alt="${nome}" onerror="this.onerror=null; this.src='img/default.png';">
+            </div>
+            <div class="produto-detalhe-resumo">
+                <div class="produto-detalhe-selos">
+                    ${montarSelos(produto)}
+                    <span class="produto-status ${disponivel ? "disponivel" : "indisponivel"}">${disponivel ? "Disponível" : "Indisponível"}</span>
+                </div>
+                <h2 id="tituloProdutoDetalhes">${nome}</h2>
+                <div class="produto-detalhe-preco">${formatarDinheiro(produto.preco)}</div>
+                ${categorias.length ? `<div class="produto-detalhe-categorias">${categorias.map(c => `<span>${escaparHTML(formatarNomeCategoria(c))}</span>`).join("")}</div>` : ""}
+                <button type="button" class="produto-detalhe-adicionar" data-detalhe-adicionar-id="${id}" ${disponivel ? "" : "disabled"}>
+                    ${disponivel ? "＋ Adicionar ao carrinho" : "Indisponível"}
+                </button>
+            </div>
+        </div>
+
+        <div class="produto-detalhe-informacoes">
+            ${blocoInformacao("Descrição", descricao)}
+            ${blocoInformacao("Para que serve", paraQueServe)}
+            ${blocoInformacao("Onde aplicar", ondeAplicar)}
+            ${blocoInformacao("Modo de uso", modoUso)}
+            ${blocoInformacao("Observações", observacoes)}
+            ${!descricao && !paraQueServe && !ondeAplicar && !modoUso && !observacoes ? `
+                <div class="produto-detalhe-sem-info">
+                    <strong>Informações do produto</strong>
+                    <p>Os detalhes de uso e aplicação ainda não foram cadastrados para este produto.</p>
+                </div>
+            ` : ""}
+        </div>
+    `;
+
+    modal.classList.remove("hidden");
+    document.body.classList.add("modal-aberto");
+    modal.querySelector(".modal-produto-conteudo")?.scrollTo({ top: 0 });
+}
+
+function fecharModalProduto() {
+    const modal = document.getElementById("modalProdutoDetalhes");
+    if (!modal) return;
+    modal.classList.add("hidden");
+    document.body.classList.remove("modal-aberto");
+}
+
 function mostrarToast(mensagem) {
     let toast = document.getElementById("toastDlimp");
     if (!toast) {
@@ -267,12 +396,22 @@ document.addEventListener("DOMContentLoaded", async () => {
                 dadosOnline.forEach(produto => {
 
                     produtos.push({
+                        // Preserva todas as informações cadastradas no catálogo
+                        ...produto,
                         id: produto.id,
                         nome: produto.descricao,
                         descricao: produto.descricao,
                         preco: produto.preco,
                         imagem: produto.imagem,
-                        categoria: "residencial",
+                        categorias: Array.isArray(produto.categorias)
+                            ? produto.categorias
+                            : [],
+
+                        categoria:
+                            Array.isArray(produto.categorias) && produto.categorias.length
+                                ? produto.categorias[0]
+                                : "",
+
                         estoque: produto.estoque,
 
                         // Usa exatamente o valor enviado pelo sincronizador
@@ -422,13 +561,44 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     container?.addEventListener("click", evento => {
+        const adicionarDetalhe = evento.target.closest("[data-detalhe-adicionar-id]");
+        if (adicionarDetalhe) {
+            const produto = produtos.find(item => Number(item.id) === Number(adicionarDetalhe.dataset.detalheAdicionarId));
+            if (produto && typeof adicionarCarrinho === "function") {
+                adicionarCarrinho(Number(produto.id));
+                fecharModalProduto();
+            }
+            return;
+        }
+
         const favorito = evento.target.closest("[data-favorito-id]");
         if (favorito) {
             alternarFavorito(favorito.dataset.favoritoId);
             return;
         }
         const adicionar = evento.target.closest("[data-adicionar-id]");
-        if (adicionar && typeof adicionarCarrinho === "function") adicionarCarrinho(Number(adicionar.dataset.adicionarId));
+        if (adicionar && typeof adicionarCarrinho === "function") {
+            adicionarCarrinho(Number(adicionar.dataset.adicionarId));
+            return;
+        }
+
+        const areaImagem = evento.target.closest(".area-imagem-clicavel");
+        const nomeProduto = evento.target.closest(".nome-produto-clicavel");
+        const card = evento.target.closest("[data-produto-id]");
+        if ((areaImagem || nomeProduto) && card) {
+            const produto = produtos.find(item => Number(item.id) === Number(card.dataset.produtoId));
+            if (produto) abrirModalProduto(produto);
+        }
+    });
+
+    container?.addEventListener("keydown", evento => {
+        if (evento.key !== "Enter" && evento.key !== " ") return;
+        const areaImagem = evento.target.closest(".area-imagem-clicavel");
+        if (!areaImagem) return;
+        evento.preventDefault();
+        const card = areaImagem.closest("[data-produto-id]");
+        const produto = produtos.find(item => Number(item.id) === Number(card?.dataset.produtoId));
+        if (produto) abrirModalProduto(produto);
     });
 
     campoBusca?.addEventListener("input", debounce(() => {
@@ -450,7 +620,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (evento.target === modalCarrinho) fecharModalCarrinho();
     });
     document.addEventListener("keydown", evento => {
-        if (evento.key === "Escape") fecharModalCarrinho();
+        if (evento.key === "Escape") {
+            fecharModalProduto();
+            fecharModalCarrinho();
+        }
     });
 
     if (typeof atualizarCarrinho === "function") atualizarCarrinho();
@@ -461,3 +634,6 @@ window.aplicarFiltros = aplicarFiltros;
 window.abrirModalCarrinho = abrirModalCarrinho;
 window.fecharModalCarrinho = fecharModalCarrinho;
 window.mostrarToast = mostrarToast;
+
+window.abrirModalProduto = abrirModalProduto;
+window.fecharModalProduto = fecharModalProduto;

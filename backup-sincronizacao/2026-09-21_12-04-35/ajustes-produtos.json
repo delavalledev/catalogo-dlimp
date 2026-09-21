@@ -1,0 +1,187 @@
+{
+  "80": {
+    "custo_custeamento": 3.75
+  },
+  "114": {
+    "custo_custeamento": 8.5
+  },
+  "115": {
+    "custo_custeamento": 7
+  },
+  "125": {
+    "custo_custeamento": 2.5
+  },
+  "131": {
+    "custo_custeamento": 1.15
+  },
+  "132": {
+    "custo_custeamento": 1.98
+  },
+  "133": {
+    "custo_custeamento": 2.5
+  },
+  "134": {
+    "custo_custeamento": 2.7
+  },
+  "135": {
+    "custo_custeamento": 4.2
+  },
+  "136": {
+    "custo_custeamento": 7.5
+  },
+  "137": {
+    "custo_custeamento": 7.8
+  },
+  "138": {
+    "custo_custeamento": 10.3
+  },
+  "141": {
+    "custo_custeamento": 8
+  },
+  "143": {
+    "custo_custeamento": 12
+  },
+  "146": {
+    "custo_custeamento": 9.8
+  },
+  "147": {
+    "custo_custeamento": 8
+  },
+  "148": {
+    "custo_custeamento": 9.8
+  },
+  "149": {
+    "custo_custeamento": 9
+  },
+  "150": {
+    "custo_custeamento": 5
+  },
+  "151": {
+    "custo_custeamento": 6
+  },
+  "152": {
+    "custo_custeamento": 7.2
+  },
+  "154": {
+    "custo_custeamento": 9.8
+  },
+  "155": {
+    "custo_custeamento": 5
+  },
+  "157": {
+    "custo_custeamento": 5
+  },
+  "173": {
+    "custo_custeamento": 7.5
+  },
+  "200": {
+    "custo_custeamento": 2.4
+  },
+  "221": {
+    "custo_custeamento": 3.758
+  },
+  "222": {
+    "custo_custeamento": 4.875
+  },
+  "225": {
+    "custo_custeamento": 4.75
+  },
+  "263": {
+    "custo_custeamento": 11.9
+  },
+  "274": {
+    "descricao": "VEJAX CONCENTRADO",
+    "preco": 20,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  },
+  "281": {
+    "custo_custeamento": 5.7
+  },
+  "307": {
+    "custo_custeamento": 7.85
+  },
+  "308": {
+    "custo_custeamento": 8
+  },
+  "333": {
+    "custo_custeamento": 22
+  },
+  "334": {
+    "custo_custeamento": 14.9
+  },
+  "335": {
+    "custo_custeamento": 29.9
+  },
+  "341": {
+    "custo_custeamento": 23
+  },
+  "378": {
+    "custo_custeamento": 3.5
+  },
+  "389": {
+    "custo_custeamento": 12
+  },
+  "390": {
+    "custo_custeamento": 12
+  },
+  "394": {
+    "custo_custeamento": 10.5
+  },
+  "399": {
+    "descricao": "AGUA SANITARIA 2 LITROS",
+    "preco": 6,
+    "disponivel": true,
+    "categorias": [
+      "residencial"
+    ],
+    "exibirSite": true,
+    "promocao": false,
+    "novo": false
+  },
+  "416": {
+    "custo_custeamento": 29
+  },
+  "422": {
+    "custo_custeamento": 9.8
+  },
+  "440": {
+    "descricao": "KIT PROMOCIONAL 50 REAIS",
+    "preco": 50,
+    "disponivel": true,
+    "categorias": [],
+    "exibirSite": false,
+    "promocao": false,
+    "novo": false
+  },
+  "427447": {
+    "custo_custeamento": 4.5
+  },
+  "427449": {
+    "custo_custeamento": 7.85
+  },
+  "427450": {
+    "custo_custeamento": 7.85
+  },
+  "427451": {
+    "custo_custeamento": 7.85
+  },
+  "427452": {
+    "custo_custeamento": 7.85
+  },
+  "427453": {
+    "custo_custeamento": 7.85
+  },
+  "427454": {
+    "custo_custeamento": 7.85
+  },
+  "427455": {
+    "custo_custeamento": 7.85
+  },
+  "427459": {
+    "custo_custeamento": 30
+  }
+}

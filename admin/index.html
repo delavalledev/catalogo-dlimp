@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin D'Limp</title>
-    <link rel="stylesheet" href="admin.css?v=6">
+    <link rel="stylesheet" href="admin.css?v=7">
 </head>
 <body>
 
@@ -202,8 +202,16 @@
             Insumos
         </button>
 
+        <button id="subMenuFornecedores" class="submenu-item">
+            Fornecedores
+        </button>
+
         <button id="subMenuReceitas" class="submenu-item">
-            Receitas
+            Bases de produção
+        </button>
+
+        <button id="subMenuProdutosFinais" class="submenu-item">
+            Produtos finais
         </button>
     </div>
 
@@ -243,6 +251,7 @@
                 <span>Tipo</span>
                 <span>Unidade</span>
                 <span>Preço atual</span>
+                <span>Fornecedor</span>
                 <span></span>
             </div>
 
@@ -251,6 +260,25 @@
 
     </section>
 
+
+    <!-- PAINEL DE FORNECEDORES -->
+    <section id="painelFornecedores" class="painel-custeamento oculto">
+
+        <div class="cabecalho-custeamento">
+            <div>
+                <span class="eyebrow-custeamento">CUSTEAMENTO</span>
+                <h2>Fornecedores</h2>
+                <p>Organize onde comprar cada matéria-prima, embalagem e acessório.</p>
+            </div>
+            <button id="novoFornecedor" class="btn-salvar">+ Novo fornecedor</button>
+        </div>
+
+        <section class="filtros filtros-custeamento">
+            <input id="buscaFornecedor" type="search" placeholder="Buscar fornecedor...">
+        </section>
+
+        <section id="listaFornecedores" class="lista-fornecedores"></section>
+    </section>
 
     <!-- PAINEL DE RECEITAS -->
     <section id="painelReceitas" class="painel-custeamento oculto">
@@ -290,6 +318,53 @@
 
         </section>
 
+    </section>
+
+    <!-- PAINEL DE PRODUTOS FINAIS -->
+    <section id="painelProdutosFinais" class="painel-custeamento oculto">
+        <div class="cabecalho-custeamento cabecalho-produtos-finais">
+            <div>
+                <span class="eyebrow-custeamento">CUSTEAMENTO</span>
+                <h2>Produtos finais</h2>
+                <p>Visão consolidada de custo, preço de venda e resultado de cada produto.</p>
+            </div>
+            <div class="produtos-finais-resumo" id="resumoProdutosFinais"></div>
+        </div>
+
+        <section class="filtros filtros-custeamento produtos-finais-filtros">
+            <input id="buscaProdutoFinal" type="search" placeholder="Buscar produto...">
+            <select id="filtroCategoriaProdutoFinal">
+                <option value="">Todas as categorias</option>
+                <option value="residencial">Residencial</option>
+                <option value="industrial">Industrial</option>
+                <option value="automotivo">Automotivo</option>
+                <option value="utilitarios">Utilitários</option>
+            </select>
+            <select id="filtroStatusProdutoFinal">
+                <option value="todos">Todos</option>
+                <option value="fabricados">Fabricados</option>
+                <option value="revenda">Revenda</option>
+                <option value="sem-custo">Sem custo cadastrado</option>
+            </select>
+        </section>
+
+        <div class="produtos-finais-acoes">
+            <span id="indicadorCustosPendentes">Nenhuma alteração pendente</span>
+            <button id="salvarCustosProdutosFinais" class="btn-salvar" type="button" disabled>Salvar alterações</button>
+        </div>
+
+        <section class="produtos-finais-tabela">
+            <div class="produtos-finais-head">
+                <span>PRODUTO</span>
+                <span>BASE / TIPO</span>
+                <span>VOLUME</span>
+                <span>CUSTO</span>
+                <span>VENDA</span>
+                <span>LUCRO BRUTO</span>
+                <span>MARGEM</span>
+            </div>
+            <div id="listaProdutosFinais"></div>
+        </section>
     </section>
 
 </section>
@@ -334,10 +409,29 @@
             <input id="precoInsumo" type="number" min="0" step="0.0001">
         </label>
 
-        <div class="acoes">
+        <label>
+            Fornecedor
+            <select id="fornecedorInsumo">
+                <option value="">Sem fornecedor definido</option>
+            </select>
+        </label>
+
+        <label>
+            Situação
+            <select id="ativoInsumo">
+                <option value="1">Ativo</option>
+                <option value="0">Inativo</option>
+            </select>
+        </label>
+
+        <div class="acoes acoes-insumo">
 
             <button id="cancelarInsumo" class="btn-site">
                 Cancelar
+            </button>
+
+            <button id="excluirInsumo" class="btn-excluir" type="button">
+                Excluir
             </button>
 
             <button id="salvarInsumo" class="btn-salvar">
@@ -352,124 +446,45 @@
 
 </div>
 
-<!-- MODAL DE RECEITA -->
-<div id="modalReceita" class="modal oculto">
-    <div class="modal-conteudo modal-receita">
 
-        <button id="fecharModalReceita" class="fechar">×</button>
+<div id="modalFornecedor" class="modal oculto">
+    <div class="modal-conteudo modal-fornecedor">
+        <button id="fecharModalFornecedor" class="fechar">×</button>
+        <h2 id="tituloModalFornecedor">Novo fornecedor</h2>
+        <input id="fornecedorId" type="hidden">
 
-        <div class="cabecalho-modal-receita">
-            <div>
-                <h2 id="tituloModalReceita">Nova receita</h2>
-                <p>Cadastre a fórmula e os insumos utilizados.</p>
-            </div>
+        <label>
+            Nome
+            <input id="nomeFornecedor" type="text" placeholder="Ex.: Londri Química">
+        </label>
+
+        <label>
+            Telefone / WhatsApp
+            <input id="telefoneFornecedor" type="text" placeholder="Opcional">
+        </label>
+
+        <label>
+            Observação
+            <textarea id="observacaoFornecedor" rows="3" placeholder="Opcional"></textarea>
+        </label>
+
+        <label>
+            Situação
+            <select id="ativoFornecedor">
+                <option value="1">Ativo</option>
+                <option value="0">Inativo</option>
+            </select>
+        </label>
+
+        <div class="acoes acoes-fornecedor">
+            <button id="cancelarFornecedor" class="btn-site" type="button">Cancelar</button>
+            <button id="excluirFornecedor" class="btn-excluir" type="button">Excluir</button>
+            <button id="salvarFornecedor" class="btn-salvar" type="button">Salvar</button>
         </div>
-
-        <input id="receitaId" type="hidden">
-
-        <div class="form-receita">
-
-            <label>
-                Nome da receita
-                <input id="nomeReceita" type="text" placeholder="Ex.: Cloro Gel">
-            </label>
-
-            <div class="campos-receita">
-                <label>
-                    Rendimento
-                    <input id="rendimentoReceita" type="number" min="0" step="0.0001" placeholder="0">
-                </label>
-
-                <label>
-                    Unidade
-                    <select id="unidadeRendimentoReceita">
-                        <option value="L">Litros (L)</option>
-                        <option value="KG">Quilos (KG)</option>
-                        <option value="UN">Unidades (UN)</option>
-                    </select>
-                </label>
-            </div>
-
-            <label>
-                Observação
-                <textarea id="observacaoReceita" rows="3" placeholder="Observações da receita..."></textarea>
-            </label>
-
-            <div class="acoes">
-                <button id="cancelarReceita" type="button" class="btn-cancelar-receita">
-                    Cancelar
-                </button>
-
-                <button id="salvarReceita" type="button" class="btn-salvar">
-                    Salvar receita
-                </button>
-            </div>
-
-            <div id="avisoReceita" class="aviso"></div>
-
-        </div>
-
-        <section id="areaItensReceita" class="area-itens-receita oculto">
-
-            <div class="titulo-itens-receita">
-                <div>
-                    <h3>Insumos da receita</h3>
-                    <p>Informe a quantidade usada de cada insumo.</p>
-                </div>
-            </div>
-
-            <div class="adicionar-item-receita">
-
-                <select id="insumoReceita">
-                    <option value="">Selecione um insumo...</option>
-                </select>
-
-                <input
-                    id="quantidadeInsumoReceita"
-                    type="number"
-                    min="0"
-                    step="0.000001"
-                    placeholder="Quantidade"
-                >
-
-                <button id="adicionarItemReceita" type="button" class="btn-salvar">
-                    + Adicionar
-                </button>
-
-            </div>
-
-            <div class="tabela-itens-receita">
-                <div class="cabecalho-itens-receita">
-                    <span>Insumo</span>
-                    <span>Quantidade</span>
-                    <span>Preço</span>
-                    <span>Custo</span>
-                    <span></span>
-                </div>
-
-                <div id="listaItensReceita"></div>
-            </div>
-
-            <div class="resumo-receita">
-
-                <div>
-                    <span>Custo total</span>
-                    <strong id="custoTotalReceita">R$ 0,00</strong>
-                </div>
-
-                <div>
-                    <span>Custo por unidade</span>
-                    <strong id="custoUnidadeReceita">R$ 0,00</strong>
-                </div>
-
-            </div>
-
-        </section>
-
+        <div id="avisoFornecedor" class="aviso"></div>
     </div>
 </div>
-
-<script src="admin.js?v=6"></script>
+<script src="admin.js?v=8"></script>
 </body>
 </html>
 

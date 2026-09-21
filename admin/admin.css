@@ -1095,457 +1095,1012 @@ main {
     }
 }
 
-
 /* =========================================================
-   CUSTEAMENTO V3 — DASHBOARD + RECEITAS
+   CUSTEAMENTO  — VISUAL FUTURISTA / PROFISSIONAL
    ========================================================= */
-
-.aviso:empty {
-    display: none !important;
+:root {
+    --form-bg: #eef2f6;
+    --form-ink: #101828;
+    --form-muted: #667085;
+    --form-line: #e4e7ec;
+    --form-card: rgba(255,255,255,.94);
+    --form-green: #12905d;
+    --form-green-2: #0b6f49;
+    --form-dark: #101828;
+    --form-red: #d92d20;
+    --form-glow: rgba(18,144,93,.16);
 }
 
-#avisoReceita:not(.visivel) {
-    display: none !important;
-}
-
-#avisoReceita.visivel {
-    display: block !important;
-    margin: 14px 0 0 !important;
-    padding: 11px 14px !important;
-    border: 1px solid #fde68a !important;
-    background: #fffbeb !important;
-    color: #92400e !important;
-    border-radius: 10px !important;
-    font-size: 13px !important;
-}
-
-#avisoReceita.visivel.erro {
-    border-color: #fecaca !important;
-    background: #fef2f2 !important;
-    color: #991b1b !important;
-}
-
-.cabecalho-receitas {
-    align-items: flex-end !important;
-    margin-bottom: 18px !important;
-}
-
-.eyebrow-custeamento {
-    display: block;
-    margin-bottom: 5px;
-    color: #198754;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: .12em;
-}
-
-.btn-nova-receita {
-    display: inline-flex !important;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-nova-receita span {
-    font-size: 19px;
-    line-height: 1;
+.secao-custeamento {
+    background:
+        radial-gradient(circle at 82% 8%, rgba(18,144,93,.08), transparent 24%),
+        linear-gradient(180deg, #f7f9fb 0%, #eef2f6 100%);
 }
 
 .dashboard-custeamento {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0,1fr));
     gap: 14px;
-    margin: 0 0 18px;
+    margin: 18px 0;
 }
 
-.card-dashboard {
+.dash-card {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 13px;
-    min-height: 88px;
-    padding: 17px 18px;
-    background: #fff;
-    border: 1px solid #e2e4e8;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(15,23,42,.045);
-}
-
-.card-dashboard-icone {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    flex: 0 0 42px;
-    border-radius: 11px;
-    background: #eef8f2;
-    font-size: 20px;
-}
-
-.card-dashboard-label {
-    display: block;
-    margin-bottom: 4px;
-    color: #6b7280;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .04em;
-}
-
-.card-dashboard strong {
-    display: block;
-    color: #111827;
-    font-size: 22px;
-    line-height: 1.1;
-}
-
-.card-dashboard small {
-    display: block;
-    margin-top: 3px;
-    color: #9ca3af;
-    font-size: 11px;
-}
-
-.card-dashboard-futuro {
-    background: linear-gradient(135deg, #f0fdf4, #fff);
-    border-color: #bbf7d0;
-}
-
-#painelReceitas .filtros-custeamento {
-    margin-bottom: 14px;
-}
-
-#painelReceitas #buscaReceita {
-    height: 50px;
-}
-
-.tabela-receitas {
+    gap: 14px;
+    min-height: 96px;
+    padding: 18px 20px;
+    border: 1px solid rgba(16,24,40,.08);
+    border-radius: 18px;
+    background: var(--form-card);
+    box-shadow: 0 10px 28px rgba(16,24,40,.055);
     overflow: hidden;
 }
 
-.cabecalho-receitas-lista {
-    grid-template-columns: minmax(300px, 2fr) 160px 190px 120px !important;
+.dash-card::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    right: -30px;
+    top: -35px;
+    border-radius: 50%;
+    background: var(--form-glow);
 }
 
-#painelReceitas .linha-receita {
+.dash-icon {
+    width: 44px;
+    height: 44px;
     display: grid;
-    grid-template-columns: minmax(300px, 2fr) 160px 190px 120px;
+    place-items: center;
+    flex: 0 0 44px;
+    border-radius: 13px;
+    background: #edf9f3;
+    color: var(--form-green);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.dash-card span,
+.dash-card small {
+    display: block;
+}
+
+.dash-card span {
+    color: #667085;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.dash-card strong {
+    display: block;
+    margin: 3px 0;
+    color: var(--form-ink);
+    font-size: 24px;
+    line-height: 1;
+}
+
+.dash-card small {
+    color: #98a2b3;
+    font-size: 11px;
+}
+
+.dash-primary {
+    border-color: rgba(18,144,93,.22);
+}
+
+.dash-future {
+    background: linear-gradient(135deg, #ffffff, #f1fff8);
+}
+
+.linha-receita.form {
+    display: grid;
+    grid-template-columns: minmax(320px, 1.9fr) 150px 190px 100px;
     align-items: center;
-    gap: 15px;
     min-height: 78px;
-    padding: 12px 20px;
-    border-bottom: 1px solid #eef0f2;
+    padding: 0 18px;
+    border-bottom: 1px solid var(--form-line);
     background: #fff;
-    transition: .15s ease;
 }
 
-#painelReceitas .linha-receita:last-child {
-    border-bottom: 0;
+.linha-receita.form:last-child { border-bottom: 0; }
+.linha-receita.form:hover { background: #fbfefc; }
+
+.receita-identidade,
+.receita-rendimento,
+.receita-custo,
+.receita-acoes { display:flex; align-items:center; }
+
+.receita-identidade { gap: 12px; }
+.receita-avatar {
+    width: 38px;
+    height: 38px;
+    display:grid;
+    place-items:center;
+    border-radius: 12px;
+    background:#eefaf5;
+    color:var(--form-green);
+    font-weight:800;
+}
+.receita-identidade strong { display:block; color:#101828; font-size:14px; }
+.receita-identidade small,
+.receita-rendimento span,
+.receita-custo small { display:block; margin-top:3px; color:#98a2b3; font-size:11px; }
+.receita-rendimento { flex-direction:column; align-items:flex-start; }
+.receita-rendimento strong { font-size:15px; color:#344054; }
+.receita-custo { flex-direction:column; align-items:flex-start; }
+.receita-custo strong { color:var(--form-green); font-size:15px; }
+.receita-acoes { justify-content:flex-start; }
+
+.btn-editar-receita.form {
+    border: 1px solid #d0d5dd;
+    background:#fff;
+    color:#344054;
+    border-radius:10px;
+    padding:9px 14px;
+    font-size:12px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.18s ease;
+}
+.btn-editar-receita.form:hover {
+    color:var(--form-green-2);
+    border-color:rgba(18,144,93,.45);
+    box-shadow:0 5px 14px rgba(18,144,93,.10);
+    transform:translateY(-1px);
 }
 
-#painelReceitas .linha-receita:hover {
-    background: #fbfcfd;
+.estado-vazio {
+    min-height: 150px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
 }
+.estado-icone { color:var(--form-green); font-size:28px; }
+.estado-vazio strong { color:#344054; }
+.estado-vazio span { color:#98a2b3; font-size:12px; }
+.estado-vazio.erro { color:var(--form-red); }
+.estado-vazio.erro small { color:#98a2b3; }
 
-.receita-identificacao strong {
-    display: block;
-    color: #111827;
-    font-size: 14px;
+/* modal */
+body.modal-aberto-form { overflow:hidden; }
+.modal-receita-form-overlay {
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    background:rgba(7,13,24,.70);
+    backdrop-filter:blur(9px);
+    opacity:0;
+    pointer-events:none;
+    transition:.2s ease;
 }
-
-.receita-identificacao small,
-.receita-rendimento small,
-.receita-custo small {
-    display: block;
-    margin-top: 4px;
-    color: #9ca3af;
-    font-size: 11px;
+.modal-receita-form-overlay.aberto { opacity:1; pointer-events:auto; }
+.modal-receita-form {
+    position:relative;
+    width:min(1120px, 96vw);
+    max-height:94vh;
+    overflow:auto;
+    border:1px solid rgba(255,255,255,.72);
+    border-radius:24px;
+    background:linear-gradient(180deg,#ffffff 0%,#f8fafb 100%);
+    box-shadow:0 30px 90px rgba(0,0,0,.30);
+    padding:30px;
 }
-
-.receita-rendimento strong {
-    color: #374151;
-    font-size: 14px;
+.modal-form-fechar {
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:40px;
+    height:40px;
+    border:0;
+    border-radius:12px;
+    background:#f2f4f7;
+    color:#344054;
+    font-size:24px;
+    cursor:pointer;
 }
-
-.receita-custo strong {
-    display: block;
-    color: #198754;
-    font-size: 15px;
+.modal-form-fechar:hover { background:#eaecf0; }
+.modal-form-header {
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding-right:54px;
+    margin-bottom:26px;
 }
-
-.receita-custo .custo-unidade-receita {
-    color: #6b7280;
+.modal-form-kicker {
+    color:var(--form-green);
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.14em;
 }
-
-.acoes-receita {
-    display: flex;
-    justify-content: flex-end;
+.modal-form-header h2 {
+    margin:5px 0 5px;
+    color:#101828;
+    font-size:28px;
+    letter-spacing:-.02em;
 }
-
-#painelReceitas .btn-editar-receita {
-    min-height: 37px;
-    padding: 0 13px;
-    border: 1px solid #dfe3e8;
-    border-radius: 9px;
-    background: #fff;
-    color: #374151;
-    font-size: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .15s ease;
+.modal-form-header p,
+.form-section-head p {
+    margin:0;
+    color:#667085;
+    font-size:13px;
 }
-
-#painelReceitas .btn-editar-receita:hover {
-    border-color: #198754;
-    color: #198754;
-    background: #f0fdf4;
+.modal-form-status,
+.form-pill,
+.form-coming {
+    align-self:flex-start;
+    white-space:nowrap;
+    padding:8px 11px;
+    border-radius:999px;
+    background:#edf9f3;
+    color:var(--form-green-2);
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.06em;
 }
+.modal-form-status i { display:inline-block; width:7px; height:7px; margin-right:6px; border-radius:50%; background:#18a56d; box-shadow:0 0 0 4px rgba(24,165,109,.12); }
 
-/* Modal receita */
-#modalReceita .modal-conteudo.modal-receita {
-    display: block !important;
-    width: min(980px, calc(100vw - 40px)) !important;
-    max-width: 980px !important;
-    max-height: calc(100vh - 40px) !important;
-    overflow-y: auto !important;
-    padding: 32px 34px 28px !important;
-    border-radius: 20px !important;
-    background: #fff !important;
-    box-shadow: 0 28px 80px rgba(15,23,42,.28) !important;
+.form-form-grid {
+    display:grid;
+    grid-template-columns:1.5fr 1fr 220px;
+    gap:16px;
 }
-
-#modalReceita {
-    background: rgba(15,23,42,.68) !important;
-    backdrop-filter: blur(4px);
+.form-field { display:block; }
+.form-field-wide { grid-column:1 / -1; }
+.form-field-full { grid-column:1 / -1; }
+.form-field > span { display:block; margin-bottom:7px; color:#344054; font-size:11px; font-weight:800; }
+.form-field input,
+.form-field select,
+.form-field textarea,
+.form-add-row select,
+.form-add-row input,
+.form-product-search input {
+    width:100%;
+    box-sizing:border-box;
+    border:1px solid #d0d5dd;
+    border-radius:12px;
+    background:#fff;
+    color:#101828;
+    font:inherit;
+    transition:.18s ease;
 }
+.form-field input,
+.form-field select { height:46px; padding:0 13px; }
+.form-field textarea { padding:13px; resize:vertical; min-height:108px; }
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus,
+.form-add-row select:focus,
+.form-add-row input:focus,
+.form-product-search input:focus { outline:none; border-color:#19a56b; box-shadow:0 0 0 4px rgba(25,165,107,.10); }
+.form-input-unit { position:relative; }
+.form-input-unit input { padding-right:48px; }
+.form-input-unit b { position:absolute; right:14px; top:14px; color:#98a2b3; font-size:12px; }
 
-#modalReceita .fechar {
-    width: 38px !important;
-    height: 38px !important;
-    right: 18px !important;
-    top: 18px !important;
-    border-radius: 10px !important;
-    background: #f3f4f6 !important;
-    color: #374151 !important;
-    font-size: 24px !important;
-}
+.form-alert { min-height:20px; margin:12px 0; color:#667085; font-size:12px; }
+.form-alert.sucesso { color:var(--form-green-2); }
+.form-alert.erro { color:var(--form-red); }
+.form-section { margin-top:24px; padding-top:24px; border-top:1px solid #eaecf0; }
+.form-section-head { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; margin-bottom:15px; }
+.form-section-head h3 { margin:4px 0 4px; color:#101828; font-size:18px; }
+.form-add-row { display:grid; grid-template-columns:minmax(0,1fr) 170px 150px; gap:10px; padding:12px; border:1px solid #e4e7ec; border-radius:16px; background:#f8fafb; }
+.form-add-row select,.form-add-row input { height:46px; padding:0 13px; }
+.form-btn-primary,.form-btn-secondary,.form-btn-danger { border-radius:11px; height:44px; padding:0 17px; font-weight:800; cursor:pointer; transition:.18s ease; }
+.form-btn-primary { border:1px solid var(--form-green); background:linear-gradient(135deg,#159766,#0d7e53); color:#fff; box-shadow:0 7px 18px rgba(18,144,93,.18); }
+.form-btn-primary:hover { transform:translateY(-1px); box-shadow:0 10px 22px rgba(18,144,93,.24); }
+.form-btn-secondary { border:1px solid #d0d5dd; background:#fff; color:#344054; }
+.form-btn-secondary:hover { background:#f9fafb; }
+.form-btn-danger { border:1px solid #fecdca; background:#fff5f4; color:#b42318; }
+.form-btn-danger:hover { background:#fee4e2; }
 
-#modalReceita .form-receita input,
-#modalReceita .form-receita select,
-#modalReceita .form-receita textarea {
-    border: 1px solid #d1d5db !important;
-    border-radius: 10px !important;
-}
+.form-table { margin-top:14px; overflow:hidden; border:1px solid #e4e7ec; border-radius:16px; background:#fff; }
+.form-table-head,.form-table-row { display:grid; grid-template-columns:minmax(280px,2fr) 150px 150px 150px 50px; gap:12px; align-items:center; padding:0 16px; }
+.form-table-head { min-height:42px; background:#f7f9fa; color:#667085; font-size:10px; font-weight:900; letter-spacing:.08em; }
+.form-table-row { min-height:70px; border-top:1px solid #eaecf0; }
+.form-insumo-name { display:flex; align-items:center; gap:10px; }
+.form-mini-icon { width:28px; height:28px; display:grid; place-items:center; border-radius:9px; background:#edf9f3; color:var(--form-green); font-size:16px; }
+.form-insumo-name strong { display:block; color:#344054; font-size:13px; }
+.form-insumo-name small { display:block; margin-top:2px; color:#98a2b3; font-size:10px; }
+.form-qtd { width:100%; height:38px; box-sizing:border-box; border:1px solid #d0d5dd; border-radius:9px; padding:0 10px; }
+.form-price { color:#667085; font-size:13px; }
+.form-cost { color:var(--form-green); font-size:13px; font-weight:900; }
+.form-remove { width:34px; height:34px; border:0; border-radius:10px; background:#fff1f0; color:#d92d20; font-size:21px; cursor:pointer; }
+.form-remove:hover { background:#fee4e2; }
+.form-empty-composition { min-height:150px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; color:#98a2b3; }
+.form-empty-composition div { color:var(--form-green); font-size:26px; }
+.form-empty-composition strong { color:#475467; font-size:13px; }
+.form-empty-composition span { font-size:11px; }
+.form-totais { display:flex; justify-content:flex-end; gap:12px; margin-top:14px; }
+.form-totais > div { min-width:180px; padding:15px 17px; border:1px solid #e4e7ec; border-radius:15px; background:#fff; }
+.form-totais span { display:block; color:#667085; font-size:9px; font-weight:900; letter-spacing:.08em; }
+.form-totais strong { display:block; margin-top:4px; color:#101828; font-size:20px; }
+.form-total-destaque { border-color:rgba(18,144,93,.25) !important; background:#f3fbf7 !important; }
+.form-total-destaque strong { color:var(--form-green); }
 
-#modalReceita .area-itens-receita {
-    border-top: 1px solid #e5e7eb !important;
-    padding-top: 28px !important;
-}
+.form-produto-final { background:linear-gradient(180deg,rgba(245,251,248,.55),rgba(255,255,255,0)); padding-bottom:4px; }
+.form-product-search { display:flex; align-items:center; gap:9px; height:46px; padding:0 13px; border:1px solid #d0d5dd; border-radius:12px; background:#fff; }
+.form-product-search span { color:var(--form-green); font-size:20px; }
+.form-product-search input { height:42px; border:0; box-shadow:none !important; padding:0; }
+.form-product-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:10px; max-height:190px; overflow:auto; }
+.form-product-option { display:grid; grid-template-columns:30px 1fr auto; align-items:center; gap:9px; text-align:left; border:1px solid #e4e7ec; border-radius:12px; background:#fff; padding:10px 12px; cursor:pointer; }
+.form-product-option:hover,.form-product-option.selecionado { border-color:rgba(18,144,93,.45); background:#f4fbf7; }
+.form-product-dot { color:var(--form-green); }
+.form-product-option strong { display:block; color:#344054; font-size:12px; }
+.form-product-option small { display:block; margin-top:2px; color:#98a2b3; font-size:10px; }
+.form-product-option b { color:var(--form-green); font-size:12px; }
+.form-product-empty { grid-column:1/-1; padding:18px; text-align:center; color:#98a2b3; font-size:12px; }
+.form-rentabilidade { display:grid; grid-template-columns:2fr repeat(4,1fr); margin-top:12px; border:1px solid rgba(18,144,93,.22); border-radius:15px; background:#f7fcf9; overflow:hidden; }
+.form-rentabilidade > div { padding:14px; border-right:1px solid rgba(18,144,93,.12); }
+.form-rentabilidade > div:last-child { border-right:0; }
+.form-rentabilidade span { display:block; color:#667085; font-size:9px; font-weight:900; letter-spacing:.08em; }
+.form-rentabilidade strong { display:block; margin-top:4px; color:#101828; font-size:14px; }
+.form-rentabilidade .margem strong { color:var(--form-green); font-size:18px; }
+.form-fracionamento { margin-top:15px; padding:14px; border:1px dashed #cfd8d3; border-radius:15px; background:rgba(255,255,255,.75); }
+.form-fracionamento-title { display:flex; justify-content:space-between; margin-bottom:10px; color:#475467; font-size:10px; font-weight:900; letter-spacing:.08em; }
+.form-fracionamento-title small { color:#98a2b3; font-size:10px; font-weight:600; letter-spacing:0; }
+.form-pack-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+.form-pack-grid > div { padding:12px; border:1px solid #eaecf0; border-radius:11px; background:#fff; }
+.form-pack-grid b { display:block; color:#344054; font-size:13px; }
+.form-pack-grid span { display:block; margin-top:3px; color:#98a2b3; font-size:10px; }
 
-#modalReceita .adicionar-item-receita {
-    padding: 14px !important;
-    border: 1px solid #e5e7eb !important;
-    border-radius: 13px !important;
-    background: #f8fafc !important;
-}
+.modal-form-footer { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:25px; padding-top:20px; border-top:1px solid #eaecf0; }
+.form-footer-right { display:flex; gap:9px; margin-left:auto; }
 
-#modalReceita .adicionar-item-receita select,
-#modalReceita .adicionar-item-receita input {
-    height: 44px !important;
-    border-radius: 9px !important;
-    border: 1px solid #d1d5db !important;
-}
-
-#modalReceita .adicionar-item-receita button {
-    min-width: 120px;
-    background: #198754 !important;
-}
-
-#modalReceita .tabela-itens-receita {
-    border: 1px solid #e5e7eb !important;
-    border-radius: 13px !important;
-}
-
-#modalReceita .cabecalho-itens-receita,
-#modalReceita .linha-item-receita {
-    grid-template-columns: minmax(250px, 2fr) 150px 125px 135px 48px !important;
-}
-
-#modalReceita .cabecalho-itens-receita {
-    background: #f8fafc !important;
-    color: #6b7280 !important;
-}
-
-#modalReceita .linha-item-receita {
-    min-height: 62px;
-    border-top: 1px solid #eef0f2;
-}
-
-.nome-item-receita strong {
-    display: block;
-    color: #111827;
-}
-
-.nome-item-receita small {
-    display: block;
-    margin-top: 3px;
-    color: #9ca3af;
-    font-size: 11px;
-}
-
-.quantidade-item-receita {
-    width: 100% !important;
-    height: 38px !important;
-    box-sizing: border-box !important;
-    padding: 0 9px !important;
-    border: 1px solid #d1d5db !important;
-    border-radius: 8px !important;
-    background: #fff !important;
-}
-
-.quantidade-item-receita:focus {
-    outline: none !important;
-    border-color: #198754 !important;
-    box-shadow: 0 0 0 3px rgba(25,135,84,.10) !important;
-}
-
-.custo-item-receita {
-    color: #198754 !important;
-}
-
-.btn-excluir-item-receita {
-    width: 34px !important;
-    height: 34px !important;
-    padding: 0 !important;
-    border: 0 !important;
-    border-radius: 8px !important;
-    background: #fff1f2 !important;
-    color: #be123c !important;
-    font-size: 21px !important;
-    cursor: pointer !important;
-}
-
-.btn-excluir-item-receita:hover {
-    background: #ffe4e6 !important;
-}
-
-#modalReceita .resumo-receita {
-    display: grid !important;
-    grid-template-columns: 220px 220px !important;
-    justify-content: end !important;
-    gap: 12px !important;
-    margin-top: 18px !important;
-}
-
-#modalReceita .resumo-receita > div {
-    padding: 15px 17px !important;
-    border: 1px solid #e5e7eb !important;
-    border-radius: 13px !important;
-    background: #f8fafc !important;
-}
-
-#modalReceita .resumo-receita span {
-    display: block;
-    margin-bottom: 4px !important;
-    color: #6b7280 !important;
-    font-size: 11px !important;
-}
-
-#modalReceita .resumo-receita strong {
-    color: #111827 !important;
-    font-size: 19px !important;
-}
-
-#modalReceita #custoUnidadeReceita {
-    color: #198754 !important;
-}
-
-@media (max-width: 950px) {
-    .dashboard-custeamento {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #painelReceitas .linha-receita {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .receita-identificacao {
-        grid-column: 1 / -1;
-    }
-
-    .acoes-receita {
-        justify-content: flex-start;
-    }
+@media (max-width: 1000px) {
+    .dashboard-custeamento { grid-template-columns:repeat(2,1fr); }
+    .linha-receita.form { grid-template-columns:1fr 120px 150px 90px; }
+    .form-form-grid { grid-template-columns:1fr 1fr; }
+    .form-field-wide,.form-field-full { grid-column:1/-1; }
+    .form-rentabilidade { grid-template-columns:1fr 1fr 1fr; }
+    .form-rentabilidade .rentabilidade-produto { grid-column:1/-1; }
 }
 
 @media (max-width: 700px) {
-    .dashboard-custeamento {
-        grid-template-columns: 1fr;
+    .modal-receita-form-overlay { padding:8px; }
+    .modal-receita-form { width:100%; max-height:96vh; padding:20px; border-radius:18px; }
+    .dashboard-custeamento { grid-template-columns:1fr; }
+    .form-form-grid,.form-add-row { grid-template-columns:1fr; }
+    .form-table { overflow:auto; }
+    .form-table-head,.form-table-row { min-width:760px; }
+    .form-product-list,.form-pack-grid { grid-template-columns:1fr 1fr; }
+    .modal-form-header { display:block; }
+    .modal-form-status { margin-top:12px; display:inline-block; }
+    .form-totais { flex-direction:column; }
+    .form-totais > div { width:auto; }
+}
+
+/* =========================================================
+   CUSTEAMENTO  — FRACIONAMENTO INTELIGENTE
+   ========================================================= */
+.linha-receita.form { grid-template-columns:minmax(320px,1.9fr) 150px 190px 190px; }
+.receita-acoes.calc { gap:8px; }
+.btn-excluir-receita-calc {
+    border:1px solid #fecdca;
+    background:#fff5f4;
+    color:#b42318;
+    border-radius:10px;
+    padding:9px 12px;
+    font-size:12px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.18s ease;
+}
+.btn-excluir-receita-calc:hover { background:#fee4e2; border-color:#fda29b; transform:translateY(-1px); }
+.btn-excluir-receita-calc:disabled { opacity:.55; cursor:wait; transform:none; }
+
+.calc-smart-bar {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin-bottom:14px;
+    padding:16px 18px;
+    border:1px solid rgba(18,144,93,.18);
+    border-radius:16px;
+    background:linear-gradient(135deg,#f1fbf6 0%,#ffffff 72%);
+}
+.calc-smart-bar strong { display:block; color:#101828; font-size:13px; }
+.calc-smart-bar span { display:block; margin-top:4px; color:#667085; font-size:11px; }
+.calc-smart-bar .form-btn-primary { white-space:nowrap; }
+.calc-fracionamento-list { display:grid; gap:10px; }
+.calc-variant-card {
+    overflow:hidden;
+    border:1px solid #e4e7ec;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 4px 14px rgba(16,24,40,.035);
+}
+.calc-variant-card.encontrado { border-color:rgba(18,144,93,.18); }
+.calc-variant-card.pendente { border-color:#fecdca; }
+.calc-variant-top {
+    display:grid;
+    grid-template-columns:72px 1fr auto;
+    align-items:center;
+    gap:12px;
+    padding:13px 15px;
+    background:linear-gradient(180deg,#fbfcfd,#fff);
+    border-bottom:1px solid #eef0f2;
+}
+.calc-volume-badge {
+    display:grid;
+    place-items:center;
+    min-height:38px;
+    padding:0 9px;
+    border-radius:11px;
+    background:#edf9f3;
+    color:#087443;
+    font-size:12px;
+    font-weight:900;
+}
+.calc-variant-title strong { display:block; color:#344054; font-size:14px; }
+.calc-variant-title small { display:block; margin-top:3px; color:#98a2b3; font-size:11px; }
+.calc-variant-status { font-size:11px; font-weight:900; white-space:nowrap; }
+.calc-variant-status.ok { color:#087443; }
+.calc-variant-status.warn { color:#b54708; }
+.calc-variant-grid {
+    display:grid;
+    grid-template-columns:1.5fr 1.2fr 1.1fr;
+    gap:10px;
+    padding:13px 15px;
+    background:#fff;
+}
+.calc-variant-grid label { min-width:0; }
+.calc-variant-grid label > span,
+.calc-variant-metrics span { display:block; color:#667085; font-size:10px; font-weight:900; letter-spacing:.08em; }
+.calc-variant-grid select {
+    width:100%;
+    height:40px;
+    margin-top:6px;
+    padding:0 10px;
+    box-sizing:border-box;
+    border:1px solid #d0d5dd;
+    border-radius:9px;
+    background:#fff;
+    color:#344054;
+    font:inherit;
+    font-size:12px;
+}
+.calc-variant-grid select:focus { outline:none; border-color:#19a56b; box-shadow:0 0 0 3px rgba(25,165,107,.10); }
+.calc-variant-metrics {
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    border-top:1px solid #eef0f2;
+    background:#fafcfb;
+}
+.calc-variant-metrics > div { padding:11px 13px; border-right:1px solid #eef0f2; }
+.calc-variant-metrics > div:last-child { border-right:0; }
+.calc-variant-metrics strong { display:block; margin-top:4px; color:#101828; font-size:14px; }
+.calc-variant-metrics small { display:block; margin-top:3px; color:#98a2b3; font-size:10px; }
+.calc-margin strong { color:#087443; font-size:18px; }
+.calc-margin.atencao strong { color:#b54708; }
+.calc-margin.baixa strong { color:#b42318; }
+.calc-help-card {
+    display:flex;
+    gap:11px;
+    align-items:flex-start;
+    margin-top:12px;
+    padding:13px 15px;
+    border:1px solid #eaecf0;
+    border-radius:14px;
+    background:#f8fafb;
+}
+.calc-help-card > span { font-size:18px; }
+.calc-help-card strong { color:#344054; font-size:11px; }
+.calc-help-card p { margin:3px 0 0; color:#667085; font-size:10px; line-height:1.5; }
+
+@media (max-width:1000px) {
+    .linha-receita.form { grid-template-columns:1fr 120px 150px 190px; }
+    .calc-variant-metrics { grid-template-columns:repeat(3,1fr); }
+    .calc-variant-metrics > div:nth-child(3) { border-right:0; }
+    .calc-variant-metrics > div:nth-child(n+4) { border-top:1px solid #eef0f2; }
+}
+@media (max-width:700px) {
+    .linha-receita.form { grid-template-columns:1fr; gap:10px; padding:14px 18px; }
+    .receita-acoes.calc { justify-content:flex-end; }
+    .calc-smart-bar { align-items:flex-start; flex-direction:column; }
+    .calc-smart-bar .form-btn-primary { width:100%; }
+    .calc-variant-grid { grid-template-columns:1fr; }
+    .calc-variant-metrics { grid-template-columns:1fr 1fr; }
+    .calc-variant-metrics > div { border-top:1px solid #eef0f2; }
+}
+
+/* =========================================================
+   CUSTEAMENTO Atual - MAIS COMPACTO E FOCO NO LUCRO
+   ========================================================= */
+.modal-receita-form {
+    width: min(1080px, 95vw);
+    max-height: 93vh;
+    border-radius: 18px;
+    padding: 22px;
+}
+.modal-form-header { margin-bottom: 18px; gap: 14px; }
+.modal-form-header h2 { font-size: 24px; }
+.modal-form-header p,
+.form-section-head p { font-size: 11px; }
+.form-form-grid { gap: 10px; }
+.form-field > span { margin-bottom: 5px; font-size: 10px; }
+.form-field input,
+.form-field select { height: 40px; }
+.form-field textarea { min-height: 78px; padding: 10px; }
+.form-alert { min-height: 14px; margin: 7px 0; font-size: 11px; }
+.form-section { margin-top: 16px; padding-top: 16px; }
+.form-section-head { margin-bottom: 10px; gap: 12px; }
+.form-section-head h3 { font-size: 16px; }
+.form-add-row { grid-template-columns:minmax(0,1fr) 150px 132px; gap:8px; padding:9px; border-radius:12px; }
+.form-add-row select,.form-add-row input { height: 40px; }
+.form-btn-primary,.form-btn-secondary,.form-btn-danger { height: 38px; padding:0 14px; border-radius:9px; font-size:12px; }
+.form-table { margin-top:10px; border-radius:12px; }
+.form-table-head,.form-table-row { grid-template-columns:minmax(240px,2fr) 130px 130px 130px 42px; gap:8px; padding:0 12px; }
+.form-table-head { min-height:34px; font-size:9px; }
+.form-table-row { min-height:56px; }
+.form-qtd { height:34px; }
+.form-totais { gap:8px; margin-top:9px; }
+.form-totais > div { min-width:155px; padding:10px 13px; border-radius:11px; }
+.form-totais strong { font-size:17px; }
+.calc-smart-bar { gap:10px; margin-bottom:9px; padding:10px 12px; border-radius:12px; }
+.calc-smart-bar strong { font-size:11px; }
+.calc-smart-bar span { margin-top:2px; font-size:9px; }
+.calc-smart-bar .form-btn-primary { height:34px; font-size:11px; }
+.calc-fracionamento-list { gap:7px; }
+.calc-variant-card { border-radius:12px; box-shadow:none; }
+.calc-variant-top { grid-template-columns:58px 1fr auto; gap:9px; padding:9px 12px; }
+.calc-volume-badge { min-height:32px; border-radius:9px; font-size:10px; }
+.calc-variant-title strong { font-size:11px; }
+.calc-variant-title small { margin-top:2px; font-size:9px; }
+.calc-variant-status { font-size:9px; }
+.calc-variant-grid { gap:7px; padding:9px 12px; }
+.calc-variant-grid label > span,
+.calc-variant-metrics span { font-size:8px; }
+.calc-variant-grid select { height:34px; margin-top:4px; padding:0 8px; font-size:10px; }
+.calc-variant-metrics > div { padding:8px 10px; }
+.calc-variant-metrics strong { margin-top:2px; font-size:11px; }
+.calc-variant-metrics small { margin-top:2px; font-size:8px; }
+.calc-margin strong { font-size:14px; }
+.form-rentabilidade { display:block; margin-top:10px; border-radius:12px; background:#f7fcf9; }
+.form-rentabilidade-head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:9px 12px; border-bottom:1px solid rgba(18,144,93,.12); }
+.form-rentabilidade-head span { display:block; color:#087443; font-size:8px; font-weight:900; letter-spacing:.1em; }
+.form-rentabilidade-head strong { display:block; margin-top:2px; color:#101828; font-size:13px; }
+.form-rentabilidade-head small { color:#98a2b3; font-size:9px; }
+.form-rentabilidade-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); }
+.form-rent-card { padding:9px 11px; border-right:1px solid rgba(18,144,93,.12); }
+.form-rent-card:last-child { border-right:0; }
+.form-rent-card-top { display:flex; align-items:center; gap:6px; min-width:0; margin-bottom:6px; }
+.form-rent-card-top b { flex:0 0 auto; padding:3px 6px; border-radius:6px; background:#eaf8f1; color:#087443; font-size:9px; }
+.form-rent-card-top span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#475467; font-size:9px; font-weight:700; }
+.form-rent-card-row { display:flex; justify-content:space-between; gap:8px; margin-top:2px; color:#667085; font-size:9px; }
+.form-rent-card-row strong { color:#344054; font-size:10px; }
+.form-rent-card-profit { display:grid; grid-template-columns:1fr auto; align-items:end; gap:5px; margin-top:6px; padding-top:6px; border-top:1px solid #e6f0eb; }
+.form-rent-card-profit span { grid-column:1/-1; color:#087443; font-size:8px; font-weight:900; letter-spacing:.08em; }
+.form-rent-card-profit strong { color:#087443; font-size:15px; letter-spacing:-.02em; }
+.form-rent-card-profit b { align-self:end; color:#087443; font-size:11px; }
+.form-rent-card-profit b.atencao { color:#b54708; }
+.form-rent-card-profit b.baixa { color:#b42318; }
+.modal-form-footer { margin-top:15px; padding-top:13px; }
+
+/* removido visual de ajuda; o fluxo agora é autoexplicativo */
+.calc-help-card { display:none !important; }
+
+@media (max-width:1000px) {
+    .form-rentabilidade-grid { grid-template-columns:repeat(2,1fr); }
+    .form-rent-card:nth-child(2) { border-right:0; }
+    .form-rent-card:nth-child(n+3) { border-top:1px solid rgba(18,144,93,.12); }
+}
+@media (max-width:700px) {
+    .modal-receita-form { padding:15px; }
+    .form-rentabilidade-grid { grid-template-columns:1fr; }
+    .form-rent-card { border-right:0; border-top:1px solid rgba(18,144,93,.12); }
+    .form-rent-card:first-child { border-top:0; }
+}
+
+/* =========================================================
+   CUSTEAMENTO Atual - LEITURA MELHOR + MODAL MAIS AGIL
+   ========================================================= */
+.modal-receita-form { font-size: 13px; }
+.form-field > span { font-size: 11px; }
+.form-field input,
+.form-field select,
+.form-field textarea,
+.form-add-row select,
+.form-add-row input { font-size: 13px; }
+.form-section-head h3 { font-size: 17px; }
+.form-section-head p { font-size: 12px; line-height: 1.45; }
+.calc-smart-bar strong { font-size: 12px; }
+.calc-smart-bar span { font-size: 10px; }
+.calc-variant-title strong { font-size: 12.5px; }
+.calc-variant-title small { font-size: 10px; }
+.calc-variant-status { font-size: 10px; }
+.calc-variant-grid label > span,
+.calc-variant-metrics span { font-size: 9px; }
+.calc-variant-grid select { font-size: 12px; height: 38px; }
+.calc-variant-metrics > div { padding: 9px 11px; }
+.calc-variant-metrics strong { font-size: 13px; }
+.calc-variant-metrics small { font-size: 9px; }
+.calc-margin strong { font-size: 17px; }
+.form-rentabilidade-head span { font-size: 9px; }
+.form-rentabilidade-head strong { font-size: 14px; }
+.form-rentabilidade-head small { font-size: 10px; }
+.form-rent-card-top b { font-size: 10px; }
+.form-rent-card-top span { font-size: 10px; }
+.form-rent-card-row { font-size: 10px; }
+.form-rent-card-row strong { font-size: 11px; }
+.form-rent-card-profit span { font-size: 9px; }
+.form-rent-card-profit strong { font-size: 16px; }
+.form-rent-card-profit b { font-size: 12px; }
+.form-alert { font-size: 12px; }
+
+
+/* =========================================================
+   INSUMOS - SITUAÇÃO / AÇÕES
+   ========================================================= */
+
+.linha-insumo.inativo {
+    opacity: .62;
+    background: #fafafa;
+}
+
+.badge-status-insumo {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+
+.badge-status-insumo.ativo {
+    background: #e7f7ee;
+    color: #167044;
+}
+
+.badge-status-insumo.inativo {
+    background: #f1f1f1;
+    color: #777;
+}
+
+.acoes-insumo {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.acoes-insumo .btn-excluir {
+    margin-right: auto;
+}
+
+#filtroStatusInsumo {
+    min-width: 190px;
+}
+
+@media (max-width: 900px) {
+    #filtroStatusInsumo {
+        min-width: 0;
     }
 
-    #painelReceitas .linha-receita {
-        grid-template-columns: 1fr;
+    .acoes-insumo {
+        justify-content: stretch;
+        flex-wrap: wrap;
     }
 
-    .receita-identificacao {
-        grid-column: auto;
-    }
-
-    #modalReceita .modal-conteudo.modal-receita {
-        width: calc(100vw - 20px) !important;
-        padding: 24px 18px !important;
-    }
-
-    #modalReceita .resumo-receita {
-        grid-template-columns: 1fr !important;
-    }
-
-    #modalReceita .cabecalho-itens-receita {
-        display: none !important;
-    }
-
-    #modalReceita .linha-item-receita {
-        grid-template-columns: 1fr 1fr !important;
-    }
-
-    #modalReceita .nome-item-receita {
-        grid-column: 1 / -1 !important;
+    .acoes-insumo .btn-excluir {
+        margin-right: 0;
     }
 }
 
 
 /* =========================================================
-   CUSTEAMENTO V4 - AJUSTES FINAIS
+    - PRODUTOS DA BASE
+========================================================= */
+.base-produto-add{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin:10px 0 9px;padding:10px 11px;border:1px solid #dce7e2;border-radius:12px;background:linear-gradient(180deg,#fbfefd,#f6faf8)}
+.base-produto-add select{width:100%;height:38px;border:1px solid #d5dde5;border-radius:10px;background:#fff;padding:0 11px;color:#344054;font-size:12px}
+.base-produto-add select:focus,.base-produto-controls select:focus{outline:none;border-color:#19a56b;box-shadow:0 0 0 3px rgba(25,165,107,.10)}
+.base-produtos-base-list{display:grid;gap:8px}
+.base-empty{padding:18px 14px;border:1px dashed #cbd8d2;border-radius:12px;background:#fafcfb;color:#667085;text-align:center;font-size:11px}
+.base-produto-card{border:1px solid #dce4e0;border-radius:12px;background:#fff;overflow:hidden;box-shadow:0 3px 12px rgba(16,24,40,.04)}
+.base-produto-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-bottom:1px solid #edf1ef}
+.base-produto-title{display:flex;align-items:center;gap:9px;min-width:0}
+.base-produto-title strong{display:block;color:#344054;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.base-produto-title small{display:block;margin-top:2px;color:#98a2b3;font-size:9px}
+.base-volume{display:inline-flex;align-items:center;justify-content:center;min-width:50px;height:28px;padding:0 8px;border-radius:8px;background:#eef9f4;color:#087443;font-size:10px;font-weight:900}
+.base-remover{width:30px;height:30px;border:0;border-radius:9px;background:#fff1f0;color:#b42318;font-size:18px;cursor:pointer}
+.base-produto-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:9px 12px}
+.base-produto-controls label{min-width:0}
+.base-produto-controls label>span,.base-produto-metrics span{display:block;color:#667085;font-size:8px;font-weight:900;letter-spacing:.08em}
+.base-produto-controls select{width:100%;height:35px;margin-top:4px;border:1px solid #d5dde5;border-radius:9px;background:#fff;padding:0 8px;color:#344054;font-size:11px}
+.base-produto-metrics{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #edf1ef;background:#fbfcfc}
+.base-produto-metrics>div{padding:8px 10px;border-right:1px solid #edf1ef}
+.base-produto-metrics>div:last-child{border-right:0}
+.base-produto-metrics strong{display:block;margin-top:3px;color:#101828;font-size:12px}
+.base-produto-metrics .lucro{background:#f0faf5}
+.base-produto-metrics .lucro strong{color:#087443;font-size:16px}
+.base-produto-metrics small{display:block;margin-top:2px;color:#667085;font-size:8px}
+@media(max-width:800px){.base-produto-add{grid-template-columns:1fr}.base-produto-metrics{grid-template-columns:1fr 1fr}.base-produto-metrics>div{border-top:1px solid #edf1ef}.base-produto-controls{grid-template-columns:1fr}}
+
+
+/* =========================================================
+   Atual - ADICIONAR PRODUTOS POR GRUPO
+========================================================= */
+.base-grupo-add{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:9px;margin:0 0 10px;padding:9px 11px;border:1px solid #e3e9e6;border-radius:11px;background:#fafcfb}
+.base-grupo-add>div{min-width:0}
+.base-grupo-add>div>span{display:block;margin-bottom:4px;color:#087443;font-size:8px;font-weight:900;letter-spacing:.09em}
+.base-grupo-add input{width:100%;height:35px;border:1px solid #d5dde5;border-radius:9px;background:#fff;padding:0 10px;color:#344054;font-size:11px;box-sizing:border-box}
+.base-grupo-add input:focus{outline:none;border-color:#19a56b;box-shadow:0 0 0 3px rgba(25,165,107,.10)}
+.base-grupo-add button{height:35px;white-space:nowrap}
+@media(max-width:800px){.base-grupo-add{grid-template-columns:1fr}.base-grupo-add button{width:100%}}
+
+
+/* Atual - seleção de produtos somente por grupo */
+.atual-grupo-add {
+    grid-template-columns: minmax(0, 1fr) auto;
+}
+.atual-grupo-add input {
+    width: 100%;
+}
+@media (max-width: 760px) {
+    .atual-grupo-add { grid-template-columns: 1fr; }
+    .atual-grupo-add button { width: 100%; }
+}
+
+
+/* =========================================================
+   PRODUTOS FINAIS
+   ========================================================= */
+.produtos-finais-resumo{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap;justify-content:flex-end}
+.produtos-finais-resumo .resumo-chip{min-width:112px;padding:10px 12px;border:1px solid #dfe7e3;border-radius:12px;background:#fff}
+.produtos-finais-resumo .resumo-chip span{display:block;font-size:8px;font-weight:900;letter-spacing:.08em;color:#667085}
+.produtos-finais-resumo .resumo-chip strong{display:block;margin-top:3px;font-size:17px;color:#101828}
+.produtos-finais-resumo .resumo-chip.destaque{background:#f0faf5;border-color:#cfeadf}
+.produtos-finais-resumo .resumo-chip.destaque strong{color:#087443}
+.produtos-finais-filtros{grid-template-columns:minmax(260px,1.7fr) minmax(190px,1fr) 160px}
+.produtos-finais-tabela{border:1px solid #dfe5e2;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 5px 20px rgba(16,24,40,.04)}
+.produtos-finais-head,.produto-final-linha{display:grid;grid-template-columns:minmax(240px,2.1fr) minmax(180px,1.4fr) 90px 120px 120px 135px 95px;align-items:center;gap:0}
+.produtos-finais-head{min-height:38px;padding:0 14px;background:#f7f9f8;border-bottom:1px solid #e5e9e7;color:#667085;font-size:8px;font-weight:900;letter-spacing:.08em}
+.produto-final-linha{min-height:66px;padding:0 14px;border-bottom:1px solid #edf1ef;font-size:12px}
+.produto-final-linha:last-child{border-bottom:0}
+.produto-final-linha:hover{background:#fbfdfc}
+.produto-final-identidade{display:flex;align-items:center;gap:9px;min-width:0}
+.produto-final-icone{width:30px;height:30px;border-radius:9px;background:#edf8f3;color:#098455;display:grid;place-items:center;font-weight:900;flex:0 0 auto}
+.produto-final-identidade strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#1d2939;font-size:12px}
+.produto-final-identidade small{display:block;margin-top:2px;color:#98a2b3;font-size:9px}
+.produto-final-base strong{display:block;color:#344054;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.produto-final-base small{display:block;margin-top:2px;color:#98a2b3;font-size:9px}
+.produto-final-volume{font-weight:800;color:#475467}
+.produto-final-num{text-align:left;color:#344054;font-weight:700}
+.produto-final-venda{font-weight:800;color:#344054}
+.produto-final-lucro strong{display:block;color:#087443;font-size:13px}
+.produto-final-lucro small{display:block;margin-top:2px;color:#087443;font-size:8px;font-weight:800}
+.produto-final-margem{font-weight:900;color:#087443}
+.produto-final-sem-base{color:#98a2b3;font-weight:600}
+.estado-produtos-finais{text-align:center;padding:46px 20px;color:#667085}
+.estado-produtos-finais strong{display:block;color:#344054;font-size:14px;margin-bottom:5px}
+.estado-produtos-finais span{font-size:11px}
+@media(max-width:1100px){.produtos-finais-head,.produto-final-linha{grid-template-columns:minmax(210px,2fr) minmax(150px,1.2fr) 75px 105px 105px 120px 80px}.produtos-finais-head,.produto-final-linha{padding-left:10px;padding-right:10px}}
+@media(max-width:850px){.produtos-finais-filtros{grid-template-columns:1fr}.produtos-finais-head{display:none}.produto-final-linha{grid-template-columns:1fr 1fr;padding:12px;gap:9px}.produto-final-identidade{grid-column:1/-1}.produto-final-linha>div{min-width:0}.produto-final-volume:before{content:'Volume ';color:#98a2b3;font-size:8px;text-transform:uppercase;margin-right:4px}.produto-final-num:before{content:'Custo ';color:#98a2b3;font-size:8px;text-transform:uppercase;margin-right:4px}.produto-final-venda:before{content:'Venda ';color:#98a2b3;font-size:8px;text-transform:uppercase;margin-right:4px}.produto-final-lucro:before{content:'Lucro ';color:#98a2b3;font-size:8px;text-transform:uppercase;margin-right:4px}.produto-final-margem:before{content:'Margem ';color:#98a2b3;font-size:8px;text-transform:uppercase;margin-right:4px}.produtos-finais-resumo{justify-content:flex-start}}
+
+.produto-final-revenda{background:#fffdfa}
+.produto-final-icone-revenda{background:#fff4df;color:#a15b00}
+.produto-final-custo-manual{padding-right:10px}
+.campo-custo-manual{display:flex;align-items:center;width:100px;height:32px;border:1px solid #d8e1dd;border-radius:9px;background:#fff;overflow:hidden;transition:.15s ease}
+.campo-custo-manual:focus-within{border-color:#0a9a67;box-shadow:0 0 0 3px rgba(10,154,103,.09)}
+.campo-custo-manual span{padding-left:8px;color:#98a2b3;font-size:10px;font-weight:800}
+.campo-custo-manual input{width:100%;border:0;outline:0;background:transparent;padding:6px 7px 6px 4px;text-align:right;font-size:12px;font-weight:800;color:#344054}
+.campo-custo-manual input::placeholder{color:#b7c0c7}
+.campo-custo-manual input.erro{background:#fff0f0}
+.campo-custo-manual input.salvo{background:#eefaf5}
+@media(max-width:1100px){.campo-custo-manual{width:88px}}
+
+.produtos-finais-acoes{display:flex;align-items:center;gap:10px;justify-content:flex-end;margin-bottom:8px}.produtos-finais-acoes span{font-size:11px;font-weight:700;color:#667085}.produtos-finais-acoes .btn-salvar:disabled{opacity:.45;cursor:not-allowed}
+
+/* =========================================================
+   FORNECEDORES
    ========================================================= */
 
-#avisoReceita:empty,
-#avisoReceita:not(.visivel) {
-    display: none;
+.tabela-cabecalho,
+.linha-insumo {
+    grid-template-columns: minmax(260px, 2fr) 150px 90px 130px 170px 90px;
 }
 
-#avisoReceita.erro {
-    background: #fff0f0;
-    border-color: #f3b4b4;
-    color: #a61b1b;
-}
-
-.linha-receita {
-    transition: background .15s, transform .15s;
-}
-
-.linha-receita:hover {
-    background: #fbfcfd;
-}
-
-.custo-receita-lista {
+.btn-fornecedor-insumo {
+    border: 0;
+    background: transparent;
+    color: #2864c7;
+    font-size: 13px;
     font-weight: 700;
+    text-align: left;
+    padding: 7px 0;
+    cursor: pointer;
 }
 
-.modal-receita {
-    max-height: 92vh;
-    overflow-y: auto;
+.btn-fornecedor-insumo:hover {
+    text-decoration: underline;
 }
 
-.modal-receita #avisoReceita {
-    margin-top: 12px;
-    border: 1px solid #f1d58a;
+.lista-fornecedores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 14px;
+}
+
+.card-fornecedor {
+    background: #fff;
+    border: 1px solid #e2e4e8;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.04);
+    transition: .18s ease;
+}
+
+.card-fornecedor:hover,
+.card-fornecedor.selecionado {
+    border-color: #b8cceb;
+    box-shadow: 0 6px 18px rgba(0,0,0,.07);
+}
+
+.card-fornecedor-topo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.fornecedor-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: #e8f1ff;
+    color: #2864c7;
+    font-weight: 800;
+}
+
+.fornecedor-identidade {
+    flex: 1;
+    min-width: 0;
+}
+
+.fornecedor-identidade strong,
+.fornecedor-identidade small {
+    display: block;
+}
+
+.fornecedor-identidade strong {
+    color: #222;
+    font-size: 15px;
+}
+
+.fornecedor-identidade small {
+    color: #7a7f87;
+    margin-top: 2px;
+    font-size: 11px;
+}
+
+.btn-editar-fornecedor {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    border-radius: 7px;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card-fornecedor-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    color: #667085;
+    font-size: 12px;
+}
+
+.card-fornecedor-info strong {
+    color: #198754;
+}
+
+.card-fornecedor > p {
+    margin: 11px 0 0;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.btn-ver-insumos-fornecedor {
+    margin-top: 13px;
+    border: 0;
+    background: transparent;
+    color: #2864c7;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.fornecedor-insumos-lista {
+    margin-top: 11px;
+    border-top: 1px solid #eee;
+    padding-top: 9px;
+}
+
+.fornecedor-insumos-lista > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 7px 0;
+    font-size: 12px;
+    color: #333;
+}
+
+.fornecedor-insumos-lista > div + div {
+    border-top: 1px solid #f1f1f1;
+}
+
+.fornecedor-insumos-lista strong {
+    color: #198754;
+}
+
+.estado-fornecedores {
+    background: #fff;
+    border: 1px solid #e2e4e8;
+    border-radius: 14px;
+    padding: 35px;
+    text-align: center;
+    color: #667085;
+    grid-column: 1 / -1;
+}
+
+.estado-fornecedores strong,
+.estado-fornecedores span,
+.estado-fornecedores small {
+    display: block;
+}
+
+.estado-fornecedores strong {
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.estado-fornecedores.erro {
+    color: #b42318;
+}
+
+.modal-fornecedor {
+    max-width: 520px;
+}
+
+.modal-fornecedor textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 7px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 11px 12px;
+    font: inherit;
+    resize: vertical;
+    background: #fff;
+}
+
+.modal-fornecedor textarea:focus {
+    outline: none;
+    border-color: #198754;
+    box-shadow: 0 0 0 3px rgba(25,135,84,.10);
+}
+
+@media (max-width: 900px) {
+    .tabela-cabecalho,
+    .linha-insumo {
+        grid-template-columns: 1fr 1fr;
+    }
 }

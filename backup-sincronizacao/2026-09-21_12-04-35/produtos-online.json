@@ -1,0 +1,3126 @@
+[
+    {
+        "id": 399,
+        "descricao": "AGUA SANITARIA 2 LITROS",
+        "preco_venda": 6,
+        "preco": 6,
+        "estoque": 5,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/399.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 381,
+        "descricao": "AGUA SANITARIA 5 LITROS",
+        "preco_venda": 11,
+        "preco": 11,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/381.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 210,
+        "descricao": "AGUA SANITARIA ATACADO",
+        "preco_venda": 1.5,
+        "preco": 1.5,
+        "estoque": 0,
+        "disponivel": false,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 217,
+        "descricao": "ALCOOL 70 1 LITRO",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 11,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/217.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 174,
+        "descricao": "ALCOOL 70 2 LITROS",
+        "preco_venda": 28,
+        "preco": 28,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/174.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 175,
+        "descricao": "ALCOOL 70 5 LITROS",
+        "preco_venda": 60,
+        "preco": 60,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/175.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427456,
+        "descricao": "ALCOOL 70 500 ML",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/427456.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 176,
+        "descricao": "ALCOOL 96 1 LITRO",
+        "preco_venda": 20,
+        "preco": 20,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/176.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 177,
+        "descricao": "ALCOOL 96 2 LITROS",
+        "preco_venda": 35,
+        "preco": 35,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/177.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 178,
+        "descricao": "ALCOOL 96 5 LITROS",
+        "preco_venda": 70,
+        "preco": 70,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/178.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 20,
+        "descricao": "ALCOOL GEL 1 LITRO",
+        "preco_venda": 16.99,
+        "preco": 16.99,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/20.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 317,
+        "descricao": "ALCOOL GEL 5 LITROS",
+        "preco_venda": 66,
+        "preco": 66,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/317.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 346,
+        "descricao": "ALCOOL GEL 500 ML",
+        "preco_venda": 12,
+        "preco": 12,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/346.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 88,
+        "descricao": "ALCOOL PERFUMADO BAMBOO 2 LITROS",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/88.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 94,
+        "descricao": "ALCOOL PERFUMADO BAMBOO 5 LITROS",
+        "preco_venda": 19.9,
+        "preco": 19.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/94.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 87,
+        "descricao": "ALCOOL PERFUMADO CEREJA AVELA 2 LITROS",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/87.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 95,
+        "descricao": "ALCOOL PERFUMADO CEREJA AVELA 5 LITROS",
+        "preco_venda": 19.9,
+        "preco": 19.9,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/95.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427448,
+        "descricao": "ALCOOL PERFUMADO MACA CANELA 2 LITROS",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/427448.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427441,
+        "descricao": "ALCOOL PERFUMADO MACA CANELA 5 LITROS",
+        "preco_venda": 19.9,
+        "preco": 19.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/427441.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 54,
+        "descricao": "ALVEJANTE SEM CLORO 2 LITROS",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/54.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 55,
+        "descricao": "ALVEJANTE SEM CLORO 5 LITROS",
+        "preco_venda": 20,
+        "preco": 20,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/55.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 57,
+        "descricao": "AMACIANTE CONFORTO 2 LITROS",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 5,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/57.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 187,
+        "descricao": "AMACIANTE CONFORTO 5 LITROS",
+        "preco_venda": 20,
+        "preco": 20,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/187.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 56,
+        "descricao": "AMACIANTE DOWNIE 2 LITROS",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/56.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427440,
+        "descricao": "AMACIANTE DOWNIE 5 LITROS",
+        "preco_venda": 25,
+        "preco": 25,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/427440.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 58,
+        "descricao": "AMACIANTE MAMAE BEBE 2 LITROS",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 5,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/58.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 241,
+        "descricao": "ANIL",
+        "preco_venda": 14,
+        "preco": 14,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 222,
+        "descricao": "ANTI MOFO 500 ML",
+        "preco_venda": 11,
+        "preco": 11,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/222.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 287,
+        "descricao": "AROMATIZANTE",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 7,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 288,
+        "descricao": "AROMATIZANTE DIFUSOR",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 137,
+        "descricao": "BACIA 12 LITROS",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 138,
+        "descricao": "BACIA 18 LITROS",
+        "preco_venda": 25,
+        "preco": 25,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 333,
+        "descricao": "BACIA 40 LITROS",
+        "preco_venda": 39.9,
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 225,
+        "descricao": "BALDE 10 LITROS",
+        "preco_venda": 12,
+        "preco": 12,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/225.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 389,
+        "descricao": "BALDE 15 LITROS",
+        "preco_venda": 20,
+        "preco": 20,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 334,
+        "descricao": "BALDE 30 LITROS",
+        "preco_venda": 39.9,
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 136,
+        "descricao": "BALDE PEDREIRO 8 LITROS",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 308,
+        "descricao": "BARRILHA 1 KG",
+        "preco_venda": 20,
+        "preco": 20,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/308.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 80,
+        "descricao": "BLOCO DE ESPUMA",
+        "preco_venda": 8.5,
+        "preco": 8.5,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/80.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 378,
+        "descricao": "BUCHA DE BANHO",
+        "preco_venda": 6,
+        "preco": 6,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 132,
+        "descricao": "BUCHA INOX",
+        "preco_venda": 4,
+        "preco": 4,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 131,
+        "descricao": "BUCHA LAVA LOUCAS",
+        "preco_venda": 2.5,
+        "preco": 2.5,
+        "estoque": 12,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/131.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 200,
+        "descricao": "CABO MADEIRA 1,2M AVULSO",
+        "preco_venda": 6,
+        "preco": 6,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 347,
+        "descricao": "CAIXA ACOPLADA",
+        "preco_venda": 8.9,
+        "preco": 8.9,
+        "estoque": 10,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 316,
+        "descricao": "CANETAO QUADRO BRANCO",
+        "preco_venda": 9.9,
+        "preco": 9.9,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427447,
+        "descricao": "CESTO TELADO 12 LITROS",
+        "preco_venda": 8,
+        "preco": 8,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/427447.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 335,
+        "descricao": "CESTO TELADO 60 LITROS",
+        "preco_venda": 49.9,
+        "preco": 49.9,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/335.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 2,
+        "descricao": "CLORO 1 LITRO",
+        "preco_venda": 8,
+        "preco": 8,
+        "estoque": 8,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/2.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 7,
+        "descricao": "CLORO 2 LITROS",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 5,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/7.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 18,
+        "descricao": "CLORO 5 LITROS",
+        "preco_venda": 28,
+        "preco": 28,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/18.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 172,
+        "descricao": "CLORO ATACADO",
+        "preco_venda": 3.85,
+        "preco": 3.85,
+        "estoque": 2.14,
+        "disponivel": false,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 84,
+        "descricao": "CLORO GEL 1 LITRO",
+        "preco_venda": 8,
+        "preco": 8,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/84.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 85,
+        "descricao": "CLORO GEL 2 LITROS",
+        "preco_venda": 15.9,
+        "preco": 15.9,
+        "estoque": 9,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/85.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 86,
+        "descricao": "CLORO GEL 5 LITROS",
+        "preco_venda": 39.9,
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/86.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427450,
+        "descricao": "CONCENTRADO CHA BRANCO",
+        "preco_venda": 15.9,
+        "preco": 15.9,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427451,
+        "descricao": "CONCENTRATO FLORAL",
+        "preco_venda": 15.9,
+        "preco": 15.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427455,
+        "descricao": "CONCENTRATO FLORES DO CAMPO",
+        "preco_venda": 15.9,
+        "preco": 15.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427454,
+        "descricao": "CONCENTRATO GIOVANNA",
+        "preco_venda": 15.9,
+        "preco": 15.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427452,
+        "descricao": "CONCENTRATO LAVANDA",
+        "preco_venda": 15.9,
+        "preco": 15.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427453,
+        "descricao": "CONCENTRATO MARINE",
+        "preco_venda": 15.9,
+        "preco": 15.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427449,
+        "descricao": "CONCENTRATO TULIPA NEGRA",
+        "preco_venda": 15.9,
+        "preco": 15.9,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 307,
+        "descricao": "CONCENTRATO UBATUBA",
+        "preco_venda": 15.9,
+        "preco": 15.9,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 199,
+        "descricao": "CREOLINA 2 LITROS",
+        "preco_venda": 13,
+        "preco": 13,
+        "estoque": 7,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/199.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 198,
+        "descricao": "CREOLINA 5 LITROS",
+        "preco_venda": 24.9,
+        "preco": 24.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/198.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 430,
+        "descricao": "DESENGRAXANTE 2 LITROS",
+        "preco_venda": 16,
+        "preco": 16,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/430.jpg",
+        "categorias": [
+            "automotivo",
+            "industrial"
+        ]
+    },
+    {
+        "id": 439,
+        "descricao": "DESENGRAXANTE 5 LITROS",
+        "preco_venda": 35,
+        "preco": 35,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/439.jpg",
+        "categorias": [
+            "automotivo",
+            "industrial"
+        ]
+    },
+    {
+        "id": 121,
+        "descricao": "DESENTUPIDOR DE PIA",
+        "preco_venda": 6,
+        "preco": 6,
+        "estoque": 9,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/121.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 157,
+        "descricao": "DESENTUPIDOR W.C",
+        "preco_venda": 11,
+        "preco": 11,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 24,
+        "descricao": "DESINFETANTE CAPIM LIMAO 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 5,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/24.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 42,
+        "descricao": "DESINFETANTE CAPIM LIMAO 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/42.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 21,
+        "descricao": "DESINFETANTE CASA LIMPA 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/21.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 36,
+        "descricao": "DESINFETANTE CASA LIMPA 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/36.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 25,
+        "descricao": "DESINFETANTE CITRONELA 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/25.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 41,
+        "descricao": "DESINFETANTE CITRONELA 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/41.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427458,
+        "descricao": "DESINFETANTE CONCENTRADO 1L P 20L",
+        "preco_venda": 20,
+        "preco": 20,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 26,
+        "descricao": "DESINFETANTE EUCALIPTO 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/26.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 34,
+        "descricao": "DESINFETANTE EUCALIPTO 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/34.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 71,
+        "descricao": "DESINFETANTE FLOR DE CEREJEIRA 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/71.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 22,
+        "descricao": "DESINFETANTE FLORAL 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 10,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/22.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 44,
+        "descricao": "DESINFETANTE FLORAL 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/44.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 337,
+        "descricao": "DESINFETANTE JASMIM 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/337.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 300,
+        "descricao": "DESINFETANTE JASMIM 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/300.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 28,
+        "descricao": "DESINFETANTE KAIAK 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 5,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/28.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 33,
+        "descricao": "DESINFETANTE KAIAK 5 LITROS",
+        "preco_venda": 12,
+        "preco": 12,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/33.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 23,
+        "descricao": "DESINFETANTE LAVANDA 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 5,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/23.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 37,
+        "descricao": "DESINFETANTE LAVANDA 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": -3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/37.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 299,
+        "descricao": "DESINFETANTE MAMAE BEBE 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/299.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 72,
+        "descricao": "DESINFETANTE MARINE 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 8,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/72.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427444,
+        "descricao": "DESINFETANTE MARINE 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/427444.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 32,
+        "descricao": "DESINFETANTE NATUREZA 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/32.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 43,
+        "descricao": "DESINFETANTE NATUREZA 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/43.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 27,
+        "descricao": "DESINFETANTE PINHO SOL 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/27.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 40,
+        "descricao": "DESINFETANTE PINHO SOL 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/40.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 30,
+        "descricao": "DESINFETANTE REVEILLON 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/30.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 38,
+        "descricao": "DESINFETANTE REVEILLON 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/38.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 31,
+        "descricao": "DESINFETANTE TALCO 2 LITROS",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/31.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 39,
+        "descricao": "DESINFETANTE TALCO 5 LITROS",
+        "preco_venda": 11.5,
+        "preco": 11.5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/39.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 105,
+        "descricao": "DETERGENTE NEUTRO 1 LITRO",
+        "preco_venda": 5.5,
+        "preco": 5.5,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/105.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 106,
+        "descricao": "DETERGENTE NEUTRO 2 LITROS",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/106.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 107,
+        "descricao": "DETERGENTE NEUTRO 5 LITROS",
+        "preco_venda": 25,
+        "preco": 25,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/107.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 254,
+        "descricao": "DETERGENTE NEUTRO ATACADO",
+        "preco_venda": 3,
+        "preco": 3,
+        "estoque": 101,
+        "disponivel": false,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 133,
+        "descricao": "ESCOVA ROUPA MADEIRA",
+        "preco_venda": 5.8,
+        "preco": 5.8,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/133.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 135,
+        "descricao": "ESCOVA ROUPAS COM ALCA",
+        "preco_venda": 7.9,
+        "preco": 7.9,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/135.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 134,
+        "descricao": "ESCOVA ROUPAS PLASTICO ANATOMICA",
+        "preco_venda": 5.2,
+        "preco": 5.2,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/134.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 281,
+        "descricao": "ESCOVA SANITARIA",
+        "preco_venda": 14.9,
+        "preco": 14.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/281.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 341,
+        "descricao": "ESFREGAO GARI",
+        "preco_venda": 56,
+        "preco": 56,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427431,
+        "descricao": "FLANELA BRANCA MEDIA",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 255,
+        "descricao": "FLANELA LARANJA MEDIA",
+        "preco_venda": 6.5,
+        "preco": 6.5,
+        "estoque": 8,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 315,
+        "descricao": "GATILHO COM EMBALAGEM",
+        "preco_venda": 9.9,
+        "preco": 9.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/315.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 285,
+        "descricao": "GEL SANITARIO",
+        "preco_venda": 4,
+        "preco": 4,
+        "estoque": 14,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 5,
+        "descricao": "HOME SPRAY BAUNILHA",
+        "preco_venda": 16,
+        "preco": 16,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "automotivo"
+        ]
+    },
+    {
+        "id": 77,
+        "descricao": "JET CERA 500 ML",
+        "preco_venda": 9.9,
+        "preco": 9.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/77.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 111,
+        "descricao": "LIMPA ALUMINIO 1 LITRO",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/111.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 112,
+        "descricao": "LIMPA ALUMINIO 2 LITROS",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/112.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 113,
+        "descricao": "LIMPA ALUMINIO 5 LITROS",
+        "preco_venda": 35.9,
+        "preco": 35.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/113.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 110,
+        "descricao": "LIMPA ALUMINIO 500 ML",
+        "preco_venda": 7,
+        "preco": 7,
+        "estoque": 5,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/110.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 114,
+        "descricao": "LIMPA AZULEJO MADEIRA",
+        "preco_venda": 21,
+        "preco": 21,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 115,
+        "descricao": "LIMPA AZULEJO PLASTICO",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 155,
+        "descricao": "LIMPA AZULEJO REFIL PLASTICO",
+        "preco_venda": 12,
+        "preco": 12,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 291,
+        "descricao": "LIMPA BAU 1 LITRO",
+        "preco_venda": 8,
+        "preco": 8,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/291.jpg",
+        "categorias": [
+            "automotivo",
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 82,
+        "descricao": "LIMPA BAU 2 LITROS",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/82.jpg",
+        "categorias": [
+            "automotivo",
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 83,
+        "descricao": "LIMPA BAU 5 LITROS",
+        "preco_venda": 39.9,
+        "preco": 39.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/83.jpg",
+        "categorias": [
+            "automotivo",
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 251,
+        "descricao": "LIMPA CANIL 2 LITROS",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 7,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/251.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 276,
+        "descricao": "LIMPA CANIL 5 LITROS",
+        "preco_venda": 20,
+        "preco": 20,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/276.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 46,
+        "descricao": "LIMPA CANO SUPER 1 LITRO",
+        "preco_venda": 20,
+        "preco": 20,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/46.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 351,
+        "descricao": "LIMPA CARPETE",
+        "preco_venda": 6,
+        "preco": 6,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427445,
+        "descricao": "LIMPA CARPETE 2 LITROS",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/427445.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 246,
+        "descricao": "LIMPA CONCRETO 1 LITRO",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 31,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 47,
+        "descricao": "LIMPA CONCRETO 2 LITROS",
+        "preco_venda": 19.9,
+        "preco": 19.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/47.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 386,
+        "descricao": "LIMPA CONCRETO 5 LITROS",
+        "preco_venda": 110,
+        "preco": 110,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/386.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 237,
+        "descricao": "LIMPA COURO",
+        "preco_venda": 14,
+        "preco": 14,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 412,
+        "descricao": "LIMPA PAINEL 500 ML",
+        "preco_venda": 9.9,
+        "preco": 9.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/412.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 15,
+        "descricao": "LIMPA PEDRA 2 LITROS",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/15.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 16,
+        "descricao": "LIMPA PEDRA 5 LITROS",
+        "preco_venda": 39.9,
+        "preco": 39.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/16.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 124,
+        "descricao": "LIMPA PORCELANATO 500 ML",
+        "preco_venda": 7.5,
+        "preco": 7.5,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/124.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 100,
+        "descricao": "LIMPA TUDO 2 LITROS",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 7,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/100.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 99,
+        "descricao": "LIMPA TUDO 5 LITROS",
+        "preco_venda": 24.9,
+        "preco": 24.9,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/99.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 323,
+        "descricao": "LIMPA VIDROS 500 ML",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 7,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/323.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 116,
+        "descricao": "LIMPA VIDROS COM CABO",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/116.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 283,
+        "descricao": "LIXEIRA",
+        "preco_venda": 39.9,
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 355,
+        "descricao": "LIXEIRINHA",
+        "preco_venda": 8,
+        "preco": 8,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 221,
+        "descricao": "LUSTRA MOVEIS 500 ML",
+        "preco_venda": 11,
+        "preco": 11,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/221.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 127,
+        "descricao": "LUVA LATEX G",
+        "preco_venda": 8.9,
+        "preco": 8.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 126,
+        "descricao": "LUVA LATEX M",
+        "preco_venda": 8.9,
+        "preco": 8.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 267,
+        "descricao": "LUVA P",
+        "preco_venda": 7.5,
+        "preco": 7.5,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 9,
+        "descricao": "MARIDAO 2 LITROS",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 10,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/9.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 10,
+        "descricao": "MARIDAO 5 LITROS",
+        "preco_venda": 25,
+        "preco": 25,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/10.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 244,
+        "descricao": "MARIDAO CONCENTRADO",
+        "preco_venda": 25,
+        "preco": 25,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 328,
+        "descricao": "MATA INSETO 500 ML C GATILHO",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/328.jpg",
+        "categorias": [
+            "utilitarios",
+            "residencial"
+        ]
+    },
+    {
+        "id": 45,
+        "descricao": "MATA INSETOS 1 LITRO",
+        "preco_venda": 25,
+        "preco": 25,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/45.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 266,
+        "descricao": "NAFTALINA",
+        "preco_venda": 3.5,
+        "preco": 3.5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 180,
+        "descricao": "NEW 3/5",
+        "preco_venda": 5,
+        "preco": 5,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 286,
+        "descricao": "ODORIZANTE DE AMBIENTE BIXINHO",
+        "preco_venda": 13,
+        "preco": 13,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 171,
+        "descricao": "ODORIZANTE PARA CARRO MELANCIA (ROSA)",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 13,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "automotivo",
+            "residencial"
+        ]
+    },
+    {
+        "id": 427434,
+        "descricao": "ODORIZANTE PARA CARRO TROUSSARDI (AZUL)",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "automotivo",
+            "residencial"
+        ]
+    },
+    {
+        "id": 4,
+        "descricao": "ODORIZANTE PARA CARRO VANILLA (ROXO)",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 12,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "automotivo",
+            "residencial"
+        ]
+    },
+    {
+        "id": 122,
+        "descricao": "PA DE LIXO COM CABO",
+        "preco_venda": 12,
+        "preco": 12,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 119,
+        "descricao": "PA DE LIXO DE MAO",
+        "preco_venda": 5,
+        "preco": 5,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/119.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 289,
+        "descricao": "PA EXTRA",
+        "preco_venda": 9.9,
+        "preco": 9.9,
+        "estoque": 30,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 185,
+        "descricao": "PANO ALVEJADO/XADREZ",
+        "preco_venda": 5.9,
+        "preco": 5.9,
+        "estoque": 9,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/185.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 260,
+        "descricao": "PANO DE PIA",
+        "preco_venda": 3,
+        "preco": 3,
+        "estoque": 21,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 1,
+        "descricao": "PANO DE PRATO",
+        "preco_venda": 5.5,
+        "preco": 5.5,
+        "estoque": 17,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/1.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 348,
+        "descricao": "PANO MICROFIBRA",
+        "preco_venda": 9.9,
+        "preco": 9.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 173,
+        "descricao": "PASSA CERA",
+        "preco_venda": 21,
+        "preco": 21,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/173.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 98,
+        "descricao": "PASTA DE BRILHO 500 GR",
+        "preco_venda": 9,
+        "preco": 9,
+        "estoque": 13,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/98.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 397,
+        "descricao": "PEDRA ANTIMOFO",
+        "preco_venda": 4,
+        "preco": 4,
+        "estoque": 10,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 214,
+        "descricao": "PEDRA SANITARIA",
+        "preco_venda": 3,
+        "preco": 3,
+        "estoque": 22,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 423,
+        "descricao": "PERCARBONATO DE SODIO 1 KG",
+        "preco_venda": 25,
+        "preco": 25,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 441,
+        "descricao": "PERCARBONATO DE SODIO 500 GR",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 17,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/441.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 51,
+        "descricao": "PERFUME PARA BANHEIRO 2 LITROS",
+        "preco_venda": 16,
+        "preco": 16,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/51.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 52,
+        "descricao": "PERFUME PARA BANHEIRO 5 LITROS",
+        "preco_venda": 39.9,
+        "preco": 39.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/52.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427430,
+        "descricao": "PERFUME PARA ROUPA AMACIEX 1 LITRO",
+        "preco_venda": 12.5,
+        "preco": 12.5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 202,
+        "descricao": "PERFUME PARA ROUPA AMACIEX 2 LITROS",
+        "preco_venda": 22,
+        "preco": 22,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/202.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 207,
+        "descricao": "PERFUME PARA ROUPA AMACIEX 5 LITROS",
+        "preco_venda": 39.5,
+        "preco": 39.5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/207.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 96,
+        "descricao": "PINHO GEL 2 LITROS",
+        "preco_venda": 14.2,
+        "preco": 14.2,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 97,
+        "descricao": "PINHO GEL 5 LITROS",
+        "preco_venda": 19.9,
+        "preco": 19.9,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/97.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 76,
+        "descricao": "PNEU PRETINHO 1 LITRO",
+        "preco_venda": 15,
+        "preco": 15,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/76.jpg",
+        "categorias": [
+            "automotivo"
+        ]
+    },
+    {
+        "id": 75,
+        "descricao": "PNEU PRETINHO 500 ML",
+        "preco_venda": 8,
+        "preco": 8,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/75.jpg",
+        "categorias": [
+            "automotivo"
+        ]
+    },
+    {
+        "id": 130,
+        "descricao": "PRENDEDOR MADEIRA GRANDE",
+        "preco_venda": 4,
+        "preco": 4,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/130.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 129,
+        "descricao": "PRENDEDOR MADEIRA PEQUENO",
+        "preco_venda": 2.5,
+        "preco": 2.5,
+        "estoque": 7,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/129.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 128,
+        "descricao": "PRENDEDOR PLASTICO",
+        "preco_venda": 3,
+        "preco": 3,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 427457,
+        "descricao": "PULVERIZADOR",
+        "preco_venda": 13,
+        "preco": 13,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 345,
+        "descricao": "REGADOR",
+        "preco_venda": 19.9,
+        "preco": 19.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 179,
+        "descricao": "REMOVEDOR 500 ML",
+        "preco_venda": 20,
+        "preco": 20,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/179.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 262,
+        "descricao": "REVITALIZADOR",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 118,
+        "descricao": "RODO PIA",
+        "preco_venda": 4,
+        "preco": 4,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/118.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 150,
+        "descricao": "RODO PLASTICO 30CM",
+        "preco_venda": 16,
+        "preco": 16,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/150.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 151,
+        "descricao": "RODO PLASTICO 40CM",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/151.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 152,
+        "descricao": "RODO PLASTICO 60CM",
+        "preco_venda": 22,
+        "preco": 22,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/152.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 419,
+        "descricao": "SABAO CASEIRO 350 GR",
+        "preco_venda": 5,
+        "preco": 5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 190,
+        "descricao": "SABAO LIQUIDO ARIEX 5 LITROS",
+        "preco_venda": 29.9,
+        "preco": 29.9,
+        "estoque": -1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/190.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 17,
+        "descricao": "SABAO LIQUIDO ARIEX TESTE SYNC",
+        "preco_venda": 14,
+        "preco": 14,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/17.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 63,
+        "descricao": "SABAO LIQUIDO COM BICARBONATO 2 LITROS",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/63.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 62,
+        "descricao": "SABAO LIQUIDO DE COCO 2 LITROS",
+        "preco_venda": 14,
+        "preco": 14,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/62.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 68,
+        "descricao": "SABAO LIQUIDO DE COCO 5 LITROS",
+        "preco_venda": 29.9,
+        "preco": 29.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/68.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 65,
+        "descricao": "SABAO LIQUIDO DINAMUS 2 LITROS",
+        "preco_venda": 14,
+        "preco": 14,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/65.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 70,
+        "descricao": "SABAO LIQUIDO DINAMUS 5 LITROS",
+        "preco_venda": 29.9,
+        "preco": 29.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/70.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 60,
+        "descricao": "SABAO LIQUIDO OMUS 2 LITROS",
+        "preco_venda": 14,
+        "preco": 14,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/60.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 66,
+        "descricao": "SABAO LIQUIDO OMUS 5 LITROS",
+        "preco_venda": 29.9,
+        "preco": 29.9,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/66.jpg",
+        "categorias": [
+            "residencial",
+            "industrial"
+        ]
+    },
+    {
+        "id": 417,
+        "descricao": "SABAO QUEROSENE 2 LITROS",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/417.jpg",
+        "categorias": [
+            "automotivo",
+            "residencial"
+        ]
+    },
+    {
+        "id": 164,
+        "descricao": "SACO DE LIXO 100 LITROS 5UN",
+        "preco_venda": 13,
+        "preco": 13,
+        "estoque": 10,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 188,
+        "descricao": "SACO DE LIXO 100 LITROS REF 5UN",
+        "preco_venda": 18.5,
+        "preco": 18.5,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 139,
+        "descricao": "SACO DE LIXO 20 LITROS 10 UN",
+        "preco_venda": 5,
+        "preco": 5,
+        "estoque": 51,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 169,
+        "descricao": "SACO DE LIXO 40 LITROS 10 UN",
+        "preco_venda": 8,
+        "preco": 8,
+        "estoque": 10,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 162,
+        "descricao": "SACO DE LIXO 60 LITROS 10 UN",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 48,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 418,
+        "descricao": "SACO DE LIXO 60 LITROS REF 5UN",
+        "preco_venda": 13.5,
+        "preco": 13.5,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 379,
+        "descricao": "SACOS DE 200 LITROS REF 5 UN",
+        "preco_venda": 20,
+        "preco": 20,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 354,
+        "descricao": "SALADEIRA COM TAMPA",
+        "preco_venda": 21.9,
+        "preco": 21.9,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 242,
+        "descricao": "SAPONEO",
+        "preco_venda": 6,
+        "preco": 6,
+        "estoque": 15,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 79,
+        "descricao": "SHAMPOO COM CERA 1 LITRO",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 5,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/79.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 78,
+        "descricao": "SHAMPOO COM CERA 2 LITROS",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/78.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 411,
+        "descricao": "SHAMPOO COM CERA 5 LITROS",
+        "preco_venda": 40,
+        "preco": 40,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/411.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 407,
+        "descricao": "SILICONE 250 GR",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 11,
+        "descricao": "SOLUPAM 1 LITRO",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/11.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 12,
+        "descricao": "SOLUPAM 2 LITROS",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 11,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/12.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 13,
+        "descricao": "SOLUPAM 5 LITROS",
+        "preco_venda": 39.9,
+        "preco": 39.9,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/13.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 413,
+        "descricao": "SOLUPAM ATACADO",
+        "preco_venda": 4,
+        "preco": 4,
+        "estoque": 0,
+        "disponivel": false,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 209,
+        "descricao": "TAXA ENTREGA",
+        "preco_venda": 5,
+        "preco": 5,
+        "estoque": 98,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 102,
+        "descricao": "TIRA LIMO 1 LITRO",
+        "preco_venda": 10,
+        "preco": 10,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/102.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 103,
+        "descricao": "TIRA LIMO 2 LITROS",
+        "preco_venda": 25,
+        "preco": 25,
+        "estoque": 12,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/103.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 104,
+        "descricao": "TIRA LIMO 5 LITROS",
+        "preco_venda": 49.9,
+        "preco": 49.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/104.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 398,
+        "descricao": "TIRA MANCHA DE ROUPA",
+        "preco_venda": 13,
+        "preco": 13,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 125,
+        "descricao": "VARAL N 10",
+        "preco_venda": 5,
+        "preco": 5,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/125.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 143,
+        "descricao": "VASSOURA AQUARELA",
+        "preco_venda": 25,
+        "preco": 25,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 146,
+        "descricao": "VASSOURA CANTO",
+        "preco_venda": 21,
+        "preco": 21,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/146.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 416,
+        "descricao": "VASSOURA DE BRUXA",
+        "preco_venda": 45.9,
+        "preco": 45.9,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/416.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 149,
+        "descricao": "VASSOURA ESFREGA FORTE",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/149.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 390,
+        "descricao": "VASSOURA GRAN MESTRA",
+        "preco_venda": 24,
+        "preco": 24,
+        "estoque": 6,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 147,
+        "descricao": "VASSOURA PELO PANDA",
+        "preco_venda": 18,
+        "preco": 18,
+        "estoque": 3,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 427459,
+        "descricao": "VASSOURA PELO RETA (CRINA CAVALO)",
+        "preco_venda": 50,
+        "preco": 50,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 394,
+        "descricao": "VASSOURA PIACAVA GLOBO",
+        "preco_venda": 22,
+        "preco": 22,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/394.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 141,
+        "descricao": "VASSOURA POP",
+        "preco_venda": 16,
+        "preco": 16,
+        "estoque": 7,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 148,
+        "descricao": "VASSOURA RAVENA",
+        "preco_venda": 19,
+        "preco": 19,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/148.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 263,
+        "descricao": "VASSOURA SOFT",
+        "preco_venda": 24,
+        "preco": 24,
+        "estoque": 2,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 154,
+        "descricao": "VASSOURA TROPICANA",
+        "preco_venda": 21,
+        "preco": 21,
+        "estoque": 4,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/154.jpg",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 422,
+        "descricao": "VASSOURA VERONA PLUS",
+        "preco_venda": 19,
+        "preco": 19,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "http://127.0.0.1:3000/imagens/sem_imagem.png",
+        "categorias": [
+            "utilitarios"
+        ]
+    },
+    {
+        "id": 49,
+        "descricao": "VEJAX MULTIUSO 2 LITROS",
+        "preco_venda": 12,
+        "preco": 12,
+        "estoque": 1,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/49.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    },
+    {
+        "id": 50,
+        "descricao": "VEJAX MULTIUSO 5 LITROS",
+        "preco_venda": 39.9,
+        "preco": 39.9,
+        "estoque": 0,
+        "disponivel": true,
+        "ForaDeUso": "NAO",
+        "imagem": "img/produtos/50.jpg",
+        "categorias": [
+            "residencial"
+        ]
+    }
+]

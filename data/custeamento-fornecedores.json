@@ -1,0 +1,43 @@
+{
+  "proximo_id": 6,
+  "fornecedores": [
+    {
+      "id": 1,
+      "nome": "Alex",
+      "telefone": "",
+      "observacao": "",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "nome": "Londri Química",
+      "telefone": "",
+      "observacao": "",
+      "ativo": true
+    },
+    {
+      "id": 3,
+      "nome": "AM Embalagens",
+      "telefone": "",
+      "observacao": "",
+      "ativo": true
+    },
+    {
+      "id": 4,
+      "nome": "Claudinei Vassouras",
+      "telefone": "",
+      "observacao": "",
+      "ativo": true
+    },
+    {
+      "id": 5,
+      "nome": "Multi Essências",
+      "telefone": "",
+      "observacao": "",
+      "ativo": true
+    }
+  ],
+  "insumos": {
+    "41": 1
+  }
+}

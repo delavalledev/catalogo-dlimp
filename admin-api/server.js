@@ -1,4 +1,4 @@
-﻿const path = require("path");
+const path = require("path");
 const http = require("http");
 const fs = require("fs");
 const { execFileSync } = require("child_process");
@@ -185,6 +185,121 @@ function lerCorpo(req) {
             );
         }
     );
+}
+
+
+
+/* =========================================================
+   CUSTEAMENTO - PERSISTENCIA DOS PRODUTOS DAS BASES
+========================================================= */
+const arquivoVinculosBases = path.join(__dirname, "..", "data", "custeamento-vinculos.json");
+const arquivoFornecedores = path.join(__dirname, "..", "data", "custeamento-fornecedores.json");
+
+const fornecedoresIniciais = [
+    { id: 1, nome: "Alex", telefone: "", observacao: "", ativo: true },
+    { id: 2, nome: "Londri Química", telefone: "", observacao: "", ativo: true },
+    { id: 3, nome: "AM Embalagens", telefone: "", observacao: "", ativo: true },
+    { id: 4, nome: "Claudinei Vassouras", telefone: "", observacao: "", ativo: true },
+    { id: 5, nome: "Multi Essências", telefone: "", observacao: "", ativo: true }
+];
+
+function garantirArquivoFornecedores() {
+    const pasta = path.dirname(arquivoFornecedores);
+    if (!fs.existsSync(pasta)) fs.mkdirSync(pasta, { recursive: true });
+    if (!fs.existsSync(arquivoFornecedores)) {
+        fs.writeFileSync(arquivoFornecedores, JSON.stringify({ proximo_id: 6, fornecedores: fornecedoresIniciais, insumos: {} }, null, 2), "utf8");
+    }
+}
+
+function lerFornecedoresArquivo() {
+    garantirArquivoFornecedores();
+    try {
+        const texto = fs.readFileSync(arquivoFornecedores, "utf8").replace(/^\uFEFF/, "").trim();
+        const dados = texto ? JSON.parse(texto) : {};
+        if (!dados || typeof dados !== "object") throw new Error("Formato inválido.");
+        return {
+            proximo_id: Number(dados.proximo_id) || 1,
+            fornecedores: Array.isArray(dados.fornecedores) ? dados.fornecedores : [],
+            insumos: dados.insumos && typeof dados.insumos === "object" ? dados.insumos : {}
+        };
+    } catch (erro) {
+        console.error("ERRO ao ler fornecedores:", erro);
+        return { proximo_id: 6, fornecedores: [...fornecedoresIniciais], insumos: {} };
+    }
+}
+
+function salvarFornecedoresArquivo(dados) {
+    garantirArquivoFornecedores();
+    const temporario = arquivoFornecedores + ".tmp";
+    fs.writeFileSync(temporario, JSON.stringify(dados, null, 2), "utf8");
+    fs.renameSync(temporario, arquivoFornecedores);
+}
+
+function lerVinculosBasesArquivo() {
+    try {
+        if (!fs.existsSync(arquivoVinculosBases)) return {};
+        const texto = fs.readFileSync(arquivoVinculosBases, "utf8");
+        const dados = JSON.parse(texto);
+        return dados && typeof dados === "object" ? dados : {};
+    } catch (erro) {
+        console.error("ERRO ao ler vínculos das bases:", erro);
+        return {};
+    }
+}
+
+function salvarVinculosBasesArquivo(dados) {
+    const pasta = path.dirname(arquivoVinculosBases);
+    if (!fs.existsSync(pasta)) fs.mkdirSync(pasta, { recursive: true });
+    const temporario = arquivoVinculosBases + ".tmp";
+    fs.writeFileSync(temporario, JSON.stringify(dados, null, 2), "utf8");
+    fs.renameSync(temporario, arquivoVinculosBases);
+}
+
+function normalizarVinculosProdutos(lista) {
+    const vistos = new Set();
+    return (Array.isArray(lista) ? lista : []).map(item => ({
+        produto_id: Number(item.produto_id),
+        volume: Number(item.volume || 0),
+        embalagem_id: item.embalagem_id ? Number(item.embalagem_id) : null,
+        acessorio_id: item.acessorio_id ? Number(item.acessorio_id) : null
+    })).filter(item => {
+        if (!Number.isInteger(item.produto_id) || item.produto_id <= 0) return false;
+        if (vistos.has(item.produto_id)) return false;
+        vistos.add(item.produto_id);
+        return true;
+    });
+}
+
+/* =========================================================
+   CUSTEAMENTO - VINCULOS RECEITA -> PRODUTOS
+========================================================= */
+async function colunasCusteamentoProdutos() {
+    const [rows] = await db.query(`
+        SELECT COLUMN_NAME
+        FROM INFORMATION_SCHEMA.COLUMNS
+        WHERE TABLE_SCHEMA = 'banco'
+          AND TABLE_NAME = 'custeamento_produtos'
+        ORDER BY ORDINAL_POSITION
+    `);
+    return rows.map(row => row.COLUMN_NAME);
+}
+function colunaEntre(colunas, candidatos) {
+    return candidatos.find(nome => colunas.includes(nome)) || null;
+}
+async function mapaCusteamentoProdutos() {
+    const colunas = await colunasCusteamentoProdutos();
+    const mapa = {
+        receita: colunaEntre(colunas, ['receita_id','id_receita','receitaId']),
+        produto: colunaEntre(colunas, ['produto_id','id_produto','produtoId']),
+        volume: colunaEntre(colunas, ['volume','volume_litros','volume_l']),
+        embalagem: colunaEntre(colunas, ['embalagem_id','id_embalagem','embalagemId']),
+        acessorio: colunaEntre(colunas, ['acessorio_id','acessório_id','id_acessorio','id_acessório','acessorioId']),
+        id: colunaEntre(colunas, ['id'])
+    };
+    if (!mapa.receita || !mapa.produto) {
+        throw new Error('A tabela banco.custeamento_produtos precisa ter as colunas de receita e produto para salvar os Produtos da base.');
+    }
+    return mapa;
 }
 
 /* =========================================================
@@ -913,9 +1028,24 @@ const server = http.createServer(
                     ORDER BY nome
                 `);
 
+                const fornecedores = lerFornecedoresArquivo();
+                const mapaFornecedores = new Map(
+                    fornecedores.fornecedores.map(f => [Number(f.id), f])
+                );
+
+                const insumosComFornecedor = rows.map(insumo => {
+                    const fornecedorId = fornecedores.insumos[String(insumo.id)] ? Number(fornecedores.insumos[String(insumo.id)]) : null;
+                    const fornecedor = fornecedorId ? mapaFornecedores.get(fornecedorId) : null;
+                    return {
+                        ...insumo,
+                        fornecedor_id: fornecedorId,
+                        fornecedor_nome: fornecedor?.nome || null
+                    };
+                });
+
                 return responder(res, 200, {
                     ok: true,
-                    insumos: rows
+                    insumos: insumosComFornecedor
                 });
 
             } catch (erro) {
@@ -1093,6 +1223,552 @@ const server = http.createServer(
 
 
                /* =========================================================
+           CUSTEAMENTO - EXCLUIR INSUMO
+        ========================================================= */
+
+        if (
+            req.method === "POST" &&
+            req.url === "/custeamento/insumos/excluir"
+        ) {
+            try {
+                const corpo = await lerCorpo(req);
+                const dados = JSON.parse(corpo);
+                const id = Number(dados.id);
+
+                if (!Number.isInteger(id) || id <= 0) {
+                    throw new Error("ID do insumo invalido.");
+                }
+
+                const [insumo] = await db.query(`
+                    SELECT id, nome
+                    FROM banco.custeamento_insumos
+                    WHERE id = ?
+                `, [id]);
+
+                if (!insumo.length) {
+                    throw new Error("Insumo nao encontrado.");
+                }
+
+                const [uso] = await db.query(`
+                    SELECT COUNT(*) AS total
+                    FROM banco.custeamento_receita_itens
+                    WHERE insumo_id = ?
+                `, [id]);
+
+                if (Number(uso[0].total) > 0) {
+                    throw new Error(
+                        "Este insumo ja esta sendo usado em uma receita. Para preservar o historico e os calculos, deixe-o como Inativo em vez de excluir."
+                    );
+                }
+
+                await db.query(`
+                    DELETE FROM banco.custeamento_insumos
+                    WHERE id = ?
+                `, [id]);
+
+                return responder(res, 200, {
+                    ok: true,
+                    id,
+                    mensagem: "Insumo excluido com sucesso."
+                });
+
+            } catch (erro) {
+                console.error(
+                    "ERRO POST /custeamento/insumos/excluir:",
+                    erro
+                );
+
+                return responder(res, 400, {
+                    ok: false,
+                    erro: erro.message
+                });
+            }
+        }
+
+
+
+
+        /* =========================================================
+           CUSTEAMENTO - PRODUTOS DA BASE
+        ========================================================= */
+
+        if (
+            req.method === "GET" &&
+            req.url.startsWith("/custeamento/receitas/") &&
+            req.url.endsWith("/produtos")
+        ) {
+            try {
+                const partes = req.url.split("/");
+                const receitaId = Number(partes[3]);
+                if (!Number.isInteger(receitaId) || receitaId <= 0) throw new Error("ID da receita inválido.");
+
+                const arquivo = lerVinculosBasesArquivo();
+                const salvosEmArquivo = Array.isArray(arquivo[String(receitaId)]) ? arquivo[String(receitaId)] : [];
+
+                // Primeiro tenta o banco. Se não houver vínculos ali, recupera
+                // a cópia persistida pelo módulo.
+                try {
+                    const mapa = await mapaCusteamentoProdutos();
+                    const colProduto = `\`${mapa.produto}\``;
+                    const colReceita = `\`${mapa.receita}\``;
+                    const colVolume = mapa.volume ? `, \`${mapa.volume}\` AS volume` : `, NULL AS volume`;
+                    const colEmbalagem = mapa.embalagem ? `, \`${mapa.embalagem}\` AS embalagem_id` : `, NULL AS embalagem_id`;
+                    const colAcessorio = mapa.acessorio ? `, \`${mapa.acessorio}\` AS acessorio_id` : `, NULL AS acessorio_id`;
+
+                    const [rows] = await db.query(`
+                        SELECT
+                            ${mapa.id ? `\`${mapa.id}\`` : colProduto} AS id,
+                            ${colProduto} AS produto_id
+                            ${colVolume}
+                            ${colEmbalagem}
+                            ${colAcessorio}
+                        FROM banco.custeamento_produtos
+                        WHERE ${colReceita} = ?
+                        ORDER BY id
+                    `, [receitaId]);
+
+                    if (rows.length) return responder(res, 200, { ok: true, produtos: rows });
+                } catch (erroBanco) {
+                    console.warn("Não foi possível ler vínculos do banco:", erroBanco.message);
+                }
+
+                return responder(res, 200, {
+                    ok: true,
+                    produtos: salvosEmArquivo.map((item, index) => ({
+                        id: index + 1,
+                        produto_id: item.produto_id,
+                        volume: item.volume,
+                        embalagem_id: item.embalagem_id,
+                        acessorio_id: item.acessorio_id
+                    }))
+                });
+            } catch (erro) {
+                console.error("ERRO GET produtos da base:", erro);
+                return responder(res, 400, { ok: false, erro: erro.message });
+            }
+        }
+
+        if (
+            req.method === "POST" &&
+            req.url.startsWith("/custeamento/receitas/") &&
+            req.url.endsWith("/produtos")
+        ) {
+            let conexao;
+            try {
+                const partes = req.url.split("/");
+                const receitaId = Number(partes[3]);
+                if (!Number.isInteger(receitaId) || receitaId <= 0) {
+                    throw new Error("ID da receita inválido.");
+                }
+
+                const corpo = await lerCorpo(req);
+                const dados = JSON.parse(corpo);
+                const lista = normalizarVinculosProdutos(dados.produtos);
+
+                const [receita] = await db.query(
+                    `SELECT id FROM banco.custeamento_receitas WHERE id = ? LIMIT 1`,
+                    [receitaId]
+                );
+                if (!receita.length) throw new Error("Receita não encontrada.");
+
+                // O arquivo mantém uma cópia confiável do vínculo. Isso também
+                // permite que o módulo continue funcionando se a tabela legada
+                // de vínculos tiver alguma coluna/constraint diferente.
+                const vinculos = lerVinculosBasesArquivo();
+                vinculos[String(receitaId)] = lista;
+                salvarVinculosBasesArquivo(vinculos);
+
+                // Tenta manter também o vínculo no banco, quando a estrutura
+                // existente permitir. O arquivo continua sendo a fonte de
+                // recuperação caso essa tabela antiga rejeite a gravação.
+                let bancoSalvo = false;
+                let avisoBanco = null;
+                try {
+                    const mapa = await mapaCusteamentoProdutos();
+                    conexao = await db.getConnection();
+                    await conexao.beginTransaction();
+
+                    await conexao.query(
+                        `DELETE FROM banco.custeamento_produtos WHERE \`${mapa.receita}\` = ?`,
+                        [receitaId]
+                    );
+
+                    for (const item of lista) {
+                        const colunas = [mapa.receita, mapa.produto];
+                        const valores = [receitaId, item.produto_id];
+
+                        if (mapa.volume) {
+                            colunas.push(mapa.volume);
+                            valores.push(item.volume);
+                        }
+                        if (mapa.embalagem) {
+                            colunas.push(mapa.embalagem);
+                            valores.push(item.embalagem_id);
+                        }
+                        if (mapa.acessorio) {
+                            colunas.push(mapa.acessorio);
+                            valores.push(item.acessorio_id);
+                        }
+
+                        const placeholders = colunas.map(() => "?").join(", ");
+                        const nomes = colunas.map(c => `\`${c}\``).join(", ");
+                        await conexao.query(
+                            `INSERT INTO banco.custeamento_produtos (${nomes}) VALUES (${placeholders})`,
+                            valores
+                        );
+                    }
+
+                    await conexao.commit();
+                    bancoSalvo = true;
+                } catch (erroBanco) {
+                    if (conexao) {
+                        try { await conexao.rollback(); } catch (_) {}
+                    }
+                    avisoBanco = erroBanco.message;
+                    console.warn("Vínculo salvo no arquivo; banco recusou a gravação:", erroBanco.message);
+                } finally {
+                    if (conexao) { conexao.release(); conexao = null; }
+                }
+
+                return responder(res, 200, {
+                    ok: true,
+                    receita_id: receitaId,
+                    quantidade: lista.length,
+                    banco_salvo: bancoSalvo,
+                    armazenamento: bancoSalvo ? "banco" : "arquivo",
+                    aviso_banco: avisoBanco
+                });
+            } catch (erro) {
+                if (conexao) {
+                    try { await conexao.rollback(); } catch (_) {}
+                    try { conexao.release(); } catch (_) {}
+                }
+                console.error("ERRO POST produtos da base:", erro);
+                return responder(res, 400, {
+                    ok: false,
+                    erro: `Não foi possível salvar os produtos da base: ${erro.message}`
+                });
+            }
+        }
+
+        /* =========================================================
+           CUSTEAMENTO - PRODUTOS FINAIS
+        ========================================================= */
+        if (req.method === "GET" && req.url === "/custeamento/produtos-finais") {
+            try {
+                const arquivo = lerVinculosBasesArquivo();
+                const resultado = [];
+                const chaves = new Set();
+
+                // Fonte principal: vínculos persistidos no banco.
+                try {
+                    const mapa = await mapaCusteamentoProdutos();
+                    const receitaCol = `\`${mapa.receita}\``;
+                    const produtoCol = `\`${mapa.produto}\``;
+                    const idCol = mapa.id ? `\`${mapa.id}\`` : produtoCol;
+                    const volumeCol = mapa.volume ? `\`${mapa.volume}\`` : "NULL";
+                    const embalagemCol = mapa.embalagem ? `\`${mapa.embalagem}\`` : "NULL";
+                    const acessorioCol = mapa.acessorio ? `\`${mapa.acessorio}\`` : "NULL";
+
+                    const [rows] = await db.query(`
+                        SELECT
+                            ${idCol} AS vinculo_id,
+                            ${produtoCol} AS produto_id,
+                            ${receitaCol} AS receita_id,
+                            ${volumeCol} AS volume,
+                            ${embalagemCol} AS embalagem_id,
+                            ${acessorioCol} AS acessorio_id,
+                            cr.nome AS base_nome,
+                            cr.ativa AS base_ativa,
+                            cr.rendimento,
+                            cr.unidade_rendimento,
+                            ROUND(
+                                COALESCE(SUM(ri.quantidade * ci.preco_atual), 0) /
+                                NULLIF(cr.rendimento, 0),
+                                6
+                            ) AS custo_por_unidade
+                        FROM banco.custeamento_produtos cp
+                        INNER JOIN banco.custeamento_receitas cr ON cr.id = ${receitaCol}
+                        LEFT JOIN banco.custeamento_receita_itens ri ON ri.receita_id = cr.id
+                        LEFT JOIN banco.custeamento_insumos ci ON ci.id = ri.insumo_id
+                        GROUP BY
+                            ${idCol}, ${produtoCol}, ${receitaCol}, ${volumeCol},
+                            ${embalagemCol}, ${acessorioCol}, cr.id, cr.nome,
+                            cr.ativa, cr.rendimento, cr.unidade_rendimento
+                    `);
+
+                    for (const row of rows) {
+                        resultado.push(row);
+                        chaves.add(`${row.receita_id}:${row.produto_id}`);
+                    }
+                } catch (erroBanco) {
+                    console.warn("Não foi possível ler os produtos finais do banco:", erroBanco.message);
+                }
+
+                // Recupera os vínculos persistidos pelo módulo quando a tabela
+                // legada não aceitou a gravação ou ainda está vazia.
+                const receitaIds = Object.keys(arquivo).map(Number).filter(Number.isInteger);
+                if (receitaIds.length) {
+                    const placeholders = receitaIds.map(() => "?").join(",");
+                    const [receitas] = await db.query(`
+                        SELECT
+                            cr.id, cr.nome, cr.ativa, cr.rendimento, cr.unidade_rendimento,
+                            ROUND(
+                                COALESCE(SUM(ri.quantidade * ci.preco_atual), 0) /
+                                NULLIF(cr.rendimento, 0),
+                                6
+                            ) AS custo_por_unidade
+                        FROM banco.custeamento_receitas cr
+                        LEFT JOIN banco.custeamento_receita_itens ri ON ri.receita_id = cr.id
+                        LEFT JOIN banco.custeamento_insumos ci ON ci.id = ri.insumo_id
+                        WHERE cr.id IN (${placeholders})
+                        GROUP BY cr.id, cr.nome, cr.ativa, cr.rendimento, cr.unidade_rendimento
+                    `, receitaIds);
+
+                    const mapaReceitas = new Map(receitas.map(r => [Number(r.id), r]));
+                    let fallbackId = -1;
+                    for (const receitaId of receitaIds) {
+                        const receita = mapaReceitas.get(receitaId);
+                        if (!receita) continue;
+                        const lista = normalizarVinculosProdutos(arquivo[String(receitaId)]);
+                        for (const item of lista) {
+                            const chave = `${receitaId}:${item.produto_id}`;
+                            if (chaves.has(chave)) continue;
+                            resultado.push({
+                                vinculo_id: fallbackId--,
+                                produto_id: item.produto_id,
+                                receita_id: receitaId,
+                                volume: item.volume,
+                                embalagem_id: item.embalagem_id,
+                                acessorio_id: item.acessorio_id,
+                                base_nome: receita.nome,
+                                base_ativa: receita.ativa,
+                                rendimento: receita.rendimento,
+                                unidade_rendimento: receita.unidade_rendimento,
+                                custo_por_unidade: receita.custo_por_unidade
+                            });
+                            chaves.add(chave);
+                        }
+                    }
+                }
+
+                return responder(res, 200, { ok: true, produtos: resultado });
+            } catch (erro) {
+                console.error("ERRO GET /custeamento/produtos-finais:", erro);
+                return responder(res, 400, { ok: false, erro: erro.message });
+            }
+        }
+
+        /* =========================================================
+           CUSTEAMENTO - FORNECEDORES
+        ========================================================= */
+
+        if (req.method === "GET" && req.url === "/custeamento/fornecedores") {
+            try {
+                const dados = lerFornecedoresArquivo();
+                return responder(res, 200, {
+                    ok: true,
+                    fornecedores: dados.fornecedores,
+                    insumos: dados.insumos
+                });
+            } catch (erro) {
+                console.error("ERRO GET /custeamento/fornecedores:", erro);
+                return responder(res, 500, { ok: false, erro: erro.message });
+            }
+        }
+
+        if (req.method === "POST" && req.url === "/custeamento/fornecedores") {
+            try {
+                const dadosRecebidos = JSON.parse(await lerCorpo(req));
+                const dados = lerFornecedoresArquivo();
+                const nome = String(dadosRecebidos.nome || "").trim();
+                const telefone = String(dadosRecebidos.telefone || "").trim();
+                const observacao = String(dadosRecebidos.observacao || "").trim();
+                const ativo = dadosRecebidos.ativo !== false;
+                if (!nome) throw new Error("Informe o nome do fornecedor.");
+
+                let id = Number(dadosRecebidos.id);
+                if (Number.isInteger(id) && id > 0) {
+                    const fornecedor = dados.fornecedores.find(f => Number(f.id) === id);
+                    if (!fornecedor) throw new Error("Fornecedor não encontrado.");
+                    fornecedor.nome = nome;
+                    fornecedor.telefone = telefone;
+                    fornecedor.observacao = observacao;
+                    fornecedor.ativo = ativo;
+                } else {
+                    id = Number(dados.proximo_id) || 1;
+                    while (dados.fornecedores.some(f => Number(f.id) === id)) id++;
+                    dados.proximo_id = id + 1;
+                    dados.fornecedores.push({ id, nome, telefone, observacao, ativo });
+                }
+
+                salvarFornecedoresArquivo(dados);
+                return responder(res, 200, { ok: true, id, mensagem: "Fornecedor salvo com sucesso." });
+            } catch (erro) {
+                console.error("ERRO POST /custeamento/fornecedores:", erro);
+                return responder(res, 400, { ok: false, erro: erro.message });
+            }
+        }
+
+        if (req.method === "POST" && req.url === "/custeamento/fornecedores/excluir") {
+            try {
+                const dadosRecebidos = JSON.parse(await lerCorpo(req));
+                const id = Number(dadosRecebidos.id);
+                if (!Number.isInteger(id) || id <= 0) throw new Error("ID do fornecedor inválido.");
+                const dados = lerFornecedoresArquivo();
+                if (!dados.fornecedores.some(f => Number(f.id) === id)) throw new Error("Fornecedor não encontrado.");
+                const emUso = Object.values(dados.insumos).some(v => Number(v) === id);
+                if (emUso) throw new Error("Este fornecedor está vinculado a um ou mais insumos. Remova os vínculos antes de excluir.");
+                dados.fornecedores = dados.fornecedores.filter(f => Number(f.id) !== id);
+                salvarFornecedoresArquivo(dados);
+                return responder(res, 200, { ok: true, mensagem: "Fornecedor excluído com sucesso." });
+            } catch (erro) {
+                console.error("ERRO POST /custeamento/fornecedores/excluir:", erro);
+                return responder(res, 400, { ok: false, erro: erro.message });
+            }
+        }
+
+        if (req.method === "POST" && req.url === "/custeamento/insumos/fornecedor") {
+            try {
+                const dadosRecebidos = JSON.parse(await lerCorpo(req));
+                const insumoId = Number(dadosRecebidos.insumo_id);
+                const fornecedorId = dadosRecebidos.fornecedor_id === null || dadosRecebidos.fornecedor_id === "" || dadosRecebidos.fornecedor_id === undefined
+                    ? null
+                    : Number(dadosRecebidos.fornecedor_id);
+                if (!Number.isInteger(insumoId) || insumoId <= 0) throw new Error("ID do insumo inválido.");
+                if (fornecedorId !== null && (!Number.isInteger(fornecedorId) || fornecedorId <= 0)) throw new Error("Fornecedor inválido.");
+
+                const dados = lerFornecedoresArquivo();
+                if (fornecedorId !== null && !dados.fornecedores.some(f => Number(f.id) === fornecedorId)) throw new Error("Fornecedor não encontrado.");
+                if (fornecedorId === null) delete dados.insumos[String(insumoId)];
+                else dados.insumos[String(insumoId)] = fornecedorId;
+                salvarFornecedoresArquivo(dados);
+                return responder(res, 200, { ok: true, insumo_id: insumoId, fornecedor_id: fornecedorId });
+            } catch (erro) {
+                console.error("ERRO POST /custeamento/insumos/fornecedor:", erro);
+                return responder(res, 400, { ok: false, erro: erro.message });
+            }
+        }
+
+        /* =========================================================
+           CUSTEAMENTO - SINCRONIZAR CUSTOS PARA SYS-ON
+
+           O campo cadproduto.preco é o custo de compra.
+           preco_venda permanece intacto. Lucro é recalculado.
+        ========================================================= */
+        if (req.method === "POST" && req.url === "/custeamento/sincronizar-custos") {
+            try {
+                const arquivoVinculos = lerVinculosBasesArquivo();
+                const [rowsInsumos] = await db.query(`
+                    SELECT id, preco_atual
+                    FROM banco.custeamento_insumos
+                `);
+                const mapaInsumos = new Map(rowsInsumos.map(r => [Number(r.id), Number(r.preco_atual || 0)]));
+
+                const custos = new Map();
+                let linksBanco = [];
+                try {
+                    const mapa = await mapaCusteamentoProdutos();
+                    const receitaCol = `\`${mapa.receita}\``;
+                    const produtoCol = `\`${mapa.produto}\``;
+                    const volumeCol = mapa.volume ? `\`${mapa.volume}\`` : "NULL";
+                    const embalagemCol = mapa.embalagem ? `\`${mapa.embalagem}\`` : "NULL";
+                    const acessorioCol = mapa.acessorio ? `\`${mapa.acessorio}\`` : "NULL";
+                    const [rows] = await db.query(`
+                        SELECT
+                            ${produtoCol} AS produto_id,
+                            ${volumeCol} AS volume,
+                            ${embalagemCol} AS embalagem_id,
+                            ${acessorioCol} AS acessorio_id,
+                            ROUND(COALESCE(SUM(ri.quantidade * ci.preco_atual), 0) / NULLIF(cr.rendimento, 0), 6) AS custo_por_unidade
+                        FROM banco.custeamento_produtos cp
+                        INNER JOIN banco.custeamento_receitas cr ON cr.id = ${receitaCol}
+                        LEFT JOIN banco.custeamento_receita_itens ri ON ri.receita_id = cr.id
+                        LEFT JOIN banco.custeamento_insumos ci ON ci.id = ri.insumo_id
+                        GROUP BY ${produtoCol}, ${volumeCol}, ${embalagemCol}, ${acessorioCol}, cr.id, cr.rendimento
+                    `);
+                    linksBanco = rows;
+                } catch (erroBanco) {
+                    console.warn("Não foi possível ler os vínculos de bases no banco; usando arquivo quando disponível:", erroBanco.message);
+                }
+
+                for (const row of linksBanco) {
+                    const produtoId = Number(row.produto_id);
+                    const volume = Number(row.volume || 0);
+                    const basePorUnidade = Number(row.custo_por_unidade || 0);
+                    const embalagem = row.embalagem_id ? Number(mapaInsumos.get(Number(row.embalagem_id)) || 0) : 0;
+                    const acessorio = row.acessorio_id ? Number(mapaInsumos.get(Number(row.acessorio_id)) || 0) : 0;
+                    const custo = basePorUnidade * volume + embalagem + acessorio;
+                    if (Number.isInteger(produtoId) && produtoId > 0 && Number.isFinite(custo) && custo >= 0) custos.set(produtoId, Number(custo.toFixed(2)));
+                }
+
+                for (const [receitaIdTexto, lista] of Object.entries(arquivoVinculos)) {
+                    for (const item of normalizarVinculosProdutos(lista)) {
+                        const produtoId = Number(item.produto_id);
+                        if (custos.has(produtoId)) continue;
+                        const [receitaRows] = await db.query(`
+                            SELECT ROUND(COALESCE(SUM(ri.quantidade * ci.preco_atual), 0) / NULLIF(cr.rendimento, 0), 6) AS custo_por_unidade
+                            FROM banco.custeamento_receitas cr
+                            LEFT JOIN banco.custeamento_receita_itens ri ON ri.receita_id = cr.id
+                            LEFT JOIN banco.custeamento_insumos ci ON ci.id = ri.insumo_id
+                            WHERE cr.id = ?
+                            GROUP BY cr.id, cr.rendimento
+                        `, [Number(receitaIdTexto)]);
+                        if (!receitaRows.length) continue;
+                        const custoBase = Number(receitaRows[0].custo_por_unidade || 0) * Number(item.volume || 0);
+                        const embalagem = item.embalagem_id ? Number(mapaInsumos.get(Number(item.embalagem_id)) || 0) : 0;
+                        const acessorio = item.acessorio_id ? Number(mapaInsumos.get(Number(item.acessorio_id)) || 0) : 0;
+                        const custo = custoBase + embalagem + acessorio;
+                        if (Number.isFinite(custo) && custo >= 0) custos.set(produtoId, Number(custo.toFixed(2)));
+                    }
+                }
+
+                const ajustes = lerAjustes();
+                for (const [idTexto, ajuste] of Object.entries(ajustes)) {
+                    if (custos.has(Number(idTexto))) continue;
+                    const custo = Number(ajuste?.custo_custeamento);
+                    if (Number.isInteger(Number(idTexto)) && Number(idTexto) > 0 && Number.isFinite(custo) && custo >= 0) {
+                        custos.set(Number(idTexto), Number(custo.toFixed(2)));
+                    }
+                }
+
+                const resultados = [];
+                for (const [produtoId, custo] of custos.entries()) {
+                    const [antes] = await db.query(`SELECT preco, preco_venda FROM banco.cadproduto WHERE id = ? LIMIT 1`, [produtoId]);
+                    if (!antes.length) {
+                        resultados.push({ id: produtoId, custo, status: "produto_nao_encontrado" });
+                        continue;
+                    }
+                    const custoAnterior = Number(antes[0].preco);
+                    const venda = Number(antes[0].preco_venda || 0);
+                    if (Number.isFinite(custoAnterior) && Math.abs(custoAnterior - custo) < 0.005) {
+                        resultados.push({ id: produtoId, custo, anterior: custoAnterior, status: "sem_alteracao" });
+                        continue;
+                    }
+                    await db.query(`
+                        UPDATE banco.cadproduto
+                        SET preco = ?, Lucro = ROUND(preco_venda - ?, 2)
+                        WHERE id = ?
+                        LIMIT 1
+                    `, [custo, custo, produtoId]);
+                    resultados.push({ id: produtoId, custo, anterior: custoAnterior, venda, status: "atualizado" });
+                }
+
+                return responder(res, 200, {
+                    ok: true,
+                    quantidade: resultados.length,
+                    atualizados: resultados.filter(r => r.status === "atualizado").length,
+                    sem_alteracao: resultados.filter(r => r.status === "sem_alteracao").length,
+                    nao_encontrados: resultados.filter(r => r.status === "produto_nao_encontrado").length,
+                    resultados
+                });
+            } catch (erro) {
+                console.error("ERRO POST /custeamento/sincronizar-custos:", erro);
+                return responder(res, 500, { ok: false, erro: erro.message });
+            }
+        }
+
+        /* =========================================================
            CUSTEAMENTO - RECEITAS
         ========================================================= */
 
