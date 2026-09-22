@@ -9,6 +9,7 @@ const API_ADMIN_CUSTOS = "http://127.0.0.1:3100/custeamento/sincronizar-custos";
 
 const CATALOGO_FILE = path.join(PROJETO, "data", "produtos-online.json");
 const AJUSTES_FILE = path.join(PROJETO, "data", "ajustes-produtos.json");
+const CUSTOS_STATE_FILE = path.join(PROJETO, "data", "custos-sincronizados.json");
 const BACKUP_DIR = path.join(PROJETO, "backup-sincronizacao");
 const PASTA_IMAGENS_CATALOGO = path.join(PROJETO, "img", "produtos");
 const PASTA_IMAGENS_SYSON = "C:/SysOnPDV-Pro/imgProdutos";
@@ -88,7 +89,9 @@ function normalizarProdutoSys(produto) {
     return {
         id: Number(produto.id),
         descricao: texto(produto.descricao),
-        preco_venda: numero(produto.preco_venda ?? produto.preco),
+        // Sys-On: preco = custo de compra; preco_venda = preço de venda.
+        preco_custo: produto.preco == null ? null : numero(produto.preco),
+        preco_venda: produto.preco_venda == null ? null : numero(produto.preco_venda),
         estoque: numero(produto.estoque),
         disponivel: normalizarForaDeUso(produto.ForaDeUso) !== "SIM",
         ForaDeUso: normalizarForaDeUso(produto.ForaDeUso),
@@ -104,6 +107,10 @@ async function carregarSysOn() {
     const resposta = await requisicaoJson(API_PRODUTOS);
     if (!Array.isArray(resposta)) throw new Error("A API do Sys-On não retornou uma lista.");
     const produtos = resposta.map(normalizarProdutoSys).filter(p => Number.isInteger(p.id) && p.id > 0);
+    const semPrecoVenda = produtos.filter(p => p.preco_venda === null);
+    if (semPrecoVenda.length) {
+        throw new Error(`SINCRONIZAÇÃO ABORTADA: ${semPrecoVenda.length} produto(s) do Sys-On vieram sem preco_venda. O campo preco é custo e não será usado como fallback.`);
+    }
     if (produtos.length < 200) throw new Error(`SINCRONIZAÇÃO ABORTADA: API retornou somente ${produtos.length} produtos.`);
     console.log(`Sys-On: ${produtos.length} produtos válidos.`);
     return produtos;
@@ -156,9 +163,95 @@ async function aplicarAjustesVenda(ajustes, mapaSys) {
     return processados;
 }
 
+function custoValido(valor) {
+    const n = Number(valor);
+    return Number.isFinite(n) && n >= 0 ? Number(n.toFixed(3)) : null;
+}
+
+function lerEstadoCustos() {
+    const estado = lerJson(CUSTOS_STATE_FILE, {});
+    return estado && typeof estado === "object" && !Array.isArray(estado) ? estado : {};
+}
+
+function salvarEstadoCustos(estado) {
+    salvarJson(CUSTOS_STATE_FILE, estado);
+}
+
+function custoAdminDoAjuste(ajuste) {
+    if (!ajuste || typeof ajuste !== "object") return null;
+    return custoValido(ajuste.custo_custeamento);
+}
+
+async function importarAlteracoesDeCustoDoSysOn(ajustes, mapaSys) {
+    const estado = lerEstadoCustos();
+    const ajustesAtualizados = { ...ajustes };
+    let importados = 0;
+    let conflitos = 0;
+    let inicializados = 0;
+
+    for (const [id, sys] of mapaSys) {
+        const custoSys = custoValido(sys.preco_custo);
+        if (custoSys === null) continue;
+
+        const ultimo = custoValido(estado[String(id)]);
+        const admin = custoAdminDoAjuste(ajustesAtualizados[String(id)]);
+
+        // Primeira execução: não deixamos o Sys-On sobrescrever um custo que já
+        // esteja no Admin. Apenas registramos o valor atual como referência.
+        if (ultimo === null) {
+            estado[String(id)] = custoSys;
+            inicializados++;
+            continue;
+        }
+
+        const sysMudou = Math.abs(custoSys - ultimo) > 0.0005;
+        const adminMudou = admin !== null && Math.abs(admin - ultimo) > 0.0005;
+
+        if (!sysMudou && !adminMudou) continue;
+
+        // Alteração feita no Sys-On: traz para o Admin.
+        if (sysMudou && !adminMudou) {
+            const atual = { ...(ajustesAtualizados[String(id)] || {}) };
+            atual.custo_custeamento = custoSys;
+            ajustesAtualizados[String(id)] = atual;
+            importados++;
+            continue;
+        }
+
+        // Alteração feita no Admin: não importamos o Sys-On.
+        if (!sysMudou && adminMudou) continue;
+
+        // Os dois lados mudaram desde a última sincronização.
+        // Nesse caso, preservamos a alteração feita no Sys-On para evitar
+        // apagar uma alteração manual feita diretamente no PDV.
+        if (sysMudou && adminMudou) {
+            const atual = { ...(ajustesAtualizados[String(id)] || {}) };
+            atual.custo_custeamento = custoSys;
+            ajustesAtualizados[String(id)] = atual;
+            conflitos++;
+        }
+    }
+
+    salvarEstadoCustos(estado);
+
+    if (importados || conflitos || inicializados) {
+        console.log(`Custo: ${importados} Sys-On -> Admin; ${conflitos} conflito(s); ${inicializados} referência(s) inicializada(s).`);
+    }
+
+    return { ajustes: ajustesAtualizados, estado };
+}
+
+function atualizarEstadoCustosComSysOn(estado, mapaSys) {
+    for (const [id, sys] of mapaSys) {
+        const custo = custoValido(sys.preco_custo);
+        if (custo !== null) estado[String(id)] = custo;
+    }
+    salvarEstadoCustos(estado);
+}
+
 async function sincronizarCustos() {
     console.log("");
-    console.log("Sincronizando custos de custeamento para o Sys-On...");
+    console.log("Sincronizando custos de custeamento...");
     const resposta = await requisicaoJson(API_ADMIN_CUSTOS, { method: "POST", body: {} });
     if (!resposta.ok) throw new Error(resposta.erro || "Não foi possível sincronizar os custos.");
     console.log(`Custos avaliados: ${resposta.quantidade || 0}`);
@@ -167,7 +260,6 @@ async function sincronizarCustos() {
     if (resposta.nao_encontrados) console.log(`Produtos não encontrados: ${resposta.nao_encontrados}`);
     return resposta;
 }
-
 function sincronizarFotos(mapaSys, catalogoAtual) {
     garantirPasta(PASTA_IMAGENS_CATALOGO);
     garantirPasta(PASTA_IMAGENS_SYSON);
@@ -253,7 +345,13 @@ async function main() {
     let mapaSys = mapaPorId(produtosSysOn);
     const catalogoAtual = carregarCatalogo();
     console.log(`Catálogo atual: ${catalogoAtual.length} produtos.`);
-    const ajustes = lerJson(AJUSTES_FILE, {});
+    let ajustes = lerJson(AJUSTES_FILE, {});
+
+    // Detecta alterações de custo feitas diretamente no Sys-On antes de
+    // mandar os custos do Admin de volta para o PDV.
+    const sincronizacaoCustoEntrada = await importarAlteracoesDeCustoDoSysOn(ajustes, mapaSys);
+    ajustes = sincronizacaoCustoEntrada.ajustes;
+    salvarJson(AJUSTES_FILE, ajustes);
 
     const ajustesVenda = await aplicarAjustesVenda(ajustes, mapaSys);
     if (ajustesVenda.length) {
@@ -276,22 +374,12 @@ async function main() {
     const ajustesRestantes = { ...ajustes };
     for (const id of ajustesVenda) delete ajustesRestantes[String(id)];
 
-    // O custo só é removido dos ajustes quando a chamada de sincronização terminou sem erro.
-    // Mantemos outros campos do mesmo produto, caso existam.
-    const custosSincronizados = new Set(
-        (resultadoCustos.resultados || [])
-            .filter(item => ["atualizado", "sem_alteracao"].includes(item.status))
-            .map(item => String(item.id))
-    );
-    for (const id of custosSincronizados) {
-        if (ajustesRestantes[id] && ajustesRestantes[id].custo_custeamento !== undefined) {
-            const restante = { ...ajustesRestantes[id] };
-            delete restante.custo_custeamento;
-            if (Object.keys(restante).length) ajustesRestantes[id] = restante;
-            else delete ajustesRestantes[id];
-        }
-    }
+    // O custo NÃO é removido dos ajustes. Ele precisa continuar salvo no Admin.
+    // Depois da sincronização, o Sys-On vira a referência de conferência para
+    // detectar uma eventual alteração manual no próximo ciclo.
     salvarJson(AJUSTES_FILE, ajustesRestantes);
+    const estadoCustos = lerEstadoCustos();
+    atualizarEstadoCustosComSysOn(estadoCustos, mapaSys);
 
     console.log("");
     console.log("================================================");
@@ -301,7 +389,7 @@ async function main() {
     console.log(`Produtos no catálogo: ${novoCatalogo.length}`);
     console.log(`Custos atualizados: ${resultadoCustos.atualizados || 0}`);
     console.log("Nome e preço de venda: Admin -> Sys-On");
-    console.log("Custo de compra: Custeamento -> Sys-On");
+    console.log("Custo de compra: sincronização bidirecional Sys-On <-> Custeamento");
     console.log("Estoque: Sys-On -> catálogo");
     console.log("ForaDeUso: Sys-On -> catálogo");
     console.log("Categorias, promoções e novidades: preservadas no catálogo");

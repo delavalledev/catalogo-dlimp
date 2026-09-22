@@ -4326,8 +4326,8 @@
     {
         "id": 96,
         "descricao": "SABÃO PINHO 2 LITROS",
-        "preco_venda": 18,
-        "preco": 18,
+        "preco_venda": 14.2,
+        "preco": 14.2,
         "estoque": 2,
         "disponivel": true,
         "ForaDeUso": "NAO",
